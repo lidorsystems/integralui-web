@@ -128,13 +128,13 @@ Open your application and add a reference to a component you want to use. For ex
 ### Angular
 
 ```bash
-import 'integralui-web-lite/components/integralui.treeview.js';
+import 'integralui-web/components/integralui.treeview.js';
 ```
 
 ### React
 
 ```bash
-import IntegralUITreeViewComponent from 'integralui-web-lite/wrappers/react.integralui.treeview.js';
+import IntegralUITreeViewComponent from 'integralui-web/wrappers/react.integralui.treeview.js';
 ```
 
 <b>Note</b>   Currently [ReactJS doesn't have full support for Web Components](https://custom-elements-everywhere.com/#react). Mainly because of the way data is passed to the component via attributes and their own synthetic event system. For this reason, you can use available wrappers located under /wrappers directory, which are ReactJS components that provide all public API from an IntegralUI component.</p>
@@ -142,7 +142,7 @@ import IntegralUITreeViewComponent from 'integralui-web-lite/wrappers/react.inte
 ### Vanilla JavaScript
 
 ```bash
-<script type="module" src="integralui-web-lite/components/integralui.treeview.js"></script>
+<script type="module" src="integralui-web/components/integralui.treeview.js"></script>
 ```
 
 
@@ -153,29 +153,29 @@ Because of the web component specification that defines URLs to be always relati
 ### Angular
 
 Follow these steps:
-1. Copy/Paste the content of the integralui-web-lite/icons folder under /assets/integralui/icons subfolder in your React application. 
+1. Copy/Paste the content of the integralui-web/icons folder under /assets/integralui-web/icons subfolder in your React application. 
 2. Set the resourcePath property of IntegralUI Web components to point to the location set in your /assets folder. In this case, for TreeView for example:
 
 ```bash
-<iui-treeview [resourcePath]="'assets/integralui/icons'"></iui-treeview>
+<iui-treeview [resourcePath]="'assets/integralui-web/icons'"></iui-treeview>
 ```
 
 ### React
 
 Follow these steps:
-1. Copy/Paste the content of the integralui-web-lite/icons folder under /public/integralui/icons subfolder in your React application. 
+1. Copy/Paste the content of the integralui-web/icons folder under /public/integralui-web/icons subfolder in your React application. 
 2. Set the resourcePath property of IntegralUI Web components to point to the location set in your /public folder. In this case, for TreeView for example:
 
 ```bash
-<IntegralUITreeViewComponent resourcePath="integralui/icons"></IntegralUITreeViewComponent>
+<IntegralUITreeViewComponent resourcePath="integralui-web/icons"></IntegralUITreeViewComponent>
 ```
 
 ### Vanilla JavaScript
 
-Set the resourcePath property of IntegralUI Web components to point to /integralui-web-lite/icons folder. In this case, for TreeView for example:
+Set the resourcePath property of IntegralUI Web components to point to /integralui-web/icons folder. In this case, for TreeView for example:
 
 ```bash
-<iui-treeview resource-path="../../integralui-web-lite/icons"></iui-treeview>
+<iui-treeview resource-path="../../integralui-web/icons"></iui-treeview>
 ```
 
 
@@ -183,7 +183,7 @@ Set the resourcePath property of IntegralUI Web components to point to /integral
 
 There is a demo application with source code that contains samples for each component included in the IntegralUI Web Lite library. It can help you to get started quickly with learning about the components and write tests immediatelly. 
 
-From [IntegralUI Web Lite - QuickStart](https://www.lidorsystems.com/products/web/lite/#quickstart) you can download a demo app for Angular, React and Vanilla JavaScript. A detailed information about each of these quick-start demos is available in ReadMe file, located in the root folder of the demo app.
+From [IntegralUI Web - QuickStart](https://github.com/lidorsystems/integralui-web-quickstart) you can download a demo app for Angular, AngularJS, React and Vanilla JavaScript. A detailed information about each of these quick-start demos is available in ReadMe file, located in the root folder of the demo app.
 
 
 ## License Information
