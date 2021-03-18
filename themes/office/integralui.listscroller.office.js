@@ -1,0 +1,29 @@
+import { c as css } from '../../external/lit-element.js';
+
+export const iuiListScrollerOfficeStyle = css`
+    /* DisplayMode - LeftRight */
+    .iui-listscroller-leftright-buttons
+    {
+        background: #e2e2e2;
+        border: thin solid #e2e2e2;
+    }
+    .iui-listscroller-leftright-buttons:hover
+    {
+        background: #91c1e7;
+        border: thin solid #91c1e7;
+    }
+
+    /* DisplayMode - UpDown */
+    .iui-listscroller-updown-buttons
+    {
+        background: #e2e2e2;
+        border: thin solid #e2e2e2;
+    }
+    .iui-listscroller-updown-buttons:hover
+    {
+        background: #91c1e7;
+        border: thin solid #91c1e7;
+    }
+`;
+
+
