@@ -10,79 +10,79 @@ Here is a brief overview of what is included:
 
 ## Components
 
-[Accordion](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/accordion) - Displays a list of expandable groups in vertical layout
+[Accordion](https://www.lidorsystems.com/products/web/studio/samples/#/accordion) - Displays a list of expandable groups in vertical layout
 
-[AutoComplete](https://www.lidorsystems.com/products/web/studio/samples/angular/#/autocomplete) - Represents a text box with a dropdown list where you can choose among suggested options
+[AutoComplete](https://www.lidorsystems.com/products/web/studio/samples/#/autocomplete) - Represents a text box with a dropdown list where you can choose among suggested options
 
-[Breadcrumb](https://www.lidorsystems.com/products/web/studio/samples/angular/#/breadcrumb) - Used for navigation, where each item can have a link that is automatically separated
+[Breadcrumb](https://www.lidorsystems.com/products/web/studio/samples/#/breadcrumb) - Used for navigation, where each item can have a link that is automatically separated
 
-[Button](https://www.lidorsystems.com/products/web/studio/samples/angular/#/button) - Represents a button
+[Button](https://www.lidorsystems.com/products/web/studio/samples/#/button) - Represents a button
 
-[ButtonGroup](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/buttongroup) - Manages actions of multiple buttons arranged in group
+[ButtonGroup](https://www.lidorsystems.com/products/web/studio/samples/#/buttongroup) - Manages actions of multiple buttons arranged in group
 
-[Calendar](https://www.lidorsystems.com/products/web/studio/samples/angular/#/calendar) - Enables the user to select a date using a visual monthly calendar display
+[Calendar](https://www.lidorsystems.com/products/web/studio/samples/#/calendar) - Enables the user to select a date using a visual monthly calendar display
 
-[CheckBox](https://www.lidorsystems.com/products/web/studio/samples/angular/#/checkbox) - Represents a check box
+[CheckBox](https://www.lidorsystems.com/products/web/studio/samples/#/checkbox) - Represents a check box
 
-[ColorPicker](https://www.lidorsystems.com/products/web/studio/samples/angular/#/colorpicker) - Allows the user to select a color by using a drop-down panel with color palette and slider
+[ColorPicker](https://www.lidorsystems.com/products/web/studio/samples/#/colorpicker) - Allows the user to select a color by using a drop-down panel with color palette and slider
 
-[ContextMenu](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/contextmenu) - Represents a shortcut menu
+[ContextMenu](https://www.lidorsystems.com/products/web/studio/samples/#/contextmenu) - Represents a shortcut menu
 
-[ComboBox](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/combobox) - Advanced version of standard ComboBox element
+[ComboBox](https://www.lidorsystems.com/products/web/studio/samples/#/combobox) - Advanced version of standard ComboBox element
 
-[DatePicker](https://www.lidorsystems.com/products/web/studio/samples/angular/#/datepicker) - Allows the user to select a date by using a drop-down calendar
+[DatePicker](https://www.lidorsystems.com/products/web/studio/samples/#/datepicker) - Allows the user to select a date by using a drop-down calendar
 
-[Dialog](https://www.lidorsystems.com/products/web/studio/samples/angular/#/dialog) - Displays a modal window
+[Dialog](https://www.lidorsystems.com/products/web/studio/samples/#/dialog) - Displays a modal window
 
-[DropDown](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/dropdown) - Represents a dropdown window
+[DropDown](https://www.lidorsystems.com/products/web/studio/samples/#/dropdown) - Represents a dropdown window
 
-[DropDownButton](https://www.lidorsystems.com/products/web/studio/samples/angular/#/dropdownbutton) - Represents a button with option to show a dropdown list
+[DropDownButton](https://www.lidorsystems.com/products/web/studio/samples/#/dropdownbutton) - Represents a button with option to show a dropdown list
 
-[Grid](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/grid) - Displays tabular data sets
+[Grid](https://www.lidorsystems.com/products/web/studio/samples/#/grid) - Displays tabular data sets
 
-[GroupBox](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/groupbox) - An expandable container with header and content
+[GroupBox](https://www.lidorsystems.com/products/web/studio/samples/#/groupbox) - An expandable container with header and content
 
-[ListBar](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/listbar) - Displays a list of expandable groups with items
+[ListBar](https://www.lidorsystems.com/products/web/studio/samples/#/listbar) - Displays a list of expandable groups with items
 
-[ListBox](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/listbox) - Displays a collection of items with content in custom layouts
+[ListBox](https://www.lidorsystems.com/products/web/studio/samples/#/listbox) - Displays a collection of items with content in custom layouts
 
-[ListScroller](https://www.lidorsystems.com/products/web/studio/samples/angular/#/listscroller) - Displays a scrollable item list in horizontal or vertical layout
+[ListScroller](https://www.lidorsystems.com/products/web/studio/samples/#/listscroller) - Displays a scrollable item list in horizontal or vertical layout
 
-[ListView](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/listview) - Displays a collection of items using several different views
+[ListView](https://www.lidorsystems.com/products/web/studio/samples/#/listview) - Displays a collection of items using several different views
 
-[Menu](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/menu) - Allows you to create static or dynamic menus
+[Menu](https://www.lidorsystems.com/products/web/studio/samples/#/menu) - Allows you to create static or dynamic menus
 
-[NumericUpDown](https://www.lidorsystems.com/products/web/studio/samples/angular/#/numeric-updown) - Displays a numeric value and allows changes within a range of defined minimum and maximum values
+[NumericUpDown](https://www.lidorsystems.com/products/web/studio/samples/#/numeric-updown) - Displays a numeric value and allows changes within a range of defined minimum and maximum values
 
-[Paginator](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/paginator) - Allows you to divide the content in multiple views in single page
+[Paginator](https://www.lidorsystems.com/products/web/studio/samples/#/paginator) - Allows you to divide the content in multiple views in single page
 
-[Popover](https://www.lidorsystems.com/products/web/studio/samples/angular/#/popover) - Displays custom HTML content over specified element
+[Popover](https://www.lidorsystems.com/products/web/studio/samples/#/popover) - Displays custom HTML content over specified element
 
-[ProgressBar](https://www.lidorsystems.com/products/web/studio/samples/angular/#/progressbar) - Visualize the progression of an operation
+[ProgressBar](https://www.lidorsystems.com/products/web/studio/samples/#/progressbar) - Visualize the progression of an operation
 
-[RadioButton](https://www.lidorsystems.com/products/web/studio/samples/angular/#/radiobutton) - Represents a radio button
+[RadioButton](https://www.lidorsystems.com/products/web/studio/samples/#/radiobutton) - Represents a radio button
 
-[Rating](https://www.lidorsystems.com/products/web/studio/samples/angular/#/rating) - Visualizes ratings
+[Rating](https://www.lidorsystems.com/products/web/studio/samples/#/rating) - Visualizes ratings
 
-[SideBar](https://www.lidorsystems.com/products/web/studio/samples/angular/#/sidebar) - Allows you to add a custom content panel that appears by sliding from page side over main content
+[SideBar](https://www.lidorsystems.com/products/web/studio/samples/#/sidebar) - Allows you to add a custom content panel that appears by sliding from page side over main content
 
-[SlideBar](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/slidebar) - Animates slides composed of custom content
+[SlideBar](https://www.lidorsystems.com/products/web/studio/samples/#/slidebar) - Animates slides composed of custom content
 
-[Slider](https://www.lidorsystems.com/products/web/studio/samples/angular/#/slider) - Allows changes to a numeric value within a range of defined minimum and maximum values
+[Slider](https://www.lidorsystems.com/products/web/studio/samples/#/slider) - Allows changes to a numeric value within a range of defined minimum and maximum values
 
-[SplitContainer](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/splitcontainer) - Consists of two resizable panels separated by a splitter with tabs and command buttons
+[SplitContainer](https://www.lidorsystems.com/products/web/studio/samples/#/splitcontainer) - Consists of two resizable panels separated by a splitter with tabs and command buttons
 
-[Splitter](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/splitter) - Allows you to resize two block elements during run-time
+[Splitter](https://www.lidorsystems.com/products/web/studio/samples/#/splitter) - Allows you to resize two block elements during run-time
 
-[TabStrip](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/tabstrip) - Consists of multiple scrollable panels that share the same space 
+[TabStrip](https://www.lidorsystems.com/products/web/studio/samples/#/tabstrip) - Consists of multiple scrollable panels that share the same space 
 
-[Tooltip](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/tooltip) - Adds a tooltip to an element
+[Tooltip](https://www.lidorsystems.com/products/web/studio/samples/#/tooltip) - Adds a tooltip to an element
 
-[TreeGrid](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/treegrid) - Displays hierarchical data structures in multiple columns
+[TreeGrid](https://www.lidorsystems.com/products/web/studio/samples/#/treegrid) - Displays hierarchical data structures in multiple columns
 
-[TreeList](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/treelist) - Allows you to navigate through tree hierarchy showing only one list at a time
+[TreeList](https://www.lidorsystems.com/products/web/studio/samples/#/treelist) - Allows you to navigate through tree hierarchy showing only one list at a time
 
-[TreeView](https://www.lidorsystems.com/products/web/studio/samples/web-components/#/treeview) - Displays hierarchical data structures
+[TreeView](https://www.lidorsystems.com/products/web/studio/samples/#/treeview) - Displays hierarchical data structures
 
 
 ## Services
