@@ -101,12 +101,12 @@ All components are inheritable, you can further extend functionalities of specif
 
 ## Dependencies
 
-IntegralUI Web Lite is built on top of [LitElement](https://github.com/Polymer/lit-element). All necessary files from that library are already included in the /external subfolder of this repository.
+IntegralUI Web is built on top of [LitElement](https://github.com/Polymer/lit-element). All necessary files from that library are already included in the /external subfolder of this repository.
 
 
 ## DEMO
 
-[Online QuickStart App](https://www.lidorsystems.com/products/web/studio/samples/web-components/) - An online demo of each component included
+[Online QuickStart App](https://www.lidorsystems.com/products/web/studio/samples/) - An online demo of each component included
 
 
 ## Installation
