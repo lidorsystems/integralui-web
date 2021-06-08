@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiSideBarOfficeStyle = css`
+const iuiSideBarOfficeStyle = css`
     .iui-sidebar {
         background: var(--sidebar-background, white);
     }
@@ -16,3 +16,5 @@ export const iuiSideBarOfficeStyle = css`
         display: var(--sidebar-line-display, block);
     }
 `;
+
+export { iuiSideBarOfficeStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiSelectMidnightStyle = css`
+const iuiSelectMidnightStyle = css`
     .iui-select {
         background-color: #252526;
         border-color: #151515;
@@ -17,7 +17,7 @@ export const iuiSelectMidnightStyle = css`
         color: white;
     }
     .iui-select-header-expand-box {
-        background: #484848 !important;
+        background: #cccccc !important;
     }
 
     /* ComboBox DropDown Window */
@@ -34,8 +34,6 @@ export const iuiSelectMidnightStyle = css`
         background-color: #37373d;
         border: thin solid #37373d;
     }
-
-    .iui-select-header-expand-box {
-        background: #cccccc !important;
-    }
 `;
+
+export { iuiSelectMidnightStyle };

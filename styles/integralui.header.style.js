@@ -1,11 +1,14 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiHeaderDefaultStyle = css`
+const iuiHeaderDefaultStyle = css`
     /* Normal State */
     .iui-header
     {
         overflow: hidden;
         position: relative;
+    }
+    .iui-header:focus {
+        outline: none !important;
     }
     .iui-header-move-marker
     {
@@ -378,3 +381,5 @@ export const iuiHeaderDefaultStyle = css`
         100% { max-width: 0; }
     }
 `;
+
+export { iuiHeaderDefaultStyle };

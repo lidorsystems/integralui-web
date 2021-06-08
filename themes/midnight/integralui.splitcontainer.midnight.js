@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiSplitContainerMidnightStyle = css`
+const iuiSplitContainerMidnightStyle = css`
     .iui-splitcontainer-splitter {
         background: var(--splitcontainer-splitter-background, #3c3c3c);
         border: var(--splitcontainer-splitter-border, thin solid #151515);
@@ -38,3 +38,5 @@ export const iuiSplitContainerMidnightStyle = css`
         border-color: var(--splitcontainer-button-selected-border-color, #0e639c);
     }
 `;
+
+export { iuiSplitContainerMidnightStyle };

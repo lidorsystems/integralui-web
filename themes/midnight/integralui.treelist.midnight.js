@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiTreeListMidnightStyle = css`
+const iuiTreeListMidnightStyle = css`
     .iui-treelist {
         background: var(--treelist-background, #252526);
         border: var(--treelist-border, thin solid #151515);
@@ -20,3 +20,5 @@ export const iuiTreeListMidnightStyle = css`
         background: var(--treelist-header-animate-select-background, #124263);
     }
 `;
+
+export { iuiTreeListMidnightStyle };

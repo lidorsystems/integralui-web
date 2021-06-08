@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiSortingDefaultStyle = css`
+const iuiSortingDefaultStyle = css`
     .iui-sort-ascending
     {
         margin: 0;
@@ -34,3 +34,5 @@ export const iuiSortingDefaultStyle = css`
         background-image: url(../icons/sort-descending-white.ico);
     }
 `;
+
+export { iuiSortingDefaultStyle };

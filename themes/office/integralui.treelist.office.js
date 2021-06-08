@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiTreeListOfficeStyle = css`
+const iuiTreeListOfficeStyle = css`
     .iui-treelist {
         background: var(--treelist-background, white);
         border: var(--treelist-border, thin solid #d9d9d9);
@@ -13,3 +13,5 @@ export const iuiTreeListOfficeStyle = css`
         color: var(--treelist-header-color, white);
     }
 `;
+
+export { iuiTreeListOfficeStyle };

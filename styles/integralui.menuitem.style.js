@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiMenuItemDefaultStyle = css`
+const iuiMenuItemDefaultStyle = css`
     .iui-menu
     {
         background: #f5f5f5;
@@ -331,3 +330,5 @@ export const iuiMenuItemDefaultStyle = css`
         pointer-events: none;
     }
 `;
+
+export { iuiMenuItemDefaultStyle };

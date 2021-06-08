@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiButtonMidnightStyle = css`
+const iuiButtonMidnightStyle = css`
     .iui-button {
         background: var(--button-background, #0e639c);
         border: var(--button-hovered-border, thin solid #0e639c);
@@ -20,3 +20,5 @@ export const iuiButtonMidnightStyle = css`
         color: var(--button-selected-color, white);
     }
 `;
+
+export { iuiButtonMidnightStyle };

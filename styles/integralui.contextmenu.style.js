@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiContextMenuDefaultStyle = css`
+const iuiContextMenuDefaultStyle = css`
     .iui-contextmenu {
         background: #f5f5f5;
         border: solid thin #dedede;
@@ -32,3 +31,5 @@ export const iuiContextMenuDefaultStyle = css`
         width: 150px;
     }
 `;
+
+export { iuiContextMenuDefaultStyle };

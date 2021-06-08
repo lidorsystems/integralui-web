@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiListScrollerMidnightStyle = css`
+const iuiListScrollerMidnightStyle = css`
     /* DisplayMode - LeftRight */
     .iui-listscroller-leftright-buttons, .iui-listscroller-updown-buttons {
         background: transparent;
@@ -19,3 +19,5 @@ export const iuiListScrollerMidnightStyle = css`
         background: url(../../icons/expandbox-icons.png) no-repeat -48px 0;
     }
 `;
+
+export { iuiListScrollerMidnightStyle };

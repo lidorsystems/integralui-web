@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiTabStripDefaultStyle = css`
+const iuiTabStripDefaultStyle = css`
     .iui-tabstrip {
         background: var(--tabstrip-background, transparent);
         border: var(--tabstrip-border, 0);
@@ -141,3 +140,5 @@ export const iuiTabStripDefaultStyle = css`
         pointer-events: none;
     }
 `;
+
+export { iuiTabStripDefaultStyle };

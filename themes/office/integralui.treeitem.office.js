@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiTreeItemOfficeStyle = css`
+const iuiTreeItemOfficeStyle = css`
     .iui-treeitem {
         color: var(--treeitem-color, #646464);
     }
@@ -74,3 +74,5 @@ export const iuiTreeItemOfficeStyle = css`
         background-position: -64px 0;
     }
 `;
+
+export { iuiTreeItemOfficeStyle };

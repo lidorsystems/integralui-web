@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiNumericDefaultStyle = css`
+const iuiNumericDefaultStyle = css`
     .iui-numeric {
         background: white;
         color: black;
@@ -150,6 +150,12 @@ export const iuiNumericDefaultStyle = css`
         text-align: center;
     }
 
+    
+    .iui-numeric-inbound-value input, .iui-numeric-leftright-value input, .iui-numeric-updown-value input {
+        background: transparent;
+        border: 0;
+    }
+
 
     /* Disabled State */
     .iui-numeric-disabled div {
@@ -158,3 +164,4 @@ export const iuiNumericDefaultStyle = css`
     }
 `;
 
+export { iuiNumericDefaultStyle };

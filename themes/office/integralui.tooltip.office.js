@@ -1,4 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiTooltipOfficeStyle = css`
+const iuiTooltipOfficeStyle = css`
 `;
+
+export { iuiTooltipOfficeStyle };

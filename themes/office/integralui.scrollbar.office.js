@@ -1,4 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiScrollBarOfficeStyle = css`
+const iuiScrollBarOfficeStyle = css`
 `;
+
+export { iuiScrollBarOfficeStyle };

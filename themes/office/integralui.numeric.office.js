@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiNumericOfficeStyle = css`
+const iuiNumericOfficeStyle = css`
     .iui-numeric-inbound-btn {
         background: #e2e2e2;
         border: thin solid #e2e2e2;
@@ -30,3 +30,5 @@ export const iuiNumericOfficeStyle = css`
         border: thin solid #91c1e7;
     }
 `;
+
+export { iuiNumericOfficeStyle };

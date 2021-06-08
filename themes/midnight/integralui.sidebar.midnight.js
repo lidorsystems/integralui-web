@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiSideBarMidnightStyle = css`
+const iuiSideBarMidnightStyle = css`
     .iui-sidebar {
         background: var(--sidebar-background, #1e1e1e);
     }
@@ -21,3 +21,5 @@ export const iuiSideBarMidnightStyle = css`
         display: var(--sidebar-line-display, block);
     }
 `;
+
+export { iuiSideBarMidnightStyle };

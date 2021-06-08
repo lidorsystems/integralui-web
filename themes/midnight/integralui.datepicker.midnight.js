@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiDatePickerMidnightStyle = css`
+const iuiDatePickerMidnightStyle = css`
     .iui-datepicker {
         background-color: #252526;
         border-color: #151515;
@@ -17,6 +17,8 @@ export const iuiDatePickerMidnightStyle = css`
         color: white;
     }
     .iui-datepicker-header-expand-box {
-        background: #484848 !important;
+        background: #cccccc !important;
     }
 `;
+
+export { iuiDatePickerMidnightStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiItemMidnightStyle = css`
+const iuiItemMidnightStyle = css`
     .iui-item {
         color: var(--item-color, #cccccc);
     }
@@ -16,3 +16,5 @@ export const iuiItemMidnightStyle = css`
         color: var(--item-selected-color, white);
     }
 `;
+
+export { iuiItemMidnightStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiSplitterOfficeStyle = css`
+const iuiSplitterOfficeStyle = css`
     .iui-splitter-bar {
         background: var(--splitter-bar-background, #e5f3fe);
     }
@@ -19,3 +19,5 @@ export const iuiSplitterOfficeStyle = css`
         border: var(--splitter-panel-border, thin solid #d9d9d9);
     }
 `;
+
+export { iuiSplitterOfficeStyle };

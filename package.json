@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "21.1.0",
+  "version": "21.2.0",
   "description": "IntegralUI Web - Advanced UI Components for Angular, React and Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,15 +10,19 @@
     "url": "git+https://github.com/lidorsystems/integralui-web.git"
   },
   "keywords": [
-    "components",
+    "component",
     "integralui",
     "ui",
     "web",
-    "web-components",
+    "web-component",
+    "grid",
+    "treegrid",
+    "treeview",
     "javascript",
     "angular",
     "react",
-    "vue"
+    "vue",
+    "vuejs"
   ],
   "author": "Lidor Systems",
   "license": "SEE LICENSE in LICENSE.md",

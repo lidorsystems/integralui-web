@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiAccordionDefaultStyle = css`
+const iuiAccordionDefaultStyle = css`
     .iui-accordion {
         background: var(--accordion-background, transparent);
         border: var(--accordion-border, 0);
@@ -24,3 +24,5 @@ export const iuiAccordionDefaultStyle = css`
         pointer-events: none;
     }
 `;
+
+export { iuiAccordionDefaultStyle };

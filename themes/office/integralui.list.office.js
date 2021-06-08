@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiListOfficeStyle = css`
+const iuiListOfficeStyle = css`
     .iui-list
     {
         background: var(--list-background, white);
@@ -8,3 +8,5 @@ export const iuiListOfficeStyle = css`
         color: var(--list-color, black);
     }
 `;
+
+export { iuiListOfficeStyle };

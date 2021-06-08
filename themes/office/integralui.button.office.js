@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiButtonOfficeStyle = css`
+const iuiButtonOfficeStyle = css`
     .iui-button {
         background: var(--button-background, #e2e2e2);
         border: var(--button-hovered-border, thin solid #e2e2e2);
@@ -46,3 +46,5 @@ export const iuiButtonOfficeStyle = css`
         color: var(--button-selected-color, white);
     }
 `;
+
+export { iuiButtonOfficeStyle };

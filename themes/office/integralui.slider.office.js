@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiSliderOfficeStyle = css`
+const iuiSliderOfficeStyle = css`
     .iui-slider-background, .iui-slider-background-vertical {
         background: var(--slider-background-appearance, #5f8bde);
     }
@@ -9,3 +9,5 @@ export const iuiSliderOfficeStyle = css`
         border: var(--slider-button-border, 2px solid #5f8bde);
     }
 `;
+
+export { iuiSliderOfficeStyle };

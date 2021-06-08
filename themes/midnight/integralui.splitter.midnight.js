@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiSplitterMidnightStyle = css`
+const iuiSplitterMidnightStyle = css`
     .iui-splitter {
         color: var(--splitter-color, #cccccc);
     }
@@ -23,3 +23,5 @@ export const iuiSplitterMidnightStyle = css`
         border: var(--splitter-panel-border, thin solid #151515);
     }
 `;
+
+export { iuiSplitterMidnightStyle };

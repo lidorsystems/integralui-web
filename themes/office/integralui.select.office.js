@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiSelectOfficeStyle = css`
+const iuiSelectOfficeStyle = css`
     /* Header */
     .iui-select-header {
         border: thin solid #d9d9d9;
@@ -9,3 +9,5 @@ export const iuiSelectOfficeStyle = css`
         background: #0d7edb !important;
     }
 `;
+
+export { iuiSelectOfficeStyle };

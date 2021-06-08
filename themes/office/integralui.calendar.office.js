@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiCalendarOfficeStyle = css`
+const iuiCalendarOfficeStyle = css`
     .iui-calendar-cell-hovered, .iui-calendar-cell-grayed:hover {
         background: #e5f3fe;
         border-color: #e5f3fe;
@@ -34,3 +34,5 @@ export const iuiCalendarOfficeStyle = css`
         }
     }
 `;
+
+export { iuiCalendarOfficeStyle };

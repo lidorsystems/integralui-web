@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiMidnightStyle = css`
+const iuiMidnightStyle = css`
     .iui-header-expand-box {
         opacity: 0.75;
     }
@@ -36,3 +36,5 @@ export const iuiMidnightStyle = css`
         color: white;
     }
 `;
+
+export { iuiMidnightStyle };

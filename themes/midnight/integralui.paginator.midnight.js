@@ -1,8 +1,8 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiPaginatorMidnightStyle = css`
+const iuiPaginatorMidnightStyle = css`
     .iui-paginator {
-        background: var(--paginator-background, transparent);
+        background: var(--paginator-background, #252526);
     }
     .iui-paginator-button {
         background-color: var(--paginator-button-background-color, #0e639c);
@@ -16,4 +16,9 @@ export const iuiPaginatorMidnightStyle = css`
         border: var(--paginator-input-border, thin solid #151515);
         color: var(--paginator-input-color, #cecece);
     }
+    .iui-paginator-label {
+        color: #cecece;
+    }
 `;
+
+export { iuiPaginatorMidnightStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiListItemDefaultStyle = css`
+const iuiListItemDefaultStyle = css`
     .iui-listitem {
         background: var(--listitem-background, transparent);
         border: var(--listitem-border, 2px solid transparent);
@@ -181,3 +181,5 @@ export const iuiListItemDefaultStyle = css`
         }
     }
 `;
+
+export { iuiListItemDefaultStyle };

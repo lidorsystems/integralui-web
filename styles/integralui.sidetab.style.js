@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiTabDefaultStyle = css`
+const iuiTabDefaultStyle = css`
     .iui-tab-header
     {
         background: var(--tab-header-background, transparent);
@@ -71,3 +70,5 @@ export const iuiTabDefaultStyle = css`
         pointer-events: none;
     }
 `;
+
+export { iuiTabDefaultStyle };

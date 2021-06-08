@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiNumericMidnightStyle = css`
+const iuiNumericMidnightStyle = css`
     .iui-numeric {
         background: transparent;
     }
@@ -59,4 +59,11 @@ export const iuiNumericMidnightStyle = css`
         border: thin solid #151515;
         color: #cecece;
     }
+
+    
+    .iui-numeric-inbound-value input, .iui-numeric-leftright-value input, .iui-numeric-updown-value input {
+        color: #cecece;
+    }
 `;
+
+export { iuiNumericMidnightStyle };

@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiSideBarDefaultStyle = css`
+const iuiSideBarDefaultStyle = css`
     .iui-sidebar {
         background: var(--sidebar-background, transparent);
         border: var(--sidebar-border, 0);
@@ -59,3 +58,5 @@ export const iuiSideBarDefaultStyle = css`
         pointer-events: none;
     }
 `;
+
+export { iuiSideBarDefaultStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiListScrollerDefaultStyle = css`
+const iuiListScrollerDefaultStyle = css`
     .iui-listscroller {
         color: black;
         cursor: default;
@@ -131,3 +131,4 @@ export const iuiListScrollerDefaultStyle = css`
     }
 `;
 
+export { iuiListScrollerDefaultStyle };

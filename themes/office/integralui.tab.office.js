@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiTabOfficeStyle = css`
+const iuiTabOfficeStyle = css`
     .iui-tab-header
     {
         background: var(--tab-header-background, transparent);
@@ -41,3 +41,5 @@ export const iuiTabOfficeStyle = css`
         border: var(--tab-content-border, 0);
     }
 `;
+
+export { iuiTabOfficeStyle };

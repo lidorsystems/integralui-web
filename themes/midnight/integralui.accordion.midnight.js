@@ -1,4 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiAccordionMidnightStyle = css`
+const iuiAccordionMidnightStyle = css`
 `;
+
+export { iuiAccordionMidnightStyle };

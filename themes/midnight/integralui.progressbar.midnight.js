@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiProgressBarMidnightStyle = css`
+const iuiProgressBarMidnightStyle = css`
     .iui-progressbar {
         background: var(--progressbar-background, #272a2b);
         border: var(--progressbar-border, thin solid #151515);
@@ -9,3 +9,5 @@ export const iuiProgressBarMidnightStyle = css`
         background: var(--progressbar-content-background, #0a4369);
     }
 `;
+
+export { iuiProgressBarMidnightStyle };

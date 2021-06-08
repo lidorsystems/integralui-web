@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiCalendarDefaultStyle = css`
+const iuiCalendarDefaultStyle = css`
     .iui-calendar {
         background: white;
         border: thin solid #cecece;
@@ -133,3 +133,5 @@ export const iuiCalendarDefaultStyle = css`
         }
     }
 `;
+
+export { iuiCalendarDefaultStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiDragWinDefaultStyle = css`
+const iuiDragWinDefaultStyle = css`
     .iui-dragwin
     {
         background: -webkit-linear-gradient(white, #F1EFEC);
@@ -94,3 +94,5 @@ export const iuiDragWinDefaultStyle = css`
         visibility: hidden;
     }
 `;
+
+export { iuiDragWinDefaultStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiTabStripMidnightStyle = css`
+const iuiTabStripMidnightStyle = css`
     .iui-tabstrip {
         background: var(--tabstrip-background, #1e1e1e);
     }
@@ -59,3 +59,5 @@ export const iuiTabStripMidnightStyle = css`
         background-image: var(--tabstrip-scroll-button-down-background-image, url(../icons/down-white-24.png));
     }
 `;
+
+export { iuiTabStripMidnightStyle };

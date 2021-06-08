@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiTreeItemDefaultStyle = css`
+const iuiTreeItemDefaultStyle = css`
     .iui-treeitem
     .iui-treeitem {
         background: var(--treeitem-background, transparent);
@@ -163,3 +163,5 @@ export const iuiTreeItemDefaultStyle = css`
         position: relative;
     }
 `;
+
+export { iuiTreeItemDefaultStyle };

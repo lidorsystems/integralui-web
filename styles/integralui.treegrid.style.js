@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiTreeGridDefaultStyle = css`
+const iuiTreeGridDefaultStyle = css`
     .iui-treegrid
     {
         background: var(--treegrid-background, white);
@@ -78,6 +77,7 @@ export const iuiTreeGridDefaultStyle = css`
     .iui-treegrid-block-top-left
     {
         background: transparent;
+        pointer-events: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -251,7 +251,7 @@ export const iuiTreeGridDefaultStyle = css`
         display: inline-block;
         width: 16px;
         height: 16px;
-        margin: 2px 3px 0 0;
+        margin: var(--treegrid-expand-box-margin, 2px 3px 0 0);
         vertical-align: top;
     }
     .iui-treegrid-enter .iui-treegrid-expand-box {
@@ -657,3 +657,5 @@ export const iuiTreeGridDefaultStyle = css`
         width: var(--treegrid-handle-width, 16px);
     }
 `;
+
+export { iuiTreeGridDefaultStyle };

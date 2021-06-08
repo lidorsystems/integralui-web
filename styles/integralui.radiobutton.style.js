@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiRadioButtonDefaultStyle = css`
+const iuiRadioButtonDefaultStyle = css`
     .iui-radio-button {
         background: var(--radio-button-background, transparent);
         border: var(--radio-button-border, 0);
@@ -59,3 +58,5 @@ export const iuiRadioButtonDefaultStyle = css`
         opacity: var(--radio-button-btn-disabled-opacity, 0.75);
     }
 `;
+
+export { iuiRadioButtonDefaultStyle };

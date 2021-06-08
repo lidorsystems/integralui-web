@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiGridOfficeStyle = css`
+const iuiGridOfficeStyle = css`
     .iui-grid
     {
         border: thin solid #d9d9d9;
@@ -228,3 +228,5 @@ export const iuiGridOfficeStyle = css`
         background-position: -32px -128px !important;
     }
 `;
+
+export { iuiGridOfficeStyle };

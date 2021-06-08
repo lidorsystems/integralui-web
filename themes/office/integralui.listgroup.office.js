@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiListGroupOfficeStyle = css`
+const iuiListGroupOfficeStyle = css`
     /* Header Normal State */
     .iui-listgroup-header
     {
@@ -72,3 +72,5 @@ export const iuiListGroupOfficeStyle = css`
         background: var(--listgroup-header-animate-select-background, #d9edfd);
     }
 `;
+
+export { iuiListGroupOfficeStyle };

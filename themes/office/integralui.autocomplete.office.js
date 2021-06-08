@@ -1,4 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiAutoCompleteOfficeStyle = css`
+const iuiAutoCompleteOfficeStyle = css`
 `;
+
+export { iuiAutoCompleteOfficeStyle };

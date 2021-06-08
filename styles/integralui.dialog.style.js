@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiDialogDefaultStyle = css`
+const iuiDialogDefaultStyle = css`
     .iui-dialog {
         background-color: #ffffff;
         box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
@@ -98,3 +97,5 @@ export const iuiDialogDefaultStyle = css`
         100% { opacity: 0.2; }
     }
 `;
+
+export { iuiDialogDefaultStyle };

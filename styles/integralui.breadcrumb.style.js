@@ -6,6 +6,7 @@ const iuiBreadCrumbDefaultStyle = css`
         border:  var(--breadcrumb-border, thin solid #cecece);
         border-color:  var(--breadcrumb-border-color, #cecece);
         cursor:  var(--breadcrumb-cursor, default);
+        margin:  var(--breadcrumb-margin, 0);
         overflow: hidden;
         padding: 1px;
         position: relative;
@@ -65,7 +66,7 @@ const iuiBreadCrumbDefaultStyle = css`
         display: inline-block;
         float: left;
         height: calc(100% - 8px);
-        margin: 0;
+        margin:  var(--breadcrumb-item-content-margin, 0);
         padding: 3px;
         position: relative;
         white-space: nowrap;

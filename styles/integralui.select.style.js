@@ -10,6 +10,7 @@ const iuiSelectDefaultStyle = css`
         overflow: hidden;
         padding: 0;
         position: relative;
+        vertical-align: var(--select-vertical-align, middle);
         width: var(--select-width, auto);
     }
     .iui-select:focus {
@@ -21,6 +22,9 @@ const iuiSelectDefaultStyle = css`
         border: thin solid #cecece;
         padding: var(--select-header-padding, 3px);
         white-space: nowrap;
+    }
+    .iui-select-header:focus {
+        outline: none !important;
     }
     .iui-select-header-hovered {
         background: transparent;

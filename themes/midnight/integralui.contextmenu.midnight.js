@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiContextMenuMidnightStyle = css`
+const iuiContextMenuMidnightStyle = css`
     .iui-contextmenu {
         background-color: #252526;
         border: solid thin #151515;
@@ -11,14 +11,22 @@ export const iuiContextMenuMidnightStyle = css`
         background: #252526;
         border: solid thin #151515;
     }
-    .iui-contextmenu .iui-menuitem-root {
+    .iui-contextmenuitem-root {
         border-color: transparent;
         color: #cccccc;
     }
-    .iui-contextmenu .iui-menuitem-root-hovered, .iui-contextmenu .iui-menuitem-root-selected {
+    .iui-contextmenuitem-root-hovered, .iui-contextmenuitem-root-selected {
         animation-name: none;
         background-color: #1177bb !important;
         border-color: #1177bb !important;
         color: white;
     }
+    .iui-contextmenuitem-root-separator, .iui-contextmenuitem-separator {
+        background-color: #252526;
+    }
+    .iui-contextmenuitem-root-separator > hr, .iui-contextmenuitem-separator > hr {
+        background-color: #151515;
+    }
 `;
+
+export { iuiContextMenuMidnightStyle };

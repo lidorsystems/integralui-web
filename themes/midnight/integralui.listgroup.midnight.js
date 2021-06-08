@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiListGroupMidnightStyle = css`
+const iuiListGroupMidnightStyle = css`
     .iui-listgroup {
         background: var(--listgroup-background, #252526);
         color: var(--listgroup-color, #cccccc);
@@ -73,3 +73,5 @@ export const iuiListGroupMidnightStyle = css`
         background: var(--listgroup-header-animate-select-background, #113d5c);
     }
 `;
+
+export { iuiListGroupMidnightStyle };

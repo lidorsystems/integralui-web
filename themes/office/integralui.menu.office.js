@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiMenuOfficeStyle = css`
+const iuiMenuOfficeStyle = css`
     .iui-menu {
         background-color: #2455b0;
     }
@@ -8,3 +8,5 @@ export const iuiMenuOfficeStyle = css`
         background-color: #2455b0;
     }
 `;
+
+export { iuiMenuOfficeStyle };

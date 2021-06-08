@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiTreeItemMidnightStyle = css`
+const iuiTreeItemMidnightStyle = css`
     .iui-treeitem {
         color: var(--treeitem-color, #cccccc);
     }
@@ -81,3 +81,5 @@ export const iuiTreeItemMidnightStyle = css`
         background-position: -48px 0;
     }
 `;
+
+export { iuiTreeItemMidnightStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiGridMidnightStyle = css`
+const iuiGridMidnightStyle = css`
     .iui-grid
     {
         background-color: #252526;
@@ -276,3 +276,5 @@ export const iuiGridMidnightStyle = css`
         background-image: var(--treegrid-background-image, url(../icons/grab-white.ico));
     }
 `;
+
+export { iuiGridMidnightStyle };

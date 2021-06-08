@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiListBoxDefaultStyle = css`
+const iuiListBoxDefaultStyle = css`
     .iui-listbox
     {
         background: var(--listbox-background, white);
@@ -48,3 +48,5 @@ export const iuiListBoxDefaultStyle = css`
         pointer-events: none;
     }
 `;
+
+export { iuiListBoxDefaultStyle };

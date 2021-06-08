@@ -1,7 +1,6 @@
-
 import { c as css } from '../external/lit-element.js';
 
-export const iuiGridDefaultStyle = css`
+const iuiGridDefaultStyle = css`
     .iui-grid
     {
         background: var(--grid-background, white);
@@ -78,6 +77,7 @@ export const iuiGridDefaultStyle = css`
     .iui-grid-block-top-left
     {
         background: transparent;
+        pointer-events: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -793,3 +793,5 @@ export const iuiGridDefaultStyle = css`
         width: var(--grid-handle-width, 16px);
     }
 `;
+
+export { iuiGridDefaultStyle };

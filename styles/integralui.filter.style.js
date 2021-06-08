@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiFilterDefaultStyle = css`
+const iuiFilterDefaultStyle = css`
     .iui-filter-window
     {
         background: #efefef;
@@ -29,3 +29,5 @@ export const iuiFilterDefaultStyle = css`
         background-image: url(../icons/filter-white.ico);
     }
 `;
+
+export { iuiFilterDefaultStyle };

@@ -1,3 +1,24 @@
+v21.2
+- New component: PivotGrid
+- Improved performance during data load and update
+- PivotGrid includes advanced filtering options for labels and values
+- Sorting of columns, rows and data values is available
+- Export data from PivotGrid to Excel CSV and JSON format
+- Custom templates for column and row cells in PivotGrid
+- Support for standard numeric and date formats in PivotGrid
+- Multi-level headers with option to expand/collapse columns
+- PivotGrid comes in light and dark theme
+- Option to set header and footer height from code in Grid components
+- CommonService now provides support for conversion of numbers, dates and strings in standard formats
+- Scrolling using Touch in Grid and TreeGrid is now fully functional
+- findItembyId and findItemByText methods added to TreeList
+- Expand/Collapse of group items in TreeList now properly updates the view
+- Header is now correctly set on selection when TreeList has groups
+- Fixed the issue that prevented selecting Breadcrumb items from top line
+- Fixed the issue that caused incorrect subheader titles during horizontal scrolling in Grid and TreeGrid
+- Sort order indicator is now displayed also when column is sorted, regardless whether it is selected or not
+- Fixed the bug that caused incorrect sorting column when there are multi-level headers
+
 v21.1
 - IntegralUI Web now includes 40+ native Web Components that you can use in Angular, React, Vue or any other framework
 - New Web Components: Grid, TreeGrid and DropDownButton

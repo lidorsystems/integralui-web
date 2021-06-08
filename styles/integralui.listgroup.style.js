@@ -1,6 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
-export const iuiListGroupDefaultStyle = css`
+const iuiListGroupDefaultStyle = css`
     .iui-listgroup
     {
         background: var(--listgroup-background, white);
@@ -95,3 +95,5 @@ export const iuiListGroupDefaultStyle = css`
         pointer-events: none;
     }
 `;
+
+export { iuiListGroupDefaultStyle };

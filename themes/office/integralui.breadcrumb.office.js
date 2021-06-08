@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiBreadCrumbOfficeStyle = css`
+const iuiBreadCrumbOfficeStyle = css`
     .iui-breadcrumb {
         background:  var(--breadcrumb-background, white);
         border-color:  var(--breadcrumb-border-color, #cecece);
@@ -42,7 +42,7 @@ export const iuiBreadCrumbOfficeStyle = css`
         display: inline-block;
         float: left;
         height: calc(100% - 8px);
-        margin: 0;
+        margin:  var(--breadcrumb-item-content-margin, 0);
         padding: 3px;
         position: relative;
         white-space: nowrap;
@@ -205,3 +205,5 @@ export const iuiBreadCrumbOfficeStyle = css`
         pointer-events: none;
     }
 `;
+
+export { iuiBreadCrumbOfficeStyle };

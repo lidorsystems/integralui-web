@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-export const iuiGroupBoxOfficeStyle = css`
+const iuiGroupBoxOfficeStyle = css`
     /* Normal State */
     .iui-groupbox-header {
         background: var(--groupbox-header-background, #e2e2e2);
@@ -71,3 +71,4 @@ export const iuiGroupBoxOfficeStyle = css`
     }
 `;
 
+export { iuiGroupBoxOfficeStyle };
