@@ -133,6 +133,19 @@ Open your application and add a reference to a component you want to use. For ex
 import 'integralui-web/components/integralui.treeview.js';
 ```
 
+Depending on current version of TypeScript, you may need to add some settings in tsconfig.json, under "angularCompilerOptions":
+
+```bash"angularCompilerOptions": {
+
+    . . .
+
+    "suppressImplicitAnyIndexErrors": true,     // solves implicit any values
+    "noImplicitAny": false,             // solves angular could not find a declaration file for module implicitly has an 'any' type
+    "strictNullChecks": false           // solves type null is not assignable to type
+
+}
+```
+
 ### React
 
 ```bash
@@ -160,19 +173,6 @@ Follow these steps:
 
 ```bash
 <iui-treeview [resourcePath]="'assets/integralui-web/icons'"></iui-treeview>
-```
-
-Depending on current version of TypeScript, you may need to add some settings in tsconfig.json, under "angularCompilerOptions":
-
-```bash"angularCompilerOptions": {
-
-    . . .
-
-    "suppressImplicitAnyIndexErrors": true,     // solves implicit any values
-    "noImplicitAny": false,             // solves angular could not find a declaration file for module implicitly has an 'any' type
-    "strictNullChecks": false           // solves type null is not assignable to type
-
-}
 ```
 
 ### React
