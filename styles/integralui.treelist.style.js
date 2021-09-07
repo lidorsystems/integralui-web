@@ -4,13 +4,20 @@ const iuiTreeListDefaultStyle = css`
     .iui-treelist {
         background: var(--treelist-background, #efefef);
         border: var(--treelist-border, thin solid #cecece);
+        border-color:  var(--treelist-border-color, #cecece);
+        border-radius: var(--treelist-border-radius, 1px);
         border-width: var(--treelist-border-width, thin);
         color: var(--treelist-color, #323232);
         cursor: var(--treelist-cursor, default);
-        overflow: hidden;
+        display: var(--treelist-display, block);
+        float: var(--treelist-float, none);
+        height: var(--treelist-height, auto);
         margin: var(--treelist-margin, 0);
+        opacity: var(--treelist-opacity, 1);
+        overflow: hidden;
         padding: var(--treelist-padding, 1px);
-        position: relative;
+        position: var(--treelist-position, relative);
+        width: var(--treelist-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

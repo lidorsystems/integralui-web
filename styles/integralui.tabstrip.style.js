@@ -4,12 +4,20 @@ const iuiTabStripDefaultStyle = css`
     .iui-tabstrip {
         background: var(--tabstrip-background, transparent);
         border: var(--tabstrip-border, 0);
+        border-color:  var(--tabstrip-border-color, transparent);
+        border-radius: var(--tabstrip-border-radius, 1px);
+        border-width: var(--tabstrip-border-width, thin);
         color: var(--tabstrip-color, black);
         cursor: var(--tabstrip-cursor, default);
-        overflow: hidden;
+        display: var(--tabstrip-display, block);
+        float: var(--tabstrip-float, none);
+        height: var(--tabstrip-height, auto);
         margin: var(--tabstrip-margin, 0);
+        opacity: var(--tabstrip-opacity, 1);
+        overflow: hidden;
         padding: var(--tabstrip-padding, 0);
-        position: relative;
+        position: var(--tabstrip-position, relative);
+        width: var(--tabstrip-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

@@ -1,10 +1,10 @@
-# IntegralUI Web, v21.2
+# IntegralUI Web, v21.3
 
 IntegralUI Web includes 40+ native Web Components and services that can help you build modern web applications. 
 
 <b>Note</b>  Older version of IntegralUI Web that was built specifically for Angular is available here: [IntegralUI Web for Angular](https://github.com/lidorsystems/integralui-web-angular).
 
-![IntegralUI Web 21.2 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
+![IntegralUI Web 21.3 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 
@@ -160,6 +160,19 @@ Follow these steps:
 
 ```bash
 <iui-treeview [resourcePath]="'assets/integralui-web/icons'"></iui-treeview>
+```
+
+Depending on current version of TypeScript, you may need to add some settings in tsconfig.json, under "angularCompilerOptions":
+
+```bash"angularCompilerOptions": {
+
+    . . .
+
+    "suppressImplicitAnyIndexErrors": true,     // solves implicit any values
+    "noImplicitAny": false,             // solves angular could not find a declaration file for module implicitly has an 'any' type
+    "strictNullChecks": false           // solves type null is not assignable to type
+
+}
 ```
 
 ### React

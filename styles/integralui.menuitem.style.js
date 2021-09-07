@@ -1,13 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiMenuItemDefaultStyle = css`
-    .iui-menu
-    {
-        background: #f5f5f5;
-        border: 0;
-        cursor: default;
-        padding: 0;
-        position: relative;
+    .iui-menu {
+        background: var(--menu-background, #f5f5f5);
+        border: var(--menu-border, 0);
+        border-color:  var(--menu-border-color, transparent);
+        border-radius: var(--menu-border-radius, 1px);
+        border-width: var(--menu-border-width, thin);
+        color: var(--menu-color, black);
+        cursor: var(--menu-cursor, default);
+        display: var(--menu-display, block);
+        float: var(--menu-float, none);
+        height: var(--menu-height, auto);
+        margin: var(--menu-margin, 0);
+        opacity: var(--menu-opacity, 1);
+        overflow: hidden;
+        padding: var(--menu-padding, 0);
+        position: var(--menu-position, relative);
+        width: var(--menu-width, auto);
     }
     .iui-menu-block, .iui-menuitem-block, .iui-contextmenuitem-block
     {
@@ -56,12 +66,12 @@ const iuiMenuItemDefaultStyle = css`
     }
     .iui-menuitem-root-hovered, .iui-menuitem-root-selected, .iui-contextmenuitem-root-hovered, .iui-contextmenuitem-root-selected
     {
-        background-color: #e5e5e5;
+        background: #e5e5e5;
         border-color: #dedede;
     }
     .iui-menuitem-hovered, .iui-menuitem-selected, .iui-contextmenuitem-hovered, .iui-contextmenuitem-root-selected
     {
-        background-color: #ededed;
+        background: #ededed;
         border-color: #e5e5e5;
     }
     .iui-menuitem-root-content, .iui-contextmenuitem-root-content
@@ -294,7 +304,7 @@ const iuiMenuItemDefaultStyle = css`
     }
     .iui-menuitem-root-separator > hr, .iui-menuitem-separator > hr, .iui-contextmenuitem-root-separator > hr, .iui-contextmenuitem-separator > hr
     {
-        background-color: #e5e5e5;
+        background: #e5e5e5;
         border: 0;
         margin: 0;
         padding: 0;

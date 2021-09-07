@@ -4,13 +4,17 @@ const iuiButtonDefaultStyle = css`
     .iui-button {
         background: var(--button-background, #e5e5e5);
         border: var(--button-border, thin solid #cecece);
-        border-color: var(--button-border-color, #cecece);
+        border-color:  var(--button-border-color, #cecece);
         border-radius: var(--button-border-radius, 3px);
+        border-width: var(--button-border-width, thin);
         color: var(--button-color, black);
         cursor: var(--button-cursor, default);
         display: var(--button-display, inline-block);
-        margin: var(--button-margin, 0);
+        float: var(--button-float, none);
+        height: var(--button-height, auto);
+        opacity: var(--button-opacity, 1);
         overflow: hidden;
+        margin: var(--button-margin, 0);
         padding: var(--button-padding, 5px);
         position: relative;
         text-align: var(--button-text-align, center);

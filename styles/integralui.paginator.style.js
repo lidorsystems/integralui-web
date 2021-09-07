@@ -4,12 +4,21 @@ const iuiPaginatorDefaultStyle = css`
     .iui-paginator {
         background: var(--paginator-background, #f0f0f0);
         border: var(--paginator-border, 0);
+        border-color:  var(--paginator-border-color, transparent);
+        border-radius: var(--paginator-border-radius, 1px);
+        border-width: var(--paginator-border-width, thin);
         color: var(--paginator-color, black);
         cursor: var(--paginator-cursor, default);
+        display: var(--paginator-display, block);
+        float: var(--paginator-float, none);
+        height: var(--paginator-height, auto);
         margin: var(--paginator-margin, 1px 0);
+        opacity: var(--paginator-opacity, 1);
+        overflow: hidden;
         padding: var(--paginator-padding, 3px 3px 0px 3px);
-        position: relative;
+        position: var(--paginator-position, relative);
         white-space: nowrap;
+        width: var(--paginator-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

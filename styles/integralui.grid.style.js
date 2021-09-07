@@ -1,19 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiGridDefaultStyle = css`
-    .iui-grid
-    {
+    .iui-grid {
         background: var(--grid-background, white);
         border: var(--grid-border, thin solid #cecece);
-        border-radius: var(--grid-border-radius, 3px);
+        border-color:  var(--grid-border-color, #cecece);
+        border-radius: var(--grid-border-radius, 1px);
+        border-width: var(--grid-border-width, thin);
         color: var(--grid-color, black);
         cursor: var(--grid-cursor, default);
         display: var(--grid-display, block);
         float: var(--grid-float, none);
-        overflow: hidden;
+        height: var(--grid-height, auto);
         margin: var(--grid-margin, 0);
+        opacity: var(--grid-opacity, 1);
+        overflow: hidden;
         padding: var(--grid-padding, 0);
-        position: relative;
+        position: var(--grid-position, relative);
+        width: var(--grid-width, auto);
         
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -22,32 +26,27 @@ const iuiGridDefaultStyle = css`
         -ms-user-select: none;
         user-select: none;
     }
-    .iui-grid table
-    {
-        color: black;
+    .iui-grid table {
+        color: var(--grid-color, black);
     }
-    .iui-grid div /*Compatibility with Bootstrap */
-    {
+    .iui-grid div { /*Compatibility with Bootstrap */
         -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: content-box;    /* Firefox, other Gecko */
         box-sizing: content-box; 
     }
-    .iui-grid-rtl
-    {
+    .iui-grid-rtl {
         direction: rtl;
     }
-    .iui-grid-block
-    {
-        background: white;
+    .iui-grid-block {
+        background: var(--grid-background, #white);
         margin: 0;
         overflow: hidden;
         padding: 0;
         position: relative;
         z-index: 0;
     }
-    .iui-grid-block-left
-    {
-        background: #f5f5f5;
+    .iui-grid-block-left {
+        background: var(--grid-block-fixed-background, #f5f5f5);
         left: 0;
         margin: 0;
         overflow: hidden;
@@ -56,9 +55,8 @@ const iuiGridDefaultStyle = css`
         top: 0;
         z-index: 4;
     }
-    .iui-grid-block-right
-    {
-        background: #f5f5f5;
+    .iui-grid-block-right {
+        background: var(--grid-block-fixed-background, #f5f5f5);
         margin: 0;
         overflow: hidden;
         padding: 0;
@@ -67,15 +65,13 @@ const iuiGridDefaultStyle = css`
         top: 0;
         z-index: 3;
     }
-    .iui-grid-block-top
-    {
+    .iui-grid-block-top {
         position: absolute;
         top: 0;
         left: 0;
         z-index: 10;
     }
-    .iui-grid-block-top-left
-    {
+    .iui-grid-block-top-left {
         background: transparent;
         pointer-events: none;
         position: absolute;
@@ -83,37 +79,32 @@ const iuiGridDefaultStyle = css`
         left: 0;
         z-index: 12;
     }
-    .iui-grid-block-top-right
-    {
+    .iui-grid-block-top-right {
         background: transparent;
         position: absolute;
         top: 0;
         right: 0;
         z-index: 11;
     }
-    .iui-grid-block-bottom
-    {
+    .iui-grid-block-bottom {
         bottom: 0;
         left: 0;
         position: absolute;
         z-index: 7;
     }
-    .iui-grid-block-bottom-left
-    {
+    .iui-grid-block-bottom-left {
         position: absolute;
         bottom: 0;
         left: 0;
         z-index: 9;
     }
-    .iui-grid-block-bottom-right
-    {
+    .iui-grid-block-bottom-right {
         position: absolute;
         bottom: 0;
         right: 0;
         z-index: 8;
     }
-    .iui-grid-block-middle
-    {
+    .iui-grid-block-middle {
         position: absolute;
         top: 0;
         left: 0;
@@ -134,30 +125,26 @@ const iuiGridDefaultStyle = css`
         top: 0;
         z-index: 5;
     }
-    .iui-grid-block-shift-left
-    {
+    .iui-grid-block-shift-left {
         /*margin-left: 16px !important;*/
         padding-left: 15px;
     }
-    .iui-grid-block-shift-right
-    {
+    .iui-grid-block-shift-right {
         margin-right: 16px;
     }
-    .iui-grid-row-block
-    {
+    .iui-grid-row-block {
         padding: 0 0 0 15px;
     }
-    .iui-grid-row-block-rtl
-    {
+    .iui-grid-row-block-rtl {
         padding: 0 15px 0 0;
     }
-    .iui-grid-column-header, .iui-grid-column-footer
-    {
-        background-color: #ededed;
-        border: thin solid #d5d5d5;
-        color: black;
+    .iui-grid-column-header, .iui-grid-column-footer {
+        background: var(--grid-column-background, #ededed);
+        border: var(--grid-column-border, thin solid #d5d5d5);
+        border-color: var(--grid-column-border-color, #d5d5d5);
+        color: var(--grid-column-color, black);
         margin: 0;
-        padding: 3px 0;
+        padding: var(--grid-column-padding, 3px 0);
         position: relative;
         vertical-align:middle;
         white-space: nowrap;
@@ -167,23 +154,22 @@ const iuiGridDefaultStyle = css`
     .iui-grid-block-top-left .iui-grid-column-footer, 
     .iui-grid-block-top-right .iui-grid-column-header, 
     .iui-grid-block-top-right .iui-grid-column-footer {
-        background-color: #dddddd;
+        background: var(--grid-column-fixed-background, #dddddd);
         border: thin solid #c5c5c5;
     }
-    .iui-grid-column-header-hovered
-    {
-        background-color: #d5d5d5;
-        border-color: #cecece;
-        color: black;
+    .iui-grid-column-header-hovered {
+        animation-name: var(--grid-column-header-hovered-animation-name, none);
+        background: var(--grid-column-header-hovered-background, #d5d5d5);
+        border-color: var(--grid-colum-header-hovered-border-color, #cecece);
+        color: var(--grid-column-header-hovered-color, black);
     }
-    .iui-grid-column-header-selected
-    {
-        background-color: #bebebe;
-        border: thin solid #aeaeae;
-        color: black;
+    .iui-grid-column-header-selected {
+        animation-name: var(--grid-column-header-selected-animation-name, none);
+        background: var(--grid-column-header-selected-background, #bebebe);
+        border-color: var(--grid-colum-header-selected-border-color, #aeaeae);
+        color: var(--grid-column-header-selected-color, black);
     }
-    .iui-grid-column-header > div, .iui-grid-column-footer > div, .iui-grid-row-cell > div
-    {
+    .iui-grid-column-header > div, .iui-grid-column-footer > div, .iui-grid-row-cell > div {
         border: 2px solid transparent;
         margin: 0;
         padding: 2px;
@@ -193,35 +179,34 @@ const iuiGridDefaultStyle = css`
         /*text-overflow: ellipsis;*/
         white-space2: nowrap;
     }
-    .iui-grid-column-header-cell-content, .iui-grid-column-footer-cell-content, .iui-grid-row-cell-label
-    {
+    .iui-grid-column-header-cell-content, .iui-grid-column-footer-cell-content, .iui-grid-row-cell-label {
         display: inline;
         padding: 0 3px;
         vertical-align: middle;
         cursor: default;
     }
-    .iui-grid-row, .iui-grid-row-fixed
-    {
-        color: black;
+    .iui-grid-row, .iui-grid-row-fixed {
+        color: var(--grid-row-color, black);
         margin: 0;
         padding: 0;
         white-space: nowrap;
         z-index: 0;
     }
-    .iui-grid-row-hovered
-    {
-        background-color: #f5f5f5;
-        border: thin solid #efefef;
-        color: black;
+    .iui-grid-row-hovered {
+        animation-name: var(--grid-row-hovered-animation-name, none);
+        background: var(--grid-row-hovered-background, #f5f5f5);
+        border: var(--grid-row-hovered-border, thin solid #efefef);
+        border-color: var(--grid-row-hovered-border-color, #efefef);
+        color: var(--grid-row-hovered-color, black);
     }
-    .iui-grid-row-selected
-    {
-        background-color: #e5e5e5;
-        border: thin solid #dedede;
-        color: black;
+    .iui-grid-row-selected {
+        animation-name: var(--grid-row-selected-animation-name, none);
+        background: var(--grid-row-selected-background, #e5e5e5);
+        border: var(--grid-row-selected-border, thin solid #dedede);
+        border-color: var(--grid-row-selected-border-color, #dedede);
+        color: var(--grid-row-selected-color, black);
     }
-    .iui-grid-row-cell
-    {
+    .iui-grid-row-cell {
         border-left: thin solid transparent;
         border-right: thin solid transparent;
         border-bottom: thin solid transparent;
@@ -229,25 +214,20 @@ const iuiGridDefaultStyle = css`
         /*position: relative;*/
         vertical-align: middle;
     }
-    .iui-grid-row-cell-content
-    {
+    .iui-grid-row-cell-content {
         border: 2px solid transparent;
         white-space: nowrap;
     }
-    .iui-grid-row-cell-content:focus
-    {
+    .iui-grid-row-cell-content:focus {
         outline: none !important;
     }
-    .iui-grid-row-cell-content-focused
-    {
+    .iui-grid-row-cell-content-focused {
         border: 2px solid gray !important;
     }
-    .iui-grid-cell-empty
-    {
+    .iui-grid-cell-empty {
         border: thin solid transparent !important;
     }
-    .iui-grid-expand-box
-    {
+    .iui-grid-expand-box {
         display: inline-block;
         width: 16px;
         height: 16px;
@@ -282,49 +262,39 @@ const iuiGridDefaultStyle = css`
         0% { opacity: 1; }
         100% { opacity: 0; }
     } 
-    .iui-grid-expand-box-load
-    {
+    .iui-grid-expand-box-load {
         background: url(../icons/load.gif) no-repeat 0 0;
     }
-    .iui-grid-expand-box-open
-    {
+    .iui-grid-expand-box-open {
         background: url(../icons/expand.ico) no-repeat 0 0;
     }
-    .iui-grid-expand-box-open-disabled
-    {
+    .iui-grid-expand-box-open-disabled {
         background: url(../icons/expand-disabled.ico) no-repeat 0 0;
     }
-    .iui-grid-expand-box-close
-    {
+    .iui-grid-expand-box-close {
         background: url(../icons/collapse.ico) no-repeat 0 0;
     }
-    .iui-grid-expand-box-close-disabled
-    {
+    .iui-grid-expand-box-close-disabled {
         background: url(../icons/collapse-disabled.ico) no-repeat 0 0;
     }
-    .iui-grid-column-reorder-mark
-    {
+    .iui-grid-column-reorder-mark {
         position: absolute;
         pointer-events: none;
     }
-    .iui-grid-column-reorder-mark span
-    {
+    .iui-grid-column-reorder-mark span {
         background-repeat: no-repeat;
         display: inline-block;
         width: 16px;
         height: 16px;
         vertical-align: middle;
     }
-    .iui-grid-column-reorder-mark-left
-    {
+    .iui-grid-column-reorder-mark-left {
         background-image: url(../icons/move-left.ico);
     }
-    .iui-grid-column-reorder-mark-right
-    {
+    .iui-grid-column-reorder-mark-right {
         background-image: url(../icons/move-right.ico);
     }
-    .iui-grid-column-reorder-tooltip
-    {
+    .iui-grid-column-reorder-tooltip {
         background: -webkit-linear-gradient(white, #F1EFEC);
         background:    -moz-linear-gradient(white, #F1EFEC);
         background:     -ms-linear-gradient(white, #F1EFEC);
@@ -345,137 +315,115 @@ const iuiGridDefaultStyle = css`
         max-width: 200px;
         z-index: 999;
     }
-    .iui-grid-column-reorder-tooltip span
-    {
+    .iui-grid-column-reorder-tooltip span {
         display: inline-block;
         padding: 3px;
         margin: 0 2px 0 0;
         vertical-align: middle;
     }
-    .iui-grid-column-header-left, .iui-grid-column-footer-left
-    {
+    .iui-grid-column-header-left, .iui-grid-column-footer-left {
         border-right: 1px solid #ababab;
     }
-    .iui-grid-column-header-right, .iui-grid-column-footer-right
-    {
+    .iui-grid-column-header-right, .iui-grid-column-footer-right {
         border-left: 1px solid #ababab;
     }
-    .iui-grid-rows-left, .iui-grid-rows-left-top, .iui-grid-rows-left-bottom
-    {
+    .iui-grid-rows-left, .iui-grid-rows-left-top, .iui-grid-rows-left-bottom {
         border-right: 1px solid #ababab;
     }
-    .iui-grid-rows-right, .iui-grid-rows-right-top, .iui-grid-rows-right-bottom
-    {
+    .iui-grid-rows-right, .iui-grid-rows-right-top, .iui-grid-rows-right-bottom {
         border-left: 1px solid #ababab;
     }
-    .iui-grid-rows-top-block
-    {
+    .iui-grid-rows-top-block {
         background: #f6f6f6;
         border-bottom: thin solid #efefef;
     }
-    .iui-grid-rows-bottom-block
-    {
+    .iui-grid-rows-bottom-block {
         background: #f6f6f6;
         border-top: thin solid #c5c5c5;
         z-index: 2;
     }
-    .iui-grid-rows-bottom-block .iui-grid-row:last-child .iui-grid-lines-both
-    {
+    .iui-grid-rows-bottom-block .iui-grid-row:last-child .iui-grid-lines-both {
         border-bottom: 0;
     }
-    .iui-grid-row-cell:first-child
-    {
+    .iui-grid-row-cell:first-child {
         border-left: thin solid #d5d5d5;
     }
-    .iui-grid-row-cell:last-child
-    {
+    .iui-grid-row-cell:last-child {
         border-right: thin solid #d5d5d5;
     }
-    .iui-grid-lines-none
-    {
+    .iui-grid-lines-none {
         border-color: transparent !important;
     }
-    .iui-grid-lines-horizontal:not(:last-child)
-    {
+    .iui-grid-lines-horizontal:not(:last-child) {
         border-left-color: transparent;
         border-right-color: transparent;
         border-bottom-color: #d5d5d5;
     }
-    .iui-grid-lines-horizontal:last-child
-    {
+    .iui-grid-lines-horizontal:last-child {
         border-left-color: transparent;
         border-bottom-color: #d5d5d5;
     }
-    .iui-grid-lines-vertical
-    {
+    .iui-grid-lines-vertical {
         border-right-color: #d5d5d5;
     }
-    .iui-grid-column-header .iui-grid-lines-vertical, .iui-grid-column-footer .iui-grid-lines-vertical
-    {
+    .iui-grid-column-header .iui-grid-lines-vertical, .iui-grid-column-footer .iui-grid-lines-vertical {
         border-left-color: #d5d5d5;
         border-right-color: #d5d5d5;
     }
-    .iui-grid-row:last-child .iui-grid-lines-vertical
-    {
+    .iui-grid-row:last-child .iui-grid-lines-vertical {
         border-bottom-color: #d5d5d5;
     }
-    .iui-grid-lines-both
-    {
+    .iui-grid-lines-both {
         border-right-color: #d5d5d5;
         border-bottom-color: #d5d5d5;
     }
-    .iui-grid-column-header .iui-grid-lines-both, .iui-grid-column-footer .iui-grid-lines-both
-    {
+    .iui-grid-column-header .iui-grid-lines-both, .iui-grid-column-footer .iui-grid-lines-both {
         border-left-color: #d5d5d5;
         border-right-color: #d5d5d5;
         border-bottom-color: #d5d5d5;
     }
 
     /* Grouping */
-    .iui-grid-grouping-panel
-    {
-        background-color: #f0f0f0;
-        border-bottom: thin solid #d5d5d5;
+    .iui-grid-grouping-panel {
+        background: var(--grid-grouping-panel-background, #f0f0f0);
+        border: var(--grid-grouping-panel-border, 0);
+        border-bottom: var(--grid-grouping-panel-border-bottom, thin solid #d5d5d5);
+        color: var(--grid-grouping-panel-color, black);
         margin: 0;
-        padding: 3px;
+        padding: var(--grid-grouping-panel-padding, 3px);
         position: absolute;
         top: 0;
         white-space: nowrap;
         width: 100%;
     }
-    .iui-grid-grouping-panel-item
-    {
-        background-color: #dedede;
+    .iui-grid-grouping-panel-item {
+        background: var(--grid-grouping-panel-item-background, #dedede);
+        border: var(--grid-grouping-panel-item-border, thin solid #bebebe);
         display: inline-block;
-        border: thin solid #bebebe;
-        border-radius: 3px;
-        margin: 2px 3px;
+        border-radius: var(--grid-grouping-panel-item-border-radius, 3px);
+        margin: var(--grid-grouping-panel-item-margin, 2px 3px);
         /*overflow: hidden;*/
-        padding: 2px 5px;
+        padding: var(--grid-grouping-panel-item-padding, 2px 5px);
         position: relative;
     }
-    .iui-grid-grouping-panel-item-disabled
-    {
-        color: gray;
+    .iui-grid-grouping-panel-item-disabled {
+        color: var(--grid-grouping-panel-item-disabled-color, gray);
     }
-    .iui-grid-grouping-panel-item-label
-    {
+    .iui-grid-grouping-panel-item-label {
         display: inline-block;
         overflow: hidden;
         padding: 0;
         margin: 0 0 2px 0;
         vertical-align: middle;
     }
-    .iui-grid-grouping-panel-toolbar
-    {
+    .iui-grid-grouping-panel-toolbar {
         display: inline-block;
         overflow: hidden;
         padding: 0;
         margin: 0;
         vertical-align: middle;
     }
-    .iui-grid-grouping-panel-toolbar-button-add
-    {
+    .iui-grid-grouping-panel-toolbar-button-add {
         background: #dedede;
         border: thin solid #bebebe;
         border-radius: 3px;
@@ -485,12 +433,10 @@ const iuiGridDefaultStyle = css`
         padding: 0;
         vertical-align: middle;
     }
-    .iui-grid-grouping-panel-toolbar-button-add:hover
-    {
+    .iui-grid-grouping-panel-toolbar-button-add:hover {
         opacity: 1;
     }
-    .iui-grid-grouping-panel-toolbar-button-add > span
-    {
+    .iui-grid-grouping-panel-toolbar-button-add > span {
         background-image: url(../icons/plus-24.png);
         display: inline-block;
         overflow: hidden;
@@ -500,8 +446,7 @@ const iuiGridDefaultStyle = css`
         height: 24px;
         vertical-align: middle;
     }
-    .iui-grid-grouping-panel-item-button
-    {
+    .iui-grid-grouping-panel-item-button {
         background-image: url(../icons/close-dark.ico);
         display: inline-block;
         overflow: hidden;
@@ -511,30 +456,27 @@ const iuiGridDefaultStyle = css`
         height: 16px;
         vertical-align: middle;
     }
-    .iui-grid-grouping-marker::before
-    {
+    .iui-grid-grouping-marker::before {
         content: "";
-        border: 6px solid #dedede;
-        border-color: transparent transparent transparent #ababab;
+        border: var(--grid-grouping-marker-before-border, 6px solid #dedede);
+        border-color: var(--grid-grouping-marker-before-border-color, transparent transparent transparent #ababab);
         position: absolute;
         top: 25%;
         right: -12px;
         width: 0;
         height: 0;
     }
-    .iui-grid-grouping-marker::after
-    {
+    .iui-grid-grouping-marker::after {
         content: "";
-        border: 6px solid #dedede;
-        border-color: transparent transparent transparent #dedede;
+        border: var(--grid-grouping-marker-after-border, 6px solid #dedede);
+        border-color: var(--grid-grouping-marker-after-border-color, transparent transparent transparent #dedede);
         position: absolute;
         top: 25%;
         right: -11px;
         width: 0;
         height: 0;
     }
-    .iui-grid-grouping-panel-dropdown-list
-    {
+    .iui-grid-grouping-panel-dropdown-list {
         cursor: default;
         margin: 0;
         overflow: auto;
@@ -544,16 +486,13 @@ const iuiGridDefaultStyle = css`
         width: auto;
         height: auto;
     }
-    .iui-grid-grouping-panel-dropdown-list li
-    {
+    .iui-grid-grouping-panel-dropdown-list li {
         padding: 5px;
     }
-    .iui-grid-grouping-panel-dropdown-list li:hover
-    {
+    .iui-grid-grouping-panel-dropdown-list li:hover {
         background: #e5e5e5;
     }
-    .iui-grid-grouping-panel-dropdown-list-checkbox
-    {
+    .iui-grid-grouping-panel-dropdown-list-checkbox {
         /*background: url('') no-repeat 0 0;*/
         display: inline-block;
         padding: 0;
@@ -562,31 +501,27 @@ const iuiGridDefaultStyle = css`
         height: 16px;
         vertical-align: middle;
     }
-    .iui-grid-grouping-panel-dropdown-list-checkbox-true
-    {
+    .iui-grid-grouping-panel-dropdown-list-checkbox-true {
         background-image: url(../icons/check-mark-dark.ico);
     }
     
     /* Disabled State */
-    .iui-grid-disabled div
-    {
-        opacity: 0.75;
+    .iui-grid-disabled div {
+        opacity: var(--grid-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
 
 
     /* Animation */
-    .iui-grid-column-animate
-    {
+    .iui-grid-column-animate {
         border: 0;
         background-color: transparent;
         box-shadow: none;
         overflow: hidden;
         position: relative;
     }
-    .iui-grid-column-animate-enter
-    {
+    .iui-grid-column-animate-enter {
         animation-name: grid-column-animate-enter;
         animation-delay: 0s;
         animation-direction: normal;
@@ -596,8 +531,7 @@ const iuiGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes grid-column-animate-enter
-    {
+    @keyframes grid-column-animate-enter {
         0% { 	   
             border: thin solid transparent;
             box-shadow: none;
@@ -607,8 +541,7 @@ const iuiGridDefaultStyle = css`
             box-shadow: 2px 3px 3px #cecece;
         }
     }
-    .iui-grid-column-animate-select-block
-    {
+    .iui-grid-column-animate-select-block {
         display: block;
         pointer-events: none;
         position: absolute;
@@ -616,8 +549,7 @@ const iuiGridDefaultStyle = css`
         top: 0;
         z-index: 9;
     }
-    .iui-grid-column-animate-select
-    {
+    .iui-grid-column-animate-select {
         background: #d5d5d5;
         display: block;
         left: 0;
@@ -625,8 +557,7 @@ const iuiGridDefaultStyle = css`
         opacity: 0;
         top: 0;
     }
-    .iui-grid-column-animate-select-left
-    {
+    .iui-grid-column-animate-select-left {
         animation-name: grid-column-animate-select-left;
         animation-delay: 0s;
         animation-direction: normal;
@@ -636,8 +567,7 @@ const iuiGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes grid-column-animate-select-left
-    {
+    @keyframes grid-column-animate-select-left {
         0% { 	   
             left: 100%;
             opacity: 0.5;
@@ -649,8 +579,7 @@ const iuiGridDefaultStyle = css`
             width: 100%;
         }
     }
-    .iui-grid-column-animate-select-right
-    {
+    .iui-grid-column-animate-select-right {
         animation-name: grid-column-animate-select-right;
         animation-delay: 0s;
         animation-direction: normal;
@@ -660,8 +589,7 @@ const iuiGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes grid-column-animate-select-right
-    {
+    @keyframes grid-column-animate-select-right {
         0% { 	   
             width: 0;
             opacity: 0.5;
@@ -673,8 +601,7 @@ const iuiGridDefaultStyle = css`
     }
 
 
-    .iui-grid-row-animate
-    {
+    .iui-grid-row-animate {
         border: 0;
         background-color: transparent;
         box-shadow: none;
@@ -682,8 +609,7 @@ const iuiGridDefaultStyle = css`
         overflow: hidden;
         position: relative;
     }
-    .iui-grid-row-animate-enter
-    {
+    .iui-grid-row-animate-enter {
         animation-name: grid-row-animate-enter;
         animation-delay: 0s;
         animation-direction: normal;
@@ -693,8 +619,7 @@ const iuiGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes grid-row-animate-enter
-    {
+    @keyframes grid-row-animate-enter {
         0% { 	   
             border: thin solid transparent;
             box-shadow: none;
@@ -704,8 +629,7 @@ const iuiGridDefaultStyle = css`
             box-shadow: 2px 3px 3px #cecece;
         }
     }
-    .iui-grid-row-animate-select-block
-    {
+    .iui-grid-row-animate-select-block {
         display: block;
         pointer-events: none;
         position: absolute;
@@ -713,8 +637,7 @@ const iuiGridDefaultStyle = css`
         top: 0;
         z-index: 9;
     }
-    .iui-grid-row-animate-select
-    {
+    .iui-grid-row-animate-select {
         background: #f5f5f5;
         display: block;
         left: 0;
@@ -722,8 +645,7 @@ const iuiGridDefaultStyle = css`
         opacity: 0;
         top: 0;
     }
-    .iui-grid-row-animate-select-left
-    {
+    .iui-grid-row-animate-select-left {
         animation-name: grid-row-animate-select-left;
         animation-delay: 0s;
         animation-direction: normal;
@@ -733,8 +655,7 @@ const iuiGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes grid-row-animate-select-left
-    {
+    @keyframes grid-row-animate-select-left {
         0% { 	   
             left: 100%;
             opacity: 0.5;
@@ -746,8 +667,7 @@ const iuiGridDefaultStyle = css`
             width: 100%;
         }
     }
-    .iui-grid-row-animate-select-right
-    {
+    .iui-grid-row-animate-select-right {
         animation-name: grid-row-animate-select-right;
         animation-delay: 0s;
         animation-direction: normal;
@@ -757,8 +677,7 @@ const iuiGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes grid-row-animate-select-right
-    {
+    @keyframes grid-row-animate-select-right {
         0% { 	   
             width: 0;
             opacity: 0.5;

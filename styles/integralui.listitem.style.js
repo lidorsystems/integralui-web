@@ -2,14 +2,23 @@ import { c as css } from '../external/lit-element.js';
 
 const iuiListItemDefaultStyle = css`
     .iui-listitem {
-        background: var(--listitem-background, transparent);
+        background: var(--listitem-background, white);
         border: var(--listitem-border, 2px solid transparent);
+        border-color:  var(--listitem-border-color, transparent);
+        border-radius: var(--listitem-border-radius, 1px);
+        border-width: var(--listitem-border-width, 2px);
         color: var(--listitem-color, black);
+        cursor: var(--listitem-cursor, default);
+        display: var(--listitem-display, block);
+        height: var(--listitem-height, auto);
         list-style-type: none;
-        overflow: hidden;
         margin: var(--listitem-margin, 0);
+        opacity: var(--listitem-opacity, 1);
+        overflow: hidden;
         padding: var(--listitem-padding, 0);
+        position: var(--listitem-position, relative);
         white-space: nowrap;
+        width: var(--listitem-width, auto);
     }
     .iui-listitem-general {
         list-style-type: none;

@@ -4,13 +4,20 @@ const iuiTreeViewDefaultStyle = css`
     .iui-treeview {
         background: var(--treeview-background, white);
         border: var(--treeview-border, thin solid #cecece);
+        border-color:  var(--treeview-border-color, #cecece);
+        border-radius: var(--treeview-border-radius, 1px);
+        border-width: var(--treeview-border-width, thin);
         color: var(--treeview-color, black);
         cursor: var(--treeview-cursor, default);
+        display: var(--treeview-display, block);
         float: var(--treeview-float, none);
-        overflow: hidden;
+        height: var(--treeview-height, auto);
         margin: var(--treeview-margin, 0);
+        opacity: var(--treeview-opacity, 1);
+        overflow: hidden;
         padding: var(--treeview-padding, 1px);
-        position: relative;
+        position: var(--treeview-position, relative);
+        width: var(--treeview-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

@@ -2,13 +2,22 @@ import { c as css } from '../external/lit-element.js';
 
 const iuiCalendarDefaultStyle = css`
     .iui-calendar {
-        background: white;
-        border: thin solid #cecece;
-        margin: 0;
-        padding: 0;
+        background: var(--calendar-background, white);
+        border: var(--calendar-border, thin solid #cecece);
+        border-color:  var(--calendar-border-color, #cecece);
+        border-radius: var(--calendar-border-radius, 1px);
+        border-width: var(--calendar-border-width, thin);
+        color: var(--calendar-color, black);
+        cursor: var(--calendar-cursor, default);
+        display: var(--calendar-display, block);
+        float: var(--calendar-float, none);
+        height: var(--calendar-height, auto);
+        opacity: var(--calendar-opacity, 1);
         overflow: hidden;
-        position: relative;
-        cursor: default;
+        margin: var(--calendar-margin, 0);
+        padding: var(--calendar-padding, 0);
+        position: var(--calendar-position, relative);
+        width: var(--calendar-width, auto);
         
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -61,34 +70,32 @@ const iuiCalendarDefaultStyle = css`
     .iui-calendar-cell {
         border: thin solid transparent;
         border-radius: 3px;
+        color: var(--calendar-cell-color, black);
         padding: 0 3px;
         text-align: right;
     }
     .iui-calendar-normal {
     }
-    .iui-calendar-cell-hovered {
-        background: #f5f5f5;
-        border-color: #efefef;
+    .iui-calendar-cell-hovered, .iui-calendar-cell-grayed:hover {
+        background: var(--calendar-cell-hovered-background, #f5f5f5);
+        border-color: var(--calendar-cell-hovered-border-color, #efefef);
     }
     .iui-calendar-cell-selected {
-        background: #e5e5e5;
-        border-color: #dedede;
+        background: var(--calendar-cell-selected-background, #e5e5e5);
+        border-color: var(--calendar-cell-selected-border-color, #dedede);
+        color: var(--calendar-cell-selected-color, black);
     }
     .iui-calendar-cell-grayed {
         opacity: 0.5;
     }
-    .iui-calendar-cell-grayed:hover {
-        background: #f5f5f5;
-        border-color: #efefef;
-    }
     .iui-calendar-cell-today {
-        border-color: #bebebe;
+        border-color: var(--calendar-cell-today-border-color, #bebebe);
         font-weight: bold;
     }
 
     /* Disabled State */
     .iui-calendar-disabled {
-        opacity: 0.75;
+        opacity: var(--calendar-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
@@ -103,13 +110,13 @@ const iuiCalendarDefaultStyle = css`
         animation-timing-function: linear; 
     }
     @keyframes calendar-cell-enter {
-        0% { 	   
-            background: transparent;
-            border-color: transparent;
+        0% { 
+            background: var(--calendar-animation-cell-enter-background-0, transparent); 
+            border-color: var(--calendar-animation-cell-enter-border-color-0, transparent);
         }
         100% { 
-            background: #f5f5f5;
-            border-color: #efefef;
+            background: var(--calendar-animation-cell-enter-background-100, #f5f5f5); 
+            border-color: var(--calendar-animation-cell-enter-border-color-100, #efefef);
         }
     }
     .iui-calendar-cell-leave {
@@ -123,13 +130,13 @@ const iuiCalendarDefaultStyle = css`
         animation-timing-function: linear; 
     }
     @keyframes calendar-cell-leave {
-        0% { 	   
-            background: #f5f5f5;
-            border-color: #efefef;
+        0% { 
+            background: var(--calendar-animation-cell-leave-background-0, #f5f5f5); 
+            border-color: var(--calendar-animation-cell-leave-border-color-0, #efefef);
         }
         100% { 
-            background: transparent;
-            border-color: transparent;
+            background: var(--calendar-animation-cell-leave-background-100, transparent); 
+            border-color: var(--calendar-animation-cell-leave-border-color-100, transparent);
         }
     }
 `;

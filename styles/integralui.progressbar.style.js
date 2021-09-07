@@ -1,17 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiProgressBarDefaultStyle = css`
-    .iui-progressbar
-    {
+    .iui-progressbar {
         background: var(--progressbar-background, white);
         border: var(--progressbar-border, thin solid #cecece);
-        border-radius: var(--progressbar-border-radius, 3px);
+        border-color:  var(--progressbar-border-color, #cecece);
+        border-radius: var(--progressbar-border-radius, 1px);
+        border-width: var(--progressbar-border-width, thin);
         color: var(--progressbar-color, black);
         cursor: var(--progressbar-cursor, default);
+        display: var(--progressbar-display, block);
+        float: var(--progressbar-float, none);
+        height: var(--progressbar-height, auto);
         margin: var(--progressbar-margin, 0);
+        opacity: var(--progressbar-opacity, 1);
         overflow: hidden;
         padding: var(--progressbar-padding, 2px);
-        position: relative;
+        position: var(--progressbar-position, relative);
+        width: var(--progressbar-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

@@ -1,16 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiListBoxDefaultStyle = css`
-    .iui-listbox
-    {
+    .iui-listbox {
         background: var(--listbox-background, white);
         border: var(--listbox-border, thin solid #cecece);
+        border-color:  var(--listbox-border-color, #cecece);
+        border-radius: var(--listbox-border-radius, 1px);
+        border-width: var(--listbox-border-width, thin);
         color: var(--listbox-color, black);
         cursor: var(--listbox-cursor, default);
+        display: var(--listbox-display, block);
+        float: var(--listbox-float, none);
+        height: var(--listbox-height, auto);
         margin: var(--listbox-margin, 0);
+        opacity: var(--listbox-opacity, 1);
         overflow: hidden;
         padding: var(--listbox-padding, 1px);
-        position: relative;
+        position: var(--listbox-position, relative);
+        width: var(--listbox-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

@@ -4,14 +4,20 @@ const iuiRadioButtonDefaultStyle = css`
     .iui-radio-button {
         background: var(--radio-button-background, transparent);
         border: var(--radio-button-border, 0);
-        border-color: var(--radio-button-border-color, transparent);
+        border-color:  var(--radio-button-border-color, transparent);
+        border-radius: var(--radio-button-border-radius, 1px);
+        border-width: var(--radio-button-border-width, thin);
         color: var(--radio-button-color, black);
         cursor: var(--radio-button-cursor, default);
         display: var(--radio-button-display, inline-block);
+        float: var(--radio-button-float, none);
+        height: var(--radio-button-height, auto);
         margin: var(--radio-button-margin, 2px 0);
+        opacity: var(--radio-button-opacity, 1);
         overflow: hidden;
         padding: var(--radio-button-padding, 5px);
-        position: relative;
+        position: var(--radio-button-position, relative);
+        width: var(--radio-button-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

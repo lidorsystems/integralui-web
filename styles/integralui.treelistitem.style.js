@@ -26,6 +26,18 @@ const iuiTreeListItemDefaultStyle = css`
         height: 16px;
         vertical-align: middle;
     }
+    .iui-treelistitem-expand-icon-collapse {
+        background-position: var(--treelistitem-expand-icon-background-position, 0 -16px);
+        float: left;
+        margin: var(--treelistitem-expand-icon-margin, 3px 5px 0 0);
+    }
+    .iui-treelistitem-expand-icon-expand {
+        float: left;
+        margin: var(--treelistitem-expand-icon-margin, 3px 5px 0 0);
+    }
+    .iui-treelistitem-expand-icon-next {
+        float: right;
+    }
     .iui-treelistitem-hovered {
         background: var(--treelistitem-hovered-background, #e5e5e5);
         color: var(--treelistitem-hovered-color, black);

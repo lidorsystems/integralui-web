@@ -1,15 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiListGroupDefaultStyle = css`
-    .iui-listgroup
-    {
+    .iui-listgroup {
         background: var(--listgroup-background, white);
+        border: var(--listgroup-border, 0);
+        border-color:  var(--listgroup-border-color, transparent);
+        border-radius: var(--listgroup-border-radius, 1px);
+        border-width: var(--listgroup-border-width, thin);
         color: var(--listgroup-color, black);
         cursor: var(--listgroup-cursor, default);
-        margin: var(--listgroup-margin, 1px 0);
+        display: var(--listgroup-display, block);
+        float: var(--listgroup-float, none);
+        height: var(--listgroup-height, auto);
+        margin: var(--listgroup-margin, 0);
+        opacity: var(--listgroup-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: relative;
+        padding: var(--listgroup-padding, 0);
+        position: var(--listgroup-position, relative);
+        width: var(--listgroup-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

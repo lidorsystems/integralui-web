@@ -2,14 +2,21 @@ import { c as css } from '../external/lit-element.js';
 
 const iuiSelectDefaultStyle = css`
     .iui-select {
-        background: white;
-        color: black;
-        cursor: default;
+        background: var(--select-background, white);
+        border: var(--select-border, 0);
+        border-color:  var(--select-border-color, transparent);
+        border-radius: var(--select-border-radius, 1px);
+        border-width: var(--select-border-width, thin);
+        color: var(--select-color, black);
+        cursor: var(--select-cursor, default);
         display: var(--select-display, block);
+        float: var(--select-float, none);
+        height: var(--select-height, auto);
         margin: var(--select-margin, 2px 0);
+        opacity: var(--select-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: relative;
+        padding: var(--select-padding, 0);
+        position: var(--select-position, relative);
         vertical-align: var(--select-vertical-align, middle);
         width: var(--select-width, auto);
     }

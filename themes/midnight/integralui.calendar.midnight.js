@@ -2,24 +2,25 @@ import { c as css } from '../../external/lit-element.js';
 
 const iuiCalendarMidnightStyle = css`
     .iui-calendar {
-        background-color: #252526;
-        border-color: #151515;
-        color: #cccccc;
+        background: var(--calendar-background, #252526);
+        border: var(--calendar-border, thin solid #151515);
+        border-color:  var(--calendar-border-color, #151515);
+        color: var(--calendar-color, #cccccc);
     }
     .iui-calendar-cell {
-        color: #cccccc;
+        color: var(--calendar-cell-color, #cccccc);
     }
     .iui-calendar-cell-hovered, .iui-calendar-cell-grayed:hover {
-        background: #1177bb;
-        border-color: #1177bb;
+        background: var(--calendar-cell-hovered-background, #1177bb);
+        border-color: var(--calendar-cell-hovered-border-color, #1177bb);
     }
     .iui-calendar-cell-selected {
-        background: #0e639c;
-        border-color: #0e639c;
-        color: white;
+        background: var(--calendar-cell-selected-background, #0e639c);
+        border-color: var(--calendar-cell-selected-border-color, #0e639c);
+        color: var(--calendar-cell-selected-color, white);
     }
     .iui-calendar-cell-today {
-        border-color: #0a4369;
+        border-color: var(--calendar-cell-today-border-color, #0a4369);
     }
     .iui-calendar-header-button-prev span {
         background-image: url(../../icons/prev-white-24.png);
@@ -28,23 +29,23 @@ const iuiCalendarMidnightStyle = css`
         background-image: url(../../icons/next-white-24.png);
     }
     @keyframes calendar-cell-enter {
-        0% { 	   
-            background: transparent;
-            border-color: transparent;
+        0% { 
+            background: var(--calendar-animation-cell-enter-background-0, transparent); 
+            border-color: var(--calendar-animation-cell-enter-border-color-0, transparent);
         }
         100% { 
-            background: #1177bb;
-            border-color: #1177bb;
+            background: var(--calendar-animation-cell-enter-background-100, #1177bb); 
+            border-color: var(--calendar-animation-cell-enter-border-color-100, #1177bb);
         }
     }
     @keyframes calendar-cell-leave {
-        0% { 	   
-            background: #1177bb;
-            border-color: #1177bb;
+        0% { 
+            background: var(--calendar-animation-cell-leave-background-0, #1177bb); 
+            border-color: var(--calendar-animation-cell-leave-border-color-0, #1177bb);
         }
         100% { 
-            background: transparent;
-            border-color: transparent;
+            background: var(--calendar-animation-cell-leave-background-100, transparent); 
+            border-color: var(--calendar-animation-cell-leave-border-color-100, transparent);
         }
     }
 `;

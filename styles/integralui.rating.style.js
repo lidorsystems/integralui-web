@@ -1,19 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiRatingDefaultStyle = css`
-    .iui-rating
-    {
+    .iui-rating {
         background: var(--rating-background, white);
         border: var(--rating-border, thin solid #cecece);
-        border-radius: var(--rating-border-radius, 3px);
+        border-color:  var(--rating-border-color, #cecece);
+        border-radius: var(--rating-border-radius, 1px);
+        border-width: var(--rating-border-width, thin);
         color: var(--rating-color, black);
         cursor: var(--rating-cursor, default);
         display: var(--rating-display, block);
-        height: var(--rating-image-height, 16px);
+        float: var(--rating-float, none);
+        height: var(--rating-height, 16px);
         margin: var(--rating-margin, 0);
+        opacity: var(--rating-opacity, 1);
         overflow: hidden;
         padding: var(--rating-padding, 1px);
-        position: relative;
+        position: var(--rating-position, relative);
+        width: var(--rating-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

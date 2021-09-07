@@ -1,16 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiListDefaultStyle = css`
-    .iui-list
-    {
+    .iui-list {
         background: var(--list-background, white);
         border: var(--list-border, thin solid #cecece);
+        border-color:  var(--list-border-color, #cecece);
+        border-radius: var(--list-border-radius, 1px);
+        border-width: var(--list-border-width, thin);
         color: var(--list-color, black);
         cursor: var(--list-cursor, default);
+        display: var(--list-display, block);
+        float: var(--list-float, none);
+        height: var(--list-height, auto);
         margin: var(--list-margin, 0);
+        opacity: var(--list-opacity, 1);
         overflow: hidden;
         padding: var(--list-padding, 1px);
-        position: relative;
+        position: var(--list-position, relative);
+        width: var(--list-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

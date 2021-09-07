@@ -1,20 +1,24 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiTreeGridDefaultStyle = css`
-    .iui-treegrid
-    {
+    .iui-treegrid {
         background: var(--treegrid-background, white);
         border: var(--treegrid-border, thin solid #cecece);
-        border-radius: var(--treegrid-border-radius, 3px);
+        border-color:  var(--treegrid-border-color, #cecece);
+        border-radius: var(--treegrid-border-radius, 1px);
+        border-width: var(--treegrid-border-width, thin);
         color: var(--treegrid-color, black);
         cursor: var(--treegrid-cursor, default);
         display: var(--treegrid-display, block);
         float: var(--treegrid-float, none);
-        overflow: hidden;
+        height: var(--treegrid-height, auto);
         margin: var(--treegrid-margin, 0);
+        opacity: var(--treegrid-opacity, 1);
+        overflow: hidden;
         padding: var(--treegrid-padding, 0);
-        position: relative;
-
+        position: var(--treegrid-position, relative);
+        width: var(--treegrid-width, auto);
+        
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -22,32 +26,27 @@ const iuiTreeGridDefaultStyle = css`
         -ms-user-select: none;
         user-select: none;
     }
-    .iui-treegrid table
-    {
-        color: black;
+    .iui-treegrid table {
+        color: var(--treegrid-color, black);
     }
-    .iui-treegrid div /*Compatibility with Bootstrap */
-    {
+    .iui-treegrid div { /*Compatibility with Bootstrap */
         -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: content-box;    /* Firefox, other Gecko */
         box-sizing: content-box; 
     }
-    .iui-treegrid-rtl
-    {
+    .iui-treegrid-rtl {
         direction: rtl;
     }
-    .iui-treegrid-block
-    {
-        background: white;
+    .iui-treegrid-block {
+        background: var(--treegrid-background, #white);
         margin: 0;
         overflow: hidden;
         padding: 0;
         position: relative;
         z-index: 0;
     }
-    .iui-treegrid-block-left
-    {
-        background: #f5f5f5;
+    .iui-treegrid-block-left {
+        background: var(--treegrid-block-fixed-background, #f5f5f5);
         left: 0;
         margin: 0;
         overflow: hidden;
@@ -56,9 +55,8 @@ const iuiTreeGridDefaultStyle = css`
         top: 0;
         z-index: 4;
     }
-    .iui-treegrid-block-right
-    {
-        background: #f5f5f5;
+    .iui-treegrid-block-right {
+        background: var(--treegrid-block-fixed-background, #f5f5f5);
         margin: 0;
         overflow: hidden;
         padding: 0;
@@ -67,15 +65,13 @@ const iuiTreeGridDefaultStyle = css`
         top: 0;
         z-index: 3;
     }
-    .iui-treegrid-block-top
-    {
+    .iui-treegrid-block-top {
         position: absolute;
         top: 0;
         left: 0;
         z-index: 10;
     }
-    .iui-treegrid-block-top-left
-    {
+    .iui-treegrid-block-top-left {
         background: transparent;
         pointer-events: none;
         position: absolute;
@@ -83,37 +79,32 @@ const iuiTreeGridDefaultStyle = css`
         left: 0;
         z-index: 12;
     }
-    .iui-treegrid-block-top-right
-    {
+    .iui-treegrid-block-top-right {
         background: transparent;
         position: absolute;
         top: 0;
         right: 0;
         z-index: 11;
     }
-    .iui-treegrid-block-bottom
-    {
+    .iui-treegrid-block-bottom {
         bottom: 0;
         left: 0;
         position: absolute;
         z-index: 7;
     }
-    .iui-treegrid-block-bottom-left
-    {
+    .iui-treegrid-block-bottom-left {
         position: absolute;
         bottom: 0;
         left: 0;
         z-index: 9;
     }
-    .iui-treegrid-block-bottom-right
-    {
+    .iui-treegrid-block-bottom-right {
         position: absolute;
         bottom: 0;
         right: 0;
         z-index: 8;
     }
-    .iui-treegrid-block-middle
-    {
+    .iui-treegrid-block-middle {
         position: absolute;
         top: 0;
         left: 0;
@@ -134,30 +125,26 @@ const iuiTreeGridDefaultStyle = css`
         top: 0;
         z-index: 5;
     }
-    .iui-treegrid-block-shift-left
-    {
+    .iui-treegrid-block-shift-left {
         /*margin-left: 16px !important;*/
         padding-left: 15px;
     }
-    .iui-treegrid-block-shift-right
-    {
+    .iui-treegrid-block-shift-right {
         margin-right: 16px;
     }
-    .iui-treegrid-row-block
-    {
+    .iui-treegrid-row-block {
         padding: 0 0 0 15px;
     }
-    .iui-treegrid-row-block-rtl
-    {
+    .iui-treegrid-row-block-rtl {
         padding: 0 15px 0 0;
     }
-    .iui-treegrid-column-header, .iui-treegrid-column-footer
-    {
-        background-color: #ededed;
-        border: thin solid #d5d5d5;
-        color: black;
+    .iui-treegrid-column-header, .iui-treegrid-column-footer {
+        background: var(--treegrid-column-background, #ededed);
+        border: var(--treegrid-column-border, thin solid #d5d5d5);
+        border-color: var(--treegrid-column-border-color, #d5d5d5);
+        color: var(--treegrid-column-color, black);
         margin: 0;
-        padding: 3px 0;
+        padding: var(--treegrid-column-padding, 3px 0);
         position: relative;
         vertical-align:middle;
         white-space: nowrap;
@@ -167,23 +154,22 @@ const iuiTreeGridDefaultStyle = css`
     .iui-treegrid-block-top-left .iui-treegrid-column-footer, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header, 
     .iui-treegrid-block-top-right .iui-treegrid-column-footer {
-        background-color: #dddddd;
+        background: var(--treegrid-column-fixed-background, #dddddd);
         border: thin solid #c5c5c5;
     }
-    .iui-treegrid-column-header-hovered
-    {
-        background-color: #d5d5d5;
-        border-color: #cecece;
-        color: black;
+    .iui-treegrid-column-header-hovered {
+        animation-name: var(--treegrid-column-header-hovered-animation-name, none);
+        background: var(--treegrid-column-header-hovered-background, #d5d5d5);
+        border-color: var(--treegrid-colum-header-hovered-border-color, #cecece);
+        color: var(--treegrid-column-header-hovered-color, black);
     }
-    .iui-treegrid-column-header-selected
-    {
-        background-color: #bebebe;
-        border: thin solid #aeaeae;
-        color: black;
+    .iui-treegrid-column-header-selected {
+        animation-name: var(--treegrid-column-header-selected-animation-name, none);
+        background: var(--treegrid-column-header-selected-background, #bebebe);
+        border-color: var(--treegrid-colum-header-selected-border-color, #aeaeae);
+        color: var(--treegrid-column-header-selected-color, black);
     }
-    .iui-treegrid-column-header > div, .iui-treegrid-column-footer > div, .iui-treegrid-row-cell > div
-    {
+    .iui-treegrid-column-header > div, .iui-treegrid-column-footer > div, .iui-treegrid-row-cell > div {
         border: 2px solid transparent;
         margin: 0;
         padding: 2px;
@@ -193,35 +179,34 @@ const iuiTreeGridDefaultStyle = css`
         /*text-overflow: ellipsis;*/
         white-space2: nowrap;
     }
-    .iui-treegrid-column-header-cell-content, .iui-treegrid-column-footer-cell-content, .iui-treegrid-row-cell-label
-    {
+    .iui-treegrid-column-header-cell-content, .iui-treegrid-column-footer-cell-content, .iui-treegrid-row-cell-label {
         display: inline;
         padding: 0 3px;
         vertical-align: middle;
         cursor: default;
     }
-    .iui-treegrid-row, .iui-treegrid-row-fixed
-    {
-        color: black;
+    .iui-treegrid-row, .iui-treegrid-row-fixed {
+        color: var(--treegrid-row-color, black);
         margin: 0;
         padding: 0;
         white-space: nowrap;
         z-index: 0;
     }
-    .iui-treegrid-row-hovered
-    {
-        background-color: #f5f5f5;
-        border: thin solid #efefef;
-        color: black;
+    .iui-treegrid-row-hovered {
+        animation-name: var(--treegrid-row-hovered-animation-name, none);
+        background: var(--treegrid-row-hovered-background, #f5f5f5);
+        border: var(--treegrid-row-hovered-border, thin solid #efefef);
+        border-color: var(--treegrid-row-hovered-border-color, #efefef);
+        color: var(--treegrid-row-hovered-color, black);
     }
-    .iui-treegrid-row-selected
-    {
-        background-color: #e5e5e5;
-        border: thin solid #dedede;
-        color: black;
+    .iui-treegrid-row-selected {
+        animation-name: var(--treegrid-row-selected-animation-name, none);
+        background: var(--treegrid-row-selected-background, #e5e5e5);
+        border: var(--treegrid-row-selected-border, thin solid #dedede);
+        border-color: var(--treegrid-row-selected-border-color, #dedede);
+        color: var(--treegrid-row-selected-color, black);
     }
-    .iui-treegrid-row-cell
-    {
+    .iui-treegrid-row-cell {
         border-left: thin solid transparent;
         border-right: thin solid transparent;
         border-bottom: thin solid transparent;
@@ -229,29 +214,24 @@ const iuiTreeGridDefaultStyle = css`
         /*position: relative;*/
         vertical-align: middle;
     }
-    .iui-treegrid-row-cell-content
-    {
+    .iui-treegrid-row-cell-content {
         border: 2px solid transparent;
         white-space: nowrap;
     }
-    .iui-treegrid-row-cell-content:focus
-    {
+    .iui-treegrid-row-cell-content:focus {
         outline: none !important;
     }
-    .iui-treegrid-row-cell-content-focused
-    {
+    .iui-treegrid-row-cell-content-focused {
         border: 2px solid gray !important;
     }
-    .iui-treegrid-cell-empty
-    {
+    .iui-treegrid-cell-empty {
         border: thin solid transparent !important;
     }
-    .iui-treegrid-expand-box
-    {
+    .iui-treegrid-expand-box {
         display: inline-block;
         width: 16px;
         height: 16px;
-        margin: var(--treegrid-expand-box-margin, 2px 3px 0 0);
+        margin: 2px 3px 0 0;
         vertical-align: top;
     }
     .iui-treegrid-enter .iui-treegrid-expand-box {
@@ -282,49 +262,39 @@ const iuiTreeGridDefaultStyle = css`
         0% { opacity: 1; }
         100% { opacity: 0; }
     } 
-    .iui-treegrid-expand-box-load
-    {
+    .iui-treegrid-expand-box-load {
         background: url(../icons/load.gif) no-repeat 0 0;
     }
-    .iui-treegrid-expand-box-open
-    {
+    .iui-treegrid-expand-box-open {
         background: url(../icons/expand.ico) no-repeat 0 0;
     }
-    .iui-treegrid-expand-box-open-disabled
-    {
+    .iui-treegrid-expand-box-open-disabled {
         background: url(../icons/expand-disabled.ico) no-repeat 0 0;
     }
-    .iui-treegrid-expand-box-close
-    {
+    .iui-treegrid-expand-box-close {
         background: url(../icons/collapse.ico) no-repeat 0 0;
     }
-    .iui-treegrid-expand-box-close-disabled
-    {
+    .iui-treegrid-expand-box-close-disabled {
         background: url(../icons/collapse-disabled.ico) no-repeat 0 0;
     }
-    .iui-treegrid-column-reorder-mark
-    {
+    .iui-treegrid-column-reorder-mark {
         position: absolute;
         pointer-events: none;
     }
-    .iui-treegrid-column-reorder-mark span
-    {
+    .iui-treegrid-column-reorder-mark span {
         background-repeat: no-repeat;
         display: inline-block;
         width: 16px;
         height: 16px;
         vertical-align: middle;
     }
-    .iui-treegrid-column-reorder-mark-left
-    {
+    .iui-treegrid-column-reorder-mark-left {
         background-image: url(../icons/move-left.ico);
     }
-    .iui-treegrid-column-reorder-mark-right
-    {
+    .iui-treegrid-column-reorder-mark-right {
         background-image: url(../icons/move-right.ico);
     }
-    .iui-treegrid-column-reorder-tooltip
-    {
+    .iui-treegrid-column-reorder-tooltip {
         background: -webkit-linear-gradient(white, #F1EFEC);
         background:    -moz-linear-gradient(white, #F1EFEC);
         background:     -ms-linear-gradient(white, #F1EFEC);
@@ -345,112 +315,89 @@ const iuiTreeGridDefaultStyle = css`
         max-width: 200px;
         z-index: 999;
     }
-    .iui-treegrid-column-reorder-tooltip span
-    {
+    .iui-treegrid-column-reorder-tooltip span {
         display: inline-block;
         padding: 3px;
         margin: 0 2px 0 0;
         vertical-align: middle;
     }
-    .iui-treegrid-column-header-left, .iui-treegrid-column-footer-left
-    {
+    .iui-treegrid-column-header-left, .iui-treegrid-column-footer-left {
         border-right: 1px solid #ababab;
     }
-    .iui-treegrid-column-header-right, .iui-treegrid-column-footer-right
-    {
+    .iui-treegrid-column-header-right, .iui-treegrid-column-footer-right {
         border-left: 1px solid #ababab;
     }
-    .iui-treegrid-rows-left, .iui-treegrid-rows-left-top, .iui-treegrid-rows-left-bottom
-    {
+    .iui-treegrid-rows-left, .iui-treegrid-rows-left-top, .iui-treegrid-rows-left-bottom {
         border-right: 1px solid #ababab;
     }
-    .iui-treegrid-rows-right, .iui-treegrid-rows-right-top, .iui-treegrid-rows-right-bottom
-    {
+    .iui-treegrid-rows-right, .iui-treegrid-rows-right-top, .iui-treegrid-rows-right-bottom {
         border-left: 1px solid #ababab;
     }
-    .iui-treegrid-rows-top-block
-    {
+    .iui-treegrid-rows-top-block {
         background: #f6f6f6;
         border-bottom: thin solid #efefef;
     }
-    .iui-treegrid-rows-bottom-block
-    {
+    .iui-treegrid-rows-bottom-block {
         background: #f6f6f6;
         border-top: thin solid #c5c5c5;
         z-index: 2;
     }
-    .iui-treegrid-rows-bottom-block .iui-treegrid-row:last-child .iui-treegrid-lines-both
-    {
+    .iui-treegrid-rows-bottom-block .iui-treegrid-row:last-child .iui-treegrid-lines-both {
         border-bottom: 0;
     }
-    .iui-treegrid-row-cell:first-child
-    {
+    .iui-treegrid-row-cell:first-child {
         border-left: thin solid #d5d5d5;
     }
-    .iui-treegrid-row-cell:last-child
-    {
+    .iui-treegrid-row-cell:last-child {
         border-right: thin solid #d5d5d5;
     }
-    .iui-treegrid-lines-none
-    {
+    .iui-treegrid-lines-none {
         border-color: transparent !important;
     }
-    .iui-treegrid-lines-horizontal:not(:last-child)
-    {
+    .iui-treegrid-lines-horizontal:not(:last-child) {
         border-left-color: transparent;
         border-right-color: transparent;
         border-bottom-color: #d5d5d5;
     }
-    .iui-treegrid-lines-horizontal:last-child
-    {
+    .iui-treegrid-lines-horizontal:last-child {
         border-left-color: transparent;
         border-bottom-color: #d5d5d5;
     }
-    .iui-treegrid-lines-vertical
-    {
+    .iui-treegrid-lines-vertical {
         border-right-color: #d5d5d5;
     }
-    .iui-treegrid-column-header .iui-treegrid-lines-vertical, .iui-treegrid-column-footer .iui-treegrid-lines-vertical
-    {
+    .iui-treegrid-column-header .iui-treegrid-lines-vertical, .iui-treegrid-column-footer .iui-treegrid-lines-vertical {
         border-left-color: #d5d5d5;
         border-right-color: #d5d5d5;
     }
-    .iui-treegrid-row:last-child .iui-treegrid-lines-vertical
-    {
+    .iui-treegrid-row:last-child .iui-treegrid-lines-vertical {
         border-bottom-color: #d5d5d5;
     }
-    .iui-treegrid-lines-both
-    {
+    .iui-treegrid-lines-both {
         border-right-color: #d5d5d5;
         border-bottom-color: #d5d5d5;
     }
-    .iui-treegrid-column-header .iui-treegrid-lines-both, .iui-treegrid-column-footer .iui-treegrid-lines-both
-    {
+    .iui-treegrid-column-header .iui-treegrid-lines-both, .iui-treegrid-column-footer .iui-treegrid-lines-both {
         border-left-color: #d5d5d5;
         border-right-color: #d5d5d5;
         border-bottom-color: #d5d5d5;
     }
-
+    
     /* Disabled State */
-    .iui-treegrid-disabled div
-    {
-        opacity: 0.75;
+    .iui-treegrid-disabled div {
+        opacity: var(--treegrid-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
-
-
     /* Animation */
-    .iui-treegrid-column-animate
-    {
+    .iui-treegrid-column-animate {
         border: 0;
         background-color: transparent;
         box-shadow: none;
         overflow: hidden;
         position: relative;
     }
-    .iui-treegrid-column-animate-enter
-    {
+    .iui-treegrid-column-animate-enter {
         animation-name: treegrid-column-animate-enter;
         animation-delay: 0s;
         animation-direction: normal;
@@ -460,8 +407,7 @@ const iuiTreeGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes treegrid-column-animate-enter
-    {
+    @keyframes treegrid-column-animate-enter {
         0% { 	   
             border: thin solid transparent;
             box-shadow: none;
@@ -471,8 +417,7 @@ const iuiTreeGridDefaultStyle = css`
             box-shadow: 2px 3px 3px #cecece;
         }
     }
-    .iui-treegrid-column-animate-select-block
-    {
+    .iui-treegrid-column-animate-select-block {
         display: block;
         pointer-events: none;
         position: absolute;
@@ -480,8 +425,7 @@ const iuiTreeGridDefaultStyle = css`
         top: 0;
         z-index: 9;
     }
-    .iui-treegrid-column-animate-select
-    {
+    .iui-treegrid-column-animate-select {
         background: #d5d5d5;
         display: block;
         left: 0;
@@ -489,8 +433,7 @@ const iuiTreeGridDefaultStyle = css`
         opacity: 0;
         top: 0;
     }
-    .iui-treegrid-column-animate-select-left
-    {
+    .iui-treegrid-column-animate-select-left {
         animation-name: treegrid-column-animate-select-left;
         animation-delay: 0s;
         animation-direction: normal;
@@ -500,8 +443,7 @@ const iuiTreeGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes treegrid-column-animate-select-left
-    {
+    @keyframes treegrid-column-animate-select-left {
         0% { 	   
             left: 100%;
             opacity: 0.5;
@@ -513,8 +455,7 @@ const iuiTreeGridDefaultStyle = css`
             width: 100%;
         }
     }
-    .iui-treegrid-column-animate-select-right
-    {
+    .iui-treegrid-column-animate-select-right {
         animation-name: treegrid-column-animate-select-right;
         animation-delay: 0s;
         animation-direction: normal;
@@ -524,8 +465,7 @@ const iuiTreeGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes treegrid-column-animate-select-right
-    {
+    @keyframes treegrid-column-animate-select-right {
         0% { 	   
             width: 0;
             opacity: 0.5;
@@ -537,8 +477,7 @@ const iuiTreeGridDefaultStyle = css`
     }
 
 
-    .iui-treegrid-row-animate
-    {
+    .iui-treegrid-row-animate {
         border: 0;
         background-color: transparent;
         box-shadow: none;
@@ -546,8 +485,7 @@ const iuiTreeGridDefaultStyle = css`
         overflow: hidden;
         position: relative;
     }
-    .iui-treegrid-row-animate-enter
-    {
+    .iui-treegrid-row-animate-enter {
         animation-name: treegrid-row-animate-enter;
         animation-delay: 0s;
         animation-direction: normal;
@@ -557,8 +495,7 @@ const iuiTreeGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes treegrid-row-animate-enter
-    {
+    @keyframes treegrid-row-animate-enter {
         0% { 	   
             border: thin solid transparent;
             box-shadow: none;
@@ -568,8 +505,7 @@ const iuiTreeGridDefaultStyle = css`
             box-shadow: 2px 3px 3px #cecece;
         }
     }
-    .iui-treegrid-row-animate-select-block
-    {
+    .iui-treegrid-row-animate-select-block {
         display: block;
         pointer-events: none;
         position: absolute;
@@ -577,8 +513,7 @@ const iuiTreeGridDefaultStyle = css`
         top: 0;
         z-index: 9;
     }
-    .iui-treegrid-row-animate-select
-    {
+    .iui-treegrid-row-animate-select {
         background: #f5f5f5;
         display: block;
         left: 0;
@@ -586,8 +521,7 @@ const iuiTreeGridDefaultStyle = css`
         opacity: 0;
         top: 0;
     }
-    .iui-treegrid-row-animate-select-left
-    {
+    .iui-treegrid-row-animate-select-left {
         animation-name: treegrid-row-animate-select-left;
         animation-delay: 0s;
         animation-direction: normal;
@@ -597,8 +531,7 @@ const iuiTreeGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes treegrid-row-animate-select-left
-    {
+    @keyframes treegrid-row-animate-select-left {
         0% { 	   
             left: 100%;
             opacity: 0.5;
@@ -610,8 +543,7 @@ const iuiTreeGridDefaultStyle = css`
             width: 100%;
         }
     }
-    .iui-treegrid-row-animate-select-right
-    {
+    .iui-treegrid-row-animate-select-right {
         animation-name: treegrid-row-animate-select-right;
         animation-delay: 0s;
         animation-direction: normal;
@@ -621,8 +553,7 @@ const iuiTreeGridDefaultStyle = css`
         animation-play-state: running;
         animation-timing-function: linear; 
     }
-    @keyframes treegrid-row-animate-select-right
-    {
+    @keyframes treegrid-row-animate-select-right {
         0% { 	   
             width: 0;
             opacity: 0.5;

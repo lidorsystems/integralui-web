@@ -3,15 +3,24 @@ import { c as css } from '../external/lit-element.js';
 const iuiPopOverDefaultStyle = css`
     .iui-popover {
         animation: popover-open 0.5s 0s 1 forwards;
-        background-color: #ffffff;
-        border: thin solid #ababab;
-        color: #323232;
-        cursor: default;
+        background: var(--popover-background, white);
+        border: var(--popover-border, thin solid #cecece);
+        border-color:  var(--popover-border-color, #cecece);
+        border-radius: var(--popover-border-radius, 1px);
+        border-width: var(--popover-border-width, thin);
+        color: var(--popover-color, #323232);
+        cursor: var(--popover-cursor, default);
+        display: var(--popover-display, block);
+        float: var(--popover-float, none);
+        height: var(--popover-height, auto);
+        margin: var(--popover-margin, 0);
+        opacity: var(--popover-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: absolute;
+        padding: var(--popover-padding, 0);
+        position: var(--popover-position, absolute);
         top: -999999px;
-        z-index: 999;
+        width: var(--popover-width, auto);
+        z-index: 9999999;
         
         -webkit-user-select: none;
         -khtml-user-select: none;

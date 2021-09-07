@@ -4,12 +4,20 @@ const iuiSideBarDefaultStyle = css`
     .iui-sidebar {
         background: var(--sidebar-background, transparent);
         border: var(--sidebar-border, 0);
+        border-color:  var(--sidebar-border-color, transparent);
+        border-radius: var(--sidebar-border-radius, 1px);
+        border-width: var(--sidebar-border-width, thin);
         color: var(--sidebar-color, black);
         cursor: var(--sidebar-cursor, default);
-        overflow: hidden;
+        display: var(--sidebar-display, block);
+        float: var(--sidebar-float, none);
+        height: var(--sidebar-height, auto);
         margin: var(--sidebar-margin, 0);
+        opacity: var(--sidebar-opacity, 1);
+        overflow: hidden;
         padding: var(--sidebar-padding, 0);
-        position: relative;
+        position: var(--sidebar-position, relative);
+        width: var(--sidebar-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

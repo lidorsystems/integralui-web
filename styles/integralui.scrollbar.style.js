@@ -3,11 +3,19 @@ import { c as css } from '../external/lit-element.js';
 const iuiScrollBarStyle = css`
     .iui-scrollbar-vertical {
         background: var(--scrollbar-vertical-background, #f5f5f5);
+        border: var(--scrollbar-horizontal-border, 0);
+        border-color:  var(--scrollbar-border-color, #f5f5f5);
         border-left: var(--scrollbar-vertical-border-left, thin solid #f5f5f5);
+        border-radius: var(--scrollbar-vertical-border-radius, 1px);
+        border-width: var(--scrollbar-vertical-border-width, thin);
         cursor: var(--scrollbar-vertical-cursor, default);
-        margin: 0;
+        display: var(--scrollbar-vertical-display, block);
+        height: var(--scrollbar-vertical-height, auto);
+        margin: var(--scrollbar-vertical-margin, 0);
+        opacity: var(--scrollbar-vertical-opacity, 1);
+        overflow: hidden;
         padding: var(--scrollbar-vertical-padding, 2px);
-        position: absolute;
+        position: var(--scrollbar-vertical-position, absolute);
         top: 0;
         width: var(--scrollbar-vertical-width, 11px);
         z-index: 99;
@@ -38,13 +46,21 @@ const iuiScrollBarStyle = css`
     }
     .iui-scrollbar-horizontal {
         background: var(--scrollbar-horizontal-background, #f5f5f5);
+        border: var(--scrollbar-horizontal-border, 0);
+        border-color:  var(--scrollbar-border-color, #f5f5f5);
+        border-radius: var(--scrollbar-horizontal-border-radius, 1px);
         border-top: var(--scrollbar-horizontal-border-top, thin solid #f5f5f5);
+        border-width: var(--scrollbar-horizontal-border-width, thin);
         bottom: 0;
         cursor: var(--scrollbar-horizontal-cursor, default);
+        display: var(--scrollbar-horizontal-display, block);
         height: var(--scrollbar-horizontal-height, 11px);
-        margin: 0;
+        margin: var(--scrollbar-horizontal-margin, 0);
+        opacity: var(--scrollbar-horizontal-opacity, 1);
+        overflow: hidden;
         padding: var(--scrollbar-horizontal-padding, 2px);
-        position: absolute;
+        position: var(--scrollbar-horizontal-position, absolute);
+        width: var(--scrollbar-horizontal-width, auto);
         z-index: 99;
 
         -webkit-user-select: none;

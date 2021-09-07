@@ -2,15 +2,22 @@ import { c as css } from '../external/lit-element.js';
 
 const iuiSlideBarDefaultStyle = css`
     .iui-slidebar {
-        background-color: transparent;
-        cursor: default;
-        margin: 0;
+        background: var(--slidebar-background, #f5f5f5);
+        border: var(--slidebar-border, thin solid #f5f5f5);
+        border-color:  var(--slidebar-border-color, #f5f5f5);
+        border-radius: var(--slidebar-border-radius, 1px);
+        border-width: var(--slidebar-border-width, thin);
+        color: var(--slidebar-color, black);
+        cursor: var(--slidebar-cursor, default);
+        display: var(--slidebar-display, block);
+        float: var(--slidebar-float, none);
+        height: var(--slidebar-height, auto);
+        margin: var(--slidebar-margin, 0);
+        opacity: var(--slidebar-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: relative;
-
-        background: #f5f5f5;
-        border: thin solid #f5f5f5;
+        padding: var(--slidebar-padding, 0);
+        position: var(--slidebar-position, relative);
+        width: var(--slidebar-width, auto);
     }
     .iui-slidebar-container {
         list-style: none;

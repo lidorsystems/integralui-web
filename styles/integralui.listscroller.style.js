@@ -2,12 +2,22 @@ import { c as css } from '../external/lit-element.js';
 
 const iuiListScrollerDefaultStyle = css`
     .iui-listscroller {
-        color: black;
-        cursor: default;
-        margin: 0;
+        background: var(--listscroller-background, transparent);
+        border: var(--listscroller-border, 0);
+        border-color:  var(--listscroller-border-color, transparent);
+        border-radius: var(--listscroller-border-radius, 1px);
+        border-width: var(--listscroller-border-width, thin);
+        color: var(--listscroller-color, black);
+        cursor: var(--listscroller-cursor, default);
+        display: var(--listscroller-display, block);
+        float: var(--listscroller-float, none);
+        height: var(--listscroller-height, auto);
+        margin: var(--listscroller-margin, 0);
+        opacity: var(--listscroller-opacity, 1);
         overflow: hidden;
-        padding2: 2px;
-        position: relative;
+        padding: var(--listscroller-padding, 0);
+        position: var(--listscroller-position, relative);
+        width: var(--listscroller-width, auto);
         
         -webkit-touch-callout: none;
         -webkit-user-select: none;

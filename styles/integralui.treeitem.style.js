@@ -1,7 +1,6 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiTreeItemDefaultStyle = css`
-    .iui-treeitem
     .iui-treeitem {
         background: var(--treeitem-background, transparent);
         color: var(--treeitem-color, black);
@@ -48,13 +47,12 @@ const iuiTreeItemDefaultStyle = css`
     .iui-treeitem-expand-box {
         background: url(../icons/expandbox-icons.png) no-repeat 0 -48px;
         display: inline-block;
-        float: left;
         overflow: hidden;
         padding: 0;
-        margin: var(--treeitem-expand-box-margin, 1px 5px 0 0);
+        margin: var(--treeitem-expand-box-margin, 1px 3px 0 0);
         width: 16px;
         height: 16px;
-        vertical-align: middle;
+        vertical-align: top;
     }
     .iui-treeview-enter .iui-treeitem-expand-box-general {
         animation-name: iui-treeview-animate-expand-box-enter;
@@ -152,6 +150,25 @@ const iuiTreeItemDefaultStyle = css`
     .iui-treeitem-disabled div {
         opacity: var(--treeitem-disabled-opacity, 0.75);
         pointer-events: none;
+    }
+
+    /* CheckBox */
+    .iui-treeitem-checkbox {
+        background-image: url(../icons/checkbox-unchecked.ico);
+        background-repeat: no-repeat;
+        display: inline-block;
+        overflow: hidden;
+        padding: 0;
+        margin: 0 5px 0 0;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+    }
+    .iui-treeitem-checkbox-checked {
+        background-image: url(../icons/checkbox-checked.ico);
+    }
+    .iui-treeitem-checkbox-indeterminate {
+        background-image: url(../icons/checkbox-indeterminate.ico);
     }
 
     /* Animations */

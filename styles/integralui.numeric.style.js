@@ -2,14 +2,22 @@ import { c as css } from '../external/lit-element.js';
 
 const iuiNumericDefaultStyle = css`
     .iui-numeric {
-        background: white;
-        color: black;
-        cursor: default;
+        background: var(--numeric-background, white);
+        border: var(--numeric-border, 0);
+        border-color:  var(--numeric-border-color, transparent);
+        border-radius: var(--numeric-border-radius, 1px);
+        border-width: var(--numeric-border-width, thin);
+        color: var(--numeric-color, black);
+        cursor: var(--numeric-cursor, default);
         display: var(--numeric-display, block);
+        float: var(--numeric-float, none);
+        height: var(--numeric-height, auto);
         margin: var(--numeric-margin, 0);
+        opacity: var(--numeric-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: relative;
+        padding: var(--numeric-padding, 0);
+        position: var(--numeric-position, relative);
+        width: var(--numeric-width, auto);
         
         -webkit-touch-callout: none;
         -webkit-user-select: none;

@@ -1,3 +1,25 @@
+v21.3
+- New CSS custom properties for all web components
+- TreeView now includes built-in check boxes
+- Option to import templates from a file
+- Option to get a list of current virtual items in TreeView
+- Option to add expandable groups to TreeList
+- Methods that allow asynchronous load on demand in TreeList
+- CellTouched event available in Grid
+- Display an icon from an url in all list components: ListBox, ListView, TreeList and TreeView
+- Hovering over Tabs now shows grayed line
+- SelectedIndexChanged event available for Select component
+- Custom style settings for drag and drop component that can be changed on demand
+- Option to get a list of all checked items in TreeView
+- Fixed the issue that caused rendering error when starting drag and drop in TreeView
+- Calling updateLayout in TreeView when hovering item is clicked now correctly sets the position of hovering toolbar
+- Fixed the issue that causes Calendar to throw an error if provided date value is undefined
+- Selecting a new tab now correclty resets the state of previously hovered tab to normal
+- Fixed the appearance of hovered and selected template when Partial display mode is enabled in TreeView
+- Fixed the appearance of scroll corner when both horizontal and vertical scrollbars appear in TreeView
+- The width of scrolling view in TreeView is now correctly shown
+- Other minor bug fixes
+
 v21.2
 - New component: PivotGrid
 - Improved performance during data load and update

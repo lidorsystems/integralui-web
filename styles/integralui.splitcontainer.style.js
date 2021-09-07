@@ -1,15 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiSplitContainerDefaultStyle = css`
-    .iui-splitcontainer
-    {
+    .iui-splitcontainer {
         background: var(--splitcontainer-background, transparent);
+        border: var(--splitcontainer-border, 0);
+        border-color:  var(--splitcontainer-border-color, transparent);
+        border-radius: var(--splitcontainer-border-radius, 1px);
+        border-width: var(--splitcontainer-border-width, thin);
         color: var(--splitcontainer-color, black);
         cursor: var(--splitcontainer-cursor, default);
+        display: var(--splitcontainer-display, block);
+        float: var(--splitcontainer-float, none);
+        height: var(--splitcontainer-height, auto);
         margin: var(--splitcontainer-margin, 0);
+        opacity: var(--splitcontainer-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: relative;
+        padding: var(--splitcontainer-padding, 0);
+        position: var(--splitcontainer-position, relative);
+        width: var(--splitcontainer-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

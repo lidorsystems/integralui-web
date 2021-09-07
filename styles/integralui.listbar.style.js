@@ -1,16 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiListBarDefaultStyle = css`
-    .iui-listbar
-    {
+    .iui-listbar {
         background: var(--listbar-background, transparent);
-        border: var(--listbar-border, thin solid #ababab);
+        border: var(--listbar-border, thin solid #cecece);
+        border-color:  var(--listbar-border-color, #cecece);
+        border-radius: var(--listbar-border-radius, 1px);
+        border-width: var(--listbar-border-width, thin);
         color: var(--listbar-color, black);
         cursor: var(--listbar-cursor, default);
+        display: var(--listbar-display, block);
+        float: var(--listbar-float, none);
+        height: var(--listbar-height, auto);
         margin: var(--listbar-margin, 0);
+        opacity: var(--listbar-opacity, 1);
         overflow: hidden;
         padding: var(--listbar-padding, 0);
-        position: relative;
+        position: var(--listbar-position, relative);
+        width: var(--listbar-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

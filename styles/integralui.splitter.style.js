@@ -3,15 +3,21 @@ import { c as css } from '../external/lit-element.js';
 const iuiSplitterDefaultStyle = css`
     .iui-splitter {
         background: var(--splitter-background, transparent);
-        border: var(--splitter-border, 0 solid transparent);
-        color: var(--listbox-color, black);
+        border: var(--splitter-border, 0);
+        border-color:  var(--splitter-border-color, transparent);
+        border-radius: var(--splitter-border-radius, 1px);
+        border-width: var(--splitter-border-width, thin);
+        color: var(--splitter-color, black);
         cursor: var(--splitter-cursor, default);
-        height: 100%;
+        display: var(--splitter-display, block);
+        float: var(--splitter-float, none);
+        height: var(--splitter-height, 100%);
         margin: var(--splitter-margin, 0);
+        opacity: var(--splitter-opacity, 1);
         overflow: hidden;
         padding: var(--splitter-padding, 0);
-        position: relative;
-        width: 100%;
+        position: var(--splitter-position, relative);
+        width: var(--splitter-width, 100%);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

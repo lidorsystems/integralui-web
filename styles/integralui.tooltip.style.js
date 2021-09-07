@@ -1,18 +1,25 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiTooltipStyle = css`
-    .iui-tooltip
-    {
+    .iui-tooltip {
         background: var(--tooltip-background, #e5e5e5);
         border: var(--tooltip-border, thin solid #888888);
+        border-color:  var(--tooltip-border-color, #888888);
+        border-radius: var(--tooltip-border-radius, 1px);
+        border-width: var(--tooltip-border-width, thin);
         color: var(--tooltip-color, #323232);
         cursor: var(--tooltip-cursor, default);
-        font-size: var(--tooltip-font-size, 1em);
+        display: var(--tooltip-display, block);
+        font-size: var(--tooltip-font-size, 1rem);
+        height: var(--tooltip-height, auto);
+        margin: var(--tooltip-margin, 0);
+        opacity: var(--tooltip-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: absolute;
-        top: -999999px;
-        z-index: 999;
+        padding: var(--tooltip-padding, 0);
+        position: var(--tooltip-position, absolute);
+        top: -9999999px;
+        width: var(--tooltip-width, auto);
+        z-index: 9999999;
 
         -webkit-user-select: none;
         -khtml-user-select: none;

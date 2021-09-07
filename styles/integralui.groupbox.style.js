@@ -1,15 +1,23 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiGroupBoxDefaultStyle = css`
-    .iui-groupbox
-    {
+    .iui-groupbox {
         background: var(--groupbox-background, transparent);
+        border: var(--groupbox-border, 0);
+        border-color:  var(--groupbox-border-color, transparent);
+        border-radius: var(--groupbox-border-radius, 1px);
+        border-width: var(--groupbox-border-width, thin);
         color: var(--groupbox-color, black);
         cursor: var(--groupbox-cursor, default);
+        display: var(--groupbox-display, block);
+        float: var(--groupbox-float, none);
+        height: var(--groupbox-height, auto);
         margin: var(--groupbox-margin, 2px 0);
+        opacity: var(--groupbox-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: relative;
+        padding: var(--groupbox-padding, 0);
+        position: var(--groupbox-position, relative);
+        width: var(--groupbox-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

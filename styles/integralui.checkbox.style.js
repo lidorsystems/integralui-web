@@ -4,14 +4,20 @@ const iuiCheckBoxDefaultStyle = css`
     .iui-checkbox {
         background: var(--checkbox-background, transparent);
         border: var(--checkbox-border, 0);
-        border-color: var(--checkbox-border-color, transparent);
+        border-color:  var(--checkbox-border-color, transparent);
+        border-radius: var(--checkbox-border-radius, 1px);
+        border-width: var(--checkbox-border-width, 0);
         color: var(--checkbox-color, black);
         cursor: var(--checkbox-cursor, default);
         display: var(--checkbox-display, inline-block);
-        margin: var(--checkbox-margin, 2px 0);
+        float: var(--checkbox-float, none);
+        height: var(--checkbox-height, auto);
+        opacity: var(--checkbox-opacity, 1);
         overflow: hidden;
+        margin: var(--checkbox-margin, 2px 0);
         padding: var(--checkbox-padding, 5px);
-        position: relative;
+        position: var(--checkbox-position, relative);
+        width: var(--checkbox-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

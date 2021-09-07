@@ -3,11 +3,21 @@ import { c as css } from '../external/lit-element.js';
 const iuiSliderDefaultStyle = css`
     .iui-slider {
         background: var(--slider-background, transparent);
+        border: var(--slider-border, 0);
+        border-color:  var(--slider-border-color, transparent);
+        border-radius: var(--slider-border-radius, 1px);
+        border-width: var(--slider-border-width, thin);
+        color: var(--slider-color, black);
         cursor: var(--slider-cursor, default);
+        display: var(--slider-display, block);
+        float: var(--slider-float, none);
+        height: var(--slider-height, auto);
         margin: var(--slider-margin, 0);
+        opacity: var(--slider-opacity, 1);
         overflow: hidden;
-        padding: 0;
-        position: relative;
+        padding: var(--slider-padding, 0);
+        position: var(--slider-position, relative);
+        width: var(--slider-width, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
