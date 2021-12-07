@@ -9,8 +9,10 @@ const iuiGridOfficeStyle = css`
         background: var(--grid-block-fixed-background, #f9f9f9);
     }
     .iui-grid-block-top-left .iui-grid-column-header, 
+    .iui-grid-block-top-left .iui-grid-column-filter, 
     .iui-grid-block-top-left .iui-grid-column-footer, 
-    .iui-grid-block-top-right .iui-grid-column-header, 
+    .iui-grid-block-top-right .iui-grid-column-header,
+    .iui-grid-block-top-right .iui-grid-column-filter, 
     .iui-grid-block-top-right .iui-grid-column-footer {
         background: var(--grid-column-fixed-background, #eeeeee);
         border: var(--grid-column-fixed-border, thin solid transparent);
@@ -31,13 +33,16 @@ const iuiGridOfficeStyle = css`
     .iui-grid-block-hover {
         border: thin solid #bebebe;
     }
-    .iui-grid-column-header, .iui-grid-column-footer {
+    .iui-grid-column-header, .iui-grid-column-filter, .iui-grid-column-footer {
         background: var(--grid-column-background, #f5f5f5);
         border-color: var(--grid-column-border-color, transparent);
         border-right: thin solid transparent !important;
         color: var(--grid-column-color, #49678f);
     }
-    .iui-grid-column-header {
+    .iui-grid-column-filter {
+        background: var(--grid-column-filter-background, transparent);
+    }
+    .iui-grid-column-header, .iui-grid-column-filter {
         border-bottom: thin solid #efefef !important;
     }
     .iui-grid-column-footer {

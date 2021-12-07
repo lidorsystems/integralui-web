@@ -86,6 +86,27 @@ const iuiTreeGridDefaultStyle = css`
         right: 0;
         z-index: 11;
     }
+    .iui-treegrid-block-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .iui-treegrid-block-filter-left {
+        background: transparent;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 12;
+    }
+    .iui-treegrid-block-filter-right {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 11;
+    }
     .iui-treegrid-block-bottom {
         bottom: 0;
         left: 0;
@@ -132,13 +153,19 @@ const iuiTreeGridDefaultStyle = css`
     .iui-treegrid-block-shift-right {
         margin-right: 16px;
     }
+    .iui-treegrid-filter-block-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
     .iui-treegrid-row-block {
         padding: 0 0 0 15px;
     }
     .iui-treegrid-row-block-rtl {
         padding: 0 15px 0 0;
     }
-    .iui-treegrid-column-header, .iui-treegrid-column-footer {
+    .iui-treegrid-column-header, .iui-treegrid-column-filter, .iui-treegrid-column-footer {
         background: var(--treegrid-column-background, #ededed);
         border: var(--treegrid-column-border, thin solid #d5d5d5);
         border-color: var(--treegrid-column-border-color, #d5d5d5);
@@ -150,12 +177,21 @@ const iuiTreeGridDefaultStyle = css`
         white-space: nowrap;
         z-index: 1;
     }
+    .iui-treegrid-column-filter  {
+        background: var(--treegrid-column-filter-background, transparent);
+        padding: var(--treegrid-column-filter-padding, 0px 0);
+    }
     .iui-treegrid-block-top-left .iui-treegrid-column-header, 
+    .iui-treegrid-block-top-left .iui-treegrid-column-filter, 
     .iui-treegrid-block-top-left .iui-treegrid-column-footer, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header, 
+    .iui-treegrid-block-top-right .iui-treegrid-column-filter,
     .iui-treegrid-block-top-right .iui-treegrid-column-footer {
         background: var(--treegrid-column-fixed-background, #dddddd);
         border: thin solid #c5c5c5;
+    }
+    .iui-treegrid-block-top-left .iui-treegrid-column-filter, .iui-treegrid-block-top-right .iui-treegrid-column-filter  {
+        background: var(--treegrid-column-filter-fixed-background, transparent);
     }
     .iui-treegrid-column-header-hovered {
         animation-name: var(--treegrid-column-header-hovered-animation-name, none);
@@ -169,7 +205,7 @@ const iuiTreeGridDefaultStyle = css`
         border-color: var(--treegrid-colum-header-selected-border-color, #aeaeae);
         color: var(--treegrid-column-header-selected-color, black);
     }
-    .iui-treegrid-column-header > div, .iui-treegrid-column-footer > div, .iui-treegrid-row-cell > div {
+    .iui-treegrid-column-header > div, .iui-treegrid-column-filter > div, .iui-treegrid-column-footer > div, .iui-treegrid-row-cell > div {
         border: 2px solid transparent;
         margin: 0;
         padding: 2px;
@@ -321,10 +357,10 @@ const iuiTreeGridDefaultStyle = css`
         margin: 0 2px 0 0;
         vertical-align: middle;
     }
-    .iui-treegrid-column-header-left, .iui-treegrid-column-footer-left {
+    .iui-treegrid-column-header-left, .iui-treegrid-column-filter-left, .iui-treegrid-column-footer-left {
         border-right: 1px solid #ababab;
     }
-    .iui-treegrid-column-header-right, .iui-treegrid-column-footer-right {
+    .iui-treegrid-column-header-right, .iui-treegrid-column-filter-right, .iui-treegrid-column-footer-right {
         border-left: 1px solid #ababab;
     }
     .iui-treegrid-rows-left, .iui-treegrid-rows-left-top, .iui-treegrid-rows-left-bottom {
@@ -366,7 +402,7 @@ const iuiTreeGridDefaultStyle = css`
     .iui-treegrid-lines-vertical {
         border-right-color: #d5d5d5;
     }
-    .iui-treegrid-column-header .iui-treegrid-lines-vertical, .iui-treegrid-column-footer .iui-treegrid-lines-vertical {
+    .iui-treegrid-column-header .iui-treegrid-lines-vertical, .iui-treegrid-column-filter .iui-treegrid-lines-vertical, .iui-treegrid-column-footer .iui-treegrid-lines-vertical {
         border-left-color: #d5d5d5;
         border-right-color: #d5d5d5;
     }
@@ -377,7 +413,7 @@ const iuiTreeGridDefaultStyle = css`
         border-right-color: #d5d5d5;
         border-bottom-color: #d5d5d5;
     }
-    .iui-treegrid-column-header .iui-treegrid-lines-both, .iui-treegrid-column-footer .iui-treegrid-lines-both {
+    .iui-treegrid-column-header .iui-treegrid-lines-both, .iui-treegrid-column-filter .iui-treegrid-lines-both, .iui-treegrid-column-footer .iui-treegrid-lines-both {
         border-left-color: #d5d5d5;
         border-right-color: #d5d5d5;
         border-bottom-color: #d5d5d5;
@@ -576,8 +612,9 @@ const iuiTreeGridDefaultStyle = css`
     */
 
 
-   .iui-treegrid-handle {
-        background-image: var(--treegrid-background-image, url(../icons/grab.ico));
+    /* Drag Drop Column */
+    .iui-treegrid-handle {
+        background-image: var(--treegrid-handle-background-image, url(../icons/grab.ico));
         background-repeat: repeat;
         cursor: var(--treegrid-handle-cursor, grab);
         display: block;
@@ -586,6 +623,30 @@ const iuiTreeGridDefaultStyle = css`
         padding: 0;
         vertical-align: middle;
         width: var(--treegrid-handle-width, 16px);
+    }
+
+    /* Editing Column */
+    .iui-treegrid-editing {
+        background-repeat: repeat;
+        cursor: var(--treegrid-editing-cursor, default);
+        display: block;
+        height: var(--treegrid-editing-height, 16px);
+        margin: var(--treegrid-editing-margin, 2px 0);
+        opacity: 0.25;
+        padding: 0;
+        vertical-align: middle;
+        width: var(--treegrid-editing-width, 16px);
+    }
+    .iui-treegrid-editing:hover {
+        background-image: var(--treegrid-editing-background-image, url(../icons/edit.ico));
+        opacity: 0.25;
+    }
+    .iui-treegrid-editing-active {
+        background-image: var(--treegrid-editing-background-image, url(../icons/edit.ico));
+        opacity: 1;
+    }
+    .iui-treegrid-editing-active:hover {
+        opacity: 1 !important;
     }
 `;
 

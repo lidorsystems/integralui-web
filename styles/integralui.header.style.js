@@ -20,7 +20,9 @@ const iuiHeaderDefaultStyle = css`
     }
     .iui-header-label {
         display: inline-block;
+        margin: var(--header-label-margin, 0);
         padding: var(--header-label-padding, 1px);
+        text-align: var(--header-label-text-align, left);
     }
     .iui-header-label-empty {
         display: block;
@@ -145,6 +147,17 @@ const iuiHeaderDefaultStyle = css`
         100% { max-width: 0; left: 7px; }
     }
 
+    .iui-header-expand-box-calendar
+    {
+        background-image: url(../icons/calendar-dark.ico);
+        display: block;
+        height: 16px;
+        margin: var(--header-expand-box-margin, 2px);
+        position: absolute;
+        right: var(--header-expand-box-right, 0);
+        top: var(--header-expand-box-top, 0);
+        width: 16px;
+    }
 
 
     .iui-header-expand-box-arrow

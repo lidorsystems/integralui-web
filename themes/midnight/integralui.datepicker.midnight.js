@@ -5,6 +5,9 @@ const iuiDatePickerMidnightStyle = css`
         background: var(--datepicker-background, #252526);
         color: var(--datepicker-color, #cccccc);
     }
+    .iui-datepicker:focus {
+        border-color: #646464;
+    }
 
     /* Header */
     .iui-datepicker-header {

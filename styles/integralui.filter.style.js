@@ -1,8 +1,7 @@
 import { c as css } from '../external/lit-element.js';
 
 const iuiFilterDefaultStyle = css`
-    .iui-filter-window
-    {
+    .iui-filter-window {
         background: #efefef;
         border: thin solid gray;
         box-shadow: 1px 1px 2px #888888;
@@ -11,8 +10,7 @@ const iuiFilterDefaultStyle = css`
         top: -9999px;
         z-index: 999;
     }
-    .iui-filtering
-    {
+    .iui-filtering {
         background-image: url(../icons/filter.ico);
         margin: 0;
         position: absolute;
@@ -21,12 +19,14 @@ const iuiFilterDefaultStyle = css`
         width: 16px;
         height: 16px;
     }
-    .iui-filtering-hovered
-    {
+    .iui-filtering-hovered {
     }
-    .iui-filtering-selected
-    {
+    .iui-filtering-selected {
         background-image: url(../icons/filter-white.ico);
+    }
+    .iui-filter-cell {
+        position: relative;
+
     }
 `;
 

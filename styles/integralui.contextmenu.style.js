@@ -35,12 +35,15 @@ const iuiContextMenuDefaultStyle = css`
         margin: 0;
         padding: 0;
     }
-    .iui-contextmenu .iui-menuitem-block {
+    .iui-menuitem-block {
         background: var(--contextmenu-background, #f5f5f5);
         border: var(--contextmenu-border, thin solid #dedede);
         width: var(--contextmenu-width, 150px);
     }
     .iui-contextmenuitem-root-hovered, .iui-contextmenuitem-root-selected {
+        animation-name: var(--contextmenuitem-root-animation-name, none);
+    }
+    .iui-contextmenuitem-hovered, .iui-contextmenuitem-selected {
         animation-name: var(--contextmenuitem-root-animation-name, none);
     }
 `;

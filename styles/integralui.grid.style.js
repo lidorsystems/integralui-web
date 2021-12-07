@@ -86,6 +86,27 @@ const iuiGridDefaultStyle = css`
         right: 0;
         z-index: 11;
     }
+    .iui-grid-block-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .iui-grid-block-filter-left {
+        background: transparent;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 12;
+    }
+    .iui-grid-block-filter-right {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 11;
+    }
     .iui-grid-block-bottom {
         bottom: 0;
         left: 0;
@@ -132,13 +153,19 @@ const iuiGridDefaultStyle = css`
     .iui-grid-block-shift-right {
         margin-right: 16px;
     }
+    .iui-grid-filter-block-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
     .iui-grid-row-block {
         padding: 0 0 0 15px;
     }
     .iui-grid-row-block-rtl {
         padding: 0 15px 0 0;
     }
-    .iui-grid-column-header, .iui-grid-column-footer {
+    .iui-grid-column-header, .iui-grid-column-filter, .iui-grid-column-footer {
         background: var(--grid-column-background, #ededed);
         border: var(--grid-column-border, thin solid #d5d5d5);
         border-color: var(--grid-column-border-color, #d5d5d5);
@@ -150,12 +177,21 @@ const iuiGridDefaultStyle = css`
         white-space: nowrap;
         z-index: 1;
     }
+    .iui-grid-column-filter  {
+        background: var(--grid-column-filter-background, transparent);
+        padding: var(--grid-column-filter-padding, 0px 0);
+    }
     .iui-grid-block-top-left .iui-grid-column-header, 
+    .iui-grid-block-top-left .iui-grid-column-filter, 
     .iui-grid-block-top-left .iui-grid-column-footer, 
     .iui-grid-block-top-right .iui-grid-column-header, 
+    .iui-grid-block-top-right .iui-grid-column-filter,
     .iui-grid-block-top-right .iui-grid-column-footer {
         background: var(--grid-column-fixed-background, #dddddd);
         border: thin solid #c5c5c5;
+    }
+    .iui-grid-block-top-left .iui-grid-column-filter, .iui-grid-block-top-right .iui-grid-column-filter  {
+        background: var(--grid-column-filter-fixed-background, transparent);
     }
     .iui-grid-column-header-hovered {
         animation-name: var(--grid-column-header-hovered-animation-name, none);
@@ -169,7 +205,7 @@ const iuiGridDefaultStyle = css`
         border-color: var(--grid-colum-header-selected-border-color, #aeaeae);
         color: var(--grid-column-header-selected-color, black);
     }
-    .iui-grid-column-header > div, .iui-grid-column-footer > div, .iui-grid-row-cell > div {
+    .iui-grid-column-header > div, .iui-grid-column-filter > div, .iui-grid-column-footer > div, .iui-grid-row-cell > div {
         border: 2px solid transparent;
         margin: 0;
         padding: 2px;
@@ -179,7 +215,7 @@ const iuiGridDefaultStyle = css`
         /*text-overflow: ellipsis;*/
         white-space2: nowrap;
     }
-    .iui-grid-column-header-cell-content, .iui-grid-column-footer-cell-content, .iui-grid-row-cell-label {
+    .iui-grid-column-header-cell-content, .iui-grid-column-filter-cell-content, .iui-grid-column-footer-cell-content, .iui-grid-row-cell-label {
         display: inline;
         padding: 0 3px;
         vertical-align: middle;
@@ -321,10 +357,10 @@ const iuiGridDefaultStyle = css`
         margin: 0 2px 0 0;
         vertical-align: middle;
     }
-    .iui-grid-column-header-left, .iui-grid-column-footer-left {
+    .iui-grid-column-header-left, .iui-grid-column-filter-left, .iui-grid-column-footer-left {
         border-right: 1px solid #ababab;
     }
-    .iui-grid-column-header-right, .iui-grid-column-footer-right {
+    .iui-grid-column-header-right, .iui-grid-column-filter-right, .iui-grid-column-footer-right {
         border-left: 1px solid #ababab;
     }
     .iui-grid-rows-left, .iui-grid-rows-left-top, .iui-grid-rows-left-bottom {
@@ -366,7 +402,7 @@ const iuiGridDefaultStyle = css`
     .iui-grid-lines-vertical {
         border-right-color: #d5d5d5;
     }
-    .iui-grid-column-header .iui-grid-lines-vertical, .iui-grid-column-footer .iui-grid-lines-vertical {
+    .iui-grid-column-header .iui-grid-lines-vertical, .iui-grid-column-filter .iui-grid-lines-vertical, .iui-grid-column-footer .iui-grid-lines-vertical {
         border-left-color: #d5d5d5;
         border-right-color: #d5d5d5;
     }
@@ -377,7 +413,7 @@ const iuiGridDefaultStyle = css`
         border-right-color: #d5d5d5;
         border-bottom-color: #d5d5d5;
     }
-    .iui-grid-column-header .iui-grid-lines-both, .iui-grid-column-footer .iui-grid-lines-both {
+    .iui-grid-column-header .iui-grid-lines-both, .iui-grid-column-filter .iui-grid-lines-both, .iui-grid-column-footer .iui-grid-lines-both {
         border-left-color: #d5d5d5;
         border-right-color: #d5d5d5;
         border-bottom-color: #d5d5d5;
@@ -700,8 +736,9 @@ const iuiGridDefaultStyle = css`
     */
 
 
+    /* Drag Drop Column */
    .iui-grid-handle {
-        background-image: var(--grid-background-image, url(../icons/grab.ico));
+        background-image: var(--grid-handle-background-image, url(../icons/grab.ico));
         background-repeat: repeat;
         cursor: var(--grid-handle-cursor, grab);
         display: block;
@@ -710,6 +747,30 @@ const iuiGridDefaultStyle = css`
         padding: 0;
         vertical-align: middle;
         width: var(--grid-handle-width, 16px);
+    }
+
+    /* Editing Column */
+    .iui-grid-editing {
+        background-repeat: repeat;
+        cursor: var(--grid-editing-cursor, default);
+        display: block;
+        height: var(--grid-editing-height, 16px);
+        margin: var(--grid-editing-margin, 2px 0);
+        opacity: 0.25;
+        padding: 0;
+        vertical-align: middle;
+        width: var(--grid-editing-width, 16px);
+    }
+    .iui-grid-editing:hover {
+        background-image: var(--grid-editing-background-image, url(../icons/edit.ico));
+        opacity: 0.25;
+    }
+    .iui-grid-editing-active {
+        background-image: var(--grid-editing-background-image, url(../icons/edit.ico));
+        opacity: 1;
+    }
+    .iui-grid-editing-active:hover {
+        opacity: 1 !important;
     }
 `;
 

@@ -3,14 +3,15 @@ import { c as css } from '../external/lit-element.js';
 const iuiDatePickerDefaultStyle = css`
     .iui-datepicker {
         background: var(--datepicker-background, white);
-        border: var(--datepicker-border, 0);
+        border: var(--datepicker-border, thin solid transparent);
         border-color:  var(--datepicker-border-color, transparent);
         border-radius: var(--datepicker-border-radius, 1px);
-        border-width: var(--datepicker-border-width, 0);
+        border-width: var(--datepicker-border-width, 1px);
         color: var(--datepicker-color, black);
         cursor: var(--datepicker-cursor, default);
         display: var(--datepicker-display, block);
         float: var(--datepicker-float, none);
+        font-size: var(--datepicker-font-size, 1rem);
         height: var(--datepicker-height, auto);
         opacity: var(--datepicker-opacity, 1);
         overflow: hidden;
@@ -28,6 +29,7 @@ const iuiDatePickerDefaultStyle = css`
         user-select: none;
     }
     .iui-datepicker:focus {
+        border: thin dotted #cecece;
         outline: none !important;
     }
 
@@ -35,6 +37,7 @@ const iuiDatePickerDefaultStyle = css`
     .iui-datepicker-header {
         border: var(--datepicker-header-border, thin solid #cecece);
         padding: var(--datepicker-header-padding, 3px);
+        text-align: var(--datepicker-header-text-align, right);
         white-space: nowrap;
     }
     .iui-datepicker-header-hovered {
@@ -51,6 +54,10 @@ const iuiDatePickerDefaultStyle = css`
     }
     .iui-datepicker-header-expand-box {
         background: var(--datepicker-header-expand-box-background, #484848);
+    }
+    .iui-datepicker-header .iui-header-label {
+        margin: var(--header-label-margin, 0 25px 0 0);
+        text-align: var(--header-label-text-align, right);
     }
 
     /* Disabled State */

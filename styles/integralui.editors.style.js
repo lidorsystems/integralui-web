@@ -107,6 +107,10 @@ const iuiEditorsDefaultStyle = css`
         height: 100%;
         width: calc(100% - 2px);
     }
+    /*.iui-editor-text::-webkit-search-cancel-button {
+        position: relative;
+        right: 0; 
+    }*/
     .iui-editor-text:focus {
         outline: none !important;
     }

@@ -42,7 +42,7 @@ const iuiMenuItemOfficeStyle = css`
     {
         color: black;
     }
-    .iui-menuitem-hovered, .iui-menuitem-selected
+    .iui-menuitem-hovered, .iui-menuitem-selected, .iui-contextmenuitem-hovered, .iui-contextmenuitem-selected
     {
         background-color: #d9edfd !important;
         border: solid thin #d9edfd !important;
@@ -75,7 +75,7 @@ const iuiMenuItemOfficeStyle = css`
         width: 16px;
         height: 16px;
     }
-    .iui-menuitem
+    .iui-menuitem, .iui-contextmenuitem
     {
         background-color: #fefefe;
         border: solid thin #fefefe;

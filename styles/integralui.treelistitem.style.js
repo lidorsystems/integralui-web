@@ -57,6 +57,13 @@ const iuiTreeListItemDefaultStyle = css`
     .iui-treelistgroup div:focus, .iui-treelistitem div:focus {
         outline: none !important;
     }
+    .iui-treelistitem-separator {
+        background: #e5e5e5;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        height: 1px;
+    }
 
     /* Disabled State */
     .iui-treelist-disabled div, .iui-treelist-disabled ul {

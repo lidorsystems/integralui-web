@@ -24,7 +24,7 @@ const iuiMenuItemMidnightStyle = css`
         border: solid thin #252526;
         color: #cccccc;
     }
-    .iui-menuitem-root-hovered, .iui-menuitem-root-selected
+    .iui-menuitem-root-hovered, .iui-menuitem-root-selected, .iui-contextmenuitem-hovered, .iui-contextmenuitem-selected
     {
         animation-name: none;
         background-color: #1177bb !important;

@@ -41,6 +41,10 @@ const iuiAutoCompleteDefaultStyle = css`
         padding: var(--autocomplete-input-padding, 3px);
         width: calc(100% - 4px);
     }
+    .iui-autocomplete input::-webkit-search-cancel-button {
+        position: relative;
+        right: 0; 
+    }
     .iui-autocomplete input:focus {
         outline: none !important;
     }

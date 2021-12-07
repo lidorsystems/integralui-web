@@ -2,7 +2,7 @@ import { c as css } from '../external/lit-element.js';
 
 const iuiListItemDefaultStyle = css`
     .iui-listitem {
-        background: var(--listitem-background, white);
+        background: var(--listitem-background, transparent);
         border: var(--listitem-border, 2px solid transparent);
         border-color:  var(--listitem-border-color, transparent);
         border-radius: var(--listitem-border-radius, 1px);
@@ -17,7 +17,7 @@ const iuiListItemDefaultStyle = css`
         overflow: hidden;
         padding: var(--listitem-padding, 0);
         position: var(--listitem-position, relative);
-        white-space: nowrap;
+        white-space: var(--listitem-white-space, nowrap);
         width: var(--listitem-width, auto);
     }
     .iui-listitem-general {

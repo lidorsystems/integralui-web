@@ -11,6 +11,9 @@ const iuiTreeListItemMidnightStyle = css`
         background: var(--treelistitem-selected-background, #37373d);
         color: var(--treelistitem-selected-color, white);
     }
+    .iui-treelistitem-separator {
+        background: #151515;
+    }
     .iui-treelistitem-animate-select {
         background: var(--treelistitem-animate-select-background, #2d2d33);
     }

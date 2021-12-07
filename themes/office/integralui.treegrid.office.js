@@ -9,8 +9,10 @@ const iuiTreeGridOfficeStyle = css`
         background: var(--treegrid-block-fixed-background, #f9f9f9);
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-header, 
+    .iui-treegrid-block-top-left .iui-treegrid-column-filter, 
     .iui-treegrid-block-top-left .iui-treegrid-column-footer, 
-    .iui-treegrid-block-top-right .iui-treegrid-column-header, 
+    .iui-treegrid-block-top-right .iui-treegrid-column-header,
+    .iui-treegrid-block-top-right .iui-treegrid-column-filter, 
     .iui-treegrid-block-top-right .iui-treegrid-column-footer {
         background: var(--treegrid-column-fixed-background, #eeeeee);
         border: var(--treegrid-column-fixed-border, thin solid transparent);
@@ -31,13 +33,16 @@ const iuiTreeGridOfficeStyle = css`
     .iui-treegrid-block-hover {
         border: thin solid #bebebe;
     }
-    .iui-treegrid-column-header, .iui-treegrid-column-footer {
+    .iui-treegrid-column-header, .iui-treegrid-column-filter, .iui-treegrid-column-footer {
         background: var(--treegrid-column-background, #f5f5f5);
         border-color: var(--treegrid-column-border-color, transparent);
         border-right: thin solid transparent !important;
         color: var(--treegrid-column-color, #49678f);
     }
-    .iui-treegrid-column-header {
+    .iui-treegrid-column-filter {
+        background: var(--treegrid-column-filter-background, transparent);
+    }
+    .iui-treegrid-column-header, .iui-treegrid-column-filter {
         border-bottom: thin solid #efefef !important;
     }
     .iui-treegrid-column-footer {

@@ -7,7 +7,7 @@ const iuiContextMenuMidnightStyle = css`
         box-shadow: var(--contextmenu-box-shadow, 0 2px 5px #151515);
         color: var(--contextmenu-color, #cccccc);
     }
-    .iui-contextmenu .iui-menuitem-block {
+    .iui-menuitem-block {
         background: var(--contextmenu-background, #252526);
         border: var(--contextmenu-border, thin solid #151515);
     }

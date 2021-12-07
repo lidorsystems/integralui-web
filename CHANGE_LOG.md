@@ -1,3 +1,32 @@
+v21.4
+- Built-in Inline Filter in Grid and TreeGrid for Date, Numeric and String values
+- Built-in Inline Editor for Grid and TreeGrid components
+- Breadrumb now updates its content automatically when size changes
+- Change components CSS styles on demand from code
+- Loading icon for all data components
+- Option to prevent update of component layout
+- Custom item templates for TreeList
+- Option to add items as separators to TreeList component
+- Option to customize the drag and drop functionality with wait and resolve methods in data components
+- Option to select a date using keyboard in DatePicker
+- Option to change item or row visibility on demand in data components
+- AutoComplete header now contains a clear selection button
+- Export to JSON now supports exporting specific objects from data components
+- Changes to check value of parent and child items in TreeView is now updated automatically whenever tree layout updates
+- Fixed the locales settings not appearing for Calendar in DatePicker
+- Fixed the issue with resizing of Columns in Grid components when view is horizontally scrolled
+- Fixed the issues with appearance of resize cursor for columns when view is scrolled
+- Fixed the issue that prevented change of cell value from a droplist editor
+- Appearance of previously hovered tab is now correctly reset when a new tab is selected
+- Fixed the issue with that sorts the grid on column click when column is also resizing
+- Pressing down key in Autocomplete to open the dropdown list no longer scrolls the page
+- Editor Text is now correctly updated when using Midnight Themes
+- Click on Breadcrumb item (not the arrow), now sets that item as selected
+- When drag drop between two TreeViews, hovering over items in the first tree view now works after drop
+- If column is fixed, the resize cursor no longer appears
+- Context Menu style is now applied also to submenus
+- Other minor bug fixes
+
 v21.3
 - New CSS custom properties for all web components
 - TreeView now includes built-in check boxes

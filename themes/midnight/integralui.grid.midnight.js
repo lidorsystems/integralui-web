@@ -24,15 +24,22 @@ const iuiGridMidnightStyle = css`
         background: transparent;
     }
     .iui-grid-block-top-left .iui-grid-column-header, 
+    .iui-grid-block-top-left .iui-grid-column-filter, 
     .iui-grid-block-top-left .iui-grid-column-footer, 
     .iui-grid-block-top-right .iui-grid-column-header, 
+    .iui-grid-block-top-right .iui-grid-column-filter,
     .iui-grid-block-top-right .iui-grid-column-footer {
         background: var(--grid-column-fixed-background, #272a2b);
         border: var(--grid-column-fixed-border, thin solid transparent);
         color: var(--grid-column-fixed-color, #cccccc);
     }
+    .iui-grid-block-top-left .iui-grid-column-filter, .iui-grid-block-top-right .iui-grid-column-filter  {
+        background: var(--grid-column-fixed-filter-background, transparent);
+    }
     .iui-grid-block-top-left .iui-grid-column-header, 
-    .iui-grid-block-top-right .iui-grid-column-header {
+    .iui-grid-block-top-left .iui-grid-column-filter, 
+    .iui-grid-block-top-right .iui-grid-column-header,
+    .iui-grid-block-top-right .iui-grid-column-filter {
         border-bottom: thin solid #212121 !important;
     }
     .iui-grid-block-top-left .iui-grid-column-footer, 
@@ -54,13 +61,16 @@ const iuiGridMidnightStyle = css`
     .iui-grid-block-hover {
         border: thin solid #252526;
     }
-    .iui-grid-column-header, .iui-grid-column-footer {
+    .iui-grid-column-header, .iui-grid-column-filter, .iui-grid-column-footer {
         background: var(--grid-column-background, #2a2d2e);
         border-color: var(--grid-column-border-color, transparent);
         border-right: thin solid transparent !important;
         color: var(--grid-column-color, #cccccc);
     }
-    .iui-grid-column-header {
+    .iui-grid-column-filter  {
+        background: var(--grid-column-filter-background, transparent);
+    }
+    .iui-grid-column-header, .iui-grid-column-filter {
         border-bottom: thin solid #212121 !important;
     }
     .iui-grid-column-footer {
@@ -254,9 +264,19 @@ const iuiGridMidnightStyle = css`
     .iui-grid-grouping-panel-dropdown-list li:hover {
         background-color: #2a2d2e;
     }
-
+    
+    /* Drag Drop */
     .iui-grid-handle {
-        background-image: var(--treegrid-background-image, url(../icons/grab-white.ico));
+        background-image: var(--grid-handle-background-image, url(../../icons/grab-white.ico));
+    }
+
+    /* Editor */
+    .iui-grid-editing:hover {
+        background-image: var(--grid-editing-background-image, url(../../icons/edit-white.ico));
+    }
+    .iui-grid-editing-active {
+        background-image: var(--grid-editing-background-image, url(../../icons/edit-white.ico));
+        opacity: 1;
     }
 `;
 

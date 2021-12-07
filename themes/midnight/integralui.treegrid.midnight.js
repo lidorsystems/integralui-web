@@ -24,15 +24,22 @@ const iuiTreeGridMidnightStyle = css`
         background: transparent;
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-header, 
+    .iui-treegrid-block-top-left .iui-treegrid-column-filter, 
     .iui-treegrid-block-top-left .iui-treegrid-column-footer, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header, 
+    .iui-treegrid-block-top-right .iui-treegrid-column-filter,
     .iui-treegrid-block-top-right .iui-treegrid-column-footer {
         background: var(--treegrid-column-fixed-background, #272a2b);
         border: var(--treegrid-column-fixed-border, thin solid transparent);
         color: var(--treegrid-column-fixed-color, #cccccc);
     }
+    .iui-treegrid-block-top-left .iui-treegrid-column-filter, .iui-treegrid-block-top-right .iui-treegrid-column-filter  {
+        background: var(--treegrid-column-fixed-filter-background, transparent);
+    }
     .iui-treegrid-block-top-left .iui-treegrid-column-header, 
-    .iui-treegrid-block-top-right .iui-treegrid-column-header {
+    .iui-treegrid-block-top-left .iui-treegrid-column-filter, 
+    .iui-treegrid-block-top-right .iui-treegrid-column-header,
+    .iui-treegrid-block-top-right .iui-treegrid-column-filter {
         border-bottom: thin solid #212121 !important;
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-footer, 
@@ -54,13 +61,16 @@ const iuiTreeGridMidnightStyle = css`
     .iui-treegrid-block-hover {
         border: thin solid #252526;
     }
-    .iui-treegrid-column-header, .iui-treegrid-column-footer {
+    .iui-treegrid-column-header, .iui-treegrid-column-filter, .iui-treegrid-column-footer {
         background: var(--treegrid-column-background, #2a2d2e);
         border-color: var(--treegrid-column-border-color, transparent);
         border-right: thin solid transparent !important;
         color: var(--treegrid-column-color, #cccccc);
     }
-    .iui-treegrid-column-header {
+    .iui-treegrid-column-filter  {
+        background: var(--treegrid-column-filter-background, transparent);
+    }
+    .iui-treegrid-column-header, .iui-treegrid-column-filter {
         border-bottom: thin solid #212121 !important;
     }
     .iui-treegrid-column-footer {
@@ -198,6 +208,20 @@ const iuiTreeGridMidnightStyle = css`
     }
     .iui-treegrid-row-animate-select {
         background: #113d5c;
+    }
+    
+    /* Drag Drop */
+    .iui-treegrid-handle {
+        background-image: var(--treegrid-handle-background-image, url(../../icons/grab-white.ico));
+    }
+
+    /* Editor */
+    .iui-treegrid-editing:hover {
+        background-image: var(--treegrid-editing-background-image, url(../../icons/edit-white.ico));
+    }
+    .iui-treegrid-editing-active {
+        background-image: var(--treegrid-editing-background-image, url(../../icons/edit-white.ico));
+        opacity: 1;
     }
 
     /* Filtering and Sorting */

@@ -1,10 +1,10 @@
-# IntegralUI Web, v21.3
+# IntegralUI Web, v21.4
 
 IntegralUI Web includes 40+ native Web Components and services that can help you build modern web applications. 
 
 <b>Note</b>  Older version of IntegralUI Web that was built specifically for Angular is available here: [IntegralUI Web for Angular](https://github.com/lidorsystems/integralui-web-angular).
 
-![IntegralUI Web 21.3 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
+![IntegralUI Web 21.4 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 

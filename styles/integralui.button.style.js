@@ -16,10 +16,11 @@ const iuiButtonDefaultStyle = css`
         overflow: hidden;
         margin: var(--button-margin, 0);
         padding: var(--button-padding, 5px);
-        position: relative;
+        position: var(--button-position, relative);
         text-align: var(--button-text-align, center);
         vertical-align: var(--button-vertical-align, initial);
         width: var(--button-width, auto);
+        z-index: var(--button-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

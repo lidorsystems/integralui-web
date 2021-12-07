@@ -283,6 +283,9 @@ const iuiMenuItemDefaultStyle = css`
         white-space: nowrap;
         width: var(--menuitem-width, auto);
     }
+    .iui-contextmenuitem {
+        padding: 5px 6px 5px 4px;
+    }
     .iui-menuitem:first-of-type, .iui-contextmenuitem:first-of-type
     {
         margin-top: 0;
