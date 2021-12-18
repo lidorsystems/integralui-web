@@ -125,7 +125,9 @@ or directly from NPM
 npm i integralui-web
 ```
 
-Open your application and add a reference to a component you want to use. For example, if you are using the IntegralUI TreeView component:</p>
+<b>Note</b> A detailed information is available here: [How to Use IntegralUI Web Components](https://www.lidorsystems.com/help/integralui/web-components/introduction/installation/). Explains how to setup and use components for each framework: Angular, React or Vanilla JavaScript.
+
+In general, you need to open your application and add a reference to a component you want to use. For example, if you are using the IntegralUI TreeView component:</p>
 
 ### Angular
 
