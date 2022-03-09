@@ -1,3 +1,28 @@
+v22.1
+- New components: Card, DockPanel, Panel and Window 
+- Card - a flip card with two sides 
+- DockPanel - create dynamic layouts with docking panels
+- Panel - generic container with option for content alignment
+- Window - movable and sizable windows
+- Option to use Cards in ListView
+- Dynamic grouping In ListBox where you can drag and drop items between groups
+- Option to set maximum number pages that helps with server side pagination in Grid and TreeGrid
+- Option to export specific Data from Grid and TreeGrid components
+- Improve Editing in Grid and TreeGrid
+- Batch Editing - edit multiple rows and cells at the same time
+- Form Editing - edit grid data using a built-in Form
+- Inline Editing - edit rows with inline cell editors
+- Custom Editing - create your own editing process
+- Option to choose color scheme for all components
+- Option to prevent or allow keyboard focus for editing components
+- Option to localize names that appear in built-in Buttons used in Grid and TreeGrid
+- Sorting indicator now appears when  custom template is used for column header
+- Fixed re-applying of inline filter when it is saved in local storage
+- Fixed the issue that causes cell focus marker in Grid to appear incorrectly when scrolling
+- Fixed keyboard navigation between grid cells when moving focus away from the grid
+- Midnight theme is replaced by Dark color scheme
+- Other minor bug fixes
+
 v21.4
 - Built-in Inline Filter in Grid and TreeGrid for Date, Numeric and String values
 - Built-in Inline Editor for Grid and TreeGrid components

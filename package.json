@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "21.4.0",
+  "version": "22.1.0",
   "description": "IntegralUI Web - Advanced UI Components for Angular, React and Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +19,7 @@
     "treegrid",
     "treeview",
     "javascript",
+    "js",
     "angular",
     "react",
     "vue",

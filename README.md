@@ -1,10 +1,10 @@
-# IntegralUI Web, v21.4
+# IntegralUI Web, v22.1
 
-IntegralUI Web includes 40+ native Web Components and services that can help you build modern web applications. 
+IntegralUI Web includes 45+ native Web Components and services that can help you build modern web applications. 
 
 <b>Note</b>  Older version of IntegralUI Web that was built specifically for Angular is available here: [IntegralUI Web for Angular](https://github.com/lidorsystems/integralui-web-angular).
 
-![IntegralUI Web 21.4 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
+![IntegralUI Web 22.1 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 
@@ -22,6 +22,8 @@ Here is a brief overview of what is included:
 
 [Calendar](https://www.lidorsystems.com/products/web/studio/samples/#/calendar) - Enables the user to select a date using a visual monthly calendar display
 
+[Card](https://www.lidorsystems.com/products/web/studio/samples/#/card) - A flip card with two sides
+
 [CheckBox](https://www.lidorsystems.com/products/web/studio/samples/#/checkbox) - Represents a check box
 
 [ColorPicker](https://www.lidorsystems.com/products/web/studio/samples/#/colorpicker) - Allows the user to select a color by using a drop-down panel with color palette and slider
@@ -33,6 +35,8 @@ Here is a brief overview of what is included:
 [DatePicker](https://www.lidorsystems.com/products/web/studio/samples/#/datepicker) - Allows the user to select a date by using a drop-down calendar
 
 [Dialog](https://www.lidorsystems.com/products/web/studio/samples/#/dialog) - Displays a modal window
+
+[DockPanel](https://www.lidorsystems.com/products/web/studio/samples/#/dockpanel) - Create dynamic layouts with docking panels
 
 [DropDown](https://www.lidorsystems.com/products/web/studio/samples/#/dropdown) - Represents a dropdown window
 
@@ -55,6 +59,8 @@ Here is a brief overview of what is included:
 [NumericUpDown](https://www.lidorsystems.com/products/web/studio/samples/#/numeric-updown) - Displays a numeric value and allows changes within a range of defined minimum and maximum values
 
 [Paginator](https://www.lidorsystems.com/products/web/studio/samples/#/paginator) - Allows you to divide the content in multiple views in single page
+
+[Panel](https://www.lidorsystems.com/products/web/studio/samples/) - Generic container with option for content alignment
 
 [Popover](https://www.lidorsystems.com/products/web/studio/samples/#/popover) - Displays custom HTML content over specified element
 
@@ -85,6 +91,8 @@ Here is a brief overview of what is included:
 [TreeList](https://www.lidorsystems.com/products/web/studio/samples/#/treelist) - Allows you to navigate through tree hierarchy showing only one list at a time
 
 [TreeView](https://www.lidorsystems.com/products/web/studio/samples/#/treeview) - Displays hierarchical data structures
+
+[Window](https://www.lidorsystems.com/products/web/studio/samples/#/window) - Movable and sizable windows
 
 
 ## Services
