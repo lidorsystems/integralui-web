@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiSliderDarkStyle = css`
+export const iuiSliderDarkStyle = css`
     .iui-slider-content {
         background: var(--slider-content-background, #303030);
     }
@@ -15,5 +15,3 @@ const iuiSliderDarkStyle = css`
         background: var(--slider-content-background, #303030);
     }
 `;
-
-export { iuiSliderDarkStyle };

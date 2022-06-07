@@ -267,7 +267,7 @@ const iuiTreeGridDefaultStyle = css`
         display: inline-block;
         width: 16px;
         height: 16px;
-        margin: 2px 3px 0 0;
+        margin: var(--treegrid-expand-box-margin, 2px 3px 0 0);
         vertical-align: top;
     }
     .iui-treegrid-enter .iui-treegrid-expand-box {
@@ -422,6 +422,10 @@ const iuiTreeGridDefaultStyle = css`
     /* Disabled State */
     .iui-treegrid-disabled div {
         opacity: var(--treegrid-disabled-opacity, 0.75);
+        pointer-events: none;
+    }
+    .iui-treegrid-row-disabled {
+        opacity: var(--treegrid-row-disabled-opacity, 0.6);
         pointer-events: none;
     }
 
@@ -637,7 +641,7 @@ const iuiTreeGridDefaultStyle = css`
         vertical-align: middle;
         width: var(--treegrid-editing-width, 16px);
     }
-    .iui-treegrid-editing:hover {
+    .iui-treegrid-editing-hover, .iui-treegrid-editing:hover {
         background-image: var(--treegrid-editing-background-image, url(../../icons/edit.ico));
         opacity: 0.25;
     }

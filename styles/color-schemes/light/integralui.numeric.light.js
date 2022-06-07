@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiNumericLightStyle = css`
+export const iuiNumericLightStyle = css`
     .iui-numeric-inbound-btn {
         background: #e2e2e2;
         border: thin solid #e2e2e2;
@@ -30,5 +30,3 @@ const iuiNumericLightStyle = css`
         border: thin solid #91c1e7;
     }
 `;
-
-export { iuiNumericLightStyle };

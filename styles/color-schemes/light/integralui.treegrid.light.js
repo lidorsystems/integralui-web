@@ -21,13 +21,13 @@ const iuiTreeGridLightStyle = css`
     .iui-treegrid-block-top-left .iui-treegrid-column-header-hovered, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header-hovered {
         background-color: #e9e9e9;
-        border: thin solid #e9e9e9 !important;
+        border: thin solid #e9e9e9;
         color: #000000;
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-header-selected, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header-selected {
         background-color: #d9d9d9;
-        border: thin solid #d9d9d9 !important;
+        border: thin solid #d9d9d9;
         color: #000000;
     }
     .iui-treegrid-block-hover {
@@ -36,17 +36,17 @@ const iuiTreeGridLightStyle = css`
     .iui-treegrid-column-header, .iui-treegrid-column-filter, .iui-treegrid-column-footer {
         background: var(--treegrid-column-background, #f5f5f5);
         border-color: var(--treegrid-column-border-color, transparent);
-        border-right: thin solid transparent !important;
+        border-right: thin solid transparent;
         color: var(--treegrid-column-color, #49678f);
     }
     .iui-treegrid-column-filter {
         background: var(--treegrid-column-filter-background, transparent);
     }
     .iui-treegrid-column-header, .iui-treegrid-column-filter {
-        border-bottom: thin solid #efefef !important;
+        border-bottom: thin solid #efefef;
     }
     .iui-treegrid-column-footer {
-        border-top: thin solid #efefef !important;
+        border-top: thin solid #efefef;
         color: var(--treegrid-column-footer-color, #323232);
     }
     .iui-treegrid-column-header-hovered {
@@ -120,10 +120,10 @@ const iuiTreeGridLightStyle = css`
         background-position: -96px -128px;
     }
     .iui-treegrid .iui-sort-ascending, .iui-treegrid .iui-sort-ascending-hovered, .iui-treegrid .iui-sort-ascending-selected {
-        background-position: -48px -128px !important;
+        background-position: -48px -128px;
     }
     .iui-treegrid .iui-sort-descending, .iui-treegrid .iui-sort-descending-hovered, .iui-treegrid .iui-sort-descending-selected {
-        background-position: -32px -128px !important;
+        background-position: -32px -128px;
     }
     
     /* Form */
@@ -139,7 +139,7 @@ const iuiTreeGridLightStyle = css`
     .iui-treegrid-form-editor-text:focus {
         border: 1px solid #6ea9db;
         box-shadow: 0 0 0 1px #6ea9db;
-        outline: none !important;
+        outline: none;
     }
 `;
 

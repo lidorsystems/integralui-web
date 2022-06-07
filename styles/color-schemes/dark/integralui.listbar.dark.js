@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiListBarDarkStyle = css`
+export const iuiListBarDarkStyle = css`
     .iui-listbar {
         background: var(--listbar-background, #252526);
         border: var(--listbar-border, thin solid #151515);
@@ -18,5 +18,3 @@ const iuiListBarDarkStyle = css`
         background-position: var(--listbar-button-icon-background-position, -48px 0);
     }
 `;
-
-export { iuiListBarDarkStyle };

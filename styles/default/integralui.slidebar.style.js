@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiSlideBarDefaultStyle = css`
+export const iuiSlideBarDefaultStyle = css`
     .iui-slidebar {
         background: var(--slidebar-background, #f5f5f5);
         border: var(--slidebar-border, thin solid #f5f5f5);
@@ -90,4 +90,3 @@ const iuiSlideBarDefaultStyle = css`
     }
 `;
 
-export { iuiSlideBarDefaultStyle };

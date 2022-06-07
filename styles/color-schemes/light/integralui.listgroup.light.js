@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiListGroupLightStyle = css`
+export const iuiListGroupLightStyle = css`
     /* Header Normal State */
     .iui-listgroup-header
     {
@@ -72,5 +72,3 @@ const iuiListGroupLightStyle = css`
         background: var(--listgroup-header-animate-select-background, #d9edfd);
     }
 `;
-
-export { iuiListGroupLightStyle };

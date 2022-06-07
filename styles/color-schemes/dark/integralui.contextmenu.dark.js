@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiContextMenuDarkStyle = css`
+export const iuiContextMenuDarkStyle = css`
     .iui-contextmenu {
         background: var(--contextmenu-background, #252526);
         border: var(--contextmenu-border, thin solid #151515);
@@ -32,5 +32,3 @@ const iuiContextMenuDarkStyle = css`
         background: var(--contextmenuitem-separator-line-background, #151515);
     }
 `;
-
-export { iuiContextMenuDarkStyle };

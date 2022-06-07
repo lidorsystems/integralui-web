@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiNumericDefaultStyle = css`
+export const iuiNumericDefaultStyle = css`
     .iui-numeric {
         background: var(--numeric-background, white);
         border: var(--numeric-border, 0);
@@ -172,4 +172,3 @@ const iuiNumericDefaultStyle = css`
     }
 `;
 
-export { iuiNumericDefaultStyle };

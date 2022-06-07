@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiContextMenuDefaultStyle = css`
+export const iuiContextMenuDefaultStyle = css`
     .iui-contextmenu {
         background: var(--contextmenu-background, #f5f5f5);
         border: var(--contextmenu-border, thin solid #dedede);
@@ -47,5 +48,3 @@ const iuiContextMenuDefaultStyle = css`
         animation-name: var(--contextmenuitem-root-animation-name, none);
     }
 `;
-
-export { iuiContextMenuDefaultStyle };

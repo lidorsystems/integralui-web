@@ -1,3 +1,38 @@
+v22.2
+- New components: Label and Toaster
+- Label is fully customizable with different alignments relative to attached input element
+- Toaster allows you to display notification messages (Toasts) with different alert levels 
+- Improved appearance with animations for RadioButton and ProgressBar components
+- RadioButton now supports vector scaling with animations and CSS customization of shape and colors
+- Option to change ProgressBar appearance on demand during run-time using inline style
+- Option to show Slider Editor in Grid and TreeGrid as ProgressBar
+- ProgressBar can now display value label in different alignments and value change is animated
+- Grid and TreeGrid component now supports new editor type: RadioButton
+- Option to have different groups of radio buttons within the Grid
+- ProgressBar in Grid, TreeGrid and PivotGrid cells can now show label for current progress value
+- Showing custom content like a toolbar when row is hovered or selected is now corrected and improved
+- Option to show/hide horizontal or vertical scrollbars in Grid, TreeGrid and PivotGrid components on demand
+- Option to select which RadioButton is checked from its parent group
+- Applying CSS classes and inline styles on demand for Grid and TreeGrid columns, rows and cells
+- Option to create alert like animations for buttons or grid cells on demand
+- EditorSettings inheritance of child column from parent column
+- Updating the dropdown list from within selection changing events is now available
+- Pencil icon for editing now also appears when grid row is hovered
+- When scrolling using mouse wheel in Grid and TreeGrid now correctly closes any open dropdown windows
+- Fixed the issue that prevented changing the check box value using touch in Grid and TreeGrid cells
+- dataChanging and dataChanged events in Grid for Inline and Form editing now carries a single object instead of an array
+- Fixed the issue that caused Rating component within grid cells to always have fixed height
+- Fixed the issue with auto-sizing columns when auto-size is enabled
+- Fixed the issue that expands or collapses a row when it is disabled
+- The error that appears when returning null in item template for List components is now fixed
+- Fixed the issue with total grid space when columns are auto-sized and there are fixed columns
+- Visible area in grid is now correctly updated when scrolled to max and grid resized
+- When column maxWidth is set and autoSizeColumns is active, the overall width of columns is no longer reduced during resizing
+- Closing of DropDown Calendar or DropDown List in Grid components when mouse button is pressed and released is now fixed
+- Fixed the problem with setting ProgressBar value outside of range
+- When grid cell with slider is resized, now correctly updates the slider position
+- Other minor bug fixes
+
 v22.1
 - New components: Card, DockPanel, Panel and Window 
 - Card - a flip card with two sides 

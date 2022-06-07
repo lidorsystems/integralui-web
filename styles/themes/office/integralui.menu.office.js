@@ -1,6 +1,4 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiMenuOfficeStyle = css`
+export const iuiMenuOfficeStyle = css`
 `;
-
-export { iuiMenuOfficeStyle };

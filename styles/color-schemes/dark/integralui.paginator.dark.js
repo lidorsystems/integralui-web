@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiPaginatorDarkStyle = css`
+export const iuiPaginatorDarkStyle = css`
     .iui-paginator {
         background: var(--paginator-background, #252526);
     }
@@ -20,5 +20,3 @@ const iuiPaginatorDarkStyle = css`
         color: #cecece;
     }
 `;
-
-export { iuiPaginatorDarkStyle };

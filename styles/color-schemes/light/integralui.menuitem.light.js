@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiMenuItemLightStyle = css`
+export const iuiMenuItemLightStyle = css`
     .iui-menu
     {
         background-color: #2455b0;
@@ -176,5 +176,3 @@ const iuiMenuItemLightStyle = css`
         }
     }
 `;
-
-export { iuiMenuItemLightStyle };

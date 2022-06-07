@@ -1,8 +1,9 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiProgressBarDefaultStyle = css`
+export const iuiProgressBarDefaultStyle = css`
     .iui-progressbar {
-        background: var(--progressbar-background, white);
+        background: var(--progressbar-background, transparent);
         border: var(--progressbar-border, thin solid #cecece);
         border-color:  var(--progressbar-border-color, #cecece);
         border-radius: var(--progressbar-border-radius, 1px);
@@ -17,6 +18,7 @@ const iuiProgressBarDefaultStyle = css`
         overflow: hidden;
         padding: var(--progressbar-padding, 2px);
         position: var(--progressbar-position, relative);
+        white-space: nowrap;
         width: var(--progressbar-width, auto);
 
         -webkit-user-select: none;
@@ -26,13 +28,33 @@ const iuiProgressBarDefaultStyle = css`
         -ms-user-select: none;
         user-select: none;
     }
-    .iui-progressbar-content
-    {
+
+    /* Progress Track */
+    .iui-progressbar-track {
+        background: var(--progressbar-track-background, transparent);
+        border-radius: var(--progressbar-track-border-radius, 1px);
+        border-width: var(--progressbar-track-border-width, thin);
+        display: block;
+        position: absolute;
+    }
+    .iui-progressbar-track-content {
+        background: var(--progressbar-background, transparent);
+    }
+    .iui-progressbar-content {
         background: var(--progressbar-content-background, #bebebe);
         border-radius: var(--progressbar-content-border-radius, 3px);
         height: var(--progressbar-content-height, 12px);
     }
 
+    /* Progress Value */
+    .iui-progressbar-label {
+        background: var(--progressbar-label-background, white);
+        border-radius: var(--progressbar-label-border-radius, 3px);
+        display: block;
+        padding: 1px 3px;
+        position: absolute;
+        z-index: 3;
+    }
 
     /* Disabled State */
     .iui-progressbar-disabled div
@@ -41,5 +63,3 @@ const iuiProgressBarDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiProgressBarDefaultStyle };

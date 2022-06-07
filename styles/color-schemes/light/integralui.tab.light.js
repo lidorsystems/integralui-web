@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiTabLightStyle = css`
+export const iuiTabLightStyle = css`
     .iui-tab-header
     {
         background: var(--tab-header-background, transparent);
@@ -41,5 +41,3 @@ const iuiTabLightStyle = css`
         border: var(--tab-content-border, 0);
     }
 `;
-
-export { iuiTabLightStyle };

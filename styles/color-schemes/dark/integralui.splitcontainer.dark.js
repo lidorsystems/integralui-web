@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiSplitContainerDarkStyle = css`
+export const iuiSplitContainerDarkStyle = css`
     .iui-splitcontainer-splitter {
         background: var(--splitcontainer-splitter-background, #3c3c3c);
         border: var(--splitcontainer-splitter-border, thin solid #151515);
@@ -23,7 +23,7 @@ const iuiSplitContainerDarkStyle = css`
         border-color: var(--splitcontainer-swap-button-hover-border-color, transparent);
     }
     .iui-splitcontainer-swap-button span {
-        background-image: var(--splitcontainer-swap-button-background-image, url(../icons/swap-white.ico));
+        background-image: var(--splitcontainer-swap-button-background-image, url(../../../icons/swap-white.ico));
     }
     .iui-splitcontainer-button {
         background: var(--splitcontainer-button-background, #5e5e5e);
@@ -38,5 +38,3 @@ const iuiSplitContainerDarkStyle = css`
         border-color: var(--splitcontainer-button-selected-border-color, #0e639c);
     }
 `;
-
-export { iuiSplitContainerDarkStyle };

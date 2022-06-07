@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiCheckBoxDarkStyle = css`
+export const iuiCheckBoxDarkStyle = css`
     .iui-checkbox {
         border-radius: var(--checkbox-border-radius, 3px);
         color: var(--checkbox-color, #cccccc);
@@ -22,5 +22,3 @@ const iuiCheckBoxDarkStyle = css`
         background-image: var(--checkbox-btn-unchecked-background-image, url(../icons/checkbox-unchecked-10.ico));
     }
 `;
-
-export { iuiCheckBoxDarkStyle };

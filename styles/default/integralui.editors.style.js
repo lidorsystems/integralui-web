@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiEditorsDefaultStyle = css`
+export const iuiEditorsDefaultStyle = css`
     .iui-editor-checkbox {
         background-position: 0 0;
         background-repeat: no-repeat;
@@ -61,7 +61,8 @@ const iuiEditorsDefaultStyle = css`
     }
     .iui-editor-label {
         display: inline-block;
-        padding: 2px 0 0 0;
+        margin: var(--editor-label-margin, 0);
+        padding: var(--editor-label-padding, 2px 0 0 0);
     }
     .iui-editor-numeric {
         background: transparent;
@@ -79,6 +80,9 @@ const iuiEditorsDefaultStyle = css`
     .iui-editor-numeric:focus {
         outline: none !important;
     }
+    .iui-editor-progress-block {
+        position: relative;
+    }
     .iui-editor-progress {
         background: var(--editor-progress-background, white);
         border: var(--editor-progress-border, thin solid #cecece);
@@ -89,11 +93,25 @@ const iuiEditorsDefaultStyle = css`
         overflow: hidden;
         padding: var(--editor-progress-padding, 2px);
         position: relative;
+        width: var(--editor-progress-width, calc(100% - 45px));
+    }
+    .iui-editor-progress-full {
+        width: auto;
     }
     .iui-editor-progress-content {
         background: var(--editor-progress-content-background, #bebebe);
         border-radius: var(--editor-progress-content-border-radius, 3px);
         height: var(--editor-progress-content-height, 12px);
+    }
+    .iui-editor-progress-label {
+        background: var(--editor-progress-label-background, transparent);
+        display: block;
+        position: absolute;
+        right: var(--editor-progress-label-right, 2px);
+        text-align: right;
+        top: var(--editor-progress-label-top, 2px);
+        width: var(--editor-progress-label, 36px);
+        z-index: 3;
     }
     .iui-editor-rating {
         padding: 0;
@@ -128,5 +146,3 @@ const iuiEditorsDefaultStyle = css`
         opacity: 0.4;
     }
 `;
-
-export { iuiEditorsDefaultStyle };

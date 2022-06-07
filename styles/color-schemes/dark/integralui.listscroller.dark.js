@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiListScrollerDarkStyle = css`
+export const iuiListScrollerDarkStyle = css`
     /* DisplayMode - LeftRight */
     .iui-listscroller-leftright-buttons, .iui-listscroller-updown-buttons {
         background: transparent;
@@ -32,5 +32,3 @@ const iuiListScrollerDarkStyle = css`
     }
 
 `;
-
-export { iuiListScrollerDarkStyle };

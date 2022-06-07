@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiCalendarDarkStyle = css`
+export const iuiCalendarDarkStyle = css`
     .iui-calendar {
         background: var(--calendar-background, #252526);
         border: var(--calendar-border, thin solid #151515);
@@ -49,5 +49,3 @@ const iuiCalendarDarkStyle = css`
         }
     }
 `;
-
-export { iuiCalendarDarkStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiGroupBoxLightStyle = css`
+export const iuiGroupBoxLightStyle = css`
     /* Normal State */
     .iui-groupbox-header {
         background: var(--groupbox-header-background, #e2e2e2);
@@ -71,4 +71,3 @@ const iuiGroupBoxLightStyle = css`
     }
 `;
 
-export { iuiGroupBoxLightStyle };

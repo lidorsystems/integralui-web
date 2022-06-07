@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiDockPanelDarkStyle = css`
+export const iuiDockPanelDarkStyle = css`
     .iui-dockpanel {
         background: var(--dockpanel-background, #303030);
         border: var(--dockpanel-hovered-border, thin solid #303030);
@@ -12,5 +12,3 @@ const iuiDockPanelDarkStyle = css`
         background: var(--dockpanel-content-background, #252526);
     }
 `;
-
-export { iuiDockPanelDarkStyle };

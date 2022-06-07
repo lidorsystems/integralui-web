@@ -40,22 +40,22 @@ const iuiTreeGridDarkStyle = css`
     .iui-treegrid-block-top-left .iui-treegrid-column-filter, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header,
     .iui-treegrid-block-top-right .iui-treegrid-column-filter {
-        border-bottom: thin solid #212121 !important;
+        border-bottom: thin solid #212121;
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-footer, 
     .iui-treegrid-block-top-right .iui-treegrid-column-footer {
-        border-top: thin solid #212121 !important;
+        border-top: thin solid #212121;
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-header-hovered, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header-hovered {
         background-color: #113954;
-        border: thin solid #113954 !important;
+        border: thin solid #113954;
         color: white;
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-header-selected, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header-selected {
         background-color: #0c293d;
-        border: thin solid #0c293d !important;
+        border: thin solid #0c293d;
         color: white;
     }
     .iui-treegrid-block-hover {
@@ -64,17 +64,17 @@ const iuiTreeGridDarkStyle = css`
     .iui-treegrid-column-header, .iui-treegrid-column-filter, .iui-treegrid-column-footer {
         background: var(--treegrid-column-background, #2a2d2e);
         border-color: var(--treegrid-column-border-color, transparent);
-        border-right: thin solid transparent !important;
+        border-right: thin solid transparent;
         color: var(--treegrid-column-color, #cccccc);
     }
     .iui-treegrid-column-filter  {
         background: var(--treegrid-column-filter-background, transparent);
     }
     .iui-treegrid-column-header, .iui-treegrid-column-filter {
-        border-bottom: thin solid #212121 !important;
+        border-bottom: thin solid #212121;
     }
     .iui-treegrid-column-footer {
-        border-top: thin solid #212121 !important;
+        border-top: thin solid #212121;
         color: var(--treegrid-column-footer-color, #cccccc);
     }
     .iui-treegrid-column-header-hovered {
@@ -229,14 +229,14 @@ const iuiTreeGridDarkStyle = css`
         background-position: -96px -128px;
     }
     .iui-treegrid .iui-sort-ascending, .iui-treegrid .iui-sort-ascending-hovered, .iui-treegrid .iui-sort-ascending-selected {
-        background-position: -48px -128px !important;
+        background-position: -48px -128px;
     }
     .iui-treegrid .iui-sort-descending, .iui-treegrid .iui-sort-descending-hovered, .iui-treegrid .iui-sort-descending-selected {
-        background-position: -32px -128px !important;
+        background-position: -32px -128px;
     }
 
     /* Editor */
-    .iui-treegrid-editing:hover {
+    .iui-treegrid-editing-hover, .iui-treegrid-editing:hover {
         background-image: var(--treegrid-editing-background-image, url(../../../icons/edit-white.ico));
     }
     .iui-treegrid-editing-active {
@@ -258,7 +258,7 @@ const iuiTreeGridDarkStyle = css`
     .iui-treegrid-form-editor-text:focus {
         border: 1px solid #646464;
         box-shadow: 0 0 0 1px #646464;
-        outline: none !important;
+        outline: none;
     }
 
     /* Grid Batch Editing */

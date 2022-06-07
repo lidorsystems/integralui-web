@@ -1,6 +1,6 @@
 /*
   filename: react.integralui.breadcrumb.js
-  version : 22.1.0
+  version : 22.2.0
   Copyright © 2016-2022 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

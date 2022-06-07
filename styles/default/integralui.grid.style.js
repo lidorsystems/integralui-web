@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiGridDefaultStyle = css`
+export const iuiGridDefaultStyle = css`
     .iui-grid {
         background: var(--grid-background, white);
         border: var(--grid-border, thin solid #cecece);
@@ -267,7 +268,7 @@ const iuiGridDefaultStyle = css`
         display: inline-block;
         width: 16px;
         height: 16px;
-        margin: 2px 3px 0 0;
+        margin: var(--grid-expand-box-margin, 2px 3px 0 0);
         vertical-align: top;
     }
     .iui-grid-enter .iui-grid-expand-box {
@@ -546,6 +547,10 @@ const iuiGridDefaultStyle = css`
         opacity: var(--grid-disabled-opacity, 0.75);
         pointer-events: none;
     }
+    .iui-grid-row-disabled {
+        opacity: var(--grid-row-disabled-opacity, 0.6);
+        pointer-events: none;
+    }
 
 
 
@@ -761,7 +766,7 @@ const iuiGridDefaultStyle = css`
         vertical-align: middle;
         width: var(--grid-editing-width, 16px);
     }
-    .iui-grid-editing:hover {
+    .iui-grid-editing-hover, .iui-grid-editing:hover {
         background-image: var(--grid-editing-background-image, url(../../icons/edit.ico));
         opacity: 0.25;
     }
@@ -831,5 +836,3 @@ const iuiGridDefaultStyle = css`
         color: black;
     }
 `;
-
-export { iuiGridDefaultStyle };

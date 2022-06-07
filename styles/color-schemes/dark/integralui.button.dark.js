@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiButtonDarkStyle = css`
+export const iuiButtonDarkStyle = css`
     .iui-button {
         background: var(--button-background, #0e639c);
         border: var(--button-hovered-border, thin solid #0e639c);
@@ -25,5 +25,3 @@ const iuiButtonDarkStyle = css`
         box-shadow: var(--button-focus-box-shadow, 0 0 0 2px #0d4d78);
     }
 `;
-
-export { iuiButtonDarkStyle };

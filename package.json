@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "22.1.0",
+  "version": "22.2.0",
   "description": "IntegralUI Web - Advanced UI Components for Angular, React and Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

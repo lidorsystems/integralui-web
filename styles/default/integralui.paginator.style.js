@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiPaginatorDefaultStyle = css`
+export const iuiPaginatorDefaultStyle = css`
     .iui-paginator {
         background: var(--paginator-background, #f0f0f0);
         border: var(--paginator-border, 0);
@@ -80,5 +80,3 @@ const iuiPaginatorDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiPaginatorDefaultStyle };

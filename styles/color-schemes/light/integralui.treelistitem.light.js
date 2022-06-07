@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiTreeListItemLightStyle = css`
+export const iuiTreeListItemLightStyle = css`
     .iui-treelistitem-hovered {
         background: var(--treelistitem-hovered-background, transparent);
 
@@ -37,5 +37,3 @@ const iuiTreeListItemLightStyle = css`
         background: var(--treelistitem-animate-select-background, #d9edfd);
     }
 `;
-
-export { iuiTreeListItemLightStyle };

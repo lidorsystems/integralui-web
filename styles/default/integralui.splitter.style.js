@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiSplitterDefaultStyle = css`
+export const iuiSplitterDefaultStyle = css`
     .iui-splitter {
         background: var(--splitter-background, transparent);
         border: var(--splitter-border, 0);
@@ -80,5 +81,3 @@ const iuiSplitterDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiSplitterDefaultStyle };

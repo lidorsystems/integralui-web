@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiCheckBoxDefaultStyle = css`
+export const iuiCheckBoxDefaultStyle = css`
     .iui-checkbox {
         background: var(--checkbox-background, transparent);
         border: var(--checkbox-border, thin solid transparent);
@@ -59,7 +60,7 @@ const iuiCheckBoxDefaultStyle = css`
     }
 
     .iui-checkbox-content {
-        display: inline-block;
+        display: var(--checkbox-content-display, inline-block);
     }
 
     /* Disabled State */
@@ -151,5 +152,3 @@ const iuiCheckBoxDefaultStyle = css`
         stroke-dashoffset: 45;
     }
 `;
-
-export { iuiCheckBoxDefaultStyle };

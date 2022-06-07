@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiSelectDarkStyle = css`
+export const iuiSelectDarkStyle = css`
     .iui-select {
         background: var(--select-background, #252526);
         border: var(--select-header-border, thin solid #151515);
@@ -41,5 +41,3 @@ const iuiSelectDarkStyle = css`
         border: thin solid #37373d;
     }
 `;
-
-export { iuiSelectDarkStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiCheckBoxOfficeStyle = css`
+export const iuiCheckBoxOfficeStyle = css`
     .iui-checkbox {
         transition: all 0.25s ease-in-out;
     }
@@ -54,5 +54,3 @@ const iuiCheckBoxOfficeStyle = css`
         transition: stroke-dashoffset .4s linear;
     }
 `;
-
-export { iuiCheckBoxOfficeStyle };

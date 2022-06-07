@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiWindowDefaultStyle = css`
+export const iuiWindowDefaultStyle = css`
     .iui-window {
         background: var(--window-background, #f5f5f5);
         border: var(--window-border, 3px solid #cecece);
@@ -147,5 +147,3 @@ const iuiWindowDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiWindowDefaultStyle };

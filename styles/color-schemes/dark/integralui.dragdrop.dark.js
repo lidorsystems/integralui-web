@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiDragWinDarkStyle = css`
+export const iuiDragWinDarkStyle = css`
     .iui-dragwin {
         background: -webkit-linear-gradient(#363636, #303030);
         background:    -moz-linear-gradient(#363636, #303030);
@@ -17,5 +17,3 @@ const iuiDragWinDarkStyle = css`
         border-left: thin solid #151515;
     }
 `;
-
-export { iuiDragWinDarkStyle };

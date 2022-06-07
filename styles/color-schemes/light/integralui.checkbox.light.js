@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiCheckBoxLightStyle = css`
+export const iuiCheckBoxLightStyle = css`
     .iui-checkbox {
         border-radius: var(--checkbox-border-radius, 3px);
         box-shadow: var(--checkbox-box-shadow, 0 0 0 1px transparent);
@@ -10,5 +10,3 @@ const iuiCheckBoxLightStyle = css`
         box-shadow: var(--checkbox-box-shadow, 0 0 0 1px #6ea9db);
     }
 `;
-
-export { iuiCheckBoxLightStyle };

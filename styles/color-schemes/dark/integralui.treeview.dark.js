@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiTreeViewDarkStyle = css`
+export const iuiTreeViewDarkStyle = css`
     .iui-treeview {
         background: var(--treeview-background, #252526);
         border: var(--treeview-border, thin solid #151515);
@@ -14,5 +14,3 @@ const iuiTreeViewDarkStyle = css`
         background: var(--treeview-block-panel-background, #2a2d2e);
     }
 `;
-
-export { iuiTreeViewDarkStyle };

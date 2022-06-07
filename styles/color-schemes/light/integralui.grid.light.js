@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiGridLightStyle = css`
+export const iuiGridLightStyle = css`
     .iui-grid {
         border-color:  var(--grid-border-color, #d9d9d9);
         color: var(--grid-color, black);
@@ -21,13 +21,13 @@ const iuiGridLightStyle = css`
     .iui-grid-block-top-left .iui-grid-column-header-hovered, 
     .iui-grid-block-top-right .iui-grid-column-header-hovered {
         background-color: #e9e9e9;
-        border: thin solid #e9e9e9 !important;
+        border: thin solid #e9e9e9;
         color: #000000;
     }
     .iui-grid-block-top-left .iui-grid-column-header-selected, 
     .iui-grid-block-top-right .iui-grid-column-header-selected {
         background-color: #d9d9d9;
-        border: thin solid #d9d9d9 !important;
+        border: thin solid #d9d9d9;
         color: #000000;
     }
     .iui-grid-block-hover {
@@ -36,17 +36,17 @@ const iuiGridLightStyle = css`
     .iui-grid-column-header, .iui-grid-column-filter, .iui-grid-column-footer {
         background: var(--grid-column-background, #f5f5f5);
         border-color: var(--grid-column-border-color, transparent);
-        border-right: thin solid transparent !important;
+        border-right: thin solid transparent;
         color: var(--grid-column-color, #49678f);
     }
     .iui-grid-column-filter {
         background: var(--grid-column-filter-background, transparent);
     }
     .iui-grid-column-header, .iui-grid-column-filter {
-        border-bottom: thin solid #efefef !important;
+        border-bottom: thin solid #efefef;
     }
     .iui-grid-column-footer {
-        border-top: thin solid #efefef !important;
+        border-top: thin solid #efefef;
         color: var(--grid-column-footer-color, #323232);
     }
     .iui-grid-column-header-hovered {
@@ -153,10 +153,10 @@ const iuiGridLightStyle = css`
         background-position: -96px -128px;
     }
     .iui-grid .iui-sort-ascending, .iui-grid .iui-sort-ascending-hovered, .iui-grid .iui-sort-ascending-selected {
-        background-position: -48px -128px !important;
+        background-position: -48px -128px;
     }
     .iui-grid .iui-sort-descending, .iui-grid .iui-sort-descending-hovered, .iui-grid .iui-sort-descending-selected {
-        background-position: -32px -128px !important;
+        background-position: -32px -128px;
     }
     
     /* Form */
@@ -172,8 +172,6 @@ const iuiGridLightStyle = css`
     .iui-grid-form-editor-text:focus {
         border: 1px solid #6ea9db;
         box-shadow: 0 0 0 1px #6ea9db;
-        outline: none !important;
+        outline: none;
     }
 `;
-
-export { iuiGridLightStyle };

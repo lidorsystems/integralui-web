@@ -1,9 +1,7 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiProgressBarLightStyle = css`
-    .iui-progressbar {
-        background: var(--progressbar-background, #efefef);
+export const iuiProgressBarLightStyle = css`
+    .iui-progressbar-track {
+        background: var(--progressbar-track-background, #efefef);
     }
 `;
-
-export { iuiProgressBarLightStyle };

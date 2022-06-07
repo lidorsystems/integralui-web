@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiSplitContainerLightStyle = css`
+export const iuiSplitContainerLightStyle = css`
     .iui-splitcontainer-tab {
         border: var(--splitcontainer-tab-border, thin solid #d9d9d9);
     }
@@ -16,5 +16,3 @@ const iuiSplitContainerLightStyle = css`
         border-color: var(--splitcontainer-swap-button-hover-border-color, #d9d9d9);
     }
 `;
-
-export { iuiSplitContainerLightStyle };

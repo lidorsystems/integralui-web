@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiMenuItemDarkStyle = css`
+export const iuiMenuItemDarkStyle = css`
     .iui-menu
     {
         background-color: #252526;
@@ -156,5 +156,3 @@ const iuiMenuItemDarkStyle = css`
         color: var(--contextmenuitem-root-hovered-color, white);
     }
 `;
-
-export { iuiMenuItemDarkStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiSlideBarDarkStyle = css`
+export const iuiSlideBarDarkStyle = css`
     .iui-slidebar {
         background-color: #252526;
         border-color: #151515;
@@ -13,5 +13,3 @@ const iuiSlideBarDarkStyle = css`
         background: #252526;
     }
 `;
-
-export { iuiSlideBarDarkStyle };

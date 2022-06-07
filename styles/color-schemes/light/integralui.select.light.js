@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiSelectLightStyle = css`
+export const iuiSelectLightStyle = css`
     .iui-select {
         border: var(--select-border, thin solid #d9d9d9);
         border-radius: var(--select-border-radius, 3px);
@@ -16,5 +16,3 @@ const iuiSelectLightStyle = css`
         background: #0d7edb !important;
     }
 `;
-
-export { iuiSelectLightStyle };

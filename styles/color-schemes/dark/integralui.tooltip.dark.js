@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiTooltipDarkStyle = css`
+export const iuiTooltipDarkStyle = css`
     .iui-tooltip
     {
         background: var(--tooltip-background, #303030);
@@ -8,5 +8,3 @@ const iuiTooltipDarkStyle = css`
         color: var(--tooltip-color, #cccccc);
     }
 `;
-
-export { iuiTooltipDarkStyle };

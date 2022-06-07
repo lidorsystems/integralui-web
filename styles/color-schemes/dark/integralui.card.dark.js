@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiCardDarkStyle = css`
+export const iuiCardDarkStyle = css`
 
     /* Card Front */
     .iui-card-front {
@@ -66,5 +66,3 @@ const iuiCardDarkStyle = css`
         color: var(--card-back-footer-color, #cccccc);
     }
 `;
-
-export { iuiCardDarkStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiDropDownButtonDefaultStyle = css`
+export const iuiDropDownButtonDefaultStyle = css`
     .iui-dropdownbutton {
         background: var(--dropdownbutton-background, #e5e5e5);
         border: var(--dropdownbutton-border, thin solid #cecece);
@@ -95,5 +95,3 @@ const iuiDropDownButtonDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiDropDownButtonDefaultStyle };

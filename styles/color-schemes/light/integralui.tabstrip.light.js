@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiTabStripLightStyle = css`
+export const iuiTabStripLightStyle = css`
     .iui-tabstrip {
         background: var(--tabstrip-background, white);
     }
@@ -28,5 +28,3 @@ const iuiTabStripLightStyle = css`
         border-top: var(--tabstrip-scroll-border-top, thin solid #d9d9d9);
     }
 `;
-
-export { iuiTabStripLightStyle };

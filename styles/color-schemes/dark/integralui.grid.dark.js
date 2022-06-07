@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiGridDarkStyle = css`
+export const iuiGridDarkStyle = css`
     .iui-grid {
         background: var(--grid-background, #252526);
         border-color:  var(--grid-border-color, #252526);
@@ -40,22 +40,22 @@ const iuiGridDarkStyle = css`
     .iui-grid-block-top-left .iui-grid-column-filter, 
     .iui-grid-block-top-right .iui-grid-column-header,
     .iui-grid-block-top-right .iui-grid-column-filter {
-        border-bottom: thin solid #212121 !important;
+        border-bottom: thin solid #212121;
     }
     .iui-grid-block-top-left .iui-grid-column-footer, 
     .iui-grid-block-top-right .iui-grid-column-footer {
-        border-top: thin solid #212121 !important;
+        border-top: thin solid #212121;
     }
     .iui-grid-block-top-left .iui-grid-column-header-hovered, 
     .iui-grid-block-top-right .iui-grid-column-header-hovered {
         background-color: #113954;
-        border: thin solid #113954 !important;
+        border: thin solid #113954;
         color: white;
     }
     .iui-grid-block-top-left .iui-grid-column-header-selected, 
     .iui-grid-block-top-right .iui-grid-column-header-selected {
         background-color: #0c293d;
-        border: thin solid #0c293d !important;
+        border: thin solid #0c293d;
         color: white;
     }
     .iui-grid-block-hover {
@@ -64,17 +64,17 @@ const iuiGridDarkStyle = css`
     .iui-grid-column-header, .iui-grid-column-filter, .iui-grid-column-footer {
         background: var(--grid-column-background, #2a2d2e);
         border-color: var(--grid-column-border-color, transparent);
-        border-right: thin solid transparent !important;
+        border-right: thin solid transparent;
         color: var(--grid-column-color, #cccccc);
     }
     .iui-grid-column-filter  {
         background: var(--grid-column-filter-background, transparent);
     }
     .iui-grid-column-header, .iui-grid-column-filter {
-        border-bottom: thin solid #212121 !important;
+        border-bottom: thin solid #212121;
     }
     .iui-grid-column-footer {
-        border-top: thin solid #212121 !important;
+        border-top: thin solid #212121;
         color: var(--grid-column-footer-color, #cccccc);
     }
     .iui-grid-column-header-hovered {
@@ -215,10 +215,10 @@ const iuiGridDarkStyle = css`
         background-position: -96px -128px;
     }
     .iui-grid .iui-sort-ascending, .iui-grid .iui-sort-ascending-hovered, .iui-grid .iui-sort-ascending-selected {
-        background-position: -48px -128px !important;
+        background-position: -48px -128px;
     }
     .iui-grid .iui-sort-descending, .iui-grid .iui-sort-descending-hovered, .iui-grid .iui-sort-descending-selected {
-        background-position: -32px -128px !important;
+        background-position: -32px -128px;
     }
 
     /* Grouping */
@@ -271,7 +271,7 @@ const iuiGridDarkStyle = css`
     }
 
     /* Editor */
-    .iui-grid-editing:hover {
+    .iui-grid-editing-hover, .iui-grid-editing:hover {
         background-image: var(--grid-editing-background-image, url(../../../icons/edit-white.ico));
     }
     .iui-grid-editing-active {
@@ -293,7 +293,7 @@ const iuiGridDarkStyle = css`
     .iui-grid-form-editor-text:focus {
         border: 1px solid #646464;
         box-shadow: 0 0 0 1px #646464;
-        outline: none !important;
+        outline: none;
     }
 
     /* Grid Batch Editing */
@@ -310,5 +310,3 @@ const iuiGridDarkStyle = css`
     }
 
 `;
-
-export { iuiGridDarkStyle };

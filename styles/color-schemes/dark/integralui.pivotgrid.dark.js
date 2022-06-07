@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiPivotGridDarkStyle = css`
+export const iuiPivotGridDarkStyle = css`
     .iui-pivotgrid {
         background: var(--pivotgrid-background, #252526);
         border-color:  var(--pivotgrid-border-color, #252526);
@@ -33,22 +33,22 @@ const iuiPivotGridDarkStyle = css`
     }
     .iui-pivotgrid-block-top-left .iui-pivotgrid-column-header, 
     .iui-pivotgrid-block-top-right .iui-pivotgrid-column-header {
-        border-bottom: thin solid #212121 !important;
+        border-bottom: thin solid #212121;
     }
     .iui-pivotgrid-block-top-left .iui-pivotgrid-column-footer, 
     .iui-pivotgrid-block-top-right .iui-pivotgrid-column-footer {
-        border-top: thin solid #212121 !important;
+        border-top: thin solid #212121;
     }
     .iui-pivotgrid-block-top-left .iui-pivotgrid-column-header-hovered, 
     .iui-pivotgrid-block-top-right .iui-pivotgrid-column-header-hovered {
         background-color: #113954;
-        border: thin solid #113954 !important;
+        border: thin solid #113954;
         color: white;
     }
     .iui-pivotgrid-block-top-left .iui-pivotgrid-column-header-selected, 
     .iui-pivotgrid-block-top-right .iui-pivotgrid-column-header-selected {
         background-color: #0c293d;
-        border: thin solid #0c293d !important;
+        border: thin solid #0c293d;
         color: white;
     }
     .iui-pivotgrid-block-hover {
@@ -57,14 +57,14 @@ const iuiPivotGridDarkStyle = css`
     .iui-pivotgrid-column-header, .iui-pivotgrid-column-footer {
         background: var(--pivotgrid-column-background, #2a2d2e);
         border-color: var(--pivotgrid-column-border-color, transparent);
-        border-right: thin solid transparent !important;
+        border-right: thin solid transparent;
         color: var(--pivotgrid-column-color, #cccccc);
     }
     .iui-pivotgrid-column-header {
-        border-bottom: thin solid #212121 !important;
+        border-bottom: thin solid #212121;
     }
     .iui-pivotgrid-column-footer {
-        border-top: thin solid #212121 !important;
+        border-top: thin solid #212121;
         color: var(--pivotgrid-column-footer-color, #cccccc);
     }
     .iui-pivotgrid-column-header-hovered {
@@ -205,11 +205,9 @@ const iuiPivotGridDarkStyle = css`
         background-position: -96px -128px;
     }
     .iui-pivotgrid .iui-sort-ascending, .iui-pivotgrid .iui-sort-ascending-hovered, .iui-pivotgrid .iui-sort-ascending-selected {
-        background-position: -48px -128px !important;
+        background-position: -48px -128px;
     }
     .iui-pivotgrid .iui-sort-descending, .iui-pivotgrid .iui-sort-descending-hovered, .iui-pivotgrid .iui-sort-descending-selected {
-        background-position: -32px -128px !important;
+        background-position: -32px -128px;
     }
 `;
-
-export { iuiPivotGridDarkStyle };

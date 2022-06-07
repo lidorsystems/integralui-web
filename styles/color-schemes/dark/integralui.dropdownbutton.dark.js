@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiDropDownButtonDarkStyle = css`
+export const iuiDropDownButtonDarkStyle = css`
     .iui-dropdownbutton {
         background: var(--dropdownbutton-background, #0e639c);
         border: var(--dropdownbutton-hovered-border, thin solid #0e639c);
@@ -20,5 +20,3 @@ const iuiDropDownButtonDarkStyle = css`
         color: var(--dropdownbutton-selected-color, white);
     }
 `;
-
-export { iuiDropDownButtonDarkStyle };

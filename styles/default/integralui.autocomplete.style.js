@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiAutoCompleteDefaultStyle = css`
+export const iuiAutoCompleteDefaultStyle = css`
     .iui-autocomplete {
         background: var(--autocomplete-background, white);
         border: var(--autocomplete-border, thin solid #cecece);
@@ -55,5 +56,3 @@ const iuiAutoCompleteDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiAutoCompleteDefaultStyle };

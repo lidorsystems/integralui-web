@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiPopOverDefaultStyle = css`
+export const iuiPopOverDefaultStyle = css`
     .iui-popover {
         animation: popover-open 0.5s 0s 1 forwards;
         background: var(--popover-background, white);
@@ -143,5 +144,3 @@ const iuiPopOverDefaultStyle = css`
         padding: 0;
     }
 `;
-
-export { iuiPopOverDefaultStyle };

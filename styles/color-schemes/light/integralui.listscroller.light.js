@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiListScrollerLightStyle = css`
+export const iuiListScrollerLightStyle = css`
     /* DisplayMode - LeftRight */
     .iui-listscroller-leftright-buttons
     {
@@ -37,4 +37,4 @@ const iuiListScrollerLightStyle = css`
 	}
 `;
 
-export { iuiListScrollerLightStyle };
+

@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiListViewLightStyle = css`
+export const iuiListViewLightStyle = css`
     .iui-listview
     {
         background: var(--listview-background, white);
@@ -8,5 +8,3 @@ const iuiListViewLightStyle = css`
         color: var(--listview-color, black);
     }
 `;
-
-export { iuiListViewLightStyle };

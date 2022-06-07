@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiGroupBoxDefaultStyle = css`
+export const iuiGroupBoxDefaultStyle = css`
     .iui-groupbox {
         background: var(--groupbox-background, transparent);
         border: var(--groupbox-border, 0);
@@ -192,5 +192,3 @@ const iuiGroupBoxDefaultStyle = css`
         }
     }
 `;
-
-export { iuiGroupBoxDefaultStyle };

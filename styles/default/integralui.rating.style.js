@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiRatingDefaultStyle = css`
+export const iuiRatingDefaultStyle = css`
     .iui-rating {
         background: var(--rating-background, white);
         border: var(--rating-border, thin solid #cecece);
@@ -52,5 +52,3 @@ const iuiRatingDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiRatingDefaultStyle };

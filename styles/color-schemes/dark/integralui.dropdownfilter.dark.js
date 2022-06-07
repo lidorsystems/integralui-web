@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiDropDownFilterDarkStyle = css`
+export const iuiDropDownFilterDarkStyle = css`
     .iui-dropdownfilter {
         border-color: #151515;
         color: #cccccc;
@@ -61,5 +61,3 @@ const iuiDropDownFilterDarkStyle = css`
         background-image: url(../../../icons/search-white.ico);
     }
 `;
-
-export { iuiDropDownFilterDarkStyle };

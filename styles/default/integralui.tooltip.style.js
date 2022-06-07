@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiTooltipStyle = css`
+export const iuiTooltipStyle = css`
     .iui-tooltip {
         background: var(--tooltip-background, #e5e5e5);
         border: var(--tooltip-border, thin solid #888888);
@@ -122,5 +123,3 @@ const iuiTooltipStyle = css`
         right: -8px;
     }
 `;
-
-export { iuiTooltipStyle };

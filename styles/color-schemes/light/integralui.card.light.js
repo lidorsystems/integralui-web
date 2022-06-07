@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiCardLightStyle = css`
+export const iuiCardLightStyle = css`
 
     /* Card Front */
     .iui-card-front {
@@ -46,5 +46,3 @@ const iuiCardLightStyle = css`
         border-color: var(--card-back-header-border-color, #e2e2e2);
     }
 `;
-
-export { iuiCardLightStyle };

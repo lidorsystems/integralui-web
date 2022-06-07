@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiPivotGridDefaultStyle = css`
+export const iuiPivotGridDefaultStyle = css`
     .iui-pivotgrid {
         background: var(--pivotgrid-background, white);
         border: var(--pivotgrid-border, thin solid #cecece);
@@ -231,7 +232,7 @@ const iuiPivotGridDefaultStyle = css`
         display: inline-block;
         width: 16px;
         height: 16px;
-        margin: 2px 3px 0 0;
+        margin: var(--pivotgrid-expand-box-margin, 2px 3px 0 0);
         vertical-align: top;
     }
     .iui-pivotgrid-enter .iui-pivotgrid-expand-box {
@@ -386,6 +387,10 @@ const iuiPivotGridDefaultStyle = css`
     /* Disabled State */
     .iui-pivotgrid-disabled div {
         opacity: var(--pivotgrid-disabled-opacity, 0.75);
+        pointer-events: none;
+    }
+    .iui-pivotgrid-row-disabled {
+        opacity: var(--pivotgrid-row-disabled-opacity, 0.6);
         pointer-events: none;
     }
 
@@ -588,5 +593,3 @@ const iuiPivotGridDefaultStyle = css`
         width: var(--pivotgrid-handle-width, 16px);
     }
 `;
-
-export { iuiPivotGridDefaultStyle };

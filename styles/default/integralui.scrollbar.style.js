@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiScrollBarStyle = css`
+export const iuiScrollBarStyle = css`
     .iui-scrollbar-vertical {
         background: var(--scrollbar-vertical-background, #f5f5f5);
         border: var(--scrollbar-horizontal-border, 0);
@@ -111,5 +111,3 @@ const iuiScrollBarStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiScrollBarStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiListBarDefaultStyle = css`
+export const iuiListBarDefaultStyle = css`
     .iui-listbar {
         background: var(--listbar-background, transparent);
         border: var(--listbar-border, thin solid #cecece);
@@ -100,5 +100,3 @@ const iuiListBarDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiListBarDefaultStyle };

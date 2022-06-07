@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiAutoCompleteDarkStyle = css`
+export const iuiAutoCompleteDarkStyle = css`
     .iui-autocomplete {
         background: var(--autocomplete-background, #252526);
         border: var(--autocomplete-border, thin solid #151515);
@@ -11,5 +11,3 @@ const iuiAutoCompleteDarkStyle = css`
         color: var(--autocomplete-input-color, #cccccc);
     }
 `;
-
-export { iuiAutoCompleteDarkStyle };

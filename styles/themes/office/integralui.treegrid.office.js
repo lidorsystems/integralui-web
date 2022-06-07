@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiTreeGridOfficeStyle = css`
+export const iuiTreeGridOfficeStyle = css`
     /* TreeGrid Form */
     .iui-treegrid-form {
         transition: opacity .4s ease-in-out, right .25s ease-in-out;
@@ -9,5 +9,3 @@ const iuiTreeGridOfficeStyle = css`
         transition: all 0.25s ease-in-out;
     }
 `;
-
-export { iuiTreeGridOfficeStyle };

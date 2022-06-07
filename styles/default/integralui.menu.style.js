@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiMenuDefaultStyle = css`
+export const iuiMenuDefaultStyle = css`
     .iui-menu
     {
         background: var(--menu-background, #f5f5f5);
@@ -36,5 +37,3 @@ const iuiMenuDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiMenuDefaultStyle };

@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiSplitterLightStyle = css`
+export const iuiSplitterLightStyle = css`
     .iui-splitter-bar {
         background: var(--splitter-bar-background, #e5f3fe);
     }
@@ -19,5 +19,3 @@ const iuiSplitterLightStyle = css`
         border: var(--splitter-panel-border, thin solid #d9d9d9);
     }
 `;
-
-export { iuiSplitterLightStyle };

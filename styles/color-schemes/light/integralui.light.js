@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiLightStyle = css`
+export const iuiLightStyle = css`
     .iui-header-enter {
         animation-name: iui-combobox-header-animate-enter;
         animation-delay: 0s;
@@ -30,5 +30,3 @@ const iuiLightStyle = css`
         100% { box-shadow: 0 0 0 transparent; }
     } 
 `;
-
-export { iuiLightStyle };

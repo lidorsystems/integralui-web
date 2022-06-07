@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiSideBarDarkStyle = css`
+export const iuiSideBarDarkStyle = css`
     .iui-sidebar {
         background: var(--sidebar-background, #1e1e1e);
     }
@@ -21,5 +21,3 @@ const iuiSideBarDarkStyle = css`
         display: var(--sidebar-line-display, block);
     }
 `;
-
-export { iuiSideBarDarkStyle };

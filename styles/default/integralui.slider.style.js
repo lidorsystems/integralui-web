@@ -1,6 +1,7 @@
+
 import { c as css } from '../../external/lit-element.js';
 
-const iuiSliderDefaultStyle = css`
+export const iuiSliderDefaultStyle = css`
     .iui-slider {
         background: var(--slider-background, transparent);
         border: var(--slider-border, thin solid transparent);
@@ -68,5 +69,3 @@ const iuiSliderDefaultStyle = css`
         border-color: var(--slider-disabled-value-border-color, #e5e5e5);
     }
 `;
-
-export { iuiSliderDefaultStyle };

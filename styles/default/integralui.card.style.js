@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiCardDefaultStyle = css`
+export const iuiCardDefaultStyle = css`
     .iui-card {
         color: var(--card-color, black);
         cursor: var(--card-cursor, default);
@@ -135,5 +135,3 @@ const iuiCardDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiCardDefaultStyle };

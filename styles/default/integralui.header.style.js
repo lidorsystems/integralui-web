@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiHeaderDefaultStyle = css`
+export const iuiHeaderDefaultStyle = css`
     /* Normal State */
     .iui-header
     {
@@ -394,5 +394,3 @@ const iuiHeaderDefaultStyle = css`
         100% { max-width: 0; }
     }
 `;
-
-export { iuiHeaderDefaultStyle };

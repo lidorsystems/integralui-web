@@ -1,6 +1,6 @@
 import { c as css } from '../../external/lit-element.js';
 
-const iuiSplitContainerDefaultStyle = css`
+export const iuiSplitContainerDefaultStyle = css`
     .iui-splitcontainer {
         background: var(--splitcontainer-background, transparent);
         border: var(--splitcontainer-border, 0);
@@ -188,5 +188,3 @@ const iuiSplitContainerDefaultStyle = css`
         pointer-events: none;
     }
 `;
-
-export { iuiSplitContainerDefaultStyle };

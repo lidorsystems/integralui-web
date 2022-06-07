@@ -1,6 +1,4 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiPopOverOfficeStyle = css`
+export const iuiPopOverOfficeStyle = css`
 `;
-
-export { iuiPopOverOfficeStyle };

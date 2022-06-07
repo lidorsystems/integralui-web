@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiBreadCrumbDarkStyle = css`
+export const iuiBreadCrumbDarkStyle = css`
     .iui-breadcrumb {
         background:  var(--breadcrumb-background, #252526);
         border-color:  var(--breadcrumb-border-color, #151515);
@@ -54,5 +54,3 @@ const iuiBreadCrumbDarkStyle = css`
         background-position: var(--breadcrumb-item-expand-box-close-animate-background-position, -48px 0);
     }
 `;
-
-export { iuiBreadCrumbDarkStyle };

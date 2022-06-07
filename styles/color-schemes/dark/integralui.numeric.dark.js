@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiNumericDarkStyle = css`
+export const iuiNumericDarkStyle = css`
     .iui-numeric {
         background: transparent;
     }
@@ -65,5 +65,3 @@ const iuiNumericDarkStyle = css`
         color: #cecece;
     }
 `;
-
-export { iuiNumericDarkStyle };

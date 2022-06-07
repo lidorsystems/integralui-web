@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiWindowDarkStyle = css`
+export const iuiWindowDarkStyle = css`
     .iui-window {
         background: var(--window-background, #252526);
         border: var(--window-border, 3px solid #151515);
@@ -29,5 +29,3 @@ const iuiWindowDarkStyle = css`
         background-image: url(../../../icons/window-white.ico);
     }
 `;
-
-export { iuiWindowDarkStyle };

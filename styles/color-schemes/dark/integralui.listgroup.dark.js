@@ -1,6 +1,6 @@
 import { c as css } from '../../../external/lit-element.js';
 
-const iuiListGroupDarkStyle = css`
+export const iuiListGroupDarkStyle = css`
     .iui-listgroup {
         background: var(--listgroup-background, #252526);
         color: var(--listgroup-color, #cccccc);
@@ -73,5 +73,3 @@ const iuiListGroupDarkStyle = css`
         background: var(--listgroup-header-animate-select-background, #113d5c);
     }
 `;
-
-export { iuiListGroupDarkStyle };
