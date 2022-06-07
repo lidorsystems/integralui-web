@@ -1,10 +1,10 @@
-# IntegralUI Web, v22.1
+# IntegralUI Web, v22.2
 
 IntegralUI Web includes 45+ native Web Components and services that can help you build modern web applications. 
 
 <b>Note</b>  Older version of IntegralUI Web that was built specifically for Angular is available here: [IntegralUI Web for Angular](https://github.com/lidorsystems/integralui-web-angular).
 
-![IntegralUI Web 22.1 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
+![IntegralUI Web 22.2 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 
@@ -46,6 +46,8 @@ Here is a brief overview of what is included:
 
 [GroupBox](https://www.lidorsystems.com/products/web/studio/samples/#/groupbox) - An expandable container with header and content
 
+[Label](https://www.lidorsystems.com/products/web/studio/samples/#/label) - A fully customizable label with different alignments relative to attached element</li>
+
 [ListBar](https://www.lidorsystems.com/products/web/studio/samples/#/listbar) - Displays a list of expandable groups with items
 
 [ListBox](https://www.lidorsystems.com/products/web/studio/samples/#/listbox) - Displays a collection of items with content in custom layouts
@@ -83,6 +85,8 @@ Here is a brief overview of what is included:
 [Splitter](https://www.lidorsystems.com/products/web/studio/samples/#/splitter) - Allows you to resize two block elements during run-time
 
 [TabStrip](https://www.lidorsystems.com/products/web/studio/samples/#/tabstrip) - Consists of multiple scrollable panels that share the same space 
+
+[Toaster](https://www.lidorsystems.com/products/web/studio/samples/#/toaster) - Allows you to display notification messages (Toasts) with different alert levels</li>
 
 [Tooltip](https://www.lidorsystems.com/products/web/studio/samples/#/tooltip) - Adds a tooltip to an element
 
