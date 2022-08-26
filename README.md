@@ -180,7 +180,7 @@ Because of the web component specification that defines URLs to be always relati
 ### Angular
 
 Follow these steps:
-1. Copy/Paste the content of the integralui-web/icons folder under /assets/integralui-web/icons subfolder in your React application. 
+1. Copy/Paste the content of the integralui-web/icons folder under /assets/integralui-web/icons subfolder in your Angular application. 
 2. Set the resourcePath property of IntegralUI Web components to point to the location set in your /assets folder. In this case, for TreeView for example:
 
 ```bash
