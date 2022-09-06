@@ -20,6 +20,7 @@ const iuiDockAreaDefaultStyle = css`
         text-align: var(--dockarea-text-align, left);
         vertical-align: var(--dockarea-vertical-align, initial);
         width: var(--dockarea-width, auto);
+        z-index: var(--dockarea-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

@@ -20,13 +20,14 @@ export const iuiDropDownButtonDefaultStyle = css`
         text-align: var(--dropdownbutton-text-align, center);
         vertical-align: var(--dropdownbutton-vertical-align, initial);
         width: var(--dropdownbutton-width, auto);
+        z-index: var(--dropdownbutton-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: none;
         -o-user-select: none;
         -ms-user-select: none;
-        user-select: none;
+         user-select: none;
     }
     .iui-dropdownbutton-hovered {
         background: var(--dropdownbutton-hovered-background, #efefef);

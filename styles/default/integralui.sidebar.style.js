@@ -19,6 +19,7 @@ export const iuiSideBarDefaultStyle = css`
         padding: var(--sidebar-padding, 0);
         position: var(--sidebar-position, relative);
         width: var(--sidebar-width, auto);
+        z-index: var(--sidebar-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

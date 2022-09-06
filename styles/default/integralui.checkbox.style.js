@@ -20,6 +20,7 @@ export const iuiCheckBoxDefaultStyle = css`
         padding: var(--checkbox-padding, 5px);
         position: var(--checkbox-position, relative);
         width: var(--checkbox-width, auto);
+        z-index: var(--checkbox-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

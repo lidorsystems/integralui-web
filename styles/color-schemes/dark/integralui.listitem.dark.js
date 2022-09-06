@@ -56,4 +56,7 @@ export const iuiListItemDarkStyle = css`
     .iui-listitem-animate-select {
         background: var(--listitem-animate-select-background, #2d2d33);
     }
+    .iui-listitem-separator {
+        background: var(--listitem-separator-background, #151515);
+    }
 `;

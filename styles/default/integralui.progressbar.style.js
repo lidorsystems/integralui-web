@@ -20,6 +20,7 @@ export const iuiProgressBarDefaultStyle = css`
         position: var(--progressbar-position, relative);
         white-space: nowrap;
         width: var(--progressbar-width, auto);
+        z-index: var(--progressbar-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

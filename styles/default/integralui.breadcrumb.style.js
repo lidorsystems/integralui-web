@@ -19,6 +19,7 @@ const iuiBreadCrumbDefaultStyle = css`
         position: var(--breadcrumb-position, relative);
         white-space: nowrap;
         width: var(--breadcrumb-width, auto);
+        z-index: var(--breadcrumb-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

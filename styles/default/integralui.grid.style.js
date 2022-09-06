@@ -19,6 +19,7 @@ export const iuiGridDefaultStyle = css`
         padding: var(--grid-padding, 0);
         position: var(--grid-position, relative);
         width: var(--grid-width, auto);
+        z-index: var(--grid-z-index, auto);
         
         -webkit-touch-callout: none;
         -webkit-user-select: none;

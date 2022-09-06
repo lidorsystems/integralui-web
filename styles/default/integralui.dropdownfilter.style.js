@@ -20,6 +20,14 @@ const iuiDropDownFilterDefaultStyle = css`
         position: var(--dropdownfilter-position, relative);
         vertical-align: var(--dropdownfilter-vertical-align, middle);
         width: var(--dropdownfilter-width, auto);
+        z-index: var(--dropdownfilter-z-index, auto);
+
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+         user-select: none;
     }
     .iui-dropdownfilter:focus {
         outline: none !important;

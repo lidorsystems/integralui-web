@@ -18,7 +18,8 @@ export const iuiNumericDefaultStyle = css`
         padding: var(--numeric-padding, 0);
         position: var(--numeric-position, relative);
         width: var(--numeric-width, auto);
-        
+        z-index: var(--numeric-z-index, auto);
+
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;

@@ -19,7 +19,8 @@ export const iuiPivotGridDefaultStyle = css`
         padding: var(--pivotgrid-padding, 0);
         position: var(--pivotgrid-position, relative);
         width: var(--pivotgrid-width, auto);
-        
+        z-index: var(--pivotgrid-z-index, auto);
+
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;

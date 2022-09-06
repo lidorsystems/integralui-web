@@ -20,7 +20,14 @@ export const iuiListItemDefaultStyle = css`
         position: var(--listgroup-position, relative);
         white-space: var(--listgroup-white-space, nowrap);
         width: var(--listgroup-width, auto);
+        z-index: var(--listgroup-z-index, auto);
 
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
     .iui-listgroup-general {
         list-style-type: none;
@@ -229,6 +236,14 @@ export const iuiListItemDefaultStyle = css`
     .iui-listitem-content:focus {
         outline: none !important;
     }
+    .iui-listitem-separator {
+        background: var(--listitem-separator-background, #e5e5e5);
+        border: 0;
+        height: var(--listitem-separator-height, 1px);
+        margin: var(--listitem-separator-margin, 5px);
+        padding: 0;
+    }
+
 
     /* Disabled State */
     .iui-listitem-disabled div {

@@ -19,6 +19,7 @@ export const iuiRadioButtonDefaultStyle = css`
         padding: var(--radio-button-padding, 5px);
         position: var(--radio-button-position, relative);
         width: var(--radio-button-width, auto);
+        z-index: var(--radio-button-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

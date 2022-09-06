@@ -19,6 +19,7 @@ export const iuiSliderDefaultStyle = css`
         padding: var(--slider-padding, 0);
         position: var(--slider-position, relative);
         width: var(--slider-width, auto);
+        z-index: var(--slider-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

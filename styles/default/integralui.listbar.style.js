@@ -18,6 +18,7 @@ export const iuiListBarDefaultStyle = css`
         padding: var(--listbar-padding, 0);
         position: var(--listbar-position, relative);
         width: var(--listbar-width, auto);
+        z-index: var(--listbar-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

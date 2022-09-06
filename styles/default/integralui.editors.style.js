@@ -117,13 +117,14 @@ export const iuiEditorsDefaultStyle = css`
         padding: 0;
     }
     .iui-editor-text {
-        background: transparent;
+        background: var(--editor-text-background, white);
         border: 0;
         font: inherit;
         font-family: inherit;
-        padding: 1px;
-        height: 100%;
-        width: calc(100% - 2px);
+        height: var(--editor-text-height, calc(100% - 2px));
+        margin: var(--editor-text-margin, -2px 0 0 -2px);
+        padding: var(--editor-text-padding, 3px);
+        width: var(--editor-text-width, calc(100% - 2px));
     }
     /*.iui-editor-text::-webkit-search-cancel-button {
         position: relative;

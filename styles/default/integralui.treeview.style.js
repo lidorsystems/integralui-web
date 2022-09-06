@@ -18,6 +18,7 @@ const iuiTreeViewDefaultStyle = css`
         padding: var(--treeview-padding, 1px);
         position: var(--treeview-position, relative);
         width: var(--treeview-width, auto);
+        z-index: var(--treeview-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

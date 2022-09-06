@@ -19,6 +19,7 @@ export const iuiPaginatorDefaultStyle = css`
         position: var(--paginator-position, relative);
         white-space: nowrap;
         width: var(--paginator-width, auto);
+        z-index: var(--paginator-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

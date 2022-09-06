@@ -19,6 +19,7 @@ export const iuiListViewDefaultStyle = css`
         padding: var(--listview-padding, 1px);
         position: var(--listview-position, relative);
         width: var(--listview-width, auto);
+        z-index: var(--listview-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

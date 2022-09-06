@@ -18,6 +18,7 @@ export const iuiListGroupDefaultStyle = css`
         padding: var(--listgroup-padding, 0);
         position: var(--listgroup-position, relative);
         width: var(--listgroup-width, auto);
+        z-index: var(--listgroup-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

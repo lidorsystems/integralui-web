@@ -18,7 +18,8 @@ export const iuiListScrollerDefaultStyle = css`
         padding: var(--listscroller-padding, 0);
         position: var(--listscroller-position, relative);
         width: var(--listscroller-width, auto);
-        
+        z-index: var(--listscroller-z-index, auto);
+      
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;

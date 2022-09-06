@@ -12,6 +12,7 @@ export const iuiCardDefaultStyle = css`
         position: var(--card-position, relative);
         white-space: var(--card-white-space, normal);
         width: var(--card-width, auto);
+        z-index: var(--card-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

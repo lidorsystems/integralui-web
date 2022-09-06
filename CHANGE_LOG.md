@@ -1,3 +1,33 @@
+v22.3
+- New component: SplitImage - allows you to visually compare differences between two images or custom HTML elements
+- SlideBar component now has two display modes: Stream and Carousel
+- Mouse Wheel has five speeds in Grid, TreeGrid and PivotGrid components: VerySlow, Slow, Normal, Fast and Veryfast
+- Horizontal Scrolling is now available when Shift is pressed and Mouse Wheel is in use
+- loadData method in Grid and TreeGrid now have option to load columns and rows at the same time
+- loadData method now supports incremental data loading
+- Export data from TreeList and Breadcrumb as tree hierarchy or flat list in JSON format
+- ProgressBar has an option to show or hide a label displaying its current value
+- The type of editor and its settings used in Grid and TreeGrid columns is now also determined from parent column
+- List component has option to add items as separators
+- z-index as custom property is now available for all components
+- New CSS Custom Properties for Grid, TreeGrid and PivotGrid
+- Text editor in Grid cells now occupies the cell space in whole
+- TreeList component now has an option to scroll to specific item
+- Improved dynamic styling for all components
+- Option to prevent resizing of WIndow component
+- Internal reference to Button element is now correctly applied when component is refreshed
+- Animations for Radio buttons in Grid and TreeGrid cells are now suppressed during scrolling
+- DropDown list when shown near grid bottom now opens upwards
+- When DropDown Calendar or List appears the page is no longer scrolled back to the top
+- Losing the input focus on DatePicker when changing dates with a keyboard is prevented
+- Fixed the issue that caused DropDown editors (Calendar, DropDownList) and Text editor, they now appear when using touch
+- Fixed the flickering issue in TreeList caused by Office theme during selection and hovering
+- Fixed Auto-Expanding in TreeView when dragging item from one treeview to another
+- Swap icon now correctly appears in Dark style for SplitContainer
+- Using mouse wheel to scroll to the end now correctly updates the scroll thumb position
+- The label of Radio button is now correctly aligned relative to the button box
+- Other minor bug fixes
+
 v22.2
 - New components: Label and Toaster
 - Label is fully customizable with different alignments relative to attached input element

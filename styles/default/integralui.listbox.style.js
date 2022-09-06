@@ -18,6 +18,7 @@ export const iuiListBoxDefaultStyle = css`
         padding: var(--listbox-padding, 1px);
         position: var(--listbox-position, relative);
         width: var(--listbox-width, auto);
+        z-index: var(--listbox-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

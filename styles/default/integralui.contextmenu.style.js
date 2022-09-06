@@ -20,7 +20,7 @@ export const iuiContextMenuDefaultStyle = css`
         padding: var(--contextmenu-padding, 1px);
         position: var(--contextmenu-position, absolute);
         width: var(--contextmenu-width, 150px);
-        z-index: 9999999;
+        z-index: var(--contextmenu-z-index, 9999999);
         
         -webkit-user-select: none;
         -khtml-user-select: none;

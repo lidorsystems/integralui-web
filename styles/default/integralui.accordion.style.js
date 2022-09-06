@@ -18,6 +18,7 @@ export const iuiAccordionDefaultStyle = css`
         padding: var(--accordion-padding, 0);
         position: var(--accordion-position, relative);
         width: var(--accordion-width, auto);
+        z-index: var(--accordion-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

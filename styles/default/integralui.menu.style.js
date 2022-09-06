@@ -20,6 +20,14 @@ export const iuiMenuDefaultStyle = css`
         padding: var(--menu-padding, 0);
         position: var(--menu-position, relative);
         width: var(--menu-width, auto);
+        z-index: var(--menu-z-index, auto);
+
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
     .iui-menu-block, .iui-menuitem-block
     {

@@ -18,6 +18,7 @@ export const iuiListDefaultStyle = css`
         padding: var(--list-padding, 1px);
         position: var(--list-position, relative);
         width: var(--list-width, auto);
+        z-index: var(--list-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

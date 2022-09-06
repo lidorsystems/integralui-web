@@ -19,6 +19,7 @@ export const iuiTabStripDefaultStyle = css`
         padding: var(--tabstrip-padding, 0);
         position: var(--tabstrip-position, relative);
         width: var(--tabstrip-width, auto);
+        z-index: var(--tabstrip-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

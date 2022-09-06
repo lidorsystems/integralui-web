@@ -18,6 +18,7 @@ const iuiTreeListDefaultStyle = css`
         padding: var(--treelist-padding, 1px);
         position: var(--treelist-position, relative);
         width: var(--treelist-width, auto);
+        z-index: var(--treelist-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

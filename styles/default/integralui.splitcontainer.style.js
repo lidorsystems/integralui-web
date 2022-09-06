@@ -18,6 +18,7 @@ export const iuiSplitContainerDefaultStyle = css`
         padding: var(--splitcontainer-padding, 0);
         position: var(--splitcontainer-position, relative);
         width: var(--splitcontainer-width, auto);
+        z-index: var(--splitcontainer-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

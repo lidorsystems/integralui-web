@@ -20,6 +20,8 @@ const iuiSelectDefaultStyle = css`
         position: var(--select-position, relative);
         vertical-align: var(--select-vertical-align, middle);
         width: var(--select-width, auto);
+        z-index: var(--select-z-index, auto);
+
     }
     .iui-select:focus {
         border: var(--select-focus-border, thin dotted #cecece);

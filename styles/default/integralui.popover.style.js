@@ -21,8 +21,8 @@ export const iuiPopOverDefaultStyle = css`
         position: var(--popover-position, absolute);
         top: -999999px;
         width: var(--popover-width, auto);
-        z-index: 9999999;
-        
+        z-index: var(--popover-z-index, 9999999);
+
         -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: none;

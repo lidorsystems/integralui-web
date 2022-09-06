@@ -19,6 +19,7 @@ export const iuiSplitterDefaultStyle = css`
         padding: var(--splitter-padding, 0);
         position: var(--splitter-position, relative);
         width: var(--splitter-width, 100%);
+        z-index: var(--splitter-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

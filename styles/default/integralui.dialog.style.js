@@ -28,7 +28,7 @@ export const iuiDialogDefaultStyle = css`
         top: 0;
         white-space: nowrap;
         width: var(--dialog-width, 600px);
-        z-index: 9999989;
+        z-index: var(--dialog-z-index, 9999999);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

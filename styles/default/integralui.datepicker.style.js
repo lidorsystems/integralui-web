@@ -21,6 +21,7 @@ export const iuiDatePickerDefaultStyle = css`
         position: var(--datepicker-position, relative);
         white-space: nowrap;
         width: var(--datepicker-width, auto);
+        z-index: var(--datepicker-z-index, auto);
         
         -webkit-touch-callout: none;
         -webkit-user-select: none;

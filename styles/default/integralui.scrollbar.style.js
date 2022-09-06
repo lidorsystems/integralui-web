@@ -18,7 +18,7 @@ export const iuiScrollBarStyle = css`
         position: var(--scrollbar-vertical-position, absolute);
         top: 0;
         width: var(--scrollbar-vertical-width, 11px);
-        z-index: 99;
+        z-index: var(--scrollbar-vertical-z-index, 99);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -38,7 +38,7 @@ export const iuiScrollBarStyle = css`
         position: absolute;
         top: 2px;
         width: var(--scrollbar-thumb-width, 9px);
-        z-index: 99;
+        z-index: var(--scrollbar-thumb-z-index, 99);
     }
     .iui-scrollbar-vertical-thumb:hover {
         background: var(--scrollbar-thumb-hover-background, #c5c5c5);
@@ -61,7 +61,7 @@ export const iuiScrollBarStyle = css`
         padding: var(--scrollbar-horizontal-padding, 2px);
         position: var(--scrollbar-horizontal-position, absolute);
         width: var(--scrollbar-horizontal-width, auto);
-        z-index: 99;
+        z-index: var(--scrollbar-horizontal-z-index, 99);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -81,7 +81,7 @@ export const iuiScrollBarStyle = css`
         height: var(--scrollbar-thumb-height, 9px);
         left: 2px;
         position: absolute;
-        z-index: 99;
+        z-index: var(--scrollbar-thumb-z-index, 99);
     }
     .iui-scrollbar-horizontal-thumb:hover {
         background: var(--scrollbar-thumb-hover-background, #c5c5c5);
@@ -95,7 +95,7 @@ export const iuiScrollBarStyle = css`
         padding: 0;
         position: absolute;
         width: var(--scrollbar-corner-width, 15px);
-        z-index: 99;
+        z-index: var(--scrollbar-corner-z-index, 99);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

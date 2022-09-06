@@ -18,7 +18,8 @@ const iuiTreeGridDefaultStyle = css`
         padding: var(--treegrid-padding, 0);
         position: var(--treegrid-position, relative);
         width: var(--treegrid-width, auto);
-        
+        z-index: var(--treegrid-z-index, auto);
+
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;

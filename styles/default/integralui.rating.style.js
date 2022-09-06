@@ -19,6 +19,7 @@ export const iuiRatingDefaultStyle = css`
         padding: var(--rating-padding, 1px);
         position: var(--rating-position, relative);
         width: var(--rating-width, auto);
+        z-index: var(--rating-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

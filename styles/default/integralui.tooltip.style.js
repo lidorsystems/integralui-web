@@ -20,7 +20,7 @@ export const iuiTooltipStyle = css`
         position: var(--tooltip-position, absolute);
         top: -9999999px;
         width: var(--tooltip-width, auto);
-        z-index: 9999999;
+        z-index: var(--button-z-index, 9999999);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

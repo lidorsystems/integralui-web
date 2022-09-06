@@ -1,8 +1,8 @@
-# IntegralUI Web, v22.2
+# IntegralUI Web, v22.3
 
 IntegralUI Web includes 45+ native Web Components and services that can help you build modern web applications. 
 
-![IntegralUI Web 22.2 - 40+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
+![IntegralUI Web 22.3 - 45+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 
@@ -79,6 +79,8 @@ Here is a brief overview of what is included:
 [Slider](https://www.lidorsystems.com/products/web/studio/samples/#/slider) - Allows changes to a numeric value within a range of defined minimum and maximum values
 
 [SplitContainer](https://www.lidorsystems.com/products/web/studio/samples/#/splitcontainer) - Consists of two resizable panels separated by a splitter with tabs and command buttons
+
+[SplitImage](https://www.lidorsystems.com/products/web/studio/samples/#/splitimage) - Allows you to visually compare differences between two images
 
 [Splitter](https://www.lidorsystems.com/products/web/studio/samples/#/splitter) - Allows you to resize two block elements during run-time
 

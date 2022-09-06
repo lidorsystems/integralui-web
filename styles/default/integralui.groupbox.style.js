@@ -18,6 +18,7 @@ export const iuiGroupBoxDefaultStyle = css`
         padding: var(--groupbox-padding, 0);
         position: var(--groupbox-position, relative);
         width: var(--groupbox-width, auto);
+        z-index: var(--groupbox-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

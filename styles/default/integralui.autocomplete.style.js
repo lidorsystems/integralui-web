@@ -18,6 +18,7 @@ export const iuiAutoCompleteDefaultStyle = css`
         padding: var(--autocomplete-padding, 1px);
         position: var(--autocomplete-position, relative);
         width: var(--autocomplete-width, auto);
+        z-index: var(--autocomplete-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

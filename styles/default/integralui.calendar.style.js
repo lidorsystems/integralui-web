@@ -18,7 +18,8 @@ export const iuiCalendarDefaultStyle = css`
         padding: var(--calendar-padding, 0);
         position: var(--calendar-position, relative);
         width: var(--calendar-width, auto);
-        
+        z-index: var(--calendar-z-index, auto);
+   
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
