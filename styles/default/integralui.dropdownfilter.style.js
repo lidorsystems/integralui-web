@@ -3,8 +3,8 @@ import { c as css } from '../../external/lit-element.js';
 const iuiDropDownFilterDefaultStyle = css`
     .iui-dropdownfilter {
         background: var(--dropdownfilter-background, transparent);
-        border: var(--dropdownfilter-border, 0);
-        border-color:  var(--dropdownfilter-border-color, transparent);
+        border: var(--dropdownfilter-border, thin solid #cecece);
+        border-color: var(--dropdownfilter-border-color, #cecece);
         border-radius: var(--dropdownfilter-border-radius, 1px);
         border-width: var(--dropdownfilter-border-width, thin);
         color: var(--dropdownfilter-color, black);
@@ -98,9 +98,7 @@ const iuiDropDownFilterDefaultStyle = css`
 
     .iui-filter-operation {
         position: absolute;
-        top: 2px;
-
-        background2: blue;
+        top: var(--dropdownfilter-operation-top, 2px);
     }
     .iui-filter-icon {
         display: block;

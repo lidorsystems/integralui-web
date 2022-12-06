@@ -11,15 +11,17 @@ export const iuiTreeItemDefaultStyle = css`
     }
     .iui-treeitem-block, .iui-treeitem-content-block {
         border: var(--treeitem-border, 2px solid transparent);
+        border-color: var(--treeitem-border-color, transparent);
+        border-width: var(--treeitem-border-width, 2px);
     }
     .iui-treeitem-hovered, .iui-treeitem-content-hovered {
         background: var(--treeitem-hovered-background, #f5f5f5);
-        border: var(--treeitem-hovered-border, 2px solid #efefef);
+        border-color: var(--treeitem-hovered-border-color, #efefef);
         color: var(--treeitem-hovered-color, black);
     }
     .iui-treeitem-selected, .iui-treeitem-content-selected {
         background: var(--treeitem-selected-background, #e5e5e5);
-        border: var(--treeitem-selected-border, 2px solid #dedede);
+        border-color: var(--treeitem-selected-border-color, #dedede);
         color: var(--treeitem-selected-color, black);
     }
     .iui-treeitem:focus {
@@ -43,6 +45,10 @@ export const iuiTreeItemDefaultStyle = css`
     }
     .iui-treeitem-content:focus {
         outline: none !important;
+    }
+    .iui-treeitem-content-template {
+        display: var(--treeitem-content-template-display, inline-block);
+        vertical-align: var(--treeitem-content-template-vertical-align, middle);
     }
     .iui-treeitem-expand-box {
         background: url(../../icons/expandbox-icons.png) no-repeat 0 -48px;

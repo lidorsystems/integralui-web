@@ -7,7 +7,7 @@ const iuiTreeListItemDefaultStyle = css`
         list-style-type: none;
         overflow: hidden;
         margin: var(--treelistitem-margin, 0);
-        padding: var(--treelistitem-padding, 5px);
+        padding: var(--treelistitem-padding, 7px);
         text-overflow: var(--treelistitem-text-overflow, ellipsis);
         white-space: var(--treelistitem-white-space, nowrap);
         width: var(--treelistitem-width, auto);
@@ -28,10 +28,10 @@ const iuiTreeListItemDefaultStyle = css`
     }
     .iui-treelistitem-expand-icon-collapse {
         background-position: var(--treelistitem-expand-icon-background-position, 0 -16px);
-        margin: var(--treelistitem-expand-icon-margin, 3px 5px 0 0);
+        margin: var(--treelistitem-expand-icon-margin, 4px 5px 0 0);
     }
     .iui-treelistitem-expand-icon-expand {
-        margin: var(--treelistitem-expand-icon-margin, 3px 5px 0 0);
+        margin: var(--treelistitem-expand-icon-margin, 4px 5px 0 0);
         transform: rotate(-90deg);
     }
     .iui-treelistitem-expand-icon-next {
@@ -50,14 +50,14 @@ const iuiTreeListItemDefaultStyle = css`
     }
     .iui-treelistgroup {
         background: var(--treelistgroup-background, #f5f5f5);
-        padding: var(--treelistgroup-padding, 5px);
+        padding: var(--treelistgroup-padding, 7px);
         font-weight: var(--treelistgroup-font-weight, bold);
     }
     .iui-treelistgroup div:focus, .iui-treelistitem div:focus {
         outline: none !important;
     }
     .iui-treelistgroup .iui-treelistitem-expand-icon {
-        margin: var(--treelistgroup-expand-icon-margin, 1px 5px 0 0);
+        margin: var(--treelistgroup-expand-icon-margin, 2px 5px 0 0);
         opacity: 0.4;
     }
     .iui-treelistgroup-hovered .iui-treelistitem-expand-icon {
@@ -69,6 +69,11 @@ const iuiTreeListItemDefaultStyle = css`
         margin: 0;
         padding: 0;
         height: 1px;
+    }
+
+    .iui-treelistitem-label {
+        margin: var(--treelistitem-label-margin, 0);
+        vertical-align: var(--treelistitem-label-vertical-align, middle);
     }
 
     /* Disabled State */

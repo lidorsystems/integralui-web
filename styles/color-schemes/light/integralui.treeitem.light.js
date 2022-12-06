@@ -6,7 +6,7 @@ const iuiTreeItemLightStyle = css`
     }
     .iui-treeitem-hovered, .iui-treeitem-content-hovered {
         background: var(--treeitem-hovered-background, #d9edfd);
-        border: var(--treeitem-hovered-border, 2px solid #d9edfd);
+        border-color: var(--treeitem-hovered-border-color, #d9edfd);
         color: var(--treeitem-hovered-color, black);
 
         animation-name: none; /*iui-treeitem-hovered-animate-enter;*/
@@ -30,7 +30,7 @@ const iuiTreeItemLightStyle = css`
     }
     .iui-treeitem-selected, .iui-treeitem-content-selected {
         background: var(--treeitem-selected-background, #a5d3fa);
-        border: var(--treeitem-selected-border, 2px solid #a5d3fa);
+        border-color: var(--treeitem-selected-border-color, #a5d3fa);
         color: var(--treeitem-selected-color, black);
 
         animation-name: none; /*iui-treeitem-selected-animate-enter;*/

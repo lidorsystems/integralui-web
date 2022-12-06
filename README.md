@@ -1,8 +1,8 @@
-# IntegralUI Web, v22.3
+# IntegralUI Web, v22.4
 
 IntegralUI Web includes 45+ native Web Components and services that can help you build modern web applications. 
 
-![IntegralUI Web 22.3 - 45+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
+![IntegralUI Web 22.4 - 45+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 
@@ -40,11 +40,13 @@ Here is a brief overview of what is included:
 
 [DropDownButton](https://www.lidorsystems.com/products/web/studio/samples/#/dropdownbutton) - Represents a button with option to show a dropdown list
 
+[DropDownFilter](https://www.lidorsystems.com/products/web/studio/samples/#/dropdownfilter) - A dropdown component with different filter oprerations
+
 [Grid](https://www.lidorsystems.com/products/web/studio/samples/#/grid) - Displays tabular data sets
 
 [GroupBox](https://www.lidorsystems.com/products/web/studio/samples/#/groupbox) - An expandable container with header and content
 
-[Label](https://www.lidorsystems.com/products/web/studio/samples/#/label) - A fully customizable label with different alignments relative to attached element</li>
+[Label](https://www.lidorsystems.com/products/web/studio/samples/#/label) - A fully customizable label with different alignments relative to attached element
 
 [ListBar](https://www.lidorsystems.com/products/web/studio/samples/#/listbar) - Displays a list of expandable groups with items
 
@@ -86,7 +88,7 @@ Here is a brief overview of what is included:
 
 [TabStrip](https://www.lidorsystems.com/products/web/studio/samples/#/tabstrip) - Consists of multiple scrollable panels that share the same space 
 
-[Toaster](https://www.lidorsystems.com/products/web/studio/samples/#/toaster) - Allows you to display notification messages (Toasts) with different alert levels</li>
+[Toaster](https://www.lidorsystems.com/products/web/studio/samples/#/toaster) - Allows you to display notification messages (Toasts) with different alert levels
 
 [Tooltip](https://www.lidorsystems.com/products/web/studio/samples/#/tooltip) - Adds a tooltip to an element
 

@@ -5,11 +5,11 @@ export const iuiTreeItemDarkStyle = css`
         color: var(--treeitem-color, #cccccc);
     }
     .iui-treeitem-hovered, .iui-treeitem-content-hovered {
-        background: var(--treeitem-hovered-background, transparent);
-        border: var(--treeitem-hovered-border, 2px solid transparent);
+        background: var(--treeitem-hovered-background, #2a2d2e);
+        border-color: var(--treeitem-hovered-border-color, #2a2d2e);
         color: var(--treeitem-hovered-color, white);
 
-        animation-name: iui-treeitem-hovered-animate-enter;
+        animation-name: none; /*iui-treeitem-hovered-animate-enter;*/
         animation-delay: 0s;
         animation-direction: normal;
         animation-duration: 0.15s;
@@ -29,11 +29,11 @@ export const iuiTreeItemDarkStyle = css`
         }
     }
     .iui-treeitem-selected, .iui-treeitem-content-selected {
-        background: var(--treeitem-selected-background, transparent);
-        border: var(--treeitem-selected-border, 2px solid transparent);
+        background: var(--treeitem-selected-background, #0a4369);
+        border-color: var(--treeitem-selected-border-color, #0a4369);
         color: var(--treeitem-selected-color, white);
 
-        animation-name: iui-treeitem-selected-animate-enter;
+        animation-name: none; /*iui-treeitem-selected-animate-enter;*/
         animation-delay: 0s;
         animation-direction: normal;
         animation-duration: 0.25s;

@@ -17,6 +17,7 @@ export const iuiNumericDefaultStyle = css`
         overflow: hidden;
         padding: var(--numeric-padding, 0);
         position: var(--numeric-position, relative);
+        vertical-align: var(--numeric-vertical-align, initial);
         width: var(--numeric-width, auto);
         z-index: var(--numeric-z-index, auto);
 

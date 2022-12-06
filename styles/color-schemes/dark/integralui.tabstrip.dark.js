@@ -10,7 +10,7 @@ export const iuiTabStripDarkStyle = css`
     .iui-tabstrip-content {
         background: var(--tabstrip-content-background, #252526);
         border: var(--tabstrip-content-border, thin solid #151515);
-        border-color: var(--tabstrip-content-border-color, #151515);
+        border-color: var(--tabstrip-content-border-color, #0f344d);
     }
     .iui-tabstrip-line {
         background: var(--tabstrip-line-background, #0e639c);

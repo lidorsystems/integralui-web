@@ -50,6 +50,7 @@ export const iuiTabStripDefaultStyle = css`
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 0;
     }
     .iui-tabstrip-line {
         background: var(--tabstrip-line-background, #808080);
@@ -57,7 +58,7 @@ export const iuiTabStripDefaultStyle = css`
         left: 0;
         position: absolute;
         top: 0;
-        z-index: 5;
+        z-index: 105;
     }
     .iui-tabstrip-scroll-inbound, .iui-tabstrip-scroll-outbound {
         background: var(--tabstrip-scroll-background, white);
@@ -67,7 +68,7 @@ export const iuiTabStripDefaultStyle = css`
         overflow: hidden;
         padding: 0;
         position: absolute;
-        z-index: 9;
+        z-index: 109;
     }
     .iui-tabstrip-scroll-border-bottom {
         border-bottom: var(--tabstrip-scroll-border-bottom, thin solid #bcbcbc);

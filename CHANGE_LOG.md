@@ -1,3 +1,21 @@
+v22.4
+- New component: DropDownFilter that allows you to add a dropdown list with different filter operations
+- TabStrip can now align tabs to appear on top-left, middle or bottom-right side
+- Tabs can have vertical orientation
+- TabStrip can show tabs in multiple lines
+- TabStrip auto-updates its layout on dynamic resize
+- Tabs in different colors with option to set animated inline styles
+- TreeView items can accept inline styles for each state: disabled, normal, hovered or selected
+- Change of item appearance in TreeView on demand using custom styles
+- TreeView with auto-size ability where tree structure is shown on full without virtualization
+- Option to add radio buttons to TreeView
+- New samples for TabStrip and TreeView components
+- Fixed the issue with disappearance of scroll buttons when scroll mode is changed in TabStrip
+- Fixed the issue with updating the layout of ProgressBar component when included as child of other web components
+- Selected Tab on Left, Right and Bottom placement border is now correctly shown without a line
+- When TabStrip Animation is None, the tab content is now appearing correctly
+- Other minor bug fixes
+
 v22.3
 - New component: SplitImage - allows you to visually compare differences between two images or custom HTML elements
 - SlideBar component now has two display modes: Stream and Carousel
