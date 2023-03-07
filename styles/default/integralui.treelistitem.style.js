@@ -21,7 +21,7 @@ const iuiTreeListItemDefaultStyle = css`
         opacity: 0.25;
         overflow: hidden;
         padding: 0;
-        margin: var(--treelistitem-expand-icon-margin, 0);
+        margin: var(--treelistitem-expand-icon-margin, 0 5px 0 0);
         width: 16px;
         height: 16px;
         vertical-align: middle;
@@ -57,7 +57,7 @@ const iuiTreeListItemDefaultStyle = css`
         outline: none !important;
     }
     .iui-treelistgroup .iui-treelistitem-expand-icon {
-        margin: var(--treelistgroup-expand-icon-margin, 2px 5px 0 0);
+        margin: var(--treelistgroup-expand-icon-margin, 2px 7px 0 0);
         opacity: 0.4;
     }
     .iui-treelistgroup-hovered .iui-treelistitem-expand-icon {

@@ -1,0 +1,96 @@
+export default IntegralUIRadioButton;
+declare class IntegralUIRadioButton extends IntegralUIBaseValue {
+    static get properties(): {
+        allowAnimation: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
+        allowFocus: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
+        allowUpdate: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
+        colorScheme: {
+            attribute: string;
+            converter: {
+                fromAttribute: (value: any) => string;
+                toAttribute: (value: any) => "None" | "Dark" | "Light";
+            };
+            reflect: boolean;
+        };
+        customStyle: {
+            type: ObjectConstructor;
+            attribute: string;
+        };
+        data: {
+            type: ObjectConstructor;
+        };
+        enabled: {
+            type: BooleanConstructor;
+            reflect: boolean;
+        };
+        name: {
+            type: StringConstructor;
+            reflect: boolean;
+        };
+        readOnly: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
+        resourcePath: {
+            type: StringConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
+        size: {
+            type: ObjectConstructor;
+        };
+        state: {
+            type: NumberConstructor;
+            reflect: boolean;
+        };
+        theme: {
+            converter: {
+                fromAttribute: (value: any) => string;
+                toAttribute: (value: any) => "None" | "Office";
+            };
+            reflect: boolean;
+        };
+        value: {
+            type: NumberConstructor;
+            reflect: boolean;
+        };
+        checked: {
+            type: BooleanConstructor;
+            reflect: boolean;
+        };
+    };
+    _parentCtrl: any;
+    _checkedValue: boolean;
+    _buttonClass: {};
+    _generalClassName: string;
+    _buttonClassName: string;
+    _contentClassName: string;
+    _currentControlStyleSettings: {
+        cssText: any;
+        readonly styleSheet: CSSStyleSheet | null;
+        _styleSheet: CSSStyleSheet | null | undefined;
+        toString(): any;
+    };
+    setParent(cmp: any): void;
+    set checked(arg: boolean);
+    get checked(): boolean;
+    _ctrlMouseDown(e: any): void;
+    _updateButtonClass(): void;
+    _getButtonClass(): {};
+    _getButtonStyle(value: any): any;
+    render(): import("../external/lit-element.js").TemplateResult;
+}
+import IntegralUIBaseValue from "./integralui.base.value.js";

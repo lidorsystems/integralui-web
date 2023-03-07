@@ -10,7 +10,7 @@ export const iuiTabLightStyle = css`
     }
     .iui-tab-header-selected {
         background: var(--tab-header-selected-background, white);
-        border-color: var(--tab-header-selected-border-color, #8cb1d1);
+        border-color: var(--tab-header-hovered-border-color, #8cb1d1);
         color: var(--tab-header-selected-color, #266499);
     }
     .iui-tab-content {

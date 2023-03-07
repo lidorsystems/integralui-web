@@ -9,28 +9,9 @@ export const iuiTabLightStyle = css`
     }
     .iui-tab-header-hovered
     {
-        background: var(--tab-header-hovered-background, transparent);
-        border: var(--tab-header-hovered-border, thin solid transparent);
+        background: var(--tab-header-hovered-background, #a5d3fa);
+        border: var(--tab-header-hovered-border, thin solid #a5d3fa);
         color: var(--tab-header-hovered-color, black);
-
-        animation-name: iui-tab-header-hovered-animate-enter;
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.15s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes iui-tab-header-hovered-animate-enter {
-        0% { 
-            background: var(--tab-header-hovered-animation-background-0, transparent);
-            border: var(--tab-header-hovered-animation-border-0, thin solid transparent);
-        }
-        100% { 
-            background: var(--tab-header-hovered-animation-background-100, #a5d3fa);
-            border: var(--tab-header-hovered-animation-border-100, thin solid #a5d3fa);
-        }
     }
     .iui-tab-header-selected
     {

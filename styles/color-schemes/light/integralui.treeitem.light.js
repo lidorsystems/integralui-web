@@ -7,50 +7,12 @@ const iuiTreeItemLightStyle = css`
     .iui-treeitem-hovered, .iui-treeitem-content-hovered {
         background: var(--treeitem-hovered-background, #d9edfd);
         border-color: var(--treeitem-hovered-border-color, #d9edfd);
-        color: var(--treeitem-hovered-color, black);
-
-        animation-name: none; /*iui-treeitem-hovered-animate-enter;*/
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.15s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes iui-treeitem-hovered-animate-enter {
-        0% { 
-            background: var(--treeitem-hovered-animation-background-0, transparent); 
-            border-color: var(--treeitem-hovered-animation-border-color-0, transparent);
-        }
-        100% { 
-            background: var(--treeitem-hovered-animation-background-100, #d9edfd); 
-            border-color: var(--treeitem-hovered-animation-border-color-100, #d9edfd);
-        }
+        color: var(--treeitem-hovered-color, #323232);
     }
     .iui-treeitem-selected, .iui-treeitem-content-selected {
         background: var(--treeitem-selected-background, #a5d3fa);
         border-color: var(--treeitem-selected-border-color, #a5d3fa);
         color: var(--treeitem-selected-color, black);
-
-        animation-name: none; /*iui-treeitem-selected-animate-enter;*/
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.25s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes iui-treeitem-selected-animate-enter {
-        0% { 
-            background: var(--treeitem-selected-animation-background-0, #d9edfd); 
-            border-color: var(--treeitem-selected-animation-border-color-0, #d9edfd);
-        }
-        100% { 
-            background: var(--treeitem-selected-animation-background-100, #a5d3fa); 
-            border-color: var(--treeitem-selected-animation-border-color-100, #a5d3fa);
-        }
     }
     .iui-treeitem-expand-box {
         background: url(../../../icons/expandbox-icons.png) no-repeat -80px -48px;

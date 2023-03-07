@@ -1,3 +1,21 @@
+v23.1
+- New components: Loading and SidePanel
+- Loading - Use of asynchronous animations during loading progression
+- SidePanel - Allows you to add custom content panel that appears by sliding from page side
+- Dynamic Drag and Drop with smooth animations that show target drop position for ListBox, ListView and TreeView 
+- TypeScript definitions files for each component
+- SideBar now allows you to create content layouts divided with expandable and sizeable panels during run-time
+- Auto hide ability for SideBar that allows you to change whether side bar content pops out on top of the parent container or pushes its content to the side when opening
+- Dynamic appearance of scrollbar
+- Improved overall appearance of Tooltips
+- Option o place tabs in SideBar on each side with customizable alignment
+- Expand/Collapse of groups in TreeList no longer changes the scroll position
+- Scrolling the ListBar content is now working when using the mouse wheel
+- Reaching the end of scrolling in TabStrip shows scroll buttons in grey color
+- Mouse wheel now correctly scrolls tabs in TabStrip
+- New and improved samples
+- Other minor bug fixes
+
 v22.4
 - New component: DropDownFilter that allows you to add a dropdown list with different filter operations
 - TabStrip can now align tabs to appear on top-left, middle or bottom-right side

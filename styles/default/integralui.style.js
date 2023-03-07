@@ -67,6 +67,60 @@ const iuiBaseDefaultStyle = css`
             transform: rotate(360deg);
         }
     }
+
+    .iui-draglist {
+        background: var(--draglist-background, white);
+        border: var(--draglist-border, thin solid transparent);
+        border-color: var(--draglist-border-color, transparent);
+        box-shadow: var(--draglist-box-shadow, 0 0 0 transparent);
+        margin: 0;
+        opacity: 0.9;
+        overflow: hidden;
+        padding: 0;
+        pointer-events: none;
+        position: absolute;
+        transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        z-index: 999;
+    }
+    .iui-draglist-active {
+        border-color: var(--draglist-active-border-color, #e5e5e5);
+        box-shadow: var(--draglist-active-box-shadow, 0 0 3px #d5d5d5);
+    }
+    .iui-draglist-copy {
+        background: url(../../icons/copy.ico);
+        display: block;
+        height: 16px;
+        opacity: 0.6;
+        position: absolute;
+        width: 16px;
+        z-index: 999;
+    }
+    .iui-draglist-corner {
+        opacity: 1;
+        position: absolute;
+        right: -1px;
+        bottom: -3px;
+        zIndex: 999;
+    }
+    .iui-draglist-corner-block {
+        background: var(--draglist-corner-background, #f5f5f5);
+        border: var(--draglist-corner-border, thin solid #e5e5e5);
+        border-color: var(--draglist-corner-border-color, #e5e5e5);
+        opacity: 1;
+        position: absolute;
+        top: -35%;
+        left: -20%;
+        transform: rotate(45deg);
+        width: 250%;
+        height: 300%;
+        zIndex: 0;
+    }
+    .iui-draglist-num {
+        color: var(--draglist-num-color, black);
+        padding: 3px;
+        position: relative;
+        zIndex: 1;
+    }
 `;
 
 export { iuiBaseDefaultStyle };

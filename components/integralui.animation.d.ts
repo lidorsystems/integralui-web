@@ -1,0 +1,36 @@
+export default IntegralUIAnimation;
+declare class IntegralUIAnimation {
+    constructor(target: any, delay: any, duration: any);
+    _currentDelay: any;
+    _currentDuration: any;
+    _currentTarget: any;
+    _objStateList: any[];
+    _animationInterval: any;
+    _animationTick: number;
+    _numSteps: number;
+    destroy(): void;
+    set delay(arg: any);
+    get delay(): any;
+    set duration(arg: any);
+    get duration(): any;
+    animate(newValue: any, delay: any, duration: any, callback: any): Promise<any>;
+    _reverse(currentValue: any, duration: any, callback: any): Promise<any>;
+    _getCurrentValue(value: any): any;
+    _removeAnimationInterval(): void;
+    _updateCurrentValue(props: any, values: any, counter: any): {};
+    _getStartingValues(): any[];
+    _updateState(state: any, isReversed: any): void;
+    _convertToArray(value: any): any;
+    _createEmptyArray(length: any): any[];
+    _getNumValue(value: any): any;
+    _getObjProperties(obj: any): string[];
+    _isArray(value: any): boolean;
+    _isElement(elem: any): boolean;
+    _isFieldAvailable(field: any): boolean;
+    _isNumber(value: any): boolean;
+    _isObject(value: any): boolean;
+    _isString(value: any): boolean;
+    getTarget(): any;
+    isActive(): boolean;
+    isAnimated(target: any): boolean;
+}

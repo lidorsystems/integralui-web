@@ -35,4 +35,22 @@ export const iuiDarkStyle = css`
         background-color: #37373d;
         color: white;
     }
+
+    .iui-draglist {
+        background: var(--draglist-background, #303030);
+    }
+    .iui-draglist-active {
+        border-color: var(--draglist-active-border-color, #151515);
+        box-shadow: var(--draglist-active-box-shadow, 0 0 3px #252525);
+    }
+    .iui-draglist-copy {
+        background: url(../../../icons/copy-white.ico);
+    }
+    .iui-draglist-corner-block {
+        background: var(--draglist-corner-background, #151515);
+        border-color: var(--draglist-corner-border-color, #050505);
+    }
+    .iui-draglist-num {
+        color: var(--draglist-num-color, #cccccc);
+    }
 `;

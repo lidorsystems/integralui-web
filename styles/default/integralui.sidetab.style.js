@@ -25,6 +25,7 @@ export const iuiTabDefaultStyle = css`
         border-color: var(--tab-header-hovered-border-color, #fcfcfc);
         color: var(--tab-header-hovered-color, black);
         font-weight: var(--tab-header-hovered-font-weight, normal);
+
     }
     .iui-tab-header-selected
     {

@@ -39,6 +39,14 @@ export const iuiDragWinDefaultStyle = css`
         height: 16px;
         vertical-align: middle;
     }
+    .iui-dragwin-num
+    {
+        border-left: thin solid #c5c5c5;
+        color: black;
+        padding: 3px 3px 3px 5px;
+        margin: 0;
+        vertical-align: middle;
+    }
     .iui-dragwin-move-left
     {
         background-image: url(../../icons/move-left.ico);

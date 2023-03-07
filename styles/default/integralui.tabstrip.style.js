@@ -131,6 +131,12 @@ export const iuiTabStripDefaultStyle = css`
     .iui-tabstrip-scroll-button-down span {
         background-image: var(--tabstrip-scroll-button-down-background-image, url(../../icons/down-24.png));
     }
+    .iui-tabstrip-scroll-button-inactive:hover {
+        opacity: var(--tabstrip-scroll-button-hover-opacity, 0.6);
+    }
+    .iui-tabstrip-scroll-button-inactive span {
+        opacity: 0.5;
+    }
 
     .iui-tabstrip-left-toolbar {
         display: inline-block;

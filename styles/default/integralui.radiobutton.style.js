@@ -18,6 +18,7 @@ export const iuiRadioButtonDefaultStyle = css`
         overflow: hidden;
         padding: var(--radio-button-padding, 5px);
         position: var(--radio-button-position, relative);
+        text-align: var(--radio-button-text-align, left);
         vertical-align: var(--radio-button-vertical-align, middle);
         width: var(--radio-button-width, auto);
         z-index: var(--radio-button-z-index, auto);

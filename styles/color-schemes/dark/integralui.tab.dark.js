@@ -13,7 +13,7 @@ export const iuiTabDarkStyle = css`
     }
     .iui-tab-header-selected {
         background: var(--tab-header-selected-background, #252526);
-        border-color: var(--tab-header-selected-border-color, #0c293d);
+        border-color: var(--tab-header-selected-border-color, #0f344d);
         color: var(--tab-header-selected-color, #266499);
     }
     .iui-tab-content {

@@ -11,6 +11,8 @@ const iuiPanelDefaultStyle = css`
         cursor: var(--panel-cursor, default);
         display: var(--panel-display, block);
         float: var(--panel-float, none);
+        font-size: var(--panel-font-size, 1rem);
+        font-style: var(--panel-font-style, normal);
         height: var(--panel-height, 100%);
         opacity: var(--panel-opacity, 1);
         overflow: var(--panel-overflow, auto);

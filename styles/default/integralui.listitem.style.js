@@ -53,34 +53,6 @@ export const iuiListItemDefaultStyle = css`
         height: 16px;
         vertical-align: top;
     }
-    .iui-treeview-enter .iui-listgroup-expand-box-general {
-        animation-name: iui-treeview-animate-expand-box-enter;
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.4s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes iui-treeview-animate-expand-box-enter {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    } 
-    .iui-treeview-leave .iui-listgroup-expand-box-general {
-        animation-name: iui-treeview-animate-expand-box-leave;
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes iui-treeview-animate-expand-box-leave {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
-    } 
     .iui-listgroup-expand-box-open {
         background-position: 0 -16px;
     }
@@ -152,6 +124,7 @@ export const iuiListItemDefaultStyle = css`
         color: var(--listitem-color, black);
         cursor: var(--listitem-cursor, default);
         display: var(--listitem-display, block);
+        font-weight: var(--listitem-font-weight, normal);
         height: var(--listitem-height, auto);
         list-style-type: none;
         margin: var(--listitem-margin, 0);
@@ -208,12 +181,18 @@ export const iuiListItemDefaultStyle = css`
     .iui-listitem-hovered {
         background: var(--listitem-hovered-background, #f5f5f5);
         border: var(--listitem-hovered-border, 2px solid #efefef);
+        border-color: var(--listitem-hovered-border-color, #efefef);
+        border-width: var(--listitem-hovered-border-width, 2px);
         color: var(--listitem-hovered-color, black);
+        font-weight: var(--listitem-hovered-font-weight, normal);
     }
     .iui-listitem-selected {
         background: var(--listitem-selected-background, #e5e5e5);
         border: var(--listitem-selected-border, 2px solid #dedede);
+        border-color: var(--listitem-selected-border-color, #dedede);
+        border-width: var(--listitem-selected-border-width, 2px);
         color: var(--listitem-selected-color, black);
+        font-weight: var(--listitem-selected-font-weight, normal);
         z-index: 2;
     }
     .iui-listitem-focused {
@@ -222,9 +201,15 @@ export const iuiListItemDefaultStyle = css`
     .iui-listitem:focus {
         outline: none !important;
     }
+    .iui-listitem-content-block {
+        overflow: var(--listitem-content-overflow, hidden);
+        text-overflow: var(--listitem-content-text-overflow, ellipsis);
+    }
     .iui-listitem-content {
         border: var(--listitem-border, 2px solid transparent);
+        height: var(--listitem-content-height, calc(100% - 10px));
         padding: var(--listitem-content-padding, 3px);
+        width: var(--listitem-content-width, calc(100% - 10px));
     }
     .iui-listitem-content-hovered {
     }
@@ -272,7 +257,7 @@ export const iuiListItemDefaultStyle = css`
         animation-timing-function: linear; 
     }
     @keyframes listitem-animate-enter {
-        0% { 	   
+        0% {        
             border: thin solid transparent;
             box-shadow: none;
         }
@@ -308,7 +293,7 @@ export const iuiListItemDefaultStyle = css`
         animation-timing-function: linear; 
     }
     @keyframes listitem-animate-select-left {
-        0% { 	   
+        0% {        
             left: 100%;
             opacity: 0.5;
             width: 0;
@@ -330,7 +315,7 @@ export const iuiListItemDefaultStyle = css`
         animation-timing-function: linear; 
     }
     @keyframes listitem-animate-select-right {
-        0% { 	   
+        0% {        
             width: 0;
             opacity: 0.5;
         }

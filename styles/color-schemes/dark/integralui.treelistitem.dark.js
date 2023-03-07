@@ -6,13 +6,14 @@ export const iuiTreeListItemDarkStyle = css`
     }
     .iui-treelistitem-hovered {
         background: var(--treelistitem-background, #2a2d2e);
+        color: var(--treelistitem-hovered-color, #eeeeee);
     }
     .iui-treelistitem-selected {
         background: var(--treelistitem-selected-background, #37373d);
         color: var(--treelistitem-selected-color, white);
     }
     .iui-treelistgroup {
-        background: var(--treelistgroup-background, #113b57);
+        background: var(--treelistgroup-background, #323232);
     }
     .iui-treelistitem-expand-icon-collapse {
         background-position: var(--treelistitem-expand-icon-background-position, -48px -16px);

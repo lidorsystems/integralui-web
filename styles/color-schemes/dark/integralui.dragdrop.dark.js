@@ -16,4 +16,7 @@ export const iuiDragWinDarkStyle = css`
     .iui-dragwin-title {
         border-left: thin solid #151515;
     }
+    .iui-dragwin-num {
+        color: #cccccc;
+    }
 `;

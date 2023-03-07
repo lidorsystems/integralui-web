@@ -35,16 +35,17 @@ export const iuiListItemDarkStyle = css`
     .iui-listitem-hovered {
         animation-name: none;
         background: var(--listitem-hovered-background, #2a2d2e);
-        border: var(--listitem-hovered-border, 2px solid #2a2d2e);
+        border-color: var(--listitem-hovered-border-color, #2a2d2e);
+        color: var(--listitem-hovered-color, #eeeeee);
     }
     .iui-listitem-selected {
         animation-name: none;
         background: var(--listitem-selected-background, #0a4369);
-        border: var(--listitem-selected-border, 2px solid #0a4369);
+        border-color: var(--listitem-selected-border-color, #0a4369);
         color: var(--listitem-selected-color, white);
     }
     @keyframes listitem-animate-enter {
-        0% { 	   
+        0% {        
             border: thin solid transparent;
             box-shadow: none;
         }

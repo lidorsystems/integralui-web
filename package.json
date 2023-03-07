@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "22.4.0",
+  "version": "23.1.0",
   "description": "IntegralUI Web - Advanced UI Components for Angular, React and Vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,8 @@
     "web",
     "web-component",
     "grid",
+    "list",
+    "sidebar",
     "treegrid",
     "treeview",
     "javascript",
@@ -27,7 +29,7 @@
   ],
   "author": "Lidor Systems",
   "license": "SEE LICENSE in LICENSE.md",
-  "homepage": "https://github.com/lidorsystems/integralui-web",
+  "homepage": "https://www.lidorsystems.com/products/web/studio/",
   "bugs": {
     "url": "https://github.com/lidorsystems/integralui-web/issues"
   }
