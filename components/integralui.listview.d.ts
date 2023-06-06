@@ -29,7 +29,7 @@ declare class IntegralUIListView extends IntegralUIBaseList {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -126,11 +126,6 @@ declare class IntegralUIListView extends IntegralUIBaseList {
             };
             reflect: boolean;
         };
-        showScroll: {
-            type: BooleanConstructor;
-            attribute: string;
-            reflect: boolean;
-        };
         selectedItem: {
             type: ObjectConstructor;
             attribute: string;
@@ -141,6 +136,11 @@ declare class IntegralUIListView extends IntegralUIBaseList {
                 fromAttribute: (value: any) => string;
                 toAttribute: (value: any) => "None" | "One" | "MultiSimple" | "MultiExtended";
             };
+            reflect: boolean;
+        };
+        showScroll: {
+            type: BooleanConstructor;
+            attribute: string;
             reflect: boolean;
         };
         sorting: {
@@ -168,157 +168,13 @@ declare class IntegralUIListView extends IntegralUIBaseList {
             reflect: boolean;
         };
     };
-    _clientSpace: {
-        width: number;
-        height: number;
-    } | {
-        width: number;
-        height: number;
-    } | undefined;
-    _contentPos: {
-        top: number;
-        left: number;
-    } | {
-        top: number;
-        left: number;
-    } | undefined;
-    _currentItemSize: any;
-    _currentItemBorder: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _currentItemPadding: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _currentItemContentBorder: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _currentItemContentPadding: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _itemsPerColumn: number | undefined;
-    _itemsPerRow: number | undefined;
-    _numColumns: number | undefined;
-    _numRows: number | undefined;
-    _currentScrollMode: any;
-    _overflowSettings: {
-        horizontal: string;
-        vertical: string;
-    } | {
-        horizontal: string;
-        vertical: string;
-    } | {
-        horizontal: string;
-        vertical: string;
-    } | {
-        horizontal: string;
-        vertical: string;
-    } | undefined;
-    _currentBaseStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemThemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     set itemSize(arg: any);
     get itemSize(): any;
     set scrollMode(arg: any);
     get scrollMode(): any;
-    _updateOverflowSettings(): void;
-    _addItemToCurrentList(item: any): void;
     loadData(data: any, fields: any): void;
-    _updateScrollItemList(item?: any): void;
-    _isDropPosHorizontal(): boolean;
-    _processLeftArrowKey(itemObj: any, e: any): any;
-    _processRightArrowKey(itemObj: any, e: any): any;
-    _getLeftItem(item: any): any;
-    _getRightItem(item: any): any;
-    _getContentSize(): {
-        width: any;
-        height: any;
-    };
-    _listViewMouseWheel(e: any): void;
-    _getDefaultListStyle(): {
-        general: {
-            disabled: string;
-            focused: string;
-            hovered: string;
-            normal: string | undefined;
-            selected: string;
-        } | {
-            disabled?: undefined;
-            focused?: undefined;
-            hovered?: undefined;
-            normal?: undefined;
-            selected?: undefined;
-        };
-        item: {
-            general: {
-                disabled: any;
-                focused: any;
-                normal: any;
-                hovered: any;
-                selected: any;
-            };
-            content: {
-                disabled: any;
-                focused: any;
-                normal: any;
-                hovered: any;
-                selected: any;
-            };
-        };
-    };
-    _resetRefresh(): void;
-    _getDragTemplate(itemObj: any): import("../external/lit-element.js").TemplateResult;
+    firstUpdated(props: any): void;
+    updated(changedProperties: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _contentElem: Element | null | undefined;
 }
 import IntegralUIBaseList from "./integralui.base.list.js";

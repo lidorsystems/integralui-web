@@ -29,7 +29,7 @@ declare class IntegralUIDialog extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -73,20 +73,13 @@ declare class IntegralUIDialog extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _isVisible: any;
-    _showCloseButton: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     set closeButton(arg: any);
     get closeButton(): any;
     set visible(arg: any);
     get visible(): any;
     open(): void;
     close(): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIBase from "./integralui.base.js";

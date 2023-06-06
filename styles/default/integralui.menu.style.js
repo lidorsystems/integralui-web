@@ -4,23 +4,23 @@ import { c as css } from '../../external/lit-element.js';
 export const iuiMenuDefaultStyle = css`
     .iui-menu
     {
-        background: var(--menu-background, #f5f5f5);
-        border: var(--menu-border, 0);
-        border-color:  var(--menu-border-color, transparent);
-        border-radius: var(--menu-border-radius, 1px);
-        border-width: var(--menu-border-width, thin);
-        color: var(--menu-color, black);
-        cursor: var(--menu-cursor, default);
-        display: var(--menu-display, block);
-        float: var(--menu-float, none);
-        height: var(--menu-height, auto);
-        margin: var(--menu-margin, 0);
-        opacity: var(--menu-opacity, 1);
+        background: var(--iui-menu-background, #f5f5f5);
+        border: var(--iui-menu-border, 0);
+        border-color:  var(--iui-menu-border-color, transparent);
+        border-radius: var(--iui-menu-border-radius, 1px);
+        border-width: var(--iui-menu-border-width, thin);
+        color: var(--iui-menu-color, black);
+        cursor: var(--iui-menu-cursor, default);
+        display: var(--iui-menu-display, block);
+        float: var(--iui-menu-float, none);
+        height: var(--iui-menu-height, auto);
+        margin: var(--iui-menu-margin, 0);
+        opacity: var(--iui-menu-opacity, 1);
         overflow: visible;
-        padding: var(--menu-padding, 0);
-        position: var(--menu-position, relative);
-        width: var(--menu-width, auto);
-        z-index: var(--menu-z-index, auto);
+        padding: var(--iui-menu-padding, 0);
+        position: var(--iui-menu-position, relative);
+        width: var(--iui-menu-width, auto);
+        z-index: var(--iui-menu-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;

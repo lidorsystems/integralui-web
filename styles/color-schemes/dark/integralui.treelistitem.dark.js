@@ -2,32 +2,32 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiTreeListItemDarkStyle = css`
     .iui-treelistitem {
-        color: var(--treelistitem-color, #cccccc);
+        color: var(--iui-treelistitem-color, #cccccc);
     }
     .iui-treelistitem-hovered {
-        background: var(--treelistitem-background, #2a2d2e);
-        color: var(--treelistitem-hovered-color, #eeeeee);
+        background: var(--iui-treelistitem-background, #2a2d2e);
+        color: var(--iui-treelistitem-hovered-color, #eeeeee);
     }
     .iui-treelistitem-selected {
-        background: var(--treelistitem-selected-background, #37373d);
-        color: var(--treelistitem-selected-color, white);
+        background: var(--iui-treelistitem-selected-background, #37373d);
+        color: var(--iui-treelistitem-selected-color, white);
     }
     .iui-treelistgroup {
-        background: var(--treelistgroup-background, #323232);
+        background: var(--iui-treelistgroup-background, #323232);
     }
     .iui-treelistitem-expand-icon-collapse {
-        background-position: var(--treelistitem-expand-icon-background-position, -48px -16px);
+        background-position: var(--iui-treelistitem-expand-icon-background-position, -48px -16px);
     }
     .iui-treelistitem-expand-icon-expand {
-        background-position: var(--treelistitem-expand-icon-background-position, -48px 0);
+        background-position: var(--iui-treelistitem-expand-icon-background-position, -48px 0);
     }
     .iui-treelistitem-separator {
         background: #151515;
     }
     .iui-treelistitem-animate-select {
-        background: var(--treelistitem-animate-select-background, #2d2d33);
+        background: var(--iui-treelistitem-animate-select-background, #2d2d33);
     }
     .iui-treelistitem-expand-icon-next {
-        background-position: var(--treelistitem-next-background-position, -48px 0);
+        background-position: var(--iui-treelistitem-next-background-position, -48px 0);
     }
 `;

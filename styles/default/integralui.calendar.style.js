@@ -2,23 +2,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiCalendarDefaultStyle = css`
     .iui-calendar {
-        background: var(--calendar-background, white);
-        border: var(--calendar-border, thin solid #cecece);
-        border-color:  var(--calendar-border-color, #cecece);
-        border-radius: var(--calendar-border-radius, 1px);
-        border-width: var(--calendar-border-width, thin);
-        color: var(--calendar-color, black);
-        cursor: var(--calendar-cursor, default);
-        display: var(--calendar-display, block);
-        float: var(--calendar-float, none);
-        height: var(--calendar-height, auto);
-        opacity: var(--calendar-opacity, 1);
+        background: var(--iui-calendar-background, white);
+        border: var(--iui-calendar-border, thin solid #cecece);
+        border-color:  var(--iui-calendar-border-color, #cecece);
+        border-radius: var(--iui-calendar-border-radius, 1px);
+        border-width: var(--iui-calendar-border-width, thin);
+        color: var(--iui-calendar-color, black);
+        cursor: var(--iui-calendar-cursor, default);
+        display: var(--iui-calendar-display, block);
+        float: var(--iui-calendar-float, none);
+        height: var(--iui-calendar-height, auto);
+        opacity: var(--iui-calendar-opacity, 1);
         overflow: hidden;
-        margin: var(--calendar-margin, 0);
-        padding: var(--calendar-padding, 0);
-        position: var(--calendar-position, relative);
-        width: var(--calendar-width, auto);
-        z-index: var(--calendar-z-index, auto);
+        margin: var(--iui-calendar-margin, 0);
+        padding: var(--iui-calendar-padding, 0);
+        position: var(--iui-calendar-position, relative);
+        width: var(--iui-calendar-width, auto);
+        z-index: var(--iui-calendar-z-index, auto);
    
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -71,32 +71,32 @@ export const iuiCalendarDefaultStyle = css`
     .iui-calendar-cell {
         border: thin solid transparent;
         border-radius: 3px;
-        color: var(--calendar-cell-color, black);
+        color: var(--iui-calendar-cell-color, black);
         padding: 0 3px;
         text-align: right;
     }
     .iui-calendar-normal {
     }
     .iui-calendar-cell-hovered, .iui-calendar-cell-grayed:hover {
-        background: var(--calendar-cell-hovered-background, #f5f5f5);
-        border-color: var(--calendar-cell-hovered-border-color, #efefef);
+        background: var(--iui-calendar-cell-hovered-background, #f5f5f5);
+        border-color: var(--iui-calendar-cell-hovered-border-color, #efefef);
     }
     .iui-calendar-cell-selected {
-        background: var(--calendar-cell-selected-background, #e5e5e5);
-        border-color: var(--calendar-cell-selected-border-color, #dedede);
-        color: var(--calendar-cell-selected-color, black);
+        background: var(--iui-calendar-cell-selected-background, #e5e5e5);
+        border-color: var(--iui-calendar-cell-selected-border-color, #dedede);
+        color: var(--iui-calendar-cell-selected-color, black);
     }
     .iui-calendar-cell-grayed {
         opacity: 0.5;
     }
     .iui-calendar-cell-today {
-        border-color: var(--calendar-cell-today-border-color, #bebebe);
+        border-color: var(--iui-calendar-cell-today-border-color, #bebebe);
         font-weight: bold;
     }
 
     /* Disabled State */
     .iui-calendar-disabled {
-        opacity: var(--calendar-disabled-opacity, 0.75);
+        opacity: var(--iui-calendar-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
@@ -112,12 +112,12 @@ export const iuiCalendarDefaultStyle = css`
     }
     @keyframes calendar-cell-enter {
         0% { 
-            background: var(--calendar-animation-cell-enter-background-0, transparent); 
-            border-color: var(--calendar-animation-cell-enter-border-color-0, transparent);
+            background: var(--iui-calendar-animation-cell-enter-background-0, transparent); 
+            border-color: var(--iui-calendar-animation-cell-enter-border-color-0, transparent);
         }
         100% { 
-            background: var(--calendar-animation-cell-enter-background-100, #f5f5f5); 
-            border-color: var(--calendar-animation-cell-enter-border-color-100, #efefef);
+            background: var(--iui-calendar-animation-cell-enter-background-100, #f5f5f5); 
+            border-color: var(--iui-calendar-animation-cell-enter-border-color-100, #efefef);
         }
     }
     .iui-calendar-cell-leave {
@@ -132,12 +132,12 @@ export const iuiCalendarDefaultStyle = css`
     }
     @keyframes calendar-cell-leave {
         0% { 
-            background: var(--calendar-animation-cell-leave-background-0, #f5f5f5); 
-            border-color: var(--calendar-animation-cell-leave-border-color-0, #efefef);
+            background: var(--iui-calendar-animation-cell-leave-background-0, #f5f5f5); 
+            border-color: var(--iui-calendar-animation-cell-leave-border-color-0, #efefef);
         }
         100% { 
-            background: var(--calendar-animation-cell-leave-background-100, transparent); 
-            border-color: var(--calendar-animation-cell-leave-border-color-100, transparent);
+            background: var(--iui-calendar-animation-cell-leave-background-100, transparent); 
+            border-color: var(--iui-calendar-animation-cell-leave-border-color-100, transparent);
         }
     }
 `;

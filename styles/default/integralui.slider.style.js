@@ -3,23 +3,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiSliderDefaultStyle = css`
     .iui-slider {
-        background: var(--slider-background, transparent);
-        border: var(--slider-border, thin solid transparent);
-        border-color:  var(--slider-border-color, transparent);
-        border-radius: var(--slider-border-radius, 1px);
-        border-width: var(--slider-border-width, thin);
-        color: var(--slider-color, black);
-        cursor: var(--slider-cursor, default);
-        display: var(--slider-display, block);
-        float: var(--slider-float, none);
-        height: var(--slider-height, auto);
-        margin: var(--slider-margin, 0);
-        opacity: var(--slider-opacity, 1);
+        background: var(--iui-slider-background, transparent);
+        border: var(--iui-slider-border, thin solid transparent);
+        border-color:  var(--iui-slider-border-color, transparent);
+        border-radius: var(--iui-slider-border-radius, 1px);
+        border-width: var(--iui-slider-border-width, thin);
+        color: var(--iui-slider-color, black);
+        cursor: var(--iui-slider-cursor, default);
+        display: var(--iui-slider-display, block);
+        float: var(--iui-slider-float, none);
+        height: var(--iui-slider-height, auto);
+        margin: var(--iui-slider-margin, 0);
+        opacity: var(--iui-slider-opacity, 1);
         overflow: hidden;
-        padding: var(--slider-padding, 0);
-        position: var(--slider-position, relative);
-        width: var(--slider-width, auto);
-        z-index: var(--slider-z-index, auto);
+        padding: var(--iui-slider-padding, 0);
+        position: var(--iui-slider-position, relative);
+        width: var(--iui-slider-width, auto);
+        z-index: var(--iui-slider-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -29,29 +29,29 @@ export const iuiSliderDefaultStyle = css`
         user-select: none;
     }
     .iui-slider:focus {
-        border: var(--slider-focus-border, thin solid #cecece);
+        border: var(--iui-slider-focus-border, thin solid #cecece);
         outline: none !important;
     }
     .iui-slider-content {
-        background: var(--slider-content-background, #cecece);
-        height: var(--slider-content-size, 1px);
+        background: var(--iui-slider-content-background, #cecece);
+        height: var(--iui-slider-content-size, 1px);
     }
     .iui-slider-content-vertical {
-        background: var(--slider-content-background, #cecece);
-        width: var(--slider-content-size, 1px);
+        background: var(--iui-slider-content-background, #cecece);
+        width: var(--iui-slider-content-size, 1px);
     }
     .iui-slider-background {
-        background: var(--slider-background-appearance, #afafaf);
-        height: var(--slider-background-size, 1px);
+        background: var(--iui-slider-background-appearance, #afafaf);
+        height: var(--iui-slider-background-size, 1px);
     }
     .iui-slider-background-vertical {
-        background: var(--slider-background-appearance, #afafaf);
-        width: var(--slider-background-size, 1px);
+        background: var(--iui-slider-background-appearance, #afafaf);
+        width: var(--iui-slider-background-size, 1px);
     }
     .iui-slider-button {
-        background: var(--slider-button-background, #e5e5e5);
-        border: var(--slider-button-border, 2px solid #afafaf);
-        border-radius: var(--slider-button-border-radius, 3px);
+        background: var(--iui-slider-button-background, #e5e5e5);
+        border: var(--iui-slider-button-border, 2px solid #afafaf);
+        border-radius: var(--iui-slider-button-border-radius, 3px);
         pointer-events: none;
     }
 
@@ -62,11 +62,11 @@ export const iuiSliderDefaultStyle = css`
     }
 
     .iui-slider-disabled .iui-slider-content {
-        background: var(--slider-disabled-background, #dedede);
+        background: var(--iui-slider-disabled-background, #dedede);
     }
 
     .iui-slider-disabled .iui-slider-value {
-        background: var(--slider-disabled-value-background, #f5f5f5);
-        border-color: var(--slider-disabled-value-border-color, #e5e5e5);
+        background: var(--iui-slider-disabled-value-background, #f5f5f5);
+        border-color: var(--iui-slider-disabled-value-border-color, #e5e5e5);
     }
 `;

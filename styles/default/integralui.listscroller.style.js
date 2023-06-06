@@ -2,23 +2,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiListScrollerDefaultStyle = css`
     .iui-listscroller {
-        background: var(--listscroller-background, transparent);
-        border: var(--listscroller-border, 0);
-        border-color:  var(--listscroller-border-color, transparent);
-        border-radius: var(--listscroller-border-radius, 1px);
-        border-width: var(--listscroller-border-width, thin);
-        color: var(--listscroller-color, black);
-        cursor: var(--listscroller-cursor, default);
-        display: var(--listscroller-display, block);
-        float: var(--listscroller-float, none);
-        height: var(--listscroller-height, auto);
-        margin: var(--listscroller-margin, 0);
-        opacity: var(--listscroller-opacity, 1);
+        background: var(--iui-listscroller-background, transparent);
+        border: var(--iui-listscroller-border, 0);
+        border-color:  var(--iui-listscroller-border-color, transparent);
+        border-radius: var(--iui-listscroller-border-radius, 1px);
+        border-width: var(--iui-listscroller-border-width, thin);
+        color: var(--iui-listscroller-color, black);
+        cursor: var(--iui-listscroller-cursor, default);
+        display: var(--iui-listscroller-display, block);
+        float: var(--iui-listscroller-float, none);
+        height: var(--iui-listscroller-height, auto);
+        margin: var(--iui-listscroller-margin, 0);
+        opacity: var(--iui-listscroller-opacity, 1);
         overflow: hidden;
-        padding: var(--listscroller-padding, 0);
-        position: var(--listscroller-position, relative);
-        width: var(--listscroller-width, auto);
-        z-index: var(--listscroller-z-index, auto);
+        padding: var(--iui-listscroller-padding, 0);
+        position: var(--iui-listscroller-position, relative);
+        width: var(--iui-listscroller-width, auto);
+        z-index: var(--iui-listscroller-z-index, auto);
       
         -webkit-touch-callout: none;
         -webkit-user-select: none;

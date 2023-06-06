@@ -3,19 +3,19 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiTabDefaultStyle = css`
     .iui-tab-header {
-        background: var(--tab-header-background, #e5e5e5);
-        border: var(--tab-header-border, thin solid #bcbcbc);
-        border-color: var(--tab-header-border-color, #bcbcbc);
-        border-radius: var(--tab-header-border-radius, 0);
-        color: var(--tab-header-color, black);
+        background: var(--iui-tab-header-background, #e5e5e5);
+        border: var(--iui-tab-header-border, thin solid #bcbcbc);
+        border-color: var(--iui-tab-header-border-color, #bcbcbc);
+        border-radius: var(--iui-tab-header-border-radius, 0);
+        color: var(--iui-tab-header-color, black);
         display: inline-block;
-        font-weight: var(--tab-header-font-weight, normal);
+        font-weight: var(--iui-tab-header-font-weight, normal);
         list-style: none;
-        margin: var(--tab-header-margin, 0);
+        margin: var(--iui-tab-header-margin, 0);
         overflow: hidden;
-        padding: var(--tab-header-padding, 5px);
+        padding: var(--iui-tab-header-padding, 5px);
         position: absolute;
-        text-align: var(--tab-header-text-align, left);
+        text-align: var(--iui-tab-header-text-align, left);
         top: 1px;
         white-space: nowrap;
         z-index: 0;
@@ -25,45 +25,45 @@ export const iuiTabDefaultStyle = css`
         transform-origin: top left;
     }
     .iui-tab-header-hovered {
-        background: var(--tab-header-hovered-background, #f5f5f5);
-        border-color: var(--tab-header-hovered-border-color, #bcbcbc);
-        color: var(--tab-header-hovered-color, black);
-        font-weight: var(--tab-header-hovered-font-weight, normal);
+        background: var(--iui-tab-header-hovered-background, #f5f5f5);
+        border-color: var(--iui-tab-header-hovered-border-color, #bcbcbc);
+        color: var(--iui-tab-header-hovered-color, black);
+        font-weight: var(--iui-tab-header-hovered-font-weight, normal);
     }
     .iui-tab-header-selected {
-        background: var(--tab-header-selected-background, white);
-        border-color: var(--tab-header-selected-border-color, #bcbcbc);
-        color: var(--tab-header-selected-color, black);
-        font-weight: var(--tab-header-selected-font-weight, normal);
+        background: var(--iui-tab-header-selected-background, white);
+        border-color: var(--iui-tab-header-selected-border-color, #bcbcbc);
+        color: var(--iui-tab-header-selected-color, black);
+        font-weight: var(--iui-tab-header-selected-font-weight, normal);
     }
     .iui-tab-header-dragged {
-        border-color: var(--tab-header-dragged-border-color, #bcbcbc);
+        border-color: var(--iui-tab-header-dragged-border-color, #bcbcbc);
     }
     .iui-tab-selected-top {
-        border-color: var(--tab-header-selected-border-color, #bcbcbc #bcbcbc white #bcbcbc);
+        border-color: var(--iui-tab-header-selected-border-color, #bcbcbc #bcbcbc white #bcbcbc);
     }
     .iui-tab-selected-right {
-        border-color: var(--tab-header-selected-border-color, #bcbcbc #bcbcbc #bcbcbc white);
+        border-color: var(--iui-tab-header-selected-border-color, #bcbcbc #bcbcbc #bcbcbc white);
     }
     .iui-tab-selected-bottom {
-        border-color: var(--tab-header-selected-border-color, white #bcbcbc #bcbcbc #bcbcbc);
+        border-color: var(--iui-tab-header-selected-border-color, white #bcbcbc #bcbcbc #bcbcbc);
     }
     .iui-tab-selected-left {
-        border-color: var(--tab-header-selected-border-color, #bcbcbc white #bcbcbc #bcbcbc);
+        border-color: var(--iui-tab-header-selected-border-color, #bcbcbc white #bcbcbc #bcbcbc);
     }
     .iui-tab-content {
-        background: var(--tab-content-background, white);
-        border: var(--tab-content-border, 0);
-        color: var(--tab-content-color, black);
+        background: var(--iui-tab-content-background, white);
+        border: var(--iui-tab-content-border, 0);
+        color: var(--iui-tab-content-color, black);
         overflow: hidden;
-        padding: var(--tab-content-padding, 5px);
+        padding: var(--iui-tab-content-padding, 5px);
         position: absolute;
         vertical-align: middle;
     }
 
     /* Disabled State */
     .iui-tab-disabled div {
-        opacity: var(--tab-disabled-opacity, 0.75);
+        opacity: var(--iui-tab-disabled-opacity, 0.75);
         pointer-events: none;
     }
 `;

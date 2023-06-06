@@ -29,7 +29,7 @@ declare class IntegralUIToaster extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -95,39 +95,6 @@ declare class IntegralUIToaster extends IntegralUIBase {
             type: ObjectConstructor;
         };
     };
-    _currentDuration: number;
-    _currentDataFields: {};
-    _toastList: any[];
-    _bufferList: any[];
-    _parentRef: Element | null;
-    _inProgress: boolean;
-    _calcToastSize: {
-        width: number;
-        height: number;
-    };
-    _currentAlignment: string;
-    _currentOffsetSize: {
-        width: number;
-        height: number;
-    };
-    _currentToastMargin: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    };
-    _currentToastSize: {
-        width: number;
-        height: number;
-    };
-    _parentBounds: any;
-    _currentPositionAdjustment: {
-        top: number;
-        left: number;
-    };
-    _generalClassName: string;
-    _currentContentTemplate: any;
-    _currentHeaderTemplate: any;
     set alignment(arg: string);
     get alignment(): string;
     set contentTemplate(arg: any);
@@ -137,7 +104,6 @@ declare class IntegralUIToaster extends IntegralUIBase {
     get duration(): number;
     set parentId(arg: any);
     get parentId(): any;
-    _currentParent: any;
     set positionAdjustment(arg: {
         top: number;
         left: number;
@@ -154,31 +120,9 @@ declare class IntegralUIToaster extends IntegralUIBase {
         width: number;
         height: number;
     };
-    _getParent(): Element;
-    _getParentBounds(): any;
-    _getParentSize(): {
-        width: number;
-        height: number;
-    };
-    _setParent(): void;
-    _createDummyToast(toast: any): Promise<any>;
-    _getNewPosition(pos: any, factor: any): {
-        top: any;
-        left: any;
-    };
-    _getStartPosition(): {
-        top: number;
-        left: number;
-    };
-    _getTargetPosition(): {
-        top: number;
-        left: number;
-    };
-    _getToastObj(toast: any): any;
-    _getToastObjIndex(toast: any): number;
     hide(toast: any): void;
     show(toast: any): Promise<void>;
-    _updatePositions(toast: any): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIBase from "./integralui.base.js";

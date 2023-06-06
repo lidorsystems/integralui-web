@@ -29,7 +29,7 @@ declare class IntegralUINumeric extends IntegralUIBaseValue {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -64,7 +64,7 @@ declare class IntegralUINumeric extends IntegralUIBaseValue {
             reflect: boolean;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
         accelerator: {
@@ -104,33 +104,6 @@ declare class IntegralUINumeric extends IntegralUIBaseValue {
             reflect: boolean;
         };
     };
-    _ctrlMaxValue: any;
-    _ctrlMinValue: any;
-    _currentStep: any;
-    _currentAccelerator: any;
-    _currentDecimals: any;
-    _startValue: any;
-    _valueTimer: null | undefined;
-    _valueCount: number | undefined;
-    _isChangeActive: boolean | undefined;
-    _stopTimer: boolean | undefined;
-    _contentSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _ctrlValueWidth: number | undefined;
-    _currentButtonAlign: any;
-    _leftRightMarginTop: number | undefined;
-    _topBotomMarginLeft: number | undefined;
-    _currentDisplayMode: any;
-    _currentMouseWheelSpeed: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _windowMouseUp(event: any): void;
     set accelerator(arg: any);
     get accelerator(): any;
     set buttonAlign(arg: any);
@@ -149,22 +122,9 @@ declare class IntegralUINumeric extends IntegralUIBaseValue {
     get step(): any;
     set value(arg: number);
     get value(): number;
-    updateLayout(optimal?: any): Promise<any>;
-    _changeValueTimerElapsed(flag: any): void;
-    _changeValue(flag: any): void;
     decreaseValue(): void;
     increaseValue(): void;
-    _inputChange(e: any): void;
-    _startChange(flag: any): void;
-    _stopChange(): void;
-    _ctrlMouseWheel(e: any): void;
-    _onMouseDown(e: any, flag: any): void;
-    _onMouseUp(e: any): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _valueElem: Element | null | undefined;
-    _inboundButtonsElem: Element | null | undefined;
-    _leftrightButtonsElem: Element | null | undefined;
-    _upDownButtonsElem: Element | null | undefined;
-    _upDownButtonsChildElem: Element | null | undefined;
 }
 import IntegralUIBaseValue from "./integralui.base.value.js";

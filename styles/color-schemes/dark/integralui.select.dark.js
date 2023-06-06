@@ -2,26 +2,26 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiSelectDarkStyle = css`
     .iui-select {
-        background: var(--select-background, #252526);
-        border: var(--select-header-border, thin solid #151515);
-        border-radius: var(--select-border-radius, 3px);
-        box-shadow: var(--select-box-shadow, 0 0 0 1px transparent);
-        color: var(--select-color, #cccccc);
+        background: var(--iui-select-background, #252526);
+        border: var(--iui-select-header-border, thin solid #151515);
+        border-radius: var(--iui-select-border-radius, 3px);
+        box-shadow: var(--iui-select-box-shadow, 0 0 0 1px transparent);
+        color: var(--iui-select-color, #cccccc);
     }
     .iui-select:focus {
-        border: var(--select-header-border, thin solid #646464);
-        box-shadow: var(--select-box-shadow, 0 0 0 1px #646464);
+        border: var(--iui-select-header-border, thin solid #646464);
+        box-shadow: var(--iui-select-box-shadow, 0 0 0 1px #646464);
     }
 
     /* Select Header */
     .iui-select-header-hovered {
-        color: var(--select-header-hovered-color, white);
+        color: var(--iui-select-header-hovered-color, white);
     }
     .iui-select-header-selected {
-        color: var(--select-header-selected-color, white);
+        color: var(--iui-select-header-selected-color, white);
     }
     .iui-select-header-expand-box {
-        background: var(--select-header-expand-box-background, #cccccc);
+        background: var(--iui-select-header-expand-box-background, #cccccc);
     }
 
     .iui-header-expand-box-arrow

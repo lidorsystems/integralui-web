@@ -2,24 +2,24 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiWindowDefaultStyle = css`
     .iui-window {
-        background: var(--window-background, #f5f5f5);
-        border: var(--window-border, 3px solid #cecece);
-        border-color:  var(--window-border-color, #cecece);
-        border-radius: var(--window-border-radius, 7px);
-        border-width: var(--window-border-width, 3px);
-        color: var(--window-color, black);
-        cursor: var(--window-cursor, default);
-        display: var(--window-display, block);
-        height: var(--window-height, auto);
-        left: var(--window-left, 0);
-        margin: var(--window-margin, 0);
-        opacity: var(--window-opacity, 1); /*var(--window-opacity, 0.6);*/
+        background: var(--iui-window-background, #f5f5f5);
+        border: var(--iui-window-border, 3px solid #cecece);
+        border-color:  var(--iui-window-border-color, #cecece);
+        border-radius: var(--iui-window-border-radius, 7px);
+        border-width: var(--iui-window-border-width, 3px);
+        color: var(--iui-window-color, black);
+        cursor: var(--iui-window-cursor, default);
+        display: var(--iui-window-display, block);
+        height: var(--iui-window-height, auto);
+        left: var(--iui-window-left, 0);
+        margin: var(--iui-window-margin, 0);
+        opacity: var(--iui-window-opacity, 1); /*var(--iui-window-opacity, 0.6);*/
         overflow: hidden;
-        padding: var(--window-padding, 0);
-        position: var(--window-position, absolute);
-        top: var(--window-top, 0);
-        width: var(--window-width, auto);
-        z-index: var(--window-z-index, 999);
+        padding: var(--iui-window-padding, 0);
+        position: var(--iui-window-position, absolute);
+        top: var(--iui-window-top, 0);
+        width: var(--iui-window-width, auto);
+        z-index: var(--iui-window-z-index, 999);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -70,38 +70,38 @@ export const iuiWindowDefaultStyle = css`
     }
 
     .iui-window-header {
-        background: var(--window-header-background, #cecece);
-        border: var(--window-header-border, thin solid #cecece);
-        border-color:  var(--window-header-border-color, #cecece);
-        border-radius: var(--window-header-border-radius, 1px);
-        border-width: var(--window-header-border-width, thin);
-        color: var(--window-header-color, black);
-        cursor: var(--window-header-cursor, default);
+        background: var(--iui-window-header-background, #cecece);
+        border: var(--iui-window-header-border, thin solid #cecece);
+        border-color:  var(--iui-window-header-border-color, #cecece);
+        border-radius: var(--iui-window-header-border-radius, 1px);
+        border-width: var(--iui-window-header-border-width, thin);
+        color: var(--iui-window-header-color, black);
+        cursor: var(--iui-window-header-cursor, default);
         display: block;
-        margin: var(--window-header-margin, 0);
+        margin: var(--iui-window-header-margin, 0);
         overflow: hidden;
-        padding: var(--window-header-padding, 2px);
+        padding: var(--iui-window-header-padding, 2px);
         position: relative;
         white-space: nowrap;
-        z-index: var(--window-z-index, 9);
+        z-index: var(--iui-window-z-index, 9);
     }
     .iui-window-icon {
         display: inline-block;
     }
     .iui-window-icon-url {
-        margin: var(--window-icon-margin, 0);
-        vertical-align: var(--window-icon-vertical-align, top);
+        margin: var(--iui-window-icon-margin, 0);
+        vertical-align: var(--iui-window-icon-vertical-align, top);
     }
     .iui-window-title {
-        border: var(--window-title-border, thin solid transparent);
+        border: var(--iui-window-title-border, thin solid transparent);
         display: inline-block;
-        padding: var(--window-title-padding, 2px);
+        padding: var(--iui-window-title-padding, 2px);
     }
     .iui-window-header-content {
         display: inline-block;
     }
     .iui-window-header-buttons {
-        background: var(--window-header-background, #cecece);
+        background: var(--iui-window-header-background, #cecece);
         position: absolute;
         top: 2px;
         right: 0;
@@ -133,17 +133,17 @@ export const iuiWindowDefaultStyle = css`
     }
 
     .iui-window-content {
-        background: var(--window-content-background, transparent);
-        color: var(--window-content-color, black);
+        background: var(--iui-window-content-background, transparent);
+        color: var(--iui-window-content-color, black);
         display: block;
         overflow: hidden;
-        padding: var(--window-content-padding, 0);
+        padding: var(--iui-window-content-padding, 0);
         position: relative;
     }
 
     /* Disabled State */
     .iui-window-disabled div {
-        opacity: var(--window-disabled-opacity, 0.75);
+        opacity: var(--iui-window-disabled-opacity, 0.75);
         pointer-events: none;
     }
 `;

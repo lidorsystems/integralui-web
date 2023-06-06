@@ -20,19 +20,6 @@ export const iuiMenuItemLightStyle = css`
         background-color: #153268 !important;
         border: solid thin #0f244a !important;
         color: white;
-
-        animation-name: iui-menuitem-root-hovered-animate-enter;
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.15s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes iui-menuitem-root-hovered-animate-enter {
-        0% { background: transparent; border-color: transparent; }
-        100% { background: #153268; border-color: #0f244a; }
     }
     .iui-menuitem-root-hovered a
     {
@@ -47,19 +34,6 @@ export const iuiMenuItemLightStyle = css`
         background-color: #d9edfd !important;
         border: solid thin #d9edfd !important;
         color: black;
-
-        animation-name: iui-menuitem-hovered-animate-enter;
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.15s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes iui-menuitem-hovered-animate-enter {
-        0% { background: transparent; border-color: transparent; }
-        100% { background: #d9edfd; border-color: #d9edfd; }
     }
     .iui-menuitem-selected a
     {
@@ -152,27 +126,8 @@ export const iuiMenuItemLightStyle = css`
     }
 
     .iui-contextmenuitem-root-hovered, .iui-contextmenuitem-root-selected {
-        background: var(--contextmenuitem-hovered-background, #d9edfd);
-        border: var(--contextmenuitem-hovered-border, thin solid #d9edfd);
-        color: var(--contextmenuitem-hovered-color, black);
-
-        animation-name: none; /*iui-contextmenuitem-hovered-animate-enter;*/
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.15s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes iui-contextmenuitem-hovered-animate-enter {
-        0% { 
-            background: var(--contextmenuitem-hovered-animation-background-0, transparent); 
-            border-color: var(--contextmenuitem-hovered-animation-border-color-0, transparent);
-        }
-        100% { 
-            background: var(--contextmenuitem-hovered-animation-background-100, #d9edfd); 
-            border-color: var(--contextmenuitem-hovered-animation-border-color-100, #d9edfd);
-        }
+        background: var(--iui-contextmenuitem-hovered-background, #d9edfd);
+        border: var(--iui-contextmenuitem-hovered-border, thin solid #d9edfd);
+        color: var(--iui-contextmenuitem-hovered-color, black);
     }
 `;

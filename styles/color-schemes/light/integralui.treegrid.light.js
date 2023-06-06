@@ -2,11 +2,11 @@ import { c as css } from '../../../external/lit-element.js';
 
 const iuiTreeGridLightStyle = css`
     .iui-treegrid {
-        border-color:  var(--treegrid-border-color, #d9d9d9);
-        color: var(--treegrid-color, black);
+        border-color:  var(--iui-treegrid-border-color, #d9d9d9);
+        color: var(--iui-treegrid-color, black);
     }
     .iui-treegrid-block-left, .iui-treegrid-block-right {
-        background: var(--treegrid-block-fixed-background, #f9f9f9);
+        background: var(--iui-treegrid-block-fixed-background, #f9f9f9);
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-header, 
     .iui-treegrid-block-top-left .iui-treegrid-column-filter, 
@@ -14,9 +14,9 @@ const iuiTreeGridLightStyle = css`
     .iui-treegrid-block-top-right .iui-treegrid-column-header,
     .iui-treegrid-block-top-right .iui-treegrid-column-filter, 
     .iui-treegrid-block-top-right .iui-treegrid-column-footer {
-        background: var(--treegrid-column-fixed-background, #eeeeee);
-        border: var(--treegrid-column-fixed-border, thin solid transparent);
-        color: var(--treegrid-column-fixed-color, black);
+        background: var(--iui-treegrid-column-fixed-background, #eeeeee);
+        border: var(--iui-treegrid-column-fixed-border, thin solid transparent);
+        color: var(--iui-treegrid-column-fixed-color, black);
     }
     .iui-treegrid-block-top-left .iui-treegrid-column-header-hovered, 
     .iui-treegrid-block-top-right .iui-treegrid-column-header-hovered {
@@ -34,46 +34,46 @@ const iuiTreeGridLightStyle = css`
         border: thin solid #bebebe;
     }
     .iui-treegrid-column-header, .iui-treegrid-column-filter, .iui-treegrid-column-footer {
-        background: var(--treegrid-column-background, #f5f5f5);
-        border-color: var(--treegrid-column-border-color, transparent);
+        background: var(--iui-treegrid-column-background, #f5f5f5);
+        border-color: var(--iui-treegrid-column-border-color, transparent);
         border-right: thin solid transparent;
-        color: var(--treegrid-column-color, #49678f);
+        color: var(--iui-treegrid-column-color, #49678f);
     }
     .iui-treegrid-column-filter {
-        background: var(--treegrid-column-filter-background, transparent);
+        background: var(--iui-treegrid-column-filter-background, transparent);
     }
     .iui-treegrid-column-header, .iui-treegrid-column-filter {
         border-bottom: thin solid #efefef;
     }
     .iui-treegrid-column-footer {
         border-top: thin solid #efefef;
-        color: var(--treegrid-column-footer-color, #323232);
+        color: var(--iui-treegrid-column-footer-color, #323232);
     }
     .iui-treegrid-column-header-hovered {
-        background: var(--treegrid-column-header-hovered-background, #e9e9e9);
-        border-color: var(--treegrid-colum-header-hovered-border-color, #e9e9e9);
-        color: var(--treegrid-column-header-hovered-color, #49678f);
+        background: var(--iui-treegrid-column-header-hovered-background, #e9e9e9);
+        border-color: var(--iui-treegrid-colum-header-hovered-border-color, #e9e9e9);
+        color: var(--iui-treegrid-column-header-hovered-color, #49678f);
     }
     .iui-treegrid-column-header-selected {
-        background: var(--treegrid-column-header-hovered-background, #d9d9d9);
-        border-color: var(--treegrid-colum-header-hovered-border-color, #d9d9d9);
-        color: var(--treegrid-column-header-hovered-color, #3d5576);
+        background: var(--iui-treegrid-column-header-hovered-background, #d9d9d9);
+        border-color: var(--iui-treegrid-colum-header-hovered-border-color, #d9d9d9);
+        color: var(--iui-treegrid-column-header-hovered-color, #3d5576);
     }
     .iui-treegrid-column-header-cell-selected {
         background: transparent;
     }
     .iui-treegrid-row, .iui-treegrid-row-fixed {
-        color: var(--treegrid-row-color, #646464);
+        color: var(--iui-treegrid-row-color, #646464);
     }
     .iui-treegrid-row-hovered {
-        background: var(--treegrid-row-hovered-background, #d9edfd);
-        border-color: var(--treegrid-row-hovered-border-color, #d9edfd);
-        color: var(--treegrid-row-hovered-color, black);
+        background: var(--iui-treegrid-row-hovered-background, #d9edfd);
+        border-color: var(--iui-treegrid-row-hovered-border-color, #d9edfd);
+        color: var(--iui-treegrid-row-hovered-color, black);
     }
     .iui-treegrid-row-selected {
-        background: var(--treegrid-row-selected-background, #a5d3fa);
-        border-color: var(--treegrid-row-selected-border-color, #99d1ff);
-        color: var(--treegrid-row-selected-color, black);
+        background: var(--iui-treegrid-row-selected-background, #a5d3fa);
+        border-color: var(--iui-treegrid-row-selected-border-color, #99d1ff);
+        color: var(--iui-treegrid-row-selected-color, black);
     }
     .iui-treegrid-row-cell:first-child {
         border-left: thin solid transparent;
@@ -130,16 +130,24 @@ const iuiTreeGridLightStyle = css`
     .iui-treegrid-form {
         background: #efefef;
     }
-
     .iui-treegrid-form-editor-text {
-        border: 1px solid #d9d9d9;
-        box-shadow: 0 0 0 1px transparent;
-        border-radius: 3px;
+        border: var(--iui-treegrid-form-editor-text-border, 1px solid #d9d9d9);
+        border-color: var(--iui-treegrid-form-editor-text-border-color, #d9d9d9);
+        border-radius: var(--iui-treegrid-form-editor-text-border-radius, 3px);
+        box-shadow: var(--iui-treegrid-form-editor-text-box-shadow, 0 0 0 1px transparent);
     }
     .iui-treegrid-form-editor-text:focus {
-        border: 1px solid #6ea9db;
-        box-shadow: 0 0 0 1px #6ea9db;
+        border: var(--iui-treegrid-form-editor-text-focus-border, 1px solid #6ea9db);
+        border-color: var(--iui-treegrid-form-editor-text-focus-border-color, #6ea9db);
+        box-shadow: var(--iui-treegrid-form-editor-text-focus-box-shadow, 0 0 0 1px #6ea9db);
         outline: none;
+    }
+    .iui-treegrid-form-editor-invalid {
+        border-color: var(--iui-treegrid-form-editor-invalid-border-color, #c45151);
+    }
+    .iui-treegrid-form-editor-invalid:focus {
+        border-color: var(--iui-treegrid-form-editor-invalid-border-color, #c45151);
+        box-shadow: var(--iui-treegrid-form-editor-invalid-box-shadow, 0 0 0 1px #c45151);
     }
 `;
 

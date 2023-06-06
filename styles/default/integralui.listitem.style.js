@@ -2,25 +2,25 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiListItemDefaultStyle = css`
     .iui-listgroup {
-        background: var(--listgroup-background, transparent);
-        border: var(--listgroup-border, 1px solid transparent);
-        border-color:  var(--listgroup-border-color, transparent transparent #e5e5e5 transparent);
-        border-radius: var(--listgroup-border-radius, 1px);
-        border-width: var(--listgroup-border-width, 1px);
-        color: var(--listgroup-color, black);
-        cursor: var(--listgroup-cursor, default);
-        display: var(--listgroup-display, block);
-        font-weight: var(--listgroup-font-weight, bold);
-        height: var(--listgroup-height, auto);
+        background: var(--iui-listgroup-background, transparent);
+        border: var(--iui-listgroup-border, 1px solid transparent);
+        border-color:  var(--iui-listgroup-border-color, transparent transparent #e5e5e5 transparent);
+        border-radius: var(--iui-listgroup-border-radius, 1px);
+        border-width: var(--iui-listgroup-border-width, 1px);
+        color: var(--iui-listgroup-color, black);
+        cursor: var(--iui-listgroup-cursor, default);
+        display: var(--iui-listgroup-display, block);
+        font-weight: var(--iui-listgroup-font-weight, bold);
+        height: var(--iui-listgroup-height, auto);
         list-style-type: none;
-        margin: var(--listgroup-margin, 1px 0);
-        opacity: var(--listgroup-opacity, 1);
+        margin: var(--iui-listgroup-margin, 1px 0);
+        opacity: var(--iui-listgroup-opacity, 1);
         overflow: hidden;
-        padding: var(--listgroup-padding, 0);
-        position: var(--listgroup-position, relative);
-        white-space: var(--listgroup-white-space, nowrap);
-        width: var(--listgroup-width, auto);
-        z-index: var(--listgroup-z-index, auto);
+        padding: var(--iui-listgroup-padding, 0);
+        position: var(--iui-listgroup-position, relative);
+        white-space: var(--iui-listgroup-white-space, nowrap);
+        width: var(--iui-listgroup-width, auto);
+        z-index: var(--iui-listgroup-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -33,14 +33,14 @@ export const iuiListItemDefaultStyle = css`
         list-style-type: none;
     }
     .iui-listgroup-focused {
-        border: var(--listgroup-focused-border, 2px solid gray);
+        border: var(--iui-listgroup-focused-border, 2px solid gray);
     }
     .iui-listgroup:focus {
         outline: none !important;
     }
     .iui-listgroup-content {
-        border: var(--listgroup-border, 2px solid transparent);
-        padding: var(--listgroup-content-padding, 3px);
+        border: var(--iui-listgroup-border, 2px solid transparent);
+        padding: var(--iui-listgroup-content-padding, 3px);
     }
 
     .iui-listgroup-expand-box {
@@ -48,7 +48,7 @@ export const iuiListItemDefaultStyle = css`
         display: inline-block;
         overflow: hidden;
         padding: 0;
-        margin: var(--listgroup-expand-box-margin, 1px 3px 0 0);
+        margin: var(--iui-listgroup-expand-box-margin, 1px 3px 0 0);
         width: 16px;
         height: 16px;
         vertical-align: top;
@@ -110,30 +110,30 @@ export const iuiListItemDefaultStyle = css`
 
     /* Disabled State */
     .iui-listgroup-disabled div {
-        opacity: var(--listgroup-disabled-opacity, 0.75);
+        opacity: var(--iui-listgroup-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
     
     .iui-listitem {
-        background: var(--listitem-background, transparent);
-        border: var(--listitem-border, 2px solid transparent);
-        border-color:  var(--listitem-border-color, transparent);
-        border-radius: var(--listitem-border-radius, 1px);
-        border-width: var(--listitem-border-width, 2px);
-        color: var(--listitem-color, black);
-        cursor: var(--listitem-cursor, default);
-        display: var(--listitem-display, block);
-        font-weight: var(--listitem-font-weight, normal);
-        height: var(--listitem-height, auto);
+        background: var(--iui-listitem-background, transparent);
+        border: var(--iui-listitem-border, 2px solid transparent);
+        border-color:  var(--iui-listitem-border-color, transparent);
+        border-radius: var(--iui-listitem-border-radius, 1px);
+        border-width: var(--iui-listitem-border-width, 2px);
+        color: var(--iui-listitem-color, black);
+        cursor: var(--iui-listitem-cursor, default);
+        display: var(--iui-listitem-display, block);
+        font-weight: var(--iui-listitem-font-weight, normal);
+        height: var(--iui-listitem-height, auto);
         list-style-type: none;
-        margin: var(--listitem-margin, 0);
-        opacity: var(--listitem-opacity, 1);
+        margin: var(--iui-listitem-margin, 0);
+        opacity: var(--iui-listitem-opacity, 1);
         overflow: hidden;
-        padding: var(--listitem-padding, 0);
-        position: var(--listitem-position, relative);
-        white-space: var(--listitem-white-space, nowrap);
-        width: var(--listitem-width, auto);
+        padding: var(--iui-listitem-padding, 0);
+        position: var(--iui-listitem-position, relative);
+        white-space: var(--iui-listitem-white-space, nowrap);
+        width: var(--iui-listitem-width, auto);
     }
     .iui-listitem-general {
         list-style-type: none;
@@ -179,37 +179,37 @@ export const iuiListItemDefaultStyle = css`
         100% { max-height: 0; border-width: 0; opacity: 0; }
     }
     .iui-listitem-hovered {
-        background: var(--listitem-hovered-background, #f5f5f5);
-        border: var(--listitem-hovered-border, 2px solid #efefef);
-        border-color: var(--listitem-hovered-border-color, #efefef);
-        border-width: var(--listitem-hovered-border-width, 2px);
-        color: var(--listitem-hovered-color, black);
-        font-weight: var(--listitem-hovered-font-weight, normal);
+        background: var(--iui-listitem-hovered-background, #f5f5f5);
+        border: var(--iui-listitem-hovered-border, 2px solid #efefef);
+        border-color: var(--iui-listitem-hovered-border-color, #efefef);
+        border-width: var(--iui-listitem-hovered-border-width, 2px);
+        color: var(--iui-listitem-hovered-color, black);
+        font-weight: var(--iui-listitem-hovered-font-weight, normal);
     }
     .iui-listitem-selected {
-        background: var(--listitem-selected-background, #e5e5e5);
-        border: var(--listitem-selected-border, 2px solid #dedede);
-        border-color: var(--listitem-selected-border-color, #dedede);
-        border-width: var(--listitem-selected-border-width, 2px);
-        color: var(--listitem-selected-color, black);
-        font-weight: var(--listitem-selected-font-weight, normal);
+        background: var(--iui-listitem-selected-background, #e5e5e5);
+        border: var(--iui-listitem-selected-border, 2px solid #dedede);
+        border-color: var(--iui-listitem-selected-border-color, #dedede);
+        border-width: var(--iui-listitem-selected-border-width, 2px);
+        color: var(--iui-listitem-selected-color, black);
+        font-weight: var(--iui-listitem-selected-font-weight, normal);
         z-index: 2;
     }
     .iui-listitem-focused {
-        border: var(--listitem-focused-border, 2px solid gray);
+        border: var(--iui-listitem-focused-border, 2px solid gray);
     }
     .iui-listitem:focus {
         outline: none !important;
     }
     .iui-listitem-content-block {
-        overflow: var(--listitem-content-overflow, hidden);
-        text-overflow: var(--listitem-content-text-overflow, ellipsis);
+        overflow: var(--iui-listitem-content-overflow, hidden);
+        text-overflow: var(--iui-listitem-content-text-overflow, ellipsis);
     }
     .iui-listitem-content {
-        border: var(--listitem-border, 2px solid transparent);
-        height: var(--listitem-content-height, calc(100% - 10px));
-        padding: var(--listitem-content-padding, 3px);
-        width: var(--listitem-content-width, calc(100% - 10px));
+        border: var(--iui-listitem-border, 2px solid transparent);
+        height: var(--iui-listitem-content-height, calc(100% - 10px));
+        padding: var(--iui-listitem-content-padding, 3px);
+        width: var(--iui-listitem-content-width, calc(100% - 10px));
     }
     .iui-listitem-content-hovered {
     }
@@ -222,23 +222,23 @@ export const iuiListItemDefaultStyle = css`
         outline: none !important;
     }
     .iui-listitem-separator {
-        background: var(--listitem-separator-background, #e5e5e5);
+        background: var(--iui-listitem-separator-background, #e5e5e5);
         border: 0;
-        height: var(--listitem-separator-height, 1px);
-        margin: var(--listitem-separator-margin, 5px);
+        height: var(--iui-listitem-separator-height, 1px);
+        margin: var(--iui-listitem-separator-margin, 5px);
         padding: 0;
     }
 
 
     /* Disabled State */
     .iui-listitem-disabled div {
-        opacity: var(--listitem-disabled-opacity, 0.75);
+        opacity: var(--iui-listitem-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
     /* Animation */
     .iui-listitem-animate {
-        border: var(--listitem-animate-border, 0);
+        border: var(--iui-listitem-animate-border, 0);
         background-color: transparent;
         box-shadow: none;
         list-style-type: none;
@@ -275,7 +275,7 @@ export const iuiListItemDefaultStyle = css`
         z-index: 9;
     }
     .iui-listitem-animate-select {
-        background: var(--listitem-animate-select-background, #f5f5f5);
+        background: var(--iui-listitem-animate-select-background, #f5f5f5);
         display: block;
         left: 0;
         position: absolute;

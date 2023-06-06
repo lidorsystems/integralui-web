@@ -2,9 +2,9 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiDropDownFilterDarkStyle = css`
     .iui-dropdownfilter {
-        border: var(--dropdownfilter-border, thin solid #151515);
-        border-color: var(--dropdownfilter-border-color, #151515);
-        color: var(--dropdownfilter-color, #cccccc);
+        border: var(--iui-dropdownfilter-border, thin solid #151515);
+        border-color: var(--iui-dropdownfilter-border-color, #151515);
+        color: var(--iui-dropdownfilter-color, #cccccc);
     }
 
     /* DropDown Window */

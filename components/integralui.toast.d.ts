@@ -29,7 +29,7 @@ declare class IntegralUIToast extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -79,33 +79,6 @@ declare class IntegralUIToast extends IntegralUIBase {
             type: ObjectConstructor;
         };
     };
-    _currentDuration: any;
-    _positionInterval: any;
-    _toastFields: {
-        id: string;
-        text: string;
-        title: string;
-        type: string;
-    } | {
-        id: any;
-        text: any;
-        title: any;
-        type: any;
-    } | undefined;
-    _parentCtrl: any;
-    _isRemoved: boolean | undefined;
-    _currentPosition: {
-        top: number;
-        left: number;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentOpacity: number | undefined;
-    _currentContentTemplate: any;
     setParent(cmp: any): void;
     set contentTemplate(arg: any);
     get contentTemplate(): any;
@@ -120,19 +93,8 @@ declare class IntegralUIToast extends IntegralUIBase {
         top: number;
         left: number;
     } | undefined;
-    _animatePosition(newPos: any): Promise<any>;
     hide(): void;
-    _removeDurationTimeout(): void;
-    _delayTimeout: any;
-    _removeOpacityInterval(): void;
-    _opacityInterval: any;
-    _removePositionInterval(): void;
-    _startDuration(): void;
-    _durationTimeout: null | undefined;
-    _updateDataFields(fields: any): void;
-    _updateParent(): void;
-    _getContentTemplate(toast: any, type: any): TemplateResult;
-    _getDefaultContentTemplate(toast: any): TemplateResult;
+    firstUpdated(props: any): void;
     render(): TemplateResult;
 }
 import IntegralUIBase from "./integralui.base.js";

@@ -29,7 +29,7 @@ declare class IntegralUISlideBar extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -95,47 +95,6 @@ declare class IntegralUISlideBar extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _currentList: any[] | undefined;
-    _slideList: any[] | Node[] | undefined;
-    _animationTimeout: any;
-    _animationTimer: any;
-    _currentAnimationCounter: number | undefined;
-    _currentAnimationPause: any;
-    _currentAnimationSpeed: any;
-    _arrowTopPos: number | undefined;
-    _arrowOpacity: number | undefined;
-    _buttons: any[] | undefined;
-    _currentDisplayMode: any;
-    _elemSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _navigatorSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _isNavigationBarVisible: boolean | undefined;
-    _showNavigationButtons: any;
-    _slideSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _firstSlide: any;
-    _prevSlide: any;
-    _currentSlide: any;
-    _nextSlide: any;
-    _lastSlide: any;
-    _currentSelection: any;
-    _currentSelectedIndex: number | undefined;
-    _removeIndex: any;
-    _selectedSlideComponent: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _resizeObserver: ResizeObserver | null | undefined;
     set animationPause(arg: any);
     get animationPause(): any;
     set animationSpeed(arg: any);
@@ -146,36 +105,14 @@ declare class IntegralUISlideBar extends IntegralUIBase {
     get navigationButtons(): any;
     set selectedIndex(arg: number | undefined);
     get selectedIndex(): number | undefined;
-    _getButtonClass(btn: any): {
-        'iui-slidebar-navigator-button': boolean;
-    };
-    _cancelAnimation(): void;
-    _getSpeedFactor(): 10 | 2 | 5 | 15 | 25;
     startAnimation(): void;
     stopAnimation(): void;
-    _updateCurrentList(): void;
-    _getNextSlide(slide: any): any;
-    _getPrevSlide(slide: any): any;
-    _getSlideCurrentIndex(cmp: any): number;
-    _getSlideIndex(cmp: any): number;
-    _getSlideData(index: any): any;
     invokeCtrlMethod(key: any, slide: any): boolean;
-    _ctrlMouseEnter(e: any): void;
-    _ctrlMouseLeave(e: any): void;
     prevSlide(): void;
     nextSlide(): void;
-    _updateSlideReferences(): void;
-    _processUpdateLayout(optimal: any): Promise<any>;
-    _updateSlides(flag: any): Promise<void>;
     selectSlide(slide: any): void;
     selectSlideByIndex(index: any): Promise<void>;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _refreshSlides(): void;
-    _numSlides: any;
-    _slotChange(e: any): void;
-    _updateControlReferences(): void;
-    _blockElem: Element | null | undefined;
-    _arrowElem: Element | null | undefined;
-    _navigatorElem: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

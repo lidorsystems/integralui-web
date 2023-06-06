@@ -3,23 +3,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiGridDefaultStyle = css`
     .iui-grid {
-        background: var(--grid-background, white);
-        border: var(--grid-border, thin solid #cecece);
-        border-color:  var(--grid-border-color, #cecece);
-        border-radius: var(--grid-border-radius, 1px);
-        border-width: var(--grid-border-width, thin);
-        color: var(--grid-color, black);
-        cursor: var(--grid-cursor, default);
-        display: var(--grid-display, block);
-        float: var(--grid-float, none);
-        height: var(--grid-height, auto);
-        margin: var(--grid-margin, 0);
-        opacity: var(--grid-opacity, 1);
+        background: var(--iui-grid-background, white);
+        border: var(--iui-grid-border, thin solid #cecece);
+        border-color:  var(--iui-grid-border-color, #cecece);
+        border-radius: var(--iui-grid-border-radius, 1px);
+        border-width: var(--iui-grid-border-width, thin);
+        color: var(--iui-grid-color, black);
+        cursor: var(--iui-grid-cursor, default);
+        display: var(--iui-grid-display, block);
+        float: var(--iui-grid-float, none);
+        height: var(--iui-grid-height, auto);
+        margin: var(--iui-grid-margin, 0);
+        opacity: var(--iui-grid-opacity, 1);
         overflow: hidden;
-        padding: var(--grid-padding, 0);
-        position: var(--grid-position, relative);
-        width: var(--grid-width, auto);
-        z-index: var(--grid-z-index, auto);
+        padding: var(--iui-grid-padding, 0);
+        position: var(--iui-grid-position, relative);
+        width: var(--iui-grid-width, auto);
+        z-index: var(--iui-grid-z-index, auto);
         
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -29,7 +29,7 @@ export const iuiGridDefaultStyle = css`
         user-select: none;
     }
     .iui-grid table {
-        color: var(--grid-color, black);
+        color: var(--iui-grid-color, black);
     }
     .iui-grid div { /*Compatibility with Bootstrap */
         -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
@@ -40,7 +40,7 @@ export const iuiGridDefaultStyle = css`
         direction: rtl;
     }
     .iui-grid-block {
-        background: var(--grid-background, #white);
+        background: var(--iui-grid-background, #white);
         margin: 0;
         overflow: hidden;
         padding: 0;
@@ -48,7 +48,7 @@ export const iuiGridDefaultStyle = css`
         z-index: 0;
     }
     .iui-grid-block-left {
-        background: var(--grid-block-fixed-background, #f5f5f5);
+        background: var(--iui-grid-block-fixed-background, #f5f5f5);
         left: 0;
         margin: 0;
         overflow: hidden;
@@ -58,7 +58,7 @@ export const iuiGridDefaultStyle = css`
         z-index: 4;
     }
     .iui-grid-block-right {
-        background: var(--grid-block-fixed-background, #f5f5f5);
+        background: var(--iui-grid-block-fixed-background, #f5f5f5);
         margin: 0;
         overflow: hidden;
         padding: 0;
@@ -168,20 +168,25 @@ export const iuiGridDefaultStyle = css`
         padding: 0 15px 0 0;
     }
     .iui-grid-column-header, .iui-grid-column-filter, .iui-grid-column-footer {
-        background: var(--grid-column-background, #ededed);
-        border: var(--grid-column-border, thin solid #d5d5d5);
-        border-color: var(--grid-column-border-color, #d5d5d5);
-        color: var(--grid-column-color, black);
+        background: var(--iui-grid-column-background, #ededed);
+        border: var(--iui-grid-column-border, thin solid #d5d5d5);
+        border-color: var(--iui-grid-column-border-color, #d5d5d5);
+        color: var(--iui-grid-column-color, black);
         margin: 0;
-        padding: var(--grid-column-padding, 3px 0);
+        padding: var(--iui-grid-column-padding, 3px 0);
         position: relative;
         vertical-align:middle;
         white-space: nowrap;
         z-index: 1;
     }
+    .iui-grid-column-header-content {
+        overflow: hidden;
+        text-overflow: var(--iui-grid-column-header-text-overflow, ellipsis);
+        white-space: var(--iui-grid-column-header-white-space, nowrap);
+    }
     .iui-grid-column-filter  {
-        background: var(--grid-column-filter-background, transparent);
-        padding: var(--grid-column-filter-padding, 0px 0);
+        background: var(--iui-grid-column-filter-background, transparent);
+        padding: var(--iui-grid-column-filter-padding, 0px 0);
     }
     .iui-grid-block-top-left .iui-grid-column-header, 
     .iui-grid-block-top-left .iui-grid-column-filter, 
@@ -189,25 +194,25 @@ export const iuiGridDefaultStyle = css`
     .iui-grid-block-top-right .iui-grid-column-header, 
     .iui-grid-block-top-right .iui-grid-column-filter,
     .iui-grid-block-top-right .iui-grid-column-footer {
-        background: var(--grid-column-fixed-background, #dddddd);
+        background: var(--iui-grid-column-fixed-background, #dddddd);
         border: thin solid #c5c5c5;
     }
     .iui-grid-block-top-left .iui-grid-column-filter, .iui-grid-block-top-right .iui-grid-column-filter  {
-        background: var(--grid-column-filter-fixed-background, transparent);
+        background: var(--iui-grid-column-filter-fixed-background, transparent);
     }
     .iui-grid-column-header-hovered {
-        animation-name: var(--grid-column-header-hovered-animation-name, none);
-        background: var(--grid-column-header-hovered-background, #d5d5d5);
-        border-color: var(--grid-colum-header-hovered-border-color, #cecece);
-        color: var(--grid-column-header-hovered-color, black);
+        animation-name: var(--iui-grid-column-header-hovered-animation-name, none);
+        background: var(--iui-grid-column-header-hovered-background, #d5d5d5);
+        border-color: var(--iui-grid-colum-header-hovered-border-color, #cecece);
+        color: var(--iui-grid-column-header-hovered-color, black);
     }
     .iui-grid-column-header-selected {
-        animation-name: var(--grid-column-header-selected-animation-name, none);
-        background: var(--grid-column-header-selected-background, #bebebe);
-        border-color: var(--grid-colum-header-selected-border-color, #aeaeae);
-        color: var(--grid-column-header-selected-color, black);
+        animation-name: var(--iui-grid-column-header-selected-animation-name, none);
+        background: var(--iui-grid-column-header-selected-background, #bebebe);
+        border-color: var(--iui-grid-colum-header-selected-border-color, #aeaeae);
+        color: var(--iui-grid-column-header-selected-color, black);
     }
-    .iui-grid-column-header > div, .iui-grid-column-filter > div, .iui-grid-column-footer > div, .iui-grid-row-cell > div {
+    .iui-grid-column-header > div, .iui-grid-column-filter > div, .iui-grid-column-footer > div {
         border: 2px solid transparent;
         margin: 0;
         padding: 2px;
@@ -224,25 +229,25 @@ export const iuiGridDefaultStyle = css`
         cursor: default;
     }
     .iui-grid-row, .iui-grid-row-fixed {
-        color: var(--grid-row-color, black);
+        color: var(--iui-grid-row-color, black);
         margin: 0;
         padding: 0;
         white-space: nowrap;
         z-index: 0;
     }
     .iui-grid-row-hovered {
-        animation-name: var(--grid-row-hovered-animation-name, none);
-        background: var(--grid-row-hovered-background, #f5f5f5);
-        border: var(--grid-row-hovered-border, thin solid #efefef);
-        border-color: var(--grid-row-hovered-border-color, #efefef);
-        color: var(--grid-row-hovered-color, black);
+        animation-name: var(--iui-grid-row-hovered-animation-name, none);
+        background: var(--iui-grid-row-hovered-background, #f5f5f5);
+        border: var(--iui-grid-row-hovered-border, thin solid #efefef);
+        border-color: var(--iui-grid-row-hovered-border-color, #efefef);
+        color: var(--iui-grid-row-hovered-color, black);
     }
     .iui-grid-row-selected {
-        animation-name: var(--grid-row-selected-animation-name, none);
-        background: var(--grid-row-selected-background, #e5e5e5);
-        border: var(--grid-row-selected-border, thin solid #dedede);
-        border-color: var(--grid-row-selected-border-color, #dedede);
-        color: var(--grid-row-selected-color, black);
+        animation-name: var(--iui-grid-row-selected-animation-name, none);
+        background: var(--iui-grid-row-selected-background, #e5e5e5);
+        border: var(--iui-grid-row-selected-border, thin solid #dedede);
+        border-color: var(--iui-grid-row-selected-border-color, #dedede);
+        color: var(--iui-grid-row-selected-color, black);
     }
     .iui-grid-row-cell {
         border-left: thin solid transparent;
@@ -254,13 +259,24 @@ export const iuiGridDefaultStyle = css`
     }
     .iui-grid-row-cell-content {
         border: 2px solid transparent;
+        border-color: var(--iui-grid-row-cell-content-border-color, transparent);
+        margin: 0;
+        padding: 2px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-align: left;
+        /*text-overflow: ellipsis;*/
         white-space: nowrap;
     }
     .iui-grid-row-cell-content:focus {
         outline: none !important;
     }
     .iui-grid-row-cell-content-focused {
-        border: 2px solid gray !important;
+        /*border: 2px solid gray !important;*/
+        border: 2px solid gray;
+    }
+    .iui-grid-row-cell-content-invalid {
+        border-color: var(--iui-grid-row-cell-content-invalid-border-color, #c45151);
     }
     .iui-grid-cell-empty {
         border: thin solid transparent !important;
@@ -269,7 +285,7 @@ export const iuiGridDefaultStyle = css`
         display: inline-block;
         width: 16px;
         height: 16px;
-        margin: var(--grid-expand-box-margin, 2px 3px 0 0);
+        margin: var(--iui-grid-expand-box-margin, 2px 3px 0 0);
         vertical-align: top;
     }
     .iui-grid-enter .iui-grid-expand-box {
@@ -423,29 +439,29 @@ export const iuiGridDefaultStyle = css`
 
     /* Grouping */
     .iui-grid-grouping-panel {
-        background: var(--grid-grouping-panel-background, #f0f0f0);
-        border: var(--grid-grouping-panel-border, 0);
-        border-bottom: var(--grid-grouping-panel-border-bottom, thin solid #d5d5d5);
-        color: var(--grid-grouping-panel-color, black);
+        background: var(--iui-grid-grouping-panel-background, #f0f0f0);
+        border: var(--iui-grid-grouping-panel-border, 0);
+        border-bottom: var(--iui-grid-grouping-panel-border-bottom, thin solid #d5d5d5);
+        color: var(--iui-grid-grouping-panel-color, black);
         margin: 0;
-        padding: var(--grid-grouping-panel-padding, 3px);
+        padding: var(--iui-grid-grouping-panel-padding, 3px);
         position: absolute;
         top: 0;
         white-space: nowrap;
         width: 100%;
     }
     .iui-grid-grouping-panel-item {
-        background: var(--grid-grouping-panel-item-background, #dedede);
-        border: var(--grid-grouping-panel-item-border, thin solid #bebebe);
+        background: var(--iui-grid-grouping-panel-item-background, #dedede);
+        border: var(--iui-grid-grouping-panel-item-border, thin solid #bebebe);
         display: inline-block;
-        border-radius: var(--grid-grouping-panel-item-border-radius, 3px);
-        margin: var(--grid-grouping-panel-item-margin, 2px 3px);
+        border-radius: var(--iui-grid-grouping-panel-item-border-radius, 3px);
+        margin: var(--iui-grid-grouping-panel-item-margin, 2px 3px);
         /*overflow: hidden;*/
-        padding: var(--grid-grouping-panel-item-padding, 2px 5px);
+        padding: var(--iui-grid-grouping-panel-item-padding, 2px 5px);
         position: relative;
     }
     .iui-grid-grouping-panel-item-disabled {
-        color: var(--grid-grouping-panel-item-disabled-color, gray);
+        color: var(--iui-grid-grouping-panel-item-disabled-color, gray);
     }
     .iui-grid-grouping-panel-item-label {
         display: inline-block;
@@ -496,8 +512,8 @@ export const iuiGridDefaultStyle = css`
     }
     .iui-grid-grouping-marker::before {
         content: "";
-        border: var(--grid-grouping-marker-before-border, 6px solid #dedede);
-        border-color: var(--grid-grouping-marker-before-border-color, transparent transparent transparent #ababab);
+        border: var(--iui-grid-grouping-marker-before-border, 6px solid #dedede);
+        border-color: var(--iui-grid-grouping-marker-before-border-color, transparent transparent transparent #ababab);
         position: absolute;
         top: 25%;
         right: -12px;
@@ -506,8 +522,8 @@ export const iuiGridDefaultStyle = css`
     }
     .iui-grid-grouping-marker::after {
         content: "";
-        border: var(--grid-grouping-marker-after-border, 6px solid #dedede);
-        border-color: var(--grid-grouping-marker-after-border-color, transparent transparent transparent #dedede);
+        border: var(--iui-grid-grouping-marker-after-border, 6px solid #dedede);
+        border-color: var(--iui-grid-grouping-marker-after-border-color, transparent transparent transparent #dedede);
         position: absolute;
         top: 25%;
         right: -11px;
@@ -545,11 +561,11 @@ export const iuiGridDefaultStyle = css`
     
     /* Disabled State */
     .iui-grid-disabled div {
-        opacity: var(--grid-disabled-opacity, 0.75);
+        opacity: var(--iui-grid-disabled-opacity, 0.75);
         pointer-events: none;
     }
     .iui-grid-row-disabled {
-        opacity: var(--grid-row-disabled-opacity, 0.6);
+        opacity: var(--iui-grid-row-disabled-opacity, 0.6);
         pointer-events: none;
     }
 
@@ -744,35 +760,35 @@ export const iuiGridDefaultStyle = css`
 
     /* Drag Drop Column */
    .iui-grid-handle {
-        background-image: var(--grid-handle-background-image, url(../../icons/grab.ico));
+        background-image: var(--iui-grid-handle-background-image, url(../../icons/grab.ico));
         background-repeat: repeat;
-        cursor: var(--grid-handle-cursor, grab);
+        cursor: var(--iui-grid-handle-cursor, grab);
         display: block;
-        height: var(--grid-handle-height, 16px);
-        margin: var(--grid-handle-margin, 2px 0);
+        height: var(--iui-grid-handle-height, 16px);
+        margin: var(--iui-grid-handle-margin, 2px 0);
         padding: 0;
         vertical-align: middle;
-        width: var(--grid-handle-width, 16px);
+        width: var(--iui-grid-handle-width, 16px);
     }
 
     /* Editing Column */
     .iui-grid-editing {
         background-repeat: repeat;
-        cursor: var(--grid-editing-cursor, default);
+        cursor: var(--iui-grid-editing-cursor, default);
         display: block;
-        height: var(--grid-editing-height, 16px);
-        margin: var(--grid-editing-margin, 2px 0);
+        height: var(--iui-grid-editing-height, 16px);
+        margin: var(--iui-grid-editing-margin, 2px 0);
         opacity: 0.25;
         padding: 0;
         vertical-align: middle;
-        width: var(--grid-editing-width, 16px);
+        width: var(--iui-grid-editing-width, 16px);
     }
     .iui-grid-editing-hover, .iui-grid-editing:hover {
-        background-image: var(--grid-editing-background-image, url(../../icons/edit.ico));
+        background-image: var(--iui-grid-editing-background-image, url(../../icons/edit.ico));
         opacity: 0.25;
     }
     .iui-grid-editing-active {
-        background-image: var(--grid-editing-background-image, url(../../icons/edit.ico));
+        background-image: var(--iui-grid-editing-background-image, url(../../icons/edit.ico));
         opacity: 1;
     }
     .iui-grid-editing-active:hover {
@@ -819,12 +835,23 @@ export const iuiGridDefaultStyle = css`
         white-space: nowrap;
     }
     .iui-grid-form-editor-text {
-        border: 1px solid #cecece;
-        border-radius: 1px;
+        background: var(--iui-grid-form-editor-text-background, white);
+        border: var(--iui-grid-form-editor-text-border, 1px solid #cecece);
+        border-color: var(--iui-grid-form-editor-text-border-color, #cecece);
+        border-radius: var(--iui-grid-form-editor-text-border-radius, 1px);
+        box-shadow: var(--iui-grid-form-editor-text-box-shadow, 0 0 0 1px transparent);
+        color: var(--iui-grid-form-editor-text-color, black);
         display: block;
         margin: 2px 0 15px 0;
         padding: 7px 5px;
         width: calc(100% - 14px);
+    }
+    .iui-grid-form-editor-invalid {
+        border-color: var(--iui-grid-form-editor-invalid-border-color, #c45151);
+    }
+    .iui-grid-form-editor-invalid:focus {
+        border-color: var(--iui-grid-form-editor-invalid-border-color, #c45151);
+        box-shadow: var(--iui-grid-form-editor-invalid-box-shadow, 0 0 0 1px #c45151);
     }
 
     /* Grid Batch Editing */
@@ -835,5 +862,154 @@ export const iuiGridDefaultStyle = css`
     .iui-grid-cell-value-changed {
         background: #ffc58f;
         color: black;
+    }
+
+    /* Sorting */
+    .iui-grid-column-sort-button {
+        overflow: hidden;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 18px;
+        height: 18px;
+    }
+    .iui-grid-column-sort-button-up {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.25s ease-in-out;
+        width: 10px;
+        height: 12px;
+    }
+    .iui-grid-column-sort-button-up-active {
+        left: 3px;
+        top: 2px;
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    .iui-grid-column-sort-button-up-inactive {
+        left: -9px;
+        top: -9px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    .iui-grid-column-sort-button-up-left {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        transform: rotate(-60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-grid-column-sort-button-up-right {
+        position: absolute;
+        left: 3px;
+        top: 2px;
+        transform: rotate(60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-grid-column-sort-button-up-hline {
+        position: absolute;
+        left: 2px;
+        top: 4px;
+        width: 6px;
+        height: 2px;
+    }
+    .iui-grid-column-sort-button-up-vline {
+        position: absolute;
+        left: 4px;
+        top: 0;
+        width: 2px;
+        height: 12px;
+    }
+
+    .iui-grid-column-sort-button-down {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.25s ease-in-out;
+        width: 10px;
+        height: 12px;
+    }
+    .iui-grid-column-sort-button-down-active {
+        right: 5px;
+        bottom: 3px;
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    .iui-grid-column-sort-button-down-inactive {
+        right: -9px;
+        bottom: -9px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    .iui-grid-column-sort-button-down-left {
+        position: absolute;
+        right: 3px;
+        bottom: 2px;
+        transform: rotate(60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-grid-column-sort-button-down-right {
+        position: absolute;
+        right: 0;
+        bottom: 2px;
+        transform: rotate(-60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-grid-column-sort-button-down-hline {
+        position: absolute;
+        right: 2px;
+        bottom: 4px;
+        width: 6px;
+        height: 2px;
+    }
+    .iui-grid-column-sort-button-down-vline {
+        position: absolute;
+        right: 4px;
+        bottom: 0;
+        width: 2px;
+        height: 12px;
+    }
+
+    .iui-grid-column-sort-button-up .iui-grid-column-sort-button-up-left,
+    .iui-grid-column-sort-button-up .iui-grid-column-sort-button-up-right,
+    .iui-grid-column-sort-button-up .iui-grid-column-sort-button-up-hline,
+    .iui-grid-column-sort-button-up .iui-grid-column-sort-button-up-vline,
+    .iui-grid-column-sort-button-down .iui-grid-column-sort-button-down-left,
+    .iui-grid-column-sort-button-down .iui-grid-column-sort-button-down-right,
+    .iui-grid-column-sort-button-down .iui-grid-column-sort-button-down-hline,
+    .iui-grid-column-sort-button-down .iui-grid-column-sort-button-down-vline
+    {
+        background: var(--iui-grid-column-sort-button-background, #a5a5a5);
+    }
+    .iui-grid-column-sort-button-up-active .iui-grid-column-sort-button-up-left,
+    .iui-grid-column-sort-button-up-active .iui-grid-column-sort-button-up-right,
+    .iui-grid-column-sort-button-up-active .iui-grid-column-sort-button-up-hline,
+    .iui-grid-column-sort-button-up-active .iui-grid-column-sort-button-up-vline,
+    .iui-grid-column-sort-button-down-active .iui-grid-column-sort-button-down-left,
+    .iui-grid-column-sort-button-down-active .iui-grid-column-sort-button-down-right,
+    .iui-grid-column-sort-button-down-active .iui-grid-column-sort-button-down-hline,
+    .iui-grid-column-sort-button-down-active .iui-grid-column-sort-button-down-vline
+    {
+        background: var(--iui-grid-column-sort-button-active-background, #646464);
+    }
+    .iui-grid-column-sort-button-up:hover .iui-grid-column-sort-button-up-left,
+    .iui-grid-column-sort-button-up:hover .iui-grid-column-sort-button-up-right,
+    .iui-grid-column-sort-button-up:hover .iui-grid-column-sort-button-up-hline,
+    .iui-grid-column-sort-button-up:hover .iui-grid-column-sort-button-up-vline,
+    .iui-grid-column-sort-button-down:hover .iui-grid-column-sort-button-down-left,
+    .iui-grid-column-sort-button-down:hover .iui-grid-column-sort-button-down-right,
+    .iui-grid-column-sort-button-down:hover .iui-grid-column-sort-button-down-hline,
+    .iui-grid-column-sort-button-down:hover .iui-grid-column-sort-button-down-vline 
+    {
+        background: var(--iui-grid-column-sort-button-hover-background, #646464);
     }
 `;

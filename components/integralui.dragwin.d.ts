@@ -49,34 +49,7 @@ declare class IntegralUIDragWindow extends LitElement {
             reflect: boolean;
         };
     };
-    _commonService: IntegralUICommonService;
-    _currentDragNum: number;
-    _currentIconClass: string;
-    _currentPosition: {
-        x: number;
-        y: number;
-    };
-    _currentSize: {
-        width: number;
-        height: number;
-    };
-    _currentTitle: string;
-    _currentDisplay: string;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    };
-    _currentResourcePath: string;
-    _currentCustomStyle: {};
-    _currentTheme: string;
-    _currentThemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    };
+    attributeChangedCallback(name: any, oldValue: any, newValue: any): void;
     set colorScheme(arg: any);
     get colorScheme(): any;
     _currentColorScheme: any;
@@ -109,20 +82,9 @@ declare class IntegralUIDragWindow extends LitElement {
     set theme(arg: string);
     get theme(): string;
     updatePos(value: any): void;
-    _getTitleStyle(): {
-        border: number;
-    };
-    _updateColorSchemeSettings(value: any): void;
-    _currentColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _updateThemeSettings(value: any): void;
+    firstUpdated(props: any): void;
     refresh(): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _updateControlStyleSettings(value: any): void;
 }
 import { L as LitElement } from "../external/lit-element.js";
 import IntegralUICommonService from "../services/integralui.common.service.js";

@@ -29,7 +29,7 @@ declare class IntegralUISidePanel extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -97,71 +97,6 @@ declare class IntegralUISidePanel extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _currentAnimationSpeed: any;
-    _currentAnimationSpeedValue: number | undefined;
-    _currentParent: any;
-    _isVisible: any;
-    _overlayRef: HTMLDivElement | null | undefined;
-    _parentRef: Element | null | undefined;
-    _contentBlockSize: {
-        width: number;
-        height: number;
-    } | {
-        width: number;
-        height: number;
-    } | {
-        width: number;
-        height: number;
-    } | undefined;
-    _contentPadding: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _ctrlBorder: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _ctrlCurrentSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _ctrlMaxSize: {
-        width: number;
-        height: number;
-    } | {
-        width: number;
-        height: number;
-    } | undefined;
-    _currentPlacement: any;
-    _isInbound: any;
-    _isOverlayVisible: any;
-    _parentBounds: {
-        x: number;
-        y: number;
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-        width: number;
-        height: number;
-    } | undefined;
-    _parentPadding: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _ctrlOpacity: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     set animationSpeed(arg: any);
     get animationSpeed(): any;
     set inbound(arg: any);
@@ -174,31 +109,9 @@ declare class IntegralUISidePanel extends IntegralUIBase {
     get showOverlay(): any;
     set visible(arg: any);
     get visible(): any;
-    _animationCallback(state: any, finished: any): void;
-    _setAnimationSpeedValue(): void;
-    _getParent(): Element | null | undefined;
-    _getParentBounds(): any;
-    _getParentSize(): {
-        width: number;
-        height: number;
-    };
-    _setParent(): void;
     close(): void;
     open(): void;
-    _overlayClick(): void;
-    _removeBlockElement(): void;
-    _isVertical(): boolean;
-    _processUpdateLayout(): Promise<any>;
-    _updateContentSize(): void;
-    _updateOverlayLayout(): void;
-    _clearResizeObserver(): void;
-    _resizeObserver: ResizeObserver | null | undefined;
-    _updateResizeObserver(): void;
-    _getContentStyle(): {
-        width: string;
-        height: string;
-    };
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _contentElem: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

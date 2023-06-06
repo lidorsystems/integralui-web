@@ -408,6 +408,14 @@ export abstract class IntegralUISelectionMode {
   static readonly MultiSimple = IntegralUISelectionModeName.MultiSimple;
   static readonly MultiExtended = IntegralUISelectionModeName.MultiExtended;
 }
+declare enum IntegralUISortModeName {
+    Single = 'Single',
+    Multiple = 'Multiple'
+}
+export abstract class IntegralUISortMode {
+  static readonly Single = IntegralUISortModeName.Single;
+  static readonly Multiple = IntegralUISortModeName.Multiple;
+}
 declare enum IntegralUISortOrderName {
     None = 'None',
     Ascending = 'Ascending',

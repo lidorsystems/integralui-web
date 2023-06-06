@@ -5,6 +5,6 @@ export const iuiTextBoxOfficeStyle = css`
         transition: all 0.25s ease-in-out;
     }
     .iui-textbox:focus {
-        box-shadow: var(--textbox-focus-box-shadow, 0 0 0 1px transparent);
+        box-shadow: var(--iui-textbox-focus-box-shadow, 0 0 0 1px transparent);
     }
 `;

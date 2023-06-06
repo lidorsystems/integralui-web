@@ -29,7 +29,7 @@ declare class IntegralUISelect extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -101,37 +101,6 @@ declare class IntegralUISelect extends IntegralUIBase {
             attribute: string;
         };
     };
-    _dataItems: any;
-    _cmpRef: HTMLElement | HTMLSlotElement | HTMLTemplateElement | HTMLStyleElement | HTMLObjectElement | HTMLDataElement | HTMLAnchorElement | HTMLAreaElement | HTMLAudioElement | HTMLBaseElement | HTMLQuoteElement | HTMLBodyElement | HTMLBRElement | HTMLButtonElement | HTMLCanvasElement | HTMLTableCaptionElement | HTMLTableColElement | HTMLDataListElement | HTMLModElement | HTMLDetailsElement | HTMLDialogElement | HTMLDivElement | HTMLDListElement | HTMLEmbedElement | HTMLFieldSetElement | HTMLFormElement | HTMLHeadingElement | HTMLHeadElement | HTMLHRElement | HTMLHtmlElement | HTMLIFrameElement | HTMLImageElement | HTMLInputElement | HTMLLabelElement | HTMLLegendElement | HTMLLIElement | HTMLLinkElement | HTMLMapElement | HTMLMenuElement | HTMLMetaElement | HTMLMeterElement | HTMLOListElement | HTMLOptGroupElement | HTMLOptionElement | HTMLOutputElement | HTMLParagraphElement | HTMLPictureElement | HTMLPreElement | HTMLProgressElement | HTMLScriptElement | HTMLSelectElement | HTMLSourceElement | HTMLSpanElement | HTMLTableElement | HTMLTableSectionElement | HTMLTableCellElement | HTMLTextAreaElement | HTMLTimeElement | HTMLTitleElement | HTMLTableRowElement | HTMLTrackElement | HTMLUListElement | HTMLVideoElement | null | undefined;
-    _currentDropDownDirection: any;
-    _dropList: any;
-    _isDropDownVisible: boolean | undefined;
-    _isDropDownUpdateAllowed: boolean | undefined;
-    _expandState: string | undefined;
-    _isExpanded: boolean | undefined;
-    _isSelected: boolean | undefined;
-    _currentDropDownAdjustment: {
-        top: number;
-        left: number;
-        width: number;
-        height: number;
-    } | undefined;
-    _currentDropDownSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _currentMaxDropDownItems: any;
-    _currentSelection: any;
-    _currentIndex: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _dropListTimeout: any;
-    _headerClassName: string | undefined;
-    _headerExpandBoxClassName: string | undefined;
     set dropDownAdjustment(arg: {
         top: number;
         left: number;
@@ -164,35 +133,11 @@ declare class IntegralUISelect extends IntegralUIBase {
     get selectedIndex(): any;
     set selectedItem(arg: any);
     get selectedItem(): any;
-    _addDropDown(): void;
-    _removeCtrl(e: any): void;
-    _closeDropDown(): void;
-    _onCtrlMouseUp(e: any): void;
-    _dropDownBlur(e: any): void;
-    _itemSelected(e: any): void;
-    _listSizeChanged(e: any): void;
-    _removeDropDown(): void;
-    _showDropDown(): void;
-    _headerClick(e: any): void;
-    _onHeaderTouchStart(e: any): void;
     collapse(): void;
     expand(): void;
     toggle(): void;
-    _getHeaderIcon(): any;
-    _getHeaderIconUrl(): any;
-    _getHeaderText(): any;
-    _ctrlKeyDown(e: any): void;
-    _processEnterKey(e: any): void;
-    _keepActive: boolean | undefined;
-    _getDropDownSize(): {
-        width: any;
-        height: number;
-    };
-    _processMouseWheel(e: any): void;
     clearSelection(): void;
-    _getCurrentHeaderStyle(): any;
-    _getContentTemplate(): import("../external/lit-element.js").TemplateResult;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _header: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

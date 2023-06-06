@@ -29,7 +29,7 @@ declare class IntegralUISlide extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -67,20 +67,6 @@ declare class IntegralUISlide extends IntegralUIBase {
             type: ObjectConstructor;
         };
     };
-    _animationInterval: any;
-    _currentOpacity: any;
-    _currentPosition: {
-        top: number;
-        left: number;
-    } | undefined;
-    _currentScale: any;
-    _parentCtrl: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     setParent(cmp: any): void;
     set position(arg: {
         top: number;
@@ -90,15 +76,13 @@ declare class IntegralUISlide extends IntegralUIBase {
         top: number;
         left: number;
     } | undefined;
-    _animate(value: any, newCount: any): Promise<any>;
-    _removeAnimationInterval(): void;
     getSize(): {
         width: number;
         height: number;
     };
-    _ctrlClick(): void;
     setOpacity(value: any): void;
     setScale(value: any): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIBase from "./integralui.base.js";

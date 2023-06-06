@@ -29,7 +29,7 @@ declare class IntegralUIButton extends IntegralUIBaseValue {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -64,7 +64,7 @@ declare class IntegralUIButton extends IntegralUIBaseValue {
             reflect: boolean;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
         pressed: {
@@ -72,21 +72,10 @@ declare class IntegralUIButton extends IntegralUIBaseValue {
             reflect: boolean;
         };
     };
-    _parentCtrl: any;
-    _pressedValue: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     setParent(cmp: any): void;
     set pressed(arg: any);
     get pressed(): any;
-    _ctrlMouseDown(e: any): void;
-    _ctrlMouseEnter(e: any): void;
-    _ctrlMouseLeave(e: any): void;
-    _ctrlTouchStart(e: any): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIBaseValue from "./integralui.base.value.js";

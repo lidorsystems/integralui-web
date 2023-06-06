@@ -2,13 +2,13 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiDatePickerLightStyle = css`
     .iui-datepicker {
-        border: var(--datepicker-header-border, thin solid #d9d9d9);
-        border-radius: var(--datepicker-border-radius, 3px);
-        box-shadow: var(--datepicker-box-shadow, 0 0 0 1px transparent);
+        border: var(--iui-datepicker-header-border, thin solid #d9d9d9);
+        border-radius: var(--iui-datepicker-border-radius, 3px);
+        box-shadow: var(--iui-datepicker-box-shadow, 0 0 0 1px transparent);
     }
     .iui-datepicker:focus {
-        border: var(--datepicker-header-border, thin solid #6ea9db);
-        box-shadow: var(--datepicker-box-shadow, 0 0 0 1px #6ea9db);
+        border: var(--iui-datepicker-header-border, thin solid #6ea9db);
+        box-shadow: var(--iui-datepicker-box-shadow, 0 0 0 1px #6ea9db);
     }
 
     /* Header */

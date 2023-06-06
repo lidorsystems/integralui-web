@@ -29,7 +29,7 @@ declare class IntegralUIScrollBar extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -96,77 +96,13 @@ declare class IntegralUIScrollBar extends IntegralUIBase {
             type: ObjectConstructor;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
         width: {
             type: NumberConstructor;
         };
     };
-    _currentMaxValue: any;
-    _currentMinValue: any;
-    _currentValue: any;
-    _currentAppearance: any;
-    _isVisible: any;
-    _currentSplitterDistance: {
-        x: number;
-        y: number;
-    } | undefined;
-    _emptySpace: number | undefined;
-    _maxPos: {
-        x: number;
-        y: number;
-    } | undefined;
-    _currentOrientation: any;
-    _scrollPos: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | {
-        top: any;
-        right: any;
-        bottom: any;
-        left: any;
-    } | {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _scrollSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _thumbSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _thumbPos: {
-        x: number;
-        y: number;
-    } | undefined;
-    _isThumbActive: boolean | undefined;
-    _prevPos: {
-        x: number;
-        y: number;
-    } | undefined;
-    _smallChange: number | undefined;
-    _largeChangeValue: any;
-    _scrollInterval: any;
-    _scrollTimeout: null | undefined;
-    _thumbStartPos: {
-        x: number;
-        y: number;
-    } | {
-        x: number;
-        y: number;
-    } | undefined;
-    _isThumbHovered: boolean | undefined;
-    _thumbClass: {} | undefined;
-    _thumbClassName: string | undefined;
-    _windowMouseMove(event: any): void;
-    _windowMouseUp(event: any): void;
     set appearance(arg: any);
     get appearance(): any;
     set visible(arg: any);
@@ -183,21 +119,14 @@ declare class IntegralUIScrollBar extends IntegralUIBase {
     set value(arg: any);
     get value(): any;
     set width(arg: any);
-    _thumbMouseEnter(e: any): void;
-    _thumbMouseLeave(e: any): void;
-    _thumbMouseDown(e: any): void;
     prevPos: {
         x: any;
         y: any;
     } | undefined;
     isVertical(): boolean;
-    _updateVisibility(): void;
-    _changeScrollPos(e: any): void;
-    _clearScrollTimers(): void;
-    _processLargeChange(e: any): void;
-    _getThumbClass(): {} | undefined;
-    _updateThumbClass(): void;
-    _processUpdateLayout(): Promise<any>;
+    refresh(): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
+    updated(changedProperties: any): void;
 }
 import IntegralUIBase from "./integralui.base.js";

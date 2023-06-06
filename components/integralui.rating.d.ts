@@ -29,7 +29,7 @@ declare class IntegralUIRating extends IntegralUIBaseValue {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -64,7 +64,7 @@ declare class IntegralUIRating extends IntegralUIBaseValue {
             reflect: boolean;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
         division: {
@@ -93,28 +93,6 @@ declare class IntegralUIRating extends IntegralUIBaseValue {
             reflect: boolean;
         };
     };
-    _ctrlMaxValue: any;
-    _currentDivision: any;
-    _currentStepSize: any;
-    _currentIncrement: any;
-    _isRatingChangeActive: boolean | undefined;
-    _contentSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _ratingSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _ratingClass: {} | undefined;
-    _ratingClassName: string | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _windowMouseUp(event: any): void;
     set division(arg: any);
     get division(): any;
     set increment(arg: any);
@@ -123,18 +101,7 @@ declare class IntegralUIRating extends IntegralUIBaseValue {
     get max(): any;
     set stepSize(arg: any);
     get stepSize(): any;
-    _getContentWidth(): number;
-    _getRatingWidth(): number;
-    _ctrlKeyDown(e: any): void;
-    _processUpdateLayout(): Promise<any>;
-    _ctrlMouseDown(e: any): void;
-    _ctrlMouseMove(e: any): void;
-    _ctrlMouseUp(e: any): void;
-    _ctrlMouseWheel(e: any): void;
-    _ctrlTouchEnd(e: any): void;
-    _getRatingValueClass(): {} | undefined;
-    _updateRatingClass(): void;
-    _getRatingStyle(value: any): any;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIBaseValue from "./integralui.base.value.js";

@@ -29,7 +29,7 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -126,11 +126,6 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
             };
             reflect: boolean;
         };
-        showScroll: {
-            type: BooleanConstructor;
-            attribute: string;
-            reflect: boolean;
-        };
         selectedItem: {
             type: ObjectConstructor;
             attribute: string;
@@ -141,6 +136,11 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
                 fromAttribute: (value: any) => string;
                 toAttribute: (value: any) => "None" | "One" | "MultiSimple" | "MultiExtended";
             };
+            reflect: boolean;
+        };
+        showScroll: {
+            type: BooleanConstructor;
+            attribute: string;
             reflect: boolean;
         };
         sorting: {
@@ -174,76 +174,20 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
             reflect: boolean;
         };
     };
-    _isExpandBoxVisible: any;
-    _isGroupingEnabled: any;
-    _currentBaseStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemThemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     set defaultGroupName(arg: any);
     get defaultGroupName(): any;
-    _currentDefaultGroupName: any;
     set groups(arg: any);
     get groups(): any;
-    _dataGroups: any;
     set showExpandBox(arg: any);
     get showExpandBox(): any;
     set showGroups(arg: any);
     get showGroups(): any;
-    _addItemToCurrentList(obj: any, isGroup: any): void;
     loadData(data: any, fields: any): void;
-    _updateScrollItemList(item?: any): void;
-    _expandBoxMouseDown(e: any, group: any): void;
-    _expandBoxTouchStart(e: any, group: any): void;
     collapse(group: any): void;
     expand(group: any): void;
     toggle(group: any, value: any): void;
-    _getContentSize(): {
-        width: any;
-        height: any;
-    };
-    _resetRefresh(): void;
-    _getLayoutTemplate(obj: any, i: any): import("../external/lit-element.js").TemplateResult;
-    _getDragTemplate(itemObj: any): import("../external/lit-element.js").TemplateResult;
+    firstUpdated(props: any): void;
+    updated(changedProperties: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _contentElem: Element | null | undefined;
 }
 import IntegralUIBaseList from "./integralui.base.list.js";

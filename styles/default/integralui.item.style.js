@@ -2,25 +2,25 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiItemDefaultStyle = css`
     .iui-item {
-        background: var(--item-background, transparent);
-        border: var(--item-border, thin solid transparent);
-        color: var(--item-color, black);
-        margin: var(--item-margin, 1px);
+        background: var(--iui-item-background, transparent);
+        border: var(--iui-item-border, thin solid transparent);
+        color: var(--iui-item-color, black);
+        margin: var(--iui-item-margin, 1px);
         overflow: hidden;
-        padding: var(--item-padding, 3px);
+        padding: var(--iui-item-padding, 3px);
     }
     .iui-item-hovered {
-        background: var(--item-hovered-background, transparent);
-        border: var(--item-hovered-border, thin solid transparent);
+        background: var(--iui-item-hovered-background, transparent);
+        border: var(--iui-item-hovered-border, thin solid transparent);
     }
     .iui-item-selected {
-        background: var(--item-selected-background, transparent);
-        border: var(--item-selected-border, thin solid transparent);
+        background: var(--iui-item-selected-background, transparent);
+        border: var(--iui-item-selected-border, thin solid transparent);
     }
     .iui-item-label {
-        border: var(--item-label-border, thin solid transparent);
+        border: var(--iui-item-label-border, thin solid transparent);
         display: inline-block;
-        padding: var(--item-label-padding, 2px);
+        padding: var(--iui-item-label-padding, 2px);
     }
     .iui-item-icon {
         display: inline-block;
@@ -31,7 +31,7 @@ export const iuiItemDefaultStyle = css`
 
     /* Disabled State */
     .iui-item-disabled div {
-        opacity: var(--item-disabled-opacity, 0.75);
+        opacity: var(--iui-item-disabled-opacity, 0.75);
         pointer-events: none;
     }
 

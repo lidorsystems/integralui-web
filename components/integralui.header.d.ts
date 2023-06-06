@@ -29,7 +29,7 @@ declare class IntegralUIHeaderItem extends IntegralUIItem {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -90,28 +90,9 @@ declare class IntegralUIHeaderItem extends IntegralUIItem {
             type: StringConstructor;
         };
     };
-    _currentAnimationState: any;
-    _currentAnimationType: any;
-    _expandHorizontalClass: {} | undefined;
-    _expandVerticalClass: {} | undefined;
-    _expandArrowBottomLeftClass: {} | undefined;
-    _expandArrowBottomRightClass: {} | undefined;
-    _expandArrowVerticalClass: {} | undefined;
-    _expandArrowTopLeftClass: {} | undefined;
-    _expandArrowTopRightClass: {} | undefined;
-    _expandBoxClassName: string | undefined;
     set animationState(arg: any);
     get animationState(): any;
     set animationType(arg: any);
     get animationType(): any;
-    _getExpandVerticalClass(): {};
-    _getExpandHorizontalClass(): {};
-    _getExpandArrowBottomLeftClass(): {};
-    _getExpandArrowBottomRightClass(): {};
-    _getExpandArrowVerticalClass(): {};
-    _getExpandArrowTopLeftClass(): {};
-    _getExpandArrowTopRightClass(): {};
-    _expandBoxClicked(e: any): void;
-    _getHeaderTemplate(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIItem from "./integralui.item.js";

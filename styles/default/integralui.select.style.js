@@ -2,49 +2,49 @@ import { c as css } from '../../external/lit-element.js';
 
 const iuiSelectDefaultStyle = css`
     .iui-select {
-        background: var(--select-background, white);
-        border: var(--select-border, thin solid transparent);
-        border-color:  var(--select-border-color, transparent);
-        border-radius: var(--select-border-radius, 1px);
-        border-width: var(--select-border-width, thin);
-        box-shadow: var(--select-box-shadow, none);
-        color: var(--select-color, black);
-        cursor: var(--select-cursor, default);
-        display: var(--select-display, block);
-        float: var(--select-float, none);
-        height: var(--select-height, auto);
-        margin: var(--select-margin, 2px 0);
-        opacity: var(--select-opacity, 1);
+        background: var(--iui-select-background, white);
+        border: var(--iui-select-border, thin solid transparent);
+        border-color:  var(--iui-select-border-color, transparent);
+        border-radius: var(--iui-select-border-radius, 1px);
+        border-width: var(--iui-select-border-width, thin);
+        box-shadow: var(--iui-select-box-shadow, none);
+        color: var(--iui-select-color, black);
+        cursor: var(--iui-select-cursor, default);
+        display: var(--iui-select-display, block);
+        float: var(--iui-select-float, none);
+        height: var(--iui-select-height, auto);
+        margin: var(--iui-select-margin, 2px 0);
+        opacity: var(--iui-select-opacity, 1);
         overflow: hidden;
-        padding: var(--select-padding, 0);
-        position: var(--select-position, relative);
-        vertical-align: var(--select-vertical-align, middle);
-        width: var(--select-width, auto);
-        z-index: var(--select-z-index, auto);
+        padding: var(--iui-select-padding, 0);
+        position: var(--iui-select-position, relative);
+        vertical-align: var(--iui-select-vertical-align, middle);
+        width: var(--iui-select-width, auto);
+        z-index: var(--iui-select-z-index, auto);
 
     }
     .iui-select:focus {
-        border: var(--select-focus-border, thin dotted #cecece);
+        border: var(--iui-select-focus-border, thin dotted #cecece);
         outline: none !important;
     }
 
     /* Header */
     .iui-select-header {
-        border: var(--select-header-border, 0);
-        padding: var(--select-header-padding, 3px);
+        border: var(--iui-select-header-border, 0);
+        padding: var(--iui-select-header-padding, 3px);
         white-space: nowrap;
     }
     .iui-select-header-hovered {
         background: transparent;
-        border: var(--select-header-hovered-border, 0);
+        border: var(--iui-select-header-hovered-border, 0);
         color: black;
-        padding: var(--select-header-hovered-padding, 3px);
+        padding: var(--iui-select-header-hovered-padding, 3px);
     }
     .iui-select-header-selected {
         background: transparent;
-        border: var(--select-header-selected-border, 0);
+        border: var(--iui-select-header-selected-border, 0);
         color: black;
-        padding: var(--select-header-selected-padding, 3px);
+        padding: var(--iui-select-header-selected-padding, 3px);
     }
     .iui-select-header-expand-box {
         background: #484848;

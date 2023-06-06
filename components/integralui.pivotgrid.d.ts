@@ -187,6 +187,19 @@ declare class IntegralUIPivotGrid extends IntegralUIBaseGrid {
             };
             reflect: boolean;
         };
+        sortMode: {
+            attribute: string;
+            converter: {
+                fromAttribute: (value: any) => string;
+                toAttribute: (value: any, type: any) => "Single" | "Multiple";
+            };
+            reflect: boolean;
+        };
+        useValidation: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
         data: {
             type: any;
         };
@@ -207,65 +220,6 @@ declare class IntegralUIPivotGrid extends IntegralUIBaseGrid {
             type: ArrayConstructor;
         };
     };
-    _columnExpandList: any[] | undefined;
-    _dataFilters: any;
-    _dataValues: any;
-    _rowExpandList: any[] | undefined;
-    _valueFilters: any;
-    _currentColumnData: any;
-    _currentRowData: any[] | undefined;
-    _currentFilteredData: any[] | undefined;
-    _currentFooterData: any[] | undefined;
-    _isExpandBoxVisible: any;
-    _isTotalVisible: any;
-    _currentBaseStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentEditorStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentSortStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _columnClassName: string | undefined;
-    _columnHeaderClassName: string | undefined;
-    _columnFilterClassName: string | undefined;
-    _columnBodyClassName: string | undefined;
-    _columnFooterClassName: string | undefined;
-    _rowClassName: string | undefined;
-    _cellBorderClassName: string | undefined;
-    _cellClassName: string | undefined;
-    _expandBoxClassName: string | undefined;
-    _gridLinesClassName: string | undefined;
-    _sortingClassName: string | undefined;
-    _resizeObserver: ResizeObserver | null | undefined;
     set filters(arg: any);
     get filters(): any;
     set showExpandBox(arg: any);
@@ -274,60 +228,10 @@ declare class IntegralUIPivotGrid extends IntegralUIBaseGrid {
     get showTotal(): any;
     set values(arg: any);
     get values(): any;
-    _getFilteredData(data: any): any[];
-    _getSortedColumnData(data: any, level: any): any;
-    _getSortedRowData(data: any, level: any): any;
     loadData(data: any, fields: any, incremental: any): void;
-    _sortBy(name: any, sorting: any): (first: any, second: any) => 0 | 1 | -1;
-    _checkColumnsFromData(result: any, data: any, level: any): void;
-    _createColumnsFromData(data: any, level: any, prefix: any): any[];
-    _createColumnsFromValues(prefix: any): any[];
-    _createTotalColumnsFromValues(prefix: any): any[];
-    _isColumnExpandTriggered(id: any): boolean;
-    _getColumnExpandValue(id: any): any;
-    _updateColumnExpandValue(id: any, value: any): void;
-    _checkObj(list: any, fieldName: any, value: any): boolean;
-    _calcAVG(list: any, valueKey: any): number;
-    _calcSUM(list: any, valueKey: any): number;
-    _calcCellValueByFormula(list: any, valueKey: any): any;
-    _createCellsByColumns(cellList: any, rowList: any, column: any, colIndex: any, columnKey: any, rowKey: any, level: any): void;
-    _createRowsFromData(dataList: any, level: any, prefix: any): {
-        children: any[];
-        exclude: any[];
-    };
-    _createGroupExpandList(): void;
-    _filterCheck(list: any, name: any): boolean;
-    _getCellValueFromData(id: any, dataList: any, columnKey: any, rowKey: any, valueKey: any): any;
-    _getRowData(): any[] | undefined;
-    _removeFooterData(id: any, dataList: any): void;
-    _removeRowFromFooterData(row: any): void;
-    _updateFooterData(id: any, dataList: any, valueKey: any): void;
-    _updateFooterValues(): void;
-    _updateGroupList(): void;
-    _isRowExpandTriggered(id: any): boolean;
-    _getRowExpandValue(id: any): any;
-    _columnExpandBoxMouseDown(e: any, columnObj: any): void;
-    _columnExpandBoxMouseUp(e: any, columnObj: any): void;
-    _columnExpandBoxTouchStart(e: any, columnObj: any): void;
-    _columnToggle(column: any): void;
-    _createCSVColumnList(result: any, colList: any, level: any, side: any): void;
-    _getCellExportValue(cell: any): {
-        text: string;
-    };
-    _getNumChildColumns(column: any): any;
     exportToJSON(columnFields: any, rowFields: any, spacing: any): string;
-    _exportColumnsToJSON(fields: any, spacing: any): string;
-    _exportRowsToJSON(fields: any, spacing: any): string;
-    _getColumnExpandBoxLayout(column: any): TemplateResult;
-    _getExpandBoxLayout(row: any, cell: any): TemplateResult;
-    _getFooterLayout(side: any): TemplateResult;
-    _getHeaderLayout(side: any): TemplateResult;
-    _getRowCellTemplate(rowObj: any, cellObj: any): TemplateResult;
-    _getRowLayout(side: any): TemplateResult | undefined;
-    _processUpdateLayout(optimal: any): Promise<any>;
-    _updateRange(flag: any): void;
+    firstUpdated(props: any): void;
     render(): TemplateResult;
-    _paginatorElem: Element | null | undefined;
 }
 import IntegralUIBaseGrid from "./integralui.base.grid.js";
 import { T as TemplateResult } from "../external/lit-element.js";

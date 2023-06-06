@@ -2,23 +2,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiAccordionDefaultStyle = css`
     .iui-accordion {
-        background: var(--accordion-background, transparent);
-        border: var(--accordion-border, 0);
-        border-color:  var(--accordion-border-color, transparent);
-        border-radius: var(--accordion-border-radius, 1px);
-        border-width: var(--accordion-border-width, 0);
-        color: var(--accordion-color, black);
-        cursor: var(--accordion-cursor, default);
-        display: var(--accordion-display, block);
-        float: var(--accordion-float, none);
-        height: var(--accordion-height, auto);
-        opacity: var(--accordion-opacity, 1);
+        background: var(--iui-accordion-background, transparent);
+        border: var(--iui-accordion-border, 0);
+        border-color:  var(--iui-accordion-border-color, transparent);
+        border-radius: var(--iui-accordion-border-radius, 1px);
+        border-width: var(--iui-accordion-border-width, 0);
+        color: var(--iui-accordion-color, black);
+        cursor: var(--iui-accordion-cursor, default);
+        display: var(--iui-accordion-display, block);
+        float: var(--iui-accordion-float, none);
+        height: var(--iui-accordion-height, auto);
+        opacity: var(--iui-accordion-opacity, 1);
         overflow: hidden;
-        margin: var(--accordion-margin, 0);
-        padding: var(--accordion-padding, 0);
-        position: var(--accordion-position, relative);
-        width: var(--accordion-width, auto);
-        z-index: var(--accordion-z-index, auto);
+        margin: var(--iui-accordion-margin, 0);
+        padding: var(--iui-accordion-padding, 0);
+        position: var(--iui-accordion-position, relative);
+        width: var(--iui-accordion-width, auto);
+        z-index: var(--iui-accordion-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -30,7 +30,7 @@ export const iuiAccordionDefaultStyle = css`
 
     /* Disabled State */
     .iui-accordion-disabled div {
-        opacity: var(--accordion-disabled-opacity, 0.75);
+        opacity: var(--iui-accordion-disabled-opacity, 0.75);
         pointer-events: none;
     }
 `;

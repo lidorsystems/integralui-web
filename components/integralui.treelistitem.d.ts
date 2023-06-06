@@ -29,7 +29,7 @@ declare class IntegralUITreeListItem extends IntegralUIItem {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -96,23 +96,11 @@ declare class IntegralUITreeListItem extends IntegralUIItem {
             reflect: boolean;
         };
     };
-    _templateData: any[] | undefined;
-    _clickPos: {
-        x: number;
-        y: number;
-    } | undefined;
-    _isClicked: boolean | undefined;
-    _isHovered: boolean | undefined;
-    _currentIndent: any;
-    _currentType: any;
-    _currentTemplateRef: any;
     set indent(arg: any);
     get indent(): any;
     set templateRef(arg: any);
     get templateRef(): any;
     set type(arg: any);
     get type(): any;
-    _getDataType(): any;
-    _isSeparator(): boolean;
 }
 import IntegralUIItem from "./integralui.item.js";

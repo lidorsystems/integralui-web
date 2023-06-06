@@ -19,16 +19,16 @@ export const iuiListScrollerDarkStyle = css`
         background: url(../../../icons/expandbox-icons.png) no-repeat -48px 0;
     }
     .iui-listscroller-item {
-        color: var(--listscroller-item-color, #cccccc);
+        color: var(--iui-listscroller-item-color, #cccccc);
     }
     .iui-listscroller-item-hovered {
-        background: var(--lislistscroller-itemtitem-hovered-background, #2a2d2e);
-        border: var(--listscroller-item-hovered-border, thin solid #2a2d2e);
+        background: var(--iui-lislistscroller-itemtitem-hovered-background, #2a2d2e);
+        border: var(--iui-listscroller-item-hovered-border, thin solid #2a2d2e);
     }
     .iui-listscroller-item-selected {
-        background: var(--listscroller-item-selected-background, #0a4369);
-        border: var(--listscroller-item-selected-border, thin solid #0a4369);
-        color: var(--listscroller-item-selected-color, white);
+        background: var(--iui-listscroller-item-selected-background, #0a4369);
+        border: var(--iui-listscroller-item-selected-border, thin solid #0a4369);
+        color: var(--iui-listscroller-item-selected-color, white);
     }
 
 `;

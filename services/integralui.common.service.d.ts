@@ -40,6 +40,8 @@ declare class IntegralUICommonService {
         y: number;
     };
     getColorAtPosition(context: any, x: any, y: any): string;
+    getDateFromString(value: any): any;
+    getDateNum(date: any): number;
     getMargin(elem: any): {
         top: number;
         right: number;
@@ -90,3 +92,4 @@ declare class IntegralUICommonService {
     replaceAll(str: any, find: any, replace: any): any;
     setNumInRange(value: any, min: any, max: any): number;
 }
+//# sourceMappingURL=integralui.common.service.d.ts.map

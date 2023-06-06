@@ -5,6 +5,6 @@ export const iuiButtonOfficeStyle = css`
         transition: all 0.25s ease-in-out;
     }
     .iui-button:focus {
-        box-shadow: var(--button-focus-box-shadow, 0 0 0 1px transparent);
+        box-shadow: var(--iui-button-focus-box-shadow, 0 0 0 1px transparent);
     }
 `;

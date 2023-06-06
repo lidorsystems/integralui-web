@@ -29,7 +29,7 @@ declare class IntegralUIDockPanel extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -86,33 +86,6 @@ declare class IntegralUIDockPanel extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _dragDropService: any;
-    _currentDockPermission: any;
-    _currentDockStyle: any;
-    _isDragAllowed: any;
-    _isResizeAllowed: any;
-    _parentCtrl: any;
-    _currentDockOptions: any;
-    _isResizing: boolean | undefined;
-    _startPos: {
-        x: number;
-        y: number;
-    } | {
-        x: number;
-        y: number;
-    } | {
-        x: number;
-        y: number;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _resizeObserver: ResizeObserver | null | undefined;
-    _windowMouseMove(e: any): void;
-    _windowMouseUp(e: any): void;
     setParent(cmp: any): void;
     set allowDock(arg: any);
     get allowDock(): any;
@@ -122,11 +95,7 @@ declare class IntegralUIDockPanel extends IntegralUIBase {
     get allowResize(): any;
     set dock(arg: any);
     get dock(): any;
-    _ctrlDragStart(e: any): void;
-    _processUpdateLayout(): Promise<any>;
-    _ctrlMouseDown(e: any): void;
-    _updateDockOptions(params: any): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _updateParent(): void;
 }
 import IntegralUIBase from "./integralui.base.js";

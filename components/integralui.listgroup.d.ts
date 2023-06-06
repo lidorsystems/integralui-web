@@ -29,7 +29,7 @@ declare class IntegralUIListGroup extends IntegralUIGroupBox {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -92,25 +92,10 @@ declare class IntegralUIListGroup extends IntegralUIGroupBox {
             type: ArrayConstructor;
         };
     };
-    _dataService: IntegralUIDataService | undefined;
-    _dataItems: any;
-    _itemList: any;
-    _itemClassName: string | undefined;
     set items(arg: any);
     get items(): any;
-    _updateData(): void;
-    _onHeaderExpand(e: any): void;
     invokeCtrlMethod(key: any, cmpItem: any): boolean;
-    _getComponentData(cmp: any): any;
-    _getItemCurrentIndex(cmp: any): any;
-    _getItemDataIndex(cmp: any): any;
     clearSelection(cmp: any): void;
-    _getItemGeneralStyle(value: any): any;
-    _getItemStyle(value: any): {
-        general: any;
-    };
-    _updateItemList(): void;
-    _updateParent(): void;
 }
 import IntegralUIGroupBox from "./integralui.groupbox.js";
 import IntegralUIDataService from "../services/integralui.data.service.js";

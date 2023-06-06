@@ -29,7 +29,7 @@ declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -190,6 +190,19 @@ declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
             };
             reflect: boolean;
         };
+        sortMode: {
+            attribute: string;
+            converter: {
+                fromAttribute: (value: any) => string;
+                toAttribute: (value: any, type: any) => "Single" | "Multiple";
+            };
+            reflect: boolean;
+        };
+        useValidation: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
         autoExpand: {
             type: BooleanConstructor;
             attribute: string;
@@ -201,104 +214,12 @@ declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
             reflect: boolean;
         };
     };
-    _expandTimeout: any;
-    _expandRow: any;
-    _isAutoExpandActive: any;
-    _isExpandBoxVisible: any;
-    _currentBaseStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentEditorColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentEditorStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentEditorThemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentFilterStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentSortStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _columnClassName: string | undefined;
-    _columnHeaderClassName: string | undefined;
-    _columnFilterClassName: string | undefined;
-    _columnBodyClassName: string | undefined;
-    _columnFooterClassName: string | undefined;
-    _rowClassName: string | undefined;
-    _cellBorderClassName: string | undefined;
-    _cellClassName: string | undefined;
-    _expandBoxClassName: string | undefined;
-    _gridLinesClassName: string | undefined;
-    _sortingClassName: string | undefined;
-    _resizeObserver: ResizeObserver | null | undefined;
     set autoExpand(arg: any);
     get autoExpand(): any;
     set showExpandBox(arg: any);
     get showExpandBox(): any;
     loadData(data: any, parent: any, fields: any, flat: any, incremental: any): void;
-    _expandOnDelay(row: any): void;
-    _rowDragStart(e: any, obj: any, index: any): void;
-    _rowDragOver(e: any, obj: any, index: any, side: any): void;
-    _rowDragDrop(e: any, obj: any): void;
-    _getCellsAllSides(): any[];
-    _getDragRowLayoutBySide(): import("../external/lit-element.js").TemplateResult;
-    _getDragRowLayout(): import("../external/lit-element.js").TemplateResult;
-    _getExpandBoxLayout(row: any, cell: any): import("../external/lit-element.js").TemplateResult;
-    _getFilterCellTemplate(columnObj: any): import("../external/lit-element.js").TemplateResult;
-    _getFilterLayout(side: any): import("../external/lit-element.js").TemplateResult;
-    _getFooterLayout(side: any): import("../external/lit-element.js").TemplateResult;
-    _getFormLayout(): import("../external/lit-element.js").TemplateResult;
-    _getHeaderLayout(side: any): import("../external/lit-element.js").TemplateResult;
-    _getHoverContentLayout(): import("../external/lit-element.js").TemplateResult;
-    _getRowCellTemplate(rowObj: any, cellObj: any): import("../external/lit-element.js").TemplateResult;
-    _getRowLayout(side: any): import("../external/lit-element.js").TemplateResult | undefined;
-    _getSelectContentLayout(): any;
-    _processUpdateLayout(optimal: any): Promise<any>;
-    _updateRange(flag: any): void;
-    beginLoad(row: any): void;
-    endLoad(row: any): void;
-    _isItemLoading(item: any): boolean;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _paginatorElem: Element | null | undefined;
 }
 import IntegralUIBaseGrid from "./integralui.base.grid.js";

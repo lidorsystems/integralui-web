@@ -29,7 +29,7 @@ declare class IntegralUILoading extends IntegralUIBaseValue {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -64,7 +64,7 @@ declare class IntegralUILoading extends IntegralUIBaseValue {
             reflect: boolean;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
         parentId: {
@@ -73,59 +73,12 @@ declare class IntegralUILoading extends IntegralUIBaseValue {
             reflect: boolean;
         };
     };
-    _currentAnimationSpeedValue: number | undefined;
-    _isLoadingFinished: boolean | undefined;
-    _isStartFinished: boolean | undefined;
-    _currentParent: any;
-    _isVisible: boolean | undefined;
-    _parentRef: Element | null | undefined;
-    _ctrlCurrentPos: {
-        top: number;
-        left: number;
-    } | undefined;
-    _ctrlCurrentSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _ctrlDisplay: string | undefined;
-    _currentProgress: number | undefined;
-    _parentPadding: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    } | undefined;
-    _parentSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _progressSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     set parentId(arg: any);
     get parentId(): any;
-    _animationCallback(state: any, finished: any): void;
-    _animationCallbackValue(state: any, finished: any): void;
-    _getParent(): Element | null | undefined;
-    _getParentSize(): {
-        width: number;
-        height: number;
-    };
-    _setParent(): void;
     beginLoad(): Promise<number>;
     endLoad(): void;
     updateProgress(): Promise<void>;
-    _processUpdateLayout(): Promise<any>;
-    _clearResizeObserver(): void;
-    _resizeObserver: ResizeObserver | null | undefined;
-    _updateResizeObserver(): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIBaseValue from "./integralui.base.value.js";

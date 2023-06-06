@@ -29,7 +29,7 @@ declare class IntegralUITreeView extends IntegralUIBaseList {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -126,11 +126,6 @@ declare class IntegralUITreeView extends IntegralUIBaseList {
             };
             reflect: boolean;
         };
-        showScroll: {
-            type: BooleanConstructor;
-            attribute: string;
-            reflect: boolean;
-        };
         selectedItem: {
             type: ObjectConstructor;
             attribute: string;
@@ -141,6 +136,11 @@ declare class IntegralUITreeView extends IntegralUIBaseList {
                 fromAttribute: (value: any) => string;
                 toAttribute: (value: any) => "None" | "One" | "MultiSimple" | "MultiExtended";
             };
+            reflect: boolean;
+        };
+        showScroll: {
+            type: BooleanConstructor;
+            attribute: string;
             reflect: boolean;
         };
         sorting: {
@@ -201,180 +201,35 @@ declare class IntegralUITreeView extends IntegralUIBaseList {
             reflect: boolean;
         };
     };
-    _isCheckBoxVisible: any;
-    _currentCheckMode: any;
-    _isThereChildItems: boolean | undefined;
-    _expandItem: any;
-    _isAutoExpanded: any;
-    _currentItemDisplay: any;
-    _isExpandBoxVisible: any;
-    _isLongestInProcess: boolean | undefined;
-    _longestObj: {
-        data: null;
-        width: number;
-    } | {
-        data: any;
-        width: number;
-    } | undefined;
-    _currentBaseStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentItemThemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollColorSchemeSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _currentScrollStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _isExpandBoxTouched: boolean | undefined;
     set autoExpand(arg: any);
     get autoExpand(): any;
     set autoSize(arg: any);
     get autoSize(): any;
-    _isAutoSized: any;
     set checkBoxes(arg: any);
     get checkBoxes(): any;
     set checkMode(arg: any);
     get checkMode(): any;
     set compactMode(arg: any);
     get compactMode(): any;
-    _currentCompactMode: any;
     set indent(arg: any);
     get indent(): any;
     set itemDisplay(arg: any);
     get itemDisplay(): any;
     set showExpandBox(arg: any);
     get showExpandBox(): any;
-    _checkItem(e: any, item: any): void;
-    _getItemCheckValue(item: any): any;
-    _updateCheckValue(item: any, value: any): void;
-    _updateChildItemCheckValue(parent: any): void;
-    _updateParentItemCheckValue(item: any): void;
-    _updateChildrenCheckState(list: any): void;
-    _addChildItems(parentItem: any, indent: any, pid: any, flag: any, parent: any): boolean;
-    _addItemToCurrentList(item: any, indent: any, pid: any, flag: any, parent: any): any;
-    _isThereItems(parentItem: any): any;
-    _resetVisiblity(list: any): void;
-    _collapseChildren(list: any): void;
-    _createCompactList(orgList: any): any;
-    _updateChildren(parent: any, currentItem: any): void;
     loadData(data: any, parent: any, fields: any, flat: any): void;
-    _updateScrollItemList(item?: any): void;
-    _checkForChildren(item: any): boolean;
-    _updateIsThereChildItems(): void;
     isThereChildItems: boolean | undefined;
     collapse(item: any): void;
     expand(item: any): void;
-    _expandBoxMouseDown(e: any, item: any): void;
-    _expandBoxMouseUp(e: any): void;
-    _expandBoxTouchStart(e: any, item: any): void;
-    _expandBoxTouchEnd(e: any, item: any): void;
     toggle(item: any, value: any): void;
-    exportToJSON(data: any, fields: any, spacing: any, flat: any): string;
-    _getCheckedItems(): any[];
-    _getDisplayMode(): string;
-    updateFullList(): any[] | undefined;
+    updateFullList(): any[];
     getItemLevel(item: any): number;
     getItemParent(item: any): any;
-    _isChildOf(targetItem: any, item: any): any;
-    _isItemCheckBoxAllowed(item: any): any;
     isThereChildren(): boolean | undefined;
-    _isThereVisibleChildren(item: any): boolean;
-    _getItemRealIndex(item: any): any;
-    _isItemInCurrentList(item: any): boolean;
-    _getFullItemWidth(): string;
-    _updateLongestItem(): void;
-    _calcLongestItem(elemList: any, skip: any): void;
     beginLoad(item: any): void;
-    endLoad(item: any): void;
-    _isItemLoading(item: any): boolean;
-    _checkedChanged(e: any, itemObj: any): void;
-    _getItemRadioValue(item: any): boolean;
-    _isItemRadioButtonAllowed(item: any): any;
-    _updateItemRadioButtonValue(itemObj: any): void;
-    _getBlockStyle(): {};
-    _getItemInlineContentStyle(itemObj: any): {
-        'padding-left': string;
-    };
-    _isThereNoItems(item: any): any;
-    _itemHasChildren(item: any): any;
-    _getAppliedItemStyle(itemObj: any): any;
-    _getAppliedItemExpandBoxStyle(itemObj: any): any;
-    _getCheckBoxClass(item: any): {
-        'iui-treeitem-checkbox': boolean;
-    };
-    _getItemStyle(value: any): {
-        general: any;
-        expandBox: any;
-        content: any;
-    };
-    _getItemExpandBoxStyle(value: any): any;
-    _getDefaultItemStyle(): {
-        general: {
-            disabled: any;
-            focused: any;
-            normal: any;
-            hovered: any;
-            selected: any;
-        };
-        expandBox: {
-            general: any;
-            load: any;
-            expanded: any;
-            collapsed: any;
-        };
-        content: {
-            disabled: any;
-            focused: any;
-            normal: any;
-            hovered: any;
-            selected: any;
-        };
-    };
-    _getDefaultItemExpandBoxStyle(): {
-        general: any;
-        load: any;
-        expanded: any;
-        collapsed: any;
-    };
-    _getDefaultListStyle(): any;
-    _getDragTemplate(itemObj: any): TemplateResult;
-    _isExpandBoxPresent(item: any): any;
-    _animateIndent(list: any, indent: any): void;
-    _updateIndentAnimation(state: any, finished: any, reversed: any): void;
     render(): TemplateResult;
+    firstUpdated(props: any): void;
+    updated(changedProperties: any): void;
 }
 import IntegralUIBaseList from "./integralui.base.list.js";
 import { T as TemplateResult } from "../external/lit-element.js";

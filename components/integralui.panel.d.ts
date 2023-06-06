@@ -29,7 +29,7 @@ declare class IntegralUIPanel extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -72,23 +72,15 @@ declare class IntegralUIPanel extends IntegralUIBase {
             type: ObjectConstructor;
             attribute: string;
         };
+        scrollAppearance: {
+            attribute: string;
+            converter: {
+                fromAttribute: (value: any) => string;
+                toAttribute: (value: any, type: any) => "Static" | "Dynamic";
+            };
+            reflect: boolean;
+        };
     };
-    _isDraggable: any;
-    _contentMargin: {
-        top: number;
-        left: number;
-    } | undefined;
-    _currentContentAlignment: {
-        horizontal: string;
-        vertical: string;
-    } | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _resizeObserver: ResizeObserver | null | undefined;
     set allowDrag(arg: any);
     get allowDrag(): any;
     set contentAlignment(arg: {
@@ -99,8 +91,15 @@ declare class IntegralUIPanel extends IntegralUIBase {
         horizontal: string;
         vertical: string;
     } | undefined;
-    _processUpdateLayout(): Promise<any>;
+    set scrollAppearance(arg: any);
+    get scrollAppearance(): any;
+    scrollPos(value: any): {
+        x: number;
+        y: number;
+    };
+    isHorScrollVisible(): boolean;
+    isVerScrollVisible(): boolean;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _contentElem: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

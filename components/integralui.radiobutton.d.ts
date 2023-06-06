@@ -29,7 +29,7 @@ declare class IntegralUIRadioButton extends IntegralUIBaseValue {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -64,7 +64,7 @@ declare class IntegralUIRadioButton extends IntegralUIBaseValue {
             reflect: boolean;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
         checked: {
@@ -72,25 +72,10 @@ declare class IntegralUIRadioButton extends IntegralUIBaseValue {
             reflect: boolean;
         };
     };
-    _parentCtrl: any;
-    _checkedValue: boolean;
-    _buttonClass: {};
-    _generalClassName: string;
-    _buttonClassName: string;
-    _contentClassName: string;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    };
     setParent(cmp: any): void;
     set checked(arg: boolean);
     get checked(): boolean;
-    _ctrlMouseDown(e: any): void;
-    _updateButtonClass(): void;
-    _getButtonClass(): {};
-    _getButtonStyle(value: any): any;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIBaseValue from "./integralui.base.value.js";

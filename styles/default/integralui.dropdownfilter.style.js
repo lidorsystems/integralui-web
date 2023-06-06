@@ -2,25 +2,25 @@ import { c as css } from '../../external/lit-element.js';
 
 const iuiDropDownFilterDefaultStyle = css`
     .iui-dropdownfilter {
-        background: var(--dropdownfilter-background, transparent);
-        border: var(--dropdownfilter-border, thin solid #cecece);
-        border-color: var(--dropdownfilter-border-color, #cecece);
-        border-radius: var(--dropdownfilter-border-radius, 1px);
-        border-width: var(--dropdownfilter-border-width, thin);
-        color: var(--dropdownfilter-color, black);
-        cursor: var(--dropdownfilter-cursor, default);
-        display: var(--dropdownfilter-display, block);
-        float: var(--dropdownfilter-float, none);
+        background: var(--iui-dropdownfilter-background, transparent);
+        border: var(--iui-dropdownfilter-border, thin solid #cecece);
+        border-color: var(--iui-dropdownfilter-border-color, #cecece);
+        border-radius: var(--iui-dropdownfilter-border-radius, 1px);
+        border-width: var(--iui-dropdownfilter-border-width, thin);
+        color: var(--iui-dropdownfilter-color, black);
+        cursor: var(--iui-dropdownfilter-cursor, default);
+        display: var(--iui-dropdownfilter-display, block);
+        float: var(--iui-dropdownfilter-float, none);
         font-size: 0;
-        height: var(--dropdownfilter-height, auto);
-        margin: var(--dropdownfilter-margin, 0);
-        opacity: var(--dropdownfilter-opacity, 1);
+        height: var(--iui-dropdownfilter-height, auto);
+        margin: var(--iui-dropdownfilter-margin, 0);
+        opacity: var(--iui-dropdownfilter-opacity, 1);
         overflow: hidden;
-        padding: var(--dropdownfilter-padding, 0);
-        position: var(--dropdownfilter-position, relative);
-        vertical-align: var(--dropdownfilter-vertical-align, middle);
-        width: var(--dropdownfilter-width, auto);
-        z-index: var(--dropdownfilter-z-index, auto);
+        padding: var(--iui-dropdownfilter-padding, 0);
+        position: var(--iui-dropdownfilter-position, relative);
+        vertical-align: var(--iui-dropdownfilter-vertical-align, middle);
+        width: var(--iui-dropdownfilter-width, auto);
+        z-index: var(--iui-dropdownfilter-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -36,7 +36,7 @@ const iuiDropDownFilterDefaultStyle = css`
     /* Header */
     .iui-dropdownfilter-header {
         border: thin solid #cecece;
-        padding: var(--dropdownfilter-header-padding, 3px);
+        padding: var(--iui-dropdownfilter-header-padding, 3px);
         dark-space: nowrap;
     }
     .iui-dropdownfilter-header:focus {
@@ -46,13 +46,13 @@ const iuiDropDownFilterDefaultStyle = css`
         background: transparent;
         border: thin solid #cecece;
         color: black;
-        padding: var(--dropdownfilter-header-hovered-padding, 3px);
+        padding: var(--iui-dropdownfilter-header-hovered-padding, 3px);
     }
     .iui-dropdownfilter-header-dropdownfiltered {
         background: transparent;
         border: thin solid #cecece;
         color: black;
-        padding: var(--dropdownfilter-header-dropdownfiltered-padding, 3px);
+        padding: var(--iui-dropdownfilter-header-dropdownfiltered-padding, 3px);
     }
     .iui-dropdownfilter-header-expand-box {
         background: #484848 !important;
@@ -98,7 +98,7 @@ const iuiDropDownFilterDefaultStyle = css`
 
     .iui-filter-operation {
         position: absolute;
-        top: var(--dropdownfilter-operation-top, 2px);
+        top: var(--iui-dropdownfilter-operation-top, 2px);
     }
     .iui-filter-icon {
         display: block;

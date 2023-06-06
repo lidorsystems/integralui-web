@@ -29,7 +29,7 @@ declare class IntegralUIMenu extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -63,36 +63,128 @@ declare class IntegralUIMenu extends IntegralUIBase {
             };
             reflect: boolean;
         };
+        dataFields: {
+            type: ObjectConstructor;
+            attribute: string;
+        };
         items: {
             type: ArrayConstructor;
         };
+        orientation: {
+            converter: {
+                fromAttribute: (value: any) => string;
+                toAttribute: (value: any, type: any) => "Horizontal" | "Vertical";
+            };
+            reflect: boolean;
+        };
     };
-    _dataService: IntegralUIDataService | undefined;
-    _dataItems: any;
-    _menuItems: any[] | NodeListOf<Element> | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
+    set dataFields(arg: {
+        enabled?: undefined;
+        expanded?: undefined;
+        hasChildren?: undefined;
+        icon?: undefined;
+        iconUrl?: undefined;
+        id?: undefined;
+        items?: undefined;
+        objects?: undefined;
+        pid?: undefined;
+        shortcutKey?: undefined;
+        style?: undefined;
+        text?: undefined;
+        tooltip?: undefined;
+        value?: undefined;
+        visible?: undefined;
+    } | {
+        enabled: any;
+        expanded: any;
+        hasChildren: any;
+        icon: any;
+        iconUrl: any;
+        id: any;
+        items: any;
+        objects: any;
+        pid: any;
+        shortcutKey: any;
+        style: any;
+        text: any;
+        tooltip: any;
+        value: any;
+        visible: any;
+    } | {
+        enabled: string;
+        expanded: string;
+        hasChildren: string;
+        icon: string;
+        iconUrl: string;
+        id: string;
+        items: string;
+        objects: string;
+        pid: string;
+        shortcutKey: string;
+        style: string;
+        text: string;
+        tooltip: string;
+        value: string;
+        visible: string;
+    } | undefined);
+    get dataFields(): {
+        enabled?: undefined;
+        expanded?: undefined;
+        hasChildren?: undefined;
+        icon?: undefined;
+        iconUrl?: undefined;
+        id?: undefined;
+        items?: undefined;
+        objects?: undefined;
+        pid?: undefined;
+        shortcutKey?: undefined;
+        style?: undefined;
+        text?: undefined;
+        tooltip?: undefined;
+        value?: undefined;
+        visible?: undefined;
+    } | {
+        enabled: any;
+        expanded: any;
+        hasChildren: any;
+        icon: any;
+        iconUrl: any;
+        id: any;
+        items: any;
+        objects: any;
+        pid: any;
+        shortcutKey: any;
+        style: any;
+        text: any;
+        tooltip: any;
+        value: any;
+        visible: any;
+    } | {
+        enabled: string;
+        expanded: string;
+        hasChildren: string;
+        icon: string;
+        iconUrl: string;
+        id: string;
+        items: string;
+        objects: string;
+        pid: string;
+        shortcutKey: string;
+        style: string;
+        text: string;
+        tooltip: string;
+        value: string;
+        visible: string;
     } | undefined;
     set items(arg: any);
     get items(): any;
-    _updateData(): void;
-    _getItemFromComponent(cmp: any): any;
+    set orientation(arg: any);
+    get orientation(): any;
     itemList: any;
     getItemParent(item: any): any;
-    _getOffset(): {
-        left: any;
-        top: any;
-        width: any;
-        height: any;
-    };
     invokeCtrlMethod(name: any, value: any): void;
-    _processUpdateLayout(): Promise<any>;
-    _getItemTemplate(item: any): TemplateResult;
+    firstUpdated(props: any): void;
     render(): TemplateResult;
-    _contentElem: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";
 import IntegralUIDataService from "../services/integralui.data.service.js";

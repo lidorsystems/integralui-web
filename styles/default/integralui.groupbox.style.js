@@ -2,23 +2,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiGroupBoxDefaultStyle = css`
     .iui-groupbox {
-        background: var(--groupbox-background, transparent);
-        border: var(--groupbox-border, 0);
-        border-color:  var(--groupbox-border-color, transparent);
-        border-radius: var(--groupbox-border-radius, 1px);
-        border-width: var(--groupbox-border-width, thin);
-        color: var(--groupbox-color, black);
-        cursor: var(--groupbox-cursor, default);
-        display: var(--groupbox-display, block);
-        float: var(--groupbox-float, none);
-        height: var(--groupbox-height, auto);
-        margin: var(--groupbox-margin, 2px 0);
-        opacity: var(--groupbox-opacity, 1);
+        background: var(--iui-groupbox-background, transparent);
+        border: var(--iui-groupbox-border, 0);
+        border-color:  var(--iui-groupbox-border-color, transparent);
+        border-radius: var(--iui-groupbox-border-radius, 1px);
+        border-width: var(--iui-groupbox-border-width, thin);
+        color: var(--iui-groupbox-color, black);
+        cursor: var(--iui-groupbox-cursor, default);
+        display: var(--iui-groupbox-display, block);
+        float: var(--iui-groupbox-float, none);
+        height: var(--iui-groupbox-height, auto);
+        margin: var(--iui-groupbox-margin, 2px 0);
+        opacity: var(--iui-groupbox-opacity, 1);
         overflow: hidden;
-        padding: var(--groupbox-padding, 0);
-        position: var(--groupbox-position, relative);
-        width: var(--groupbox-width, auto);
-        z-index: var(--groupbox-z-index, auto);
+        padding: var(--iui-groupbox-padding, 0);
+        position: var(--iui-groupbox-position, relative);
+        width: var(--iui-groupbox-width, auto);
+        z-index: var(--iui-groupbox-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -36,52 +36,52 @@ export const iuiGroupBoxDefaultStyle = css`
     /* Normal State */
     .iui-groupbox-header
     {
-        background: var(--groupbox-header-background, #e5e5e5);
-        border: var(--groupbox-header-border, thin solid #cecece);
-        color: var(--groupbox-header-color, black);
+        background: var(--iui-groupbox-header-background, #e5e5e5);
+        border: var(--iui-groupbox-header-border, thin solid #cecece);
+        color: var(--iui-groupbox-header-color, black);
         margin: 0;
-        padding: var(--groupbox-header-padding, 3px);
+        padding: var(--iui-groupbox-header-padding, 3px);
         position: relative;
     }
     /* Hover State */
     .iui-groupbox-header-hovered
     {
-        background: var(--groupbox-header-hovered-background, #f5f5f5);
-        border: var(--groupbox-header-hovered-border, thin solid #e5e5e5);
+        background: var(--iui-groupbox-header-hovered-background, #f5f5f5);
+        border: var(--iui-groupbox-header-hovered-border, thin solid #e5e5e5);
         margin: 0;
-        padding: var(--groupbox-header-hovered-padding, 3px);
+        padding: var(--iui-groupbox-header-hovered-padding, 3px);
         position: relative;
     }
     /* Selected State */
     .iui-groupbox-header-selected
     {
-        background: var(--groupbox-header-selected-background, #bfbfbf);
-        border: var(--groupbox-header-selected-border, thin solid #a1a1a1);
-        color: var(--groupbox-header-selected-color, white);
-        padding: var(--groupbox-header-selected-padding, 3px);
+        background: var(--iui-groupbox-header-selected-background, #bfbfbf);
+        border: var(--iui-groupbox-header-selected-border, thin solid #a1a1a1);
+        color: var(--iui-groupbox-header-selected-color, white);
+        padding: var(--iui-groupbox-header-selected-padding, 3px);
         margin: 0;
         position: relative;
     }
     .iui-groupbox-content
     {
-        background: var(--groupbox-content-background, white);
-        border: var(--groupbox-content-border, thin solid #cecece);
+        background: var(--iui-groupbox-content-background, white);
+        border: var(--iui-groupbox-content-border, thin solid #cecece);
         margin: 0;
     }
     /* Disabled State */
     .iui-groupbox-content-disabled
     {
-        border-color: var(--groupbox-content-disabled-border-color, gray);
-        color: var(--groupbox-content-disabled-color, gray);
+        border-color: var(--iui-groupbox-content-disabled-border-color, gray);
+        color: var(--iui-groupbox-content-disabled-color, gray);
     }
     .iui-groupbox-header-marker-down::before
     {
         content: "";
-        border: var(--groupbox-header-marker-down-before-border, 5px solid white);
-        border-color: var(--groupbox-header-marker-down-before-border-color, transparent transparent #ffffff transparent);
+        border: var(--iui-groupbox-header-marker-down-before-border, 5px solid white);
+        border-color: var(--iui-groupbox-header-marker-down-before-border-color, transparent transparent #ffffff transparent);
         position: absolute;
-        bottom: var(--groupbox-header-marker-down-before-bottom, -1px);
-        left: var(--groupbox-header-marker-down-before-left, 5px);
+        bottom: var(--iui-groupbox-header-marker-down-before-bottom, -1px);
+        left: var(--iui-groupbox-header-marker-down-before-left, 5px);
         width: 0;
         height: 0;
         z-index: 2;
@@ -98,32 +98,32 @@ export const iuiGroupBoxDefaultStyle = css`
     .iui-groupbox-header-marker-down::after
     {
         content: "";
-        border: var(--groupbox-header-marker-down-after-border, 5px solid transparent);
-        border-color: var(--groupbox-header-marker-down-after-border-color, transparent transparent transparent transparent);
+        border: var(--iui-groupbox-header-marker-down-after-border, 5px solid transparent);
+        border-color: var(--iui-groupbox-header-marker-down-after-border-color, transparent transparent transparent transparent);
         position: absolute;
-        bottom: var(--groupbox-header-marker-down-after-bottom, -1px);
-        left: var(--groupbox-header-marker-down-after-left, 5px);
+        bottom: var(--iui-groupbox-header-marker-down-after-bottom, -1px);
+        left: var(--iui-groupbox-header-marker-down-after-left, 5px);
         width: 0;
         height: 0;
     }
     @keyframes marker
     {
-        0% { bottom: var(--groupbox-header-marker-animation-bottom-0, -10px); }
-        50% { bottom: var(--groupbox-header-marker-animation-bottom-50, -5px); }
-        100% { bottom: var(--groupbox-header-marker-animation-bottom-100, -1px); }
+        0% { bottom: var(--iui-groupbox-header-marker-animation-bottom-0, -10px); }
+        50% { bottom: var(--iui-groupbox-header-marker-animation-bottom-50, -5px); }
+        100% { bottom: var(--iui-groupbox-header-marker-animation-bottom-100, -1px); }
     }
 
     /* Animations */
     .iui-groupbox-header-expand-box
     {
-        background: var(--groupbox-header-expand-box-background, #484848);
+        background: var(--iui-groupbox-header-expand-box-background, #484848);
     }
 
 
     /* Disabled State */
     .iui-groupbox-disabled div
     {
-        opacity: var(--groupbox-disabled-opacity, 0.75);
+        opacity: var(--iui-groupbox-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
@@ -139,7 +139,7 @@ export const iuiGroupBoxDefaultStyle = css`
     }
     .iui-groupbox-header-animate-select
     {
-        background: var(--groupbox-header-animate-select-background, #f5f5f5);
+        background: var(--iui-groupbox-header-animate-select-background, #f5f5f5);
         display: block;
         left: 0;
         position: absolute;

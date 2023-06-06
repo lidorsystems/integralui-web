@@ -29,7 +29,7 @@ declare class IntegralUIGroupBox extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -89,43 +89,6 @@ declare class IntegralUIGroupBox extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _currentIcon: any;
-    _currentIconUrl: any;
-    _currentExpandBoxType: any;
-    _currentText: any;
-    _clickPos: {
-        x: number;
-        y: number;
-    } | undefined;
-    _expandState: string | undefined;
-    _isClicked: boolean | undefined;
-    _isExpanded: boolean | undefined;
-    _isSelected: any;
-    _parentCtrl: any;
-    _supressCallback: boolean | undefined;
-    _contentHeight: any;
-    _contentDisplay: any;
-    _contentOpacity: any;
-    _headerSize: {
-        width: number;
-        height: number;
-    } | {
-        width: any;
-        height: any;
-    } | undefined;
-    _maxBlockHeight: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _contentClassName: string | undefined;
-    _headerClassName: string | undefined;
-    _contentClass: {} | undefined;
-    _headerBlockClass: {} | undefined;
-    _initContent(): void;
-    _headerExpandBoxClassName: string | undefined;
     setParent(cmp: any): void;
     set expandBoxType(arg: any);
     get expandBoxType(): any;
@@ -139,32 +102,15 @@ declare class IntegralUIGroupBox extends IntegralUIBase {
     get selected(): any;
     set text(arg: any);
     get text(): any;
-    _callBeforeEvent(value: any): boolean;
-    _callAfterEvent(value: any, skip: any): boolean;
-    _onHeaderClick(e: any): void;
     collapse(): void;
     expand(): void;
     toggle(): void;
-    _toggleContent(): void;
     getContentHeight(): any;
     setContentDisplay(value: any): void;
     setContentHeight(value: any): void;
-    _updateContentClass(): void;
-    _getContentClass(): {} | undefined;
-    _getContentStyle(value: any): any;
-    _updateHeaderBlockClass(): void;
-    _getHeaderBlockClass(): {} | undefined;
-    _getHeaderClass(): string | undefined;
-    _getHeaderGeneralStyle(value: any): any;
-    _getHeaderStyle(value: any): {
-        general: any;
-        expandBox: any;
-    };
-    _getCurrentHeaderStyle(): any;
     setOpacity(value: any): void;
+    firstUpdated(props: any): void;
+    refresh(): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _contentElem: Element | null | undefined;
-    _contentSlotElem: Node | undefined;
-    _header: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

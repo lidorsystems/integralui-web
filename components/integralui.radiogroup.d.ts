@@ -29,7 +29,7 @@ declare class IntegralUIRadioGroup extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -69,21 +69,12 @@ declare class IntegralUIRadioGroup extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _buttonList: any[];
-    _currentSelection: any;
-    _currentIndex: number;
     set selectedIndex(arg: number);
     get selectedIndex(): number;
-    _getComponentCurrentIndex(cmp: any): number;
-    _getComponentData(cmp: any): any;
     invokeCtrlEvent(key: any, cmp: any, cmpIndex: any): boolean;
     invokeCtrlMethod(key: any, cmp: any): boolean;
-    _processUpdateLayout(): Promise<any>;
     clearSelection(): void;
-    _clearCmpSelection(cmp: any): void;
-    _selectComponent(cmp: any): boolean;
-    _refreshGroupParent(): Promise<any>;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _slotChange(e: any): void;
 }
 import IntegralUIBase from "./integralui.base.js";

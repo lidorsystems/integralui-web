@@ -20,13 +20,13 @@ export const iuiHeaderDefaultStyle = css`
     }
     .iui-header-label {
         display: inline-block;
-        margin: var(--header-label-margin, 0);
-        padding: var(--header-label-padding, 1px);
-        text-align: var(--header-label-text-align, left);
+        margin: var(--iui-header-label-margin, 0);
+        padding: var(--iui-header-label-padding, 1px);
+        text-align: var(--iui-header-label-text-align, left);
     }
     .iui-header-label-empty {
         display: block;
-        height: var(--header-label-empty-height, 20px);
+        height: var(--iui-header-label-empty-height, 20px);
     }
     .iui-header-icon {
     }
@@ -55,10 +55,10 @@ export const iuiHeaderDefaultStyle = css`
     {
         display: inline-block;
         height: 16px;
-        margin: var(--header-expand-box-margin, 5px);
+        margin: var(--iui-header-expand-box-margin, 5px);
         position: absolute;
-        right: var(--header-expand-box-right, 0);
-        top: var(--header-expand-box-top, 0);
+        right: var(--iui-header-expand-box-right, 0);
+        top: var(--iui-header-expand-box-top, 0);
         width: 16px;
     }
     .iui-header-expand-box-vertical
@@ -152,10 +152,10 @@ export const iuiHeaderDefaultStyle = css`
         background-image: url(../../icons/calendar-dark.ico);
         display: block;
         height: 16px;
-        margin: var(--header-expand-box-margin, 2px);
+        margin: var(--iui-header-expand-box-margin, 2px);
         position: absolute;
-        right: var(--header-expand-box-right, 0);
-        top: var(--header-expand-box-top, 0);
+        right: var(--iui-header-expand-box-right, 0);
+        top: var(--iui-header-expand-box-top, 0);
         width: 16px;
     }
 
@@ -164,10 +164,10 @@ export const iuiHeaderDefaultStyle = css`
     {
         display: inline-block;
         height: 16px;
-        margin: var(--header-expand-box-margin, 5px);
+        margin: var(--iui-header-expand-box-margin, 5px);
         position: absolute;
-        right: var(--header-expand-box-right, 0);
-        top: var(--header-expand-box-top, 0);
+        right: var(--iui-header-expand-box-right, 0);
+        top: var(--iui-header-expand-box-top, 0);
         width: 16px;
 
     }

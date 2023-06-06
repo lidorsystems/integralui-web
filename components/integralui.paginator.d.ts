@@ -29,7 +29,7 @@ declare class IntegralUIPaginator extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -74,30 +74,15 @@ declare class IntegralUIPaginator extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _currentPageNumber: any;
-    _maxPageNumber: any;
-    _minPageNumber: number | undefined;
-    _numPages: string | undefined;
-    _inputWidth: number | undefined;
-    _prevValue: any;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     set currentPage(arg: any);
     get currentPage(): any;
     set maxPages(arg: any);
     get maxPages(): any;
-    _onInputChange(e: any): void;
-    _updateCurrentPage(): void;
-    _processUpdateLayout(): Promise<any>;
     firstPage(): void;
     lastPage(): void;
     nextPage(): void;
     prevPage(): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _inputLabelElem: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

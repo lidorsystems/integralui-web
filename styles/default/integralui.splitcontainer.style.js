@@ -2,23 +2,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiSplitContainerDefaultStyle = css`
     .iui-splitcontainer {
-        background: var(--splitcontainer-background, transparent);
-        border: var(--splitcontainer-border, 0);
-        border-color:  var(--splitcontainer-border-color, transparent);
-        border-radius: var(--splitcontainer-border-radius, 1px);
-        border-width: var(--splitcontainer-border-width, thin);
-        color: var(--splitcontainer-color, black);
-        cursor: var(--splitcontainer-cursor, default);
-        display: var(--splitcontainer-display, block);
-        float: var(--splitcontainer-float, none);
-        height: var(--splitcontainer-height, auto);
-        margin: var(--splitcontainer-margin, 0);
-        opacity: var(--splitcontainer-opacity, 1);
+        background: var(--iui-splitcontainer-background, transparent);
+        border: var(--iui-splitcontainer-border, 0);
+        border-color:  var(--iui-splitcontainer-border-color, transparent);
+        border-radius: var(--iui-splitcontainer-border-radius, 1px);
+        border-width: var(--iui-splitcontainer-border-width, thin);
+        color: var(--iui-splitcontainer-color, black);
+        cursor: var(--iui-splitcontainer-cursor, default);
+        display: var(--iui-splitcontainer-display, block);
+        float: var(--iui-splitcontainer-float, none);
+        height: var(--iui-splitcontainer-height, auto);
+        margin: var(--iui-splitcontainer-margin, 0);
+        opacity: var(--iui-splitcontainer-opacity, 1);
         overflow: hidden;
-        padding: var(--splitcontainer-padding, 0);
-        position: var(--splitcontainer-position, relative);
-        width: var(--splitcontainer-width, auto);
-        z-index: var(--splitcontainer-z-index, auto);
+        padding: var(--iui-splitcontainer-padding, 0);
+        position: var(--iui-splitcontainer-position, relative);
+        width: var(--iui-splitcontainer-width, auto);
+        z-index: var(--iui-splitcontainer-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -29,8 +29,8 @@ export const iuiSplitContainerDefaultStyle = css`
     }
     .iui-splitcontainer-splitter
     {
-        background: var(--splitcontainer-splitter-background, #efefef);
-        border: var(--splitcontainer-splitter-border, thin solid gray);
+        background: var(--iui-splitcontainer-splitter-background, #efefef);
+        border: var(--iui-splitcontainer-splitter-border, thin solid gray);
         margin: 0;
         padding: 0;
         position: absolute;
@@ -39,13 +39,13 @@ export const iuiSplitContainerDefaultStyle = css`
     }
     .iui-splitcontainer-splitter-horizontal
     {
-        border-left-color: var(--splitcontainer-splitter-border-left-color, transparent);
-        border-right-color: var(--splitcontainer-splitter-border-right-color, transparent);
+        border-left-color: var(--iui-splitcontainer-splitter-border-left-color, transparent);
+        border-right-color: var(--iui-splitcontainer-splitter-border-right-color, transparent);
     }
     .iui-splitcontainer-splitter-vertical
     {
-        border-top-color: var(--splitcontainer-splitter-border-top-color, transparent);
-        border-bottom-color: var(--splitcontainer-splitter-border-bottom-color, transparent);
+        border-top-color: var(--iui-splitcontainer-splitter-border-top-color, transparent);
+        border-bottom-color: var(--iui-splitcontainer-splitter-border-bottom-color, transparent);
     }
     .iui-splitcontainer-handle
     {
@@ -56,7 +56,7 @@ export const iuiSplitContainerDefaultStyle = css`
     }
     .iui-splitcontainer-handle span
     {
-        background-image: var(--splitcontainer-splitter-background-image, url(../../icons/handle.png));
+        background-image: var(--iui-splitcontainer-splitter-background-image, url(../../icons/handle.png));
         background-repeat: repeat;
         display: block;
         margin: 0;
@@ -65,36 +65,36 @@ export const iuiSplitContainerDefaultStyle = css`
     }
     .iui-splitcontainer-handle-horizontal span
     {
-        height: var(--splitcontainer-handle-height, 9px);
-        width: var(--splitcontainer-handle-width, 50px);
+        height: var(--iui-splitcontainer-handle-height, 9px);
+        width: var(--iui-splitcontainer-handle-width, 50px);
     }
     .iui-splitcontainer-handle-vertical span
     {
-        height: var(--splitcontainer-handle-height, 50px);
-        width: var(--splitcontainer-handle-width, 9px);
+        height: var(--iui-splitcontainer-handle-height, 50px);
+        width: var(--iui-splitcontainer-handle-width, 9px);
     }
     .iui-splitcontainer-swap-button
     {
-        background: var(--splitcontainer-swap-button-background, transparent);
-        border: var(--splitcontainer-swap-button-border, thin solid transparent);
-        border-radius: var(--splitcontainer-swap-button-border-radius, 2px);
+        background: var(--iui-splitcontainer-swap-button-background, transparent);
+        border: var(--iui-splitcontainer-swap-button-border, thin solid transparent);
+        border-radius: var(--iui-splitcontainer-swap-button-border-radius, 2px);
         display: inline-block;
-        opacity: var(--splitcontainer-swap-button-opacity, 0.75);
-        padding: var(--splitcontainer-swap-button-padding, 2px);
+        opacity: var(--iui-splitcontainer-swap-button-opacity, 0.75);
+        padding: var(--iui-splitcontainer-swap-button-padding, 2px);
         position: absolute;
     }
     .iui-splitcontainer-swap-button:hover
     {
-        background: var(--splitcontainer-swap-button-hover-background, #fefefe);
-        border-color: var(--splitcontainer-swap-button-hover-border-color, #808080);
-        opacity: var(--splitcontainer-swap-button-hover-opacity, 1);
+        background: var(--iui-splitcontainer-swap-button-hover-background, #fefefe);
+        border-color: var(--iui-splitcontainer-swap-button-hover-border-color, #808080);
+        opacity: var(--iui-splitcontainer-swap-button-hover-opacity, 1);
     }
     .iui-splitcontainer-swap-button span
     {
-        background-image: var(--splitcontainer-swap-button-background-image, url(../../icons/swap.ico));
+        background-image: var(--iui-splitcontainer-swap-button-background-image, url(../../icons/swap.ico));
         display: block;
-        height: var(--splitcontainer-swap-button-background-image-height, 16px);
-        width: var(--splitcontainer-swap-button-background-image-width, 16px);
+        height: var(--iui-splitcontainer-swap-button-background-image-height, 16px);
+        width: var(--iui-splitcontainer-swap-button-background-image-width, 16px);
     }
     .iui-splitcontainer-swap-button-vertical span
     {
@@ -104,16 +104,16 @@ export const iuiSplitContainerDefaultStyle = css`
     }
     .iui-splitcontainer-tab
     {
-        background: var(--splitcontainer-tab-background, transparent);
-        border: var(--splitcontainer-tab-border, thin solid gray);
-        color: var(--splitcontainer-tab-color, black);
-        margin: var(--splitcontainer-tab-margin, 0);
-        padding: var(--splitcontainer-tab-padding, 0);
+        background: var(--iui-splitcontainer-tab-background, transparent);
+        border: var(--iui-splitcontainer-tab-border, thin solid gray);
+        color: var(--iui-splitcontainer-tab-color, black);
+        margin: var(--iui-splitcontainer-tab-margin, 0);
+        padding: var(--iui-splitcontainer-tab-padding, 0);
         position: absolute;
     }
     .iui-splitcontainer-tab > div
     {
-        padding: var(--splitcontainer-tab-block-padding, 3px 7px 3px 3px);
+        padding: var(--iui-splitcontainer-tab-block-padding, 3px 7px 3px 3px);
         position: absolute;
         white-space: nowrap;
     }
@@ -125,13 +125,13 @@ export const iuiSplitContainerDefaultStyle = css`
     }
     .iui-splitcontainer-tab-selected
     {
-        background: var(--splitcontainer-tab-selected-background, white);
+        background: var(--iui-splitcontainer-tab-selected-background, white);
     }
     .iui-splitcontainer-panel
     {
-        background: var(--splitcontainer-panel-background, white);
-        border: var(--splitcontainer-panel-border, thin solid gray);
-        color: var(--splitcontainer-panel-color, black);
+        background: var(--iui-splitcontainer-panel-background, white);
+        border: var(--iui-splitcontainer-panel-border, thin solid gray);
+        color: var(--iui-splitcontainer-panel-color, black);
         overflow: hidden;
         position: absolute;
     }
@@ -146,46 +146,46 @@ export const iuiSplitContainerDefaultStyle = css`
     }
     .iui-splitcontainer-button
     {
-        background: var(--splitcontainer-button-background, transparent);
-        border: var(--splitcontainer-button-border, thin solid #808080);
-        border-radius: var(--splitcontainer-button-border-radius, 2px);
+        background: var(--iui-splitcontainer-button-background, transparent);
+        border: var(--iui-splitcontainer-button-border, thin solid #808080);
+        border-radius: var(--iui-splitcontainer-button-border-radius, 2px);
         display: inline-block;
-        margin: var(--splitcontainer-button-margin, 2px);
-        opacity: var(--splitcontainer-button-opacity, 0.75);
-        padding: var(--splitcontainer-button-padding, 0);
+        margin: var(--iui-splitcontainer-button-margin, 2px);
+        opacity: var(--iui-splitcontainer-button-opacity, 0.75);
+        padding: var(--iui-splitcontainer-button-padding, 0);
     }
     .iui-splitcontainer-button:hover
     {
-        background: var(--splitcontainer-button-hover-background, #fefefe);
-        opacity: var(--splitcontainer-button-hover-opacity, 1);
+        background: var(--iui-splitcontainer-button-hover-background, #fefefe);
+        opacity: var(--iui-splitcontainer-button-hover-opacity, 1);
     }
     .iui-splitcontainer-button-selected
     {
-        background: var(--splitcontainer-button-selected-background, #ffffff);
-        opacity: var(--splitcontainer-button-selected-opacity, 1);
+        background: var(--iui-splitcontainer-button-selected-background, #ffffff);
+        opacity: var(--iui-splitcontainer-button-selected-opacity, 1);
     }
     .iui-splitcontainer-button span
     {
         display: block;
         margin: 0;
         padding: 0;
-        height: var(--splitcontainer-button-height, 16px);
-        width: var(--splitcontainer-button-width, 16px);
+        height: var(--iui-splitcontainer-button-height, 16px);
+        width: var(--iui-splitcontainer-button-width, 16px);
     }
 
     .iui-splitcontainer-button-vertical span
     {
-        background-image: var(--splitcontainer-button-vertical-background-image, url(../../icons/line-vertical.ico));
+        background-image: var(--iui-splitcontainer-button-vertical-background-image, url(../../icons/line-vertical.ico));
     }
     .iui-splitcontainer-button-horizontal span
     {
-        background-image: var(--splitcontainer-button-horizontal-background-image, url(../../icons/line-horizontal.ico));
+        background-image: var(--iui-splitcontainer-button-horizontal-background-image, url(../../icons/line-horizontal.ico));
     }
 
     /* Disabled State */
     .iui-splitcontainer-disabled div
     {
-        opacity: var(--splitcontainer-disabled-opacity, 0.75);
+        opacity: var(--iui-splitcontainer-disabled-opacity, 0.75);
         pointer-events: none;
     }
 `;

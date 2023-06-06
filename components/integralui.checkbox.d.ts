@@ -29,7 +29,7 @@ declare class IntegralUICheckBox extends IntegralUIBaseValue {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -64,7 +64,7 @@ declare class IntegralUICheckBox extends IntegralUIBaseValue {
             reflect: boolean;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
         checked: {
@@ -84,32 +84,13 @@ declare class IntegralUICheckBox extends IntegralUIBaseValue {
             attribute: string;
         };
     };
-    _checkedValue: boolean;
-    _checkStateValue: string;
-    _isThreeState: boolean;
-    _buttonClass: {};
-    _generalClassName: string;
-    _buttonClassName: string;
-    _contentClassName: string;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    };
     set checked(arg: boolean);
     get checked(): boolean;
     set checkState(arg: string);
     get checkState(): string;
     set threeState(arg: boolean);
     get threeState(): boolean;
-    _changeValue(): void;
-    _ctrlKeyDown(e: any): void;
-    _ctrlMouseDown(e: any): void;
-    _updateButtonClass(): void;
-    _getButtonClass(): {};
-    _getButtonStyle(value: any): any;
-    _ctrlTouchStart(e: any): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }
 import IntegralUIBaseValue from "./integralui.base.value.js";

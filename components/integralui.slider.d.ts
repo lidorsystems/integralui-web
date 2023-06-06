@@ -29,7 +29,7 @@ declare class IntegralUISlider extends IntegralUIBaseValue {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -64,7 +64,7 @@ declare class IntegralUISlider extends IntegralUIBaseValue {
             reflect: boolean;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
         max: {
@@ -83,45 +83,6 @@ declare class IntegralUISlider extends IntegralUIBaseValue {
             reflect: boolean;
         };
     };
-    _ctrlMaxValue: any;
-    _ctrlMinValue: any;
-    _isSliderChangeActive: boolean | undefined;
-    _currentOrientation: any;
-    _contentSize: {
-        width: number;
-        height: number;
-    } | {
-        width: number;
-        height: number;
-    } | undefined;
-    _handleSize: {
-        width: number;
-        height: number;
-    } | {
-        width: any;
-        height: any;
-    } | undefined;
-    _sliderSize: {
-        width: number;
-        height: number;
-    } | {
-        width: number;
-        height: number;
-    } | undefined;
-    _sliderPos: number | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _sliderBackgroundClass: {} | undefined;
-    _sliderButtonClass: {} | undefined;
-    _sliderBackgroundClassName: string | undefined;
-    _sliderButtonClassName: string | undefined;
-    _resizeObserver: ResizeObserver | null | undefined;
-    _windowMouseMove(e: any): void;
-    _windowMouseUp(e: any): void;
     set max(arg: any);
     get max(): any;
     set min(arg: any);
@@ -130,35 +91,7 @@ declare class IntegralUISlider extends IntegralUIBaseValue {
     get orientation(): any;
     set value(arg: number);
     get value(): number;
-    _getContentWidth(): number;
-    _getSliderWidth(): number;
-    _ctrlKeyDown(e: any): void;
-    _calcLayout(): void;
-    _ctrlMouseEnter(e: any): void;
-    _animationState: string | undefined;
-    _ctrlMouseLeave(e: any): void;
-    _ctrlMouseDown(e: any): void;
-    _ctrlMouseMove(e: any): void;
-    _ctrlMouseUp(e: any): void;
-    _ctrlMouseWheel(e: any): void;
-    _ctrlTouchEnd(e: any): void;
-    _getSliderBackStyle(): {
-        position: string;
-    };
-    _getSliderBackValueStyle(): {
-        position: string;
-    };
-    _getSliderValueStyle(): {
-        position: string;
-    };
-    _getSliderBackgroundClass(): {} | undefined;
-    _updateSliderBackgroundClass(): void;
-    _getSliderButtonClass(): {} | undefined;
-    _updateSliderButtonClass(): void;
-    _getSliderBackgroundStyle(value: any): any;
-    _getSliderButtonStyle(value: any): any;
-    _getSliderStyle(value: any): any;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _handleElem: Element | null | undefined;
 }
 import IntegralUIBaseValue from "./integralui.base.value.js";

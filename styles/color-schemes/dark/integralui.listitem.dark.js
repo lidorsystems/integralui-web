@@ -2,8 +2,8 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiListItemDarkStyle = css`
     .iui-listgroup {
-        border-color: var(--listgroup-border-color, transparent transparent #151515 transparent);
-        color: var(--listgroup-color, #cccccc);
+        border-color: var(--iui-listgroup-border-color, transparent transparent #151515 transparent);
+        color: var(--iui-listgroup-color, #cccccc);
     }
     .iui-listgroup-expand-box {
         background: url(../../../icons/expandbox-icons.png) no-repeat -48px -48px;
@@ -30,19 +30,19 @@ export const iuiListItemDarkStyle = css`
     }
 
     .iui-listitem {
-        color: var(--listitem-color, #cccccc);
+        color: var(--iui-listitem-color, #cccccc);
     }
     .iui-listitem-hovered {
         animation-name: none;
-        background: var(--listitem-hovered-background, #2a2d2e);
-        border-color: var(--listitem-hovered-border-color, #2a2d2e);
-        color: var(--listitem-hovered-color, #eeeeee);
+        background: var(--iui-listitem-hovered-background, #2a2d2e);
+        border-color: var(--iui-listitem-hovered-border-color, #2a2d2e);
+        color: var(--iui-listitem-hovered-color, #eeeeee);
     }
     .iui-listitem-selected {
         animation-name: none;
-        background: var(--listitem-selected-background, #0a4369);
-        border-color: var(--listitem-selected-border-color, #0a4369);
-        color: var(--listitem-selected-color, white);
+        background: var(--iui-listitem-selected-background, #0a4369);
+        border-color: var(--iui-listitem-selected-border-color, #0a4369);
+        color: var(--iui-listitem-selected-color, white);
     }
     @keyframes listitem-animate-enter {
         0% {        
@@ -55,9 +55,9 @@ export const iuiListItemDarkStyle = css`
         }
     }
     .iui-listitem-animate-select {
-        background: var(--listitem-animate-select-background, #2d2d33);
+        background: var(--iui-listitem-animate-select-background, #2d2d33);
     }
     .iui-listitem-separator {
-        background: var(--listitem-separator-background, #151515);
+        background: var(--iui-listitem-separator-background, #151515);
     }
 `;

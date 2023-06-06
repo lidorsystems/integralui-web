@@ -29,7 +29,7 @@ declare class IntegralUIDropDownButton extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -95,27 +95,6 @@ declare class IntegralUIDropDownButton extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _currentDropDownAdjustment: {
-        top: number;
-        left: number;
-        width: number;
-        height: number;
-    } | undefined;
-    _currentDropDownSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _currentDirection: any;
-    _currentPlacement: any;
-    _isDropDownIconVisible: any;
-    _isExpanded: any;
-    _buttonClassName: string | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
     set direction(arg: any);
     get direction(): any;
     set dropDownAdjustment(arg: {
@@ -144,30 +123,12 @@ declare class IntegralUIDropDownButton extends IntegralUIBase {
     get expanded(): any;
     set placement(arg: any);
     get placement(): any;
-    _preventDragStart(e: any): void;
-    _addDropDown(): void;
-    _cmpRef: HTMLElement | HTMLSlotElement | HTMLTemplateElement | HTMLStyleElement | HTMLObjectElement | HTMLDataElement | HTMLAnchorElement | HTMLAreaElement | HTMLAudioElement | HTMLBaseElement | HTMLQuoteElement | HTMLBodyElement | HTMLBRElement | HTMLButtonElement | HTMLCanvasElement | HTMLTableCaptionElement | HTMLTableColElement | HTMLDataListElement | HTMLModElement | HTMLDetailsElement | HTMLDialogElement | HTMLDivElement | HTMLDListElement | HTMLEmbedElement | HTMLFieldSetElement | HTMLFormElement | HTMLHeadingElement | HTMLHeadElement | HTMLHRElement | HTMLHtmlElement | HTMLIFrameElement | HTMLImageElement | HTMLInputElement | HTMLLabelElement | HTMLLegendElement | HTMLLIElement | HTMLLinkElement | HTMLMapElement | HTMLMenuElement | HTMLMetaElement | HTMLMeterElement | HTMLOListElement | HTMLOptGroupElement | HTMLOptionElement | HTMLOutputElement | HTMLParagraphElement | HTMLPictureElement | HTMLPreElement | HTMLProgressElement | HTMLScriptElement | HTMLSelectElement | HTMLSourceElement | HTMLSpanElement | HTMLTableElement | HTMLTableSectionElement | HTMLTableCellElement | HTMLTextAreaElement | HTMLTimeElement | HTMLTitleElement | HTMLTableRowElement | HTMLTrackElement | HTMLUListElement | HTMLVideoElement | null | undefined;
-    _removeCtrl(e: any): void;
-    _closeDropDown(): void;
-    _getDropDownSize(): {
-        width: any;
-        height: number;
-    };
-    _openDropDown(e: any): void;
-    _removeDropDown(): void;
     collapse(): void;
     expand(): void;
     toggle(): void;
-    _ctrlMouseDown(e: any): void;
-    _ctrlMouseEnter(e: any): void;
-    _ctrlMouseLeave(e: any): void;
-    _getButtonClass(): {} | undefined;
-    _updateButtonClass(): void;
-    _buttonClass: {} | undefined;
-    _getContentTemplate(): TemplateResult;
-    _ctrlTouchStart(e: any): void;
+    firstUpdated(props: any): void;
+    refresh(): void;
     render(): TemplateResult;
-    _buttonElem: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";
 import { T as TemplateResult } from "../external/lit-element.js";

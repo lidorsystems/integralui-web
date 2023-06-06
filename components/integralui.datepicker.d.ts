@@ -29,7 +29,7 @@ declare class IntegralUIDatePicker extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -123,39 +123,6 @@ declare class IntegralUIDatePicker extends IntegralUIBase {
             attribute: string;
         };
     };
-    _currentAnimationSpeed: any;
-    _currentAnimationType: any;
-    _cmpRef: HTMLElement | HTMLSlotElement | HTMLTemplateElement | HTMLStyleElement | HTMLObjectElement | HTMLDataElement | HTMLAnchorElement | HTMLAreaElement | HTMLAudioElement | HTMLBaseElement | HTMLQuoteElement | HTMLBodyElement | HTMLBRElement | HTMLButtonElement | HTMLCanvasElement | HTMLTableCaptionElement | HTMLTableColElement | HTMLDataListElement | HTMLModElement | HTMLDetailsElement | HTMLDialogElement | HTMLDivElement | HTMLDListElement | HTMLEmbedElement | HTMLFieldSetElement | HTMLFormElement | HTMLHeadingElement | HTMLHeadElement | HTMLHRElement | HTMLHtmlElement | HTMLIFrameElement | HTMLImageElement | HTMLInputElement | HTMLLabelElement | HTMLLegendElement | HTMLLIElement | HTMLLinkElement | HTMLMapElement | HTMLMenuElement | HTMLMetaElement | HTMLMeterElement | HTMLOListElement | HTMLOptGroupElement | HTMLOptionElement | HTMLOutputElement | HTMLParagraphElement | HTMLPictureElement | HTMLPreElement | HTMLProgressElement | HTMLScriptElement | HTMLSelectElement | HTMLSourceElement | HTMLSpanElement | HTMLTableElement | HTMLTableSectionElement | HTMLTableCellElement | HTMLTextAreaElement | HTMLTimeElement | HTMLTitleElement | HTMLTableRowElement | HTMLTrackElement | HTMLUListElement | HTMLVideoElement | null | undefined;
-    _currentDropDownAdjustment: {
-        top: number;
-        left: number;
-        width: number;
-        height: number;
-    } | undefined;
-    _currentFirstDayOfWeek: any;
-    _currentFormat: any;
-    _currentFormatOptions: any;
-    _currentLocales: any;
-    _currentSelectedDate: any;
-    _expandState: string | undefined;
-    _isExpanded: boolean | undefined;
-    _currentCalendarSize: {
-        width: number;
-        height: number;
-    } | undefined;
-    _currentCalendarAlign: any;
-    _headerClass: {} | undefined;
-    _headerClassName: string | undefined;
-    _headerExpandBoxClassName: string | undefined;
-    _calendarClassName: string | undefined;
-    _calendarCellClassName: string | undefined;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    } | undefined;
-    _focusTimeout: null | undefined;
     set animationSpeed(arg: any);
     get animationSpeed(): any;
     set animationType(arg: any);
@@ -194,25 +161,10 @@ declare class IntegralUIDatePicker extends IntegralUIBase {
     get locales(): any;
     set selectedDate(arg: any);
     get selectedDate(): any;
-    _getSelectedDate(): string;
-    _addCalendar(): void;
-    _removeCtrl(e: any): void;
-    _closeCalendar(): void;
-    _calendarBlur(e: any): void;
-    _dateChanged(e: any): void;
-    _removeCalendar(): void;
     collapse(): void;
     expand(): void;
     toggle(): void;
-    _ctrlKeyDown(e: any): void;
-    _onCtrlMouseEnter(e: any): void;
-    _onCtrlMouseLeave(e: any): void;
-    _onCtrlMouseUp(e: any): void;
-    _openCalendar(e: any): void;
-    _onHeaderTouchStart(e: any): void;
-    _getCurrentHeaderStyle(): any;
-    _getContentTemplate(): import("../external/lit-element.js").TemplateResult;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _header: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

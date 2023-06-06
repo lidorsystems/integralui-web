@@ -12,7 +12,7 @@ export const iuiDragWinDefaultStyle = css`
         background-color: #F1EFEC;
         border: thin solid black;
         border-radius: 3px;
-        font-size: var(--dragwin-font-size, 1em);
+        font-size: var(--iui-dragwin-font-size, 1em);
         margin:0;
         padding: 2px;
         position: absolute;

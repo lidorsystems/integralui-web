@@ -2,25 +2,25 @@ import { c as css } from '../../external/lit-element.js';
 
 const iuiDockAreaDefaultStyle = css`
     .iui-dockarea {
-        background: var(--dockarea-background, transparent);
-        border: var(--dockarea-border, 0);
-        border-color:  var(--dockarea-border-color, transparent);
-        border-radius: var(--dockarea-border-radius, 1px);
-        border-width: var(--dockarea-border-width, thin);
-        color: var(--dockarea-color, black);
-        cursor: var(--dockarea-cursor, default);
-        display: var(--dockarea-display, block);
-        float: var(--dockarea-float, none);
-        height: var(--dockarea-height, auto);
-        opacity: var(--dockarea-opacity, 1);
+        background: var(--iui-dockarea-background, transparent);
+        border: var(--iui-dockarea-border, 0);
+        border-color:  var(--iui-dockarea-border-color, transparent);
+        border-radius: var(--iui-dockarea-border-radius, 1px);
+        border-width: var(--iui-dockarea-border-width, thin);
+        color: var(--iui-dockarea-color, black);
+        cursor: var(--iui-dockarea-cursor, default);
+        display: var(--iui-dockarea-display, block);
+        float: var(--iui-dockarea-float, none);
+        height: var(--iui-dockarea-height, auto);
+        opacity: var(--iui-dockarea-opacity, 1);
         overflow: hidden;
-        margin: var(--dockarea-margin, 0);
-        padding: var(--dockarea-padding, 0);
+        margin: var(--iui-dockarea-margin, 0);
+        padding: var(--iui-dockarea-padding, 0);
         position: relative;
-        text-align: var(--dockarea-text-align, left);
-        vertical-align: var(--dockarea-vertical-align, initial);
-        width: var(--dockarea-width, auto);
-        z-index: var(--dockarea-z-index, auto);
+        text-align: var(--iui-dockarea-text-align, left);
+        vertical-align: var(--iui-dockarea-vertical-align, initial);
+        width: var(--iui-dockarea-width, auto);
+        z-index: var(--iui-dockarea-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -30,12 +30,12 @@ const iuiDockAreaDefaultStyle = css`
         user-select: none;
     }
     .iui-dockarea-drop {
-        background: var(--dockarea-drop-background, #ababab);
+        background: var(--iui-dockarea-drop-background, #ababab);
     }
 
     /* Disabled State */
     .iui-dockarea-disabled {
-        opacity: var(--dockarea-disabled-opacity, 0.75);
+        opacity: var(--iui-dockarea-disabled-opacity, 0.75);
         pointer-events: none;
     }
 `;

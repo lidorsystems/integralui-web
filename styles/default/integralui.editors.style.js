@@ -61,8 +61,8 @@ export const iuiEditorsDefaultStyle = css`
     }
     .iui-editor-label {
         display: inline-block;
-        margin: var(--editor-label-margin, 0);
-        padding: var(--editor-label-padding, 2px 0 0 0);
+        margin: var(--iui-editor-label-margin, 0);
+        padding: var(--iui-editor-label-padding, 2px 0 0 0);
     }
     .iui-editor-numeric {
         background: transparent;
@@ -84,47 +84,47 @@ export const iuiEditorsDefaultStyle = css`
         position: relative;
     }
     .iui-editor-progress {
-        background: var(--editor-progress-background, white);
-        border: var(--editor-progress-border, thin solid #cecece);
-        border-radius: var(--editor-progress-border-radius, 3px);
+        background: var(--iui-editor-progress-background, white);
+        border: var(--iui-editor-progress-border, thin solid #cecece);
+        border-radius: var(--iui-editor-progress-border-radius, 3px);
         color: black;
         cursor: default;
-        margin: var(--editor-progress-margin, 2px 0 0 0);
+        margin: var(--iui-editor-progress-margin, 2px 0 0 0);
         overflow: hidden;
-        padding: var(--editor-progress-padding, 2px);
+        padding: var(--iui-editor-progress-padding, 2px);
         position: relative;
-        width: var(--editor-progress-width, calc(100% - 45px));
+        width: var(--iui-editor-progress-width, calc(100% - 45px));
     }
     .iui-editor-progress-full {
         width: auto;
     }
     .iui-editor-progress-content {
-        background: var(--editor-progress-content-background, #bebebe);
-        border-radius: var(--editor-progress-content-border-radius, 3px);
-        height: var(--editor-progress-content-height, 12px);
+        background: var(--iui-editor-progress-content-background, #bebebe);
+        border-radius: var(--iui-editor-progress-content-border-radius, 3px);
+        height: var(--iui-editor-progress-content-height, 12px);
     }
     .iui-editor-progress-label {
-        background: var(--editor-progress-label-background, transparent);
+        background: var(--iui-editor-progress-label-background, transparent);
         display: block;
         position: absolute;
-        right: var(--editor-progress-label-right, 2px);
+        right: var(--iui-editor-progress-label-right, 2px);
         text-align: right;
-        top: var(--editor-progress-label-top, 2px);
-        width: var(--editor-progress-label, 36px);
+        top: var(--iui-editor-progress-label-top, 2px);
+        width: var(--iui-editor-progress-label, 36px);
         z-index: 3;
     }
     .iui-editor-rating {
         padding: 0;
     }
     .iui-editor-text {
-        background: var(--editor-text-background, white);
+        background: var(--iui-editor-text-background, white);
         border: 0;
         font: inherit;
         font-family: inherit;
-        height: var(--editor-text-height, calc(100% - 2px));
-        margin: var(--editor-text-margin, -2px 0 0 -2px);
-        padding: var(--editor-text-padding, 3px);
-        width: var(--editor-text-width, calc(100% - 2px));
+        height: var(--iui-editor-text-height, calc(100% - 2px));
+        margin: var(--iui-editor-text-margin, -2px 0 0 -2px);
+        padding: var(--iui-editor-text-padding, 3px);
+        width: var(--iui-editor-text-width, calc(100% - 2px));
     }
     /*.iui-editor-text::-webkit-search-cancel-button {
         position: relative;

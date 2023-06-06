@@ -29,7 +29,7 @@ declare class IntegralUISplitImage extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -81,78 +81,14 @@ declare class IntegralUISplitImage extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _isHovered: boolean;
-    _isSplitterActive: boolean;
-    _contentSize: {
-        width: number;
-        height: number;
-    };
-    _ctrlPadding: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    };
-    _ctrlPageRect: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-        height: number;
-        width: number;
-        x: number;
-        y: number;
-    };
-    _currentOrientation: string;
-    _currentSplitterDistance: number;
-    _currentSplitterSize: number;
-    _maxPos: {
-        x: number;
-        y: number;
-    };
-    _splitterStartPos: {
-        x: number;
-        y: number;
-    };
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    };
-    _generalClassName: string;
-    _splitterClassName: string;
-    _windowMouseUp(e: any): void;
     set orientation(arg: string);
     get orientation(): string;
     set splitterDistance(arg: number);
     get splitterDistance(): number;
     set splitterSize(arg: any);
     get splitterSize(): any;
-    _ctrlMouseLeave(e: any): void;
-    _ctrlMouseMove(e: any): void;
-    _splitterMouseDown(e: any): void;
-    _keepSplitterPosInRange(value: any): number;
-    _processUpdateLayout(): Promise<any>;
-    _updateContentPos(): void;
-    _getBlockStyle(): {
-        left: string;
-        top: string;
-    };
-    _getSplitterClass(): {} | undefined;
-    _getSplitterStyle(): {
-        top: string;
-        left: string;
-        width: string;
-        height: string;
-    };
-    _updateSplitterClass(): void;
-    _splitterClass: {} | undefined;
+    refresh(): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _slotChange(e: any): void;
-    _blockElem1: Element | null | undefined;
-    _contentElem1: Node | undefined;
-    _blockElem2: Element | null | undefined;
-    _contentElem2: Node | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

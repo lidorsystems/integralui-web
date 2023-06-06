@@ -69,10 +69,10 @@ const iuiBaseDefaultStyle = css`
     }
 
     .iui-draglist {
-        background: var(--draglist-background, white);
-        border: var(--draglist-border, thin solid transparent);
-        border-color: var(--draglist-border-color, transparent);
-        box-shadow: var(--draglist-box-shadow, 0 0 0 transparent);
+        background: var(--iui-draglist-background, white);
+        border: var(--iui-draglist-border, thin solid transparent);
+        border-color: var(--iui-draglist-border-color, transparent);
+        box-shadow: var(--iui-draglist-box-shadow, 0 0 0 transparent);
         margin: 0;
         opacity: 0.9;
         overflow: hidden;
@@ -83,8 +83,8 @@ const iuiBaseDefaultStyle = css`
         z-index: 999;
     }
     .iui-draglist-active {
-        border-color: var(--draglist-active-border-color, #e5e5e5);
-        box-shadow: var(--draglist-active-box-shadow, 0 0 3px #d5d5d5);
+        border-color: var(--iui-draglist-active-border-color, #e5e5e5);
+        box-shadow: var(--iui-draglist-active-box-shadow, 0 0 3px #d5d5d5);
     }
     .iui-draglist-copy {
         background: url(../../icons/copy.ico);
@@ -103,9 +103,9 @@ const iuiBaseDefaultStyle = css`
         zIndex: 999;
     }
     .iui-draglist-corner-block {
-        background: var(--draglist-corner-background, #f5f5f5);
-        border: var(--draglist-corner-border, thin solid #e5e5e5);
-        border-color: var(--draglist-corner-border-color, #e5e5e5);
+        background: var(--iui-draglist-corner-background, #f5f5f5);
+        border: var(--iui-draglist-corner-border, thin solid #e5e5e5);
+        border-color: var(--iui-draglist-corner-border-color, #e5e5e5);
         opacity: 1;
         position: absolute;
         top: -35%;
@@ -116,7 +116,7 @@ const iuiBaseDefaultStyle = css`
         zIndex: 0;
     }
     .iui-draglist-num {
-        color: var(--draglist-num-color, black);
+        color: var(--iui-draglist-num-color, black);
         padding: 3px;
         position: relative;
         zIndex: 1;

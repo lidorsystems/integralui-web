@@ -18,3 +18,4 @@ declare class IntegralUIFilterService {
     match(value: any, conditions: any, formula: any, tree: any, caseSensitive: any): any;
     filter(list: any, field: any, conditions: any, formula: any, tree: any, caseSensitive: any): any[];
 }
+//# sourceMappingURL=integralui.filter.service.d.ts.map

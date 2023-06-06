@@ -1,6 +1,6 @@
 /*
   filename: react.integralui.select.js
-  version : 23.1.0
+  version : 23.2.0
   Copyright © 2016-2023 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

@@ -2,11 +2,11 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiGridLightStyle = css`
     .iui-grid {
-        border-color:  var(--grid-border-color, #d9d9d9);
-        color: var(--grid-color, black);
+        border-color:  var(--iui-grid-border-color, #d9d9d9);
+        color: var(--iui-grid-color, black);
     }
     .iui-grid-block-left, .iui-grid-block-right {
-        background: var(--grid-block-fixed-background, #f9f9f9);
+        background: var(--iui-grid-block-fixed-background, #f9f9f9);
     }
     .iui-grid-block-top-left .iui-grid-column-header, 
     .iui-grid-block-top-left .iui-grid-column-filter, 
@@ -14,9 +14,9 @@ export const iuiGridLightStyle = css`
     .iui-grid-block-top-right .iui-grid-column-header,
     .iui-grid-block-top-right .iui-grid-column-filter, 
     .iui-grid-block-top-right .iui-grid-column-footer {
-        background: var(--grid-column-fixed-background, #eeeeee);
-        border: var(--grid-column-fixed-border, thin solid transparent);
-        color: var(--grid-column-fixed-color, black);
+        background: var(--iui-grid-column-fixed-background, #eeeeee);
+        border: var(--iui-grid-column-fixed-border, thin solid transparent);
+        color: var(--iui-grid-column-fixed-color, black);
     }
     .iui-grid-block-top-left .iui-grid-column-header-hovered, 
     .iui-grid-block-top-right .iui-grid-column-header-hovered {
@@ -34,54 +34,54 @@ export const iuiGridLightStyle = css`
         border: thin solid #bebebe;
     }
     .iui-grid-column-header, .iui-grid-column-filter, .iui-grid-column-footer {
-        background: var(--grid-column-background, #f5f5f5);
-        border-color: var(--grid-column-border-color, transparent);
+        background: var(--iui-grid-column-background, #f5f5f5);
+        border-color: var(--iui-grid-column-border-color, transparent);
         border-right: thin solid transparent;
-        color: var(--grid-column-color, #49678f);
+        color: var(--iui-grid-column-color, #49678f);
     }
     .iui-grid-column-filter {
-        background: var(--grid-column-filter-background, transparent);
+        background: var(--iui-grid-column-filter-background, transparent);
     }
     .iui-grid-column-header, .iui-grid-column-filter {
         border-bottom: thin solid #efefef;
     }
     .iui-grid-column-footer {
         border-top: thin solid #efefef;
-        color: var(--grid-column-footer-color, #323232);
+        color: var(--iui-grid-column-footer-color, #323232);
     }
     .iui-grid-column-header-hovered {
-        background: var(--grid-column-header-hovered-background, #e9e9e9);
-        border-color: var(--grid-colum-header-hovered-border-color, #e9e9e9);
-        color: var(--grid-column-header-hovered-color, #49678f);
+        background: var(--iui-grid-column-header-hovered-background, #e9e9e9);
+        border-color: var(--iui-grid-colum-header-hovered-border-color, #e9e9e9);
+        color: var(--iui-grid-column-header-hovered-color, #49678f);
     }
     .iui-grid-column-header-selected {
-        background: var(--grid-column-header-hovered-background, #d9d9d9);
-        border-color: var(--grid-colum-header-hovered-border-color, #d9d9d9);
-        color: var(--grid-column-header-hovered-color, #3d5576);
+        background: var(--iui-grid-column-header-hovered-background, #d9d9d9);
+        border-color: var(--iui-grid-colum-header-hovered-border-color, #d9d9d9);
+        color: var(--iui-grid-column-header-hovered-color, #3d5576);
     }
     .iui-grid-column-header-cell-selected {
         background: transparent;
     }
     .iui-grid-row, .iui-grid-row-fixed {
-        color: var(--grid-row-color, #646464);
+        color: var(--iui-grid-row-color, #646464);
     }
     .iui-grid-row-hovered {
-        background: var(--grid-row-hovered-background, #d9edfd);
-        border-color: var(--grid-row-hovered-border-color, #d9edfd);
-        color: var(--grid-row-hovered-color, black);
+        background: var(--iui-grid-row-hovered-background, #d9edfd);
+        border-color: var(--iui-grid-row-hovered-border-color, #d9edfd);
+        color: var(--iui-grid-row-hovered-color, black);
     }
     @keyframes iui-grid-row-hovered-animate-enter {
-        0% { background: var(--grid-animation-row-hovered-background-0, transparent); }
-        100% { background: var(--grid-animation-row-hovered-background-100, #d9edfd); }
+        0% { background: var(--iui-grid-animation-row-hovered-background-0, transparent); }
+        100% { background: var(--iui-grid-animation-row-hovered-background-100, #d9edfd); }
     }
     .iui-grid-row-selected {
-        background: var(--grid-row-selected-background, #a5d3fa);
-        border-color: var(--grid-row-selected-border-color, #a5d3fa);
-        color: var(--grid-row-selected-color, black);
+        background: var(--iui-grid-row-selected-background, #a5d3fa);
+        border-color: var(--iui-grid-row-selected-border-color, #a5d3fa);
+        color: var(--iui-grid-row-selected-color, black);
     }
     @keyframes iui-grid-row-selected-animate-enter {
-        0% { background: var(--grid-animation-row-selected-background-0, #d9edfd); }
-        100% { background: var(--grid-animation-row-selected-background-100, #a5d3fa); }
+        0% { background: var(--iui-grid-animation-row-selected-background-0, #d9edfd); }
+        100% { background: var(--iui-grid-animation-row-selected-background-100, #a5d3fa); }
     }
     .iui-grid-row-cell:first-child {
         border-left: thin solid transparent;
@@ -117,24 +117,24 @@ export const iuiGridLightStyle = css`
 
     /* Grouping */
     .iui-grid-grouping-panel {
-        background: var(--grid-grouping-panel-background, #f5f5f5);
-        border-bottom: var(--grid-grouping-panel-border-bottom, thin solid #d9d9d9);
+        background: var(--iui-grid-grouping-panel-background, #f5f5f5);
+        border-bottom: var(--iui-grid-grouping-panel-border-bottom, thin solid #d9d9d9);
     }
     .iui-grid-grouping-panel-item {
-        background: var(--grid-grouping-panel-item-background, #e2e2e2);
-        border: var(--grid-grouping-panel-item-border, thin solid #e2e2e2);
+        background: var(--iui-grid-grouping-panel-item-background, #e2e2e2);
+        border: var(--iui-grid-grouping-panel-item-border, thin solid #e2e2e2);
     }
     .iui-grid-grouping-panel-toolbar-button-add {
         background: #e2e2e2;
         border: thin solid #e2e2e2;
     }
     .iui-grid-grouping-marker::before {
-        border: var(--grid-grouping-marker-before-border, 6px solid #e2e2e2);
-        border-color: var(--grid-grouping-marker-before-border-color, transparent transparent transparent #e2e2e2);
+        border: var(--iui-grid-grouping-marker-before-border, 6px solid #e2e2e2);
+        border-color: var(--iui-grid-grouping-marker-before-border-color, transparent transparent transparent #e2e2e2);
     }
     .iui-grid-grouping-marker::after {
-        border: var(--grid-grouping-marker-after-border, 6px solid #e2e2e2);
-        border-color: var(--grid-grouping-marker-after-border-color, transparent transparent transparent #e2e2e2);
+        border: var(--iui-grid-grouping-marker-after-border, 6px solid #e2e2e2);
+        border-color: var(--iui-grid-grouping-marker-after-border-color, transparent transparent transparent #e2e2e2);
     }
     .iui-grid-grouping-panel-dropdown-list li:hover {
         background: #e5e5e5;
@@ -165,13 +165,22 @@ export const iuiGridLightStyle = css`
     }
 
     .iui-grid-form-editor-text {
-        border: 1px solid #d9d9d9;
-        box-shadow: 0 0 0 1px transparent;
-        border-radius: 3px;
+        border: var(--iui-grid-form-editor-text-border, 1px solid #d9d9d9);
+        border-color: var(--iui-grid-form-editor-text-border-color, #d9d9d9);
+        border-radius: var(--iui-grid-form-editor-text-border-radius, 3px);
+        box-shadow: var(--iui-grid-form-editor-text-box-shadow, 0 0 0 1px transparent);
     }
     .iui-grid-form-editor-text:focus {
-        border: 1px solid #6ea9db;
-        box-shadow: 0 0 0 1px #6ea9db;
+        border: var(--iui-grid-form-editor-text-focus-border, 1px solid #6ea9db);
+        border-color: var(--iui-grid-form-editor-text-focus-border-color, #6ea9db);
+        box-shadow: var(--iui-grid-form-editor-text-focus-box-shadow, 0 0 0 1px #6ea9db);
         outline: none;
+    }
+    .iui-grid-form-editor-invalid {
+        border-color: var(--iui-grid-form-editor-invalid-border-color, #c45151);
+    }
+    .iui-grid-form-editor-invalid:focus {
+        border-color: var(--iui-grid-form-editor-invalid-border-color, #c45151);
+        box-shadow: var(--iui-grid-form-editor-invalid-box-shadow, 0 0 0 1px #c45151);
     }
 `;

@@ -3,32 +3,32 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiDialogDefaultStyle = css`
     .iui-dialog {
-        background: var(--dialog-background, #ffffff);
-        border: var(--dialog-border, 0);
-        border-color:  var(--dialog-border-color, transparent);
-        border-radius: var(--dialog-border-radius, 1px);
-        border-width: var(--dialog-border-width, thin);
+        background: var(--iui-dialog-background, #ffffff);
+        border: var(--iui-dialog-border, 0);
+        border-color:  var(--iui-dialog-border-color, transparent);
+        border-radius: var(--iui-dialog-border-radius, 1px);
+        border-width: var(--iui-dialog-border-width, thin);
         bottom: 0;
-        box-shadow: var(--dialog-box-shadow, 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12));
-        color: var(--dialog-color, black);
-        cursor: var(--dialog-cursor, default);
-        display: var(--dialog-display, block);
-        float: var(--dialog-float, none);
-        height: var(--dialog-height, 400px);
+        box-shadow: var(--iui-dialog-box-shadow, 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12));
+        color: var(--iui-dialog-color, black);
+        cursor: var(--iui-dialog-cursor, default);
+        display: var(--iui-dialog-display, block);
+        float: var(--iui-dialog-float, none);
+        height: var(--iui-dialog-height, 400px);
         left: 0;
-        max-width: var(--dialog-max-width, 800px);
-        min-height: var(--dialog-min-height, 200px);
-        min-width: var(--dialog-min-width, 200px);
-        opacity: var(--dialog-opacity, 1);
+        max-width: var(--iui-dialog-max-width, 800px);
+        min-height: var(--iui-dialog-min-height, 200px);
+        min-width: var(--iui-dialog-min-width, 200px);
+        opacity: var(--iui-dialog-opacity, 1);
         overflow: hidden;
-        margin: var(--dialog-margin, auto);
-        padding: var(--dialog-padding, 10px);
-        position: var(--dialog-position, fixed);
+        margin: var(--iui-dialog-margin, auto);
+        padding: var(--iui-dialog-padding, 10px);
+        position: var(--iui-dialog-position, fixed);
         right: 0;
         top: 0;
         white-space: nowrap;
-        width: var(--dialog-width, 600px);
-        z-index: var(--dialog-z-index, 9999999);
+        width: var(--iui-dialog-width, 600px);
+        z-index: var(--iui-dialog-z-index, 9999999);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -40,13 +40,13 @@ export const iuiDialogDefaultStyle = css`
         box-shadow: 5px 5px 20px #808080;
     }
     .iui-dialog-overlay {
-        background: var(--dialog-overlay-background, black);
+        background: var(--iui-dialog-overlay-background, black);
         bottom: 0;
         left: 0;
-        margin: var(--dialog-overlay-margin, 0);
-        opacity: var(--dialog-overlay-opacity, 0.2);
-        padding: var(--dialog-overlay-padding, 0);
-        position: var(--dialog-overlay-position, fixed);
+        margin: var(--iui-dialog-overlay-margin, 0);
+        opacity: var(--iui-dialog-overlay-opacity, 0.2);
+        padding: var(--iui-dialog-overlay-padding, 0);
+        position: var(--iui-dialog-overlay-position, fixed);
         top: 0;
         right: 0;
         z-index: 9999979;
@@ -75,7 +75,7 @@ export const iuiDialogDefaultStyle = css`
 
     /* Disabled State */
     .iui-dialog-disabled {
-        opacity: var(--dialog-disabled-opacity, 0.75);
+        opacity: var(--iui-dialog-disabled-opacity, 0.75);
         pointer-events: none;
     }
 

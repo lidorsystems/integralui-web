@@ -3,23 +3,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiMenuItemDefaultStyle = css`
     .iui-menu {
-        background: var(--menu-background, #f5f5f5);
-        border: var(--menu-border, 0);
-        border-color:  var(--menu-border-color, transparent);
-        border-radius: var(--menu-border-radius, 1px);
-        border-width: var(--menu-border-width, thin);
-        color: var(--menu-color, black);
-        cursor: var(--menu-cursor, default);
-        display: var(--menu-display, block);
-        float: var(--menu-float, none);
-        height: var(--menu-height, auto);
-        margin: var(--menu-margin, 0);
-        opacity: var(--menu-opacity, 1);
+        background: var(--iui-menu-background, #f5f5f5);
+        border: var(--iui-menu-border, 0);
+        border-color:  var(--iui-menu-border-color, transparent);
+        border-radius: var(--iui-menu-border-radius, 1px);
+        border-width: var(--iui-menu-border-width, thin);
+        color: var(--iui-menu-color, black);
+        cursor: var(--iui-menu-cursor, default);
+        display: var(--iui-menu-display, block);
+        float: var(--iui-menu-float, none);
+        height: var(--iui-menu-height, auto);
+        margin: var(--iui-menu-margin, 0);
+        opacity: var(--iui-menu-opacity, 1);
         overflow: hidden;
-        padding: var(--menu-padding, 0);
-        position: var(--menu-position, relative);
-        width: var(--menu-width, auto);
-        z-index: var(--menu-z-index, auto);
+        padding: var(--iui-menu-padding, 0);
+        position: var(--iui-menu-position, relative);
+        width: var(--iui-menu-width, auto);
+        z-index: var(--iui-menu-z-index, auto);
 
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -53,10 +53,10 @@ export const iuiMenuItemDefaultStyle = css`
         display: inline-block;
         position: relative;
         list-style-type: none;
-        width: var(--menuitem-root-margin, 0 3px);
+        width: var(--iui-menuitem-root-margin, 0 3px);
         padding: 5px 6px 5px 4px;
         white-space: nowrap;
-        width: var(--menuitem-root-width, auto);
+        width: var(--iui-menuitem-root-width, auto);
     }
     .iui-menuitem-root-vertical, .iui-contextmenuitem-root-vertical
     {
@@ -290,7 +290,7 @@ export const iuiMenuItemDefaultStyle = css`
         padding: 3px 4px 3px 2px;
         position: relative;
         white-space: nowrap;
-        width: var(--menuitem-width, auto);
+        width: var(--iui-menuitem-width, auto);
     }
     .iui-contextmenuitem {
         padding: 5px 6px 5px 4px;
@@ -321,6 +321,19 @@ export const iuiMenuItemDefaultStyle = css`
         margin: 0;
         padding: 0;
         height: 1px;
+    }
+    .iui-menuitem-separator-label {
+        background: white;
+        display: inline-block;
+        padding: 5px 4px 5px 0;
+        position: relative;
+        z-index: 1;
+    }
+    .iui-menuitem-inline-separator {
+        position: absolute;
+        top: 50%;
+        width: calc(100% - 6px);
+        z-index: 0;
     }
     .iui-menu-load
     {

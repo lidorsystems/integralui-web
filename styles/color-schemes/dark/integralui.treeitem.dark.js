@@ -2,17 +2,17 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiTreeItemDarkStyle = css`
     .iui-treeitem {
-        color: var(--treeitem-color, #cccccc);
+        color: var(--iui-treeitem-color, #cccccc);
     }
     .iui-treeitem-hovered, .iui-treeitem-content-hovered {
-        background: var(--treeitem-hovered-background, #2a2d2e);
-        border-color: var(--treeitem-hovered-border-color, #2a2d2e);
-        color: var(--treeitem-hovered-color, #eeeeee);
+        background: var(--iui-treeitem-hovered-background, #2a2d2e);
+        border-color: var(--iui-treeitem-hovered-border-color, #2a2d2e);
+        color: var(--iui-treeitem-hovered-color, #eeeeee);
     }
     .iui-treeitem-selected, .iui-treeitem-content-selected {
-        background: var(--treeitem-selected-background, #0a4369);
-        border-color: var(--treeitem-selected-border-color, #0a4369);
-        color: var(--treeitem-selected-color, white);
+        background: var(--iui-treeitem-selected-background, #0a4369);
+        border-color: var(--iui-treeitem-selected-border-color, #0a4369);
+        color: var(--iui-treeitem-selected-color, white);
     }
     .iui-treeitem-selected .iui-treeitem-expand-box, .iui-treeitem-content-selected .iui-treeitem-expand-box {
         opacity: 1;

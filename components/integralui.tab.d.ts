@@ -29,7 +29,7 @@ declare class IntegralUITab extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -73,7 +73,8 @@ declare class IntegralUITab extends IntegralUIBase {
             attribute: string;
             reflect: boolean;
         };
-        animation: {
+        contentAnimation: {
+            attribute: string;
             converter: {
                 fromAttribute: (value: any) => string;
                 toAttribute: (value: any) => "None" | "Fade" | "Slide";
@@ -93,34 +94,13 @@ declare class IntegralUITab extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _currentAnimation: any;
-    _isDragAllowed: any;
-    _isDropAllowed: any;
-    _contentOverflow: any;
-    _currentIcon: any;
-    _currentText: any;
-    _currentZIndex: any;
-    _isContentHidden: any;
-    _parentCtrl: any;
-    _isSelected: any;
-    _topPos: any;
-    _leftPos: any;
-    _elemWidth: string | undefined;
-    _elemHeight: string | undefined;
-    _elemOrder: number | undefined;
-    _elemBorderColor: string | undefined;
-    _contentOpacity: any;
-    _contentClass: {} | undefined;
-    _contentClassName: string | undefined;
-    _headerClassName: string | undefined;
-    _initContent(): void;
     setParent(cmp: any): void;
     set allowDrag(arg: any);
     get allowDrag(): any;
     set allowDrop(arg: any);
     get allowDrop(): any;
-    set animation(arg: any);
-    get animation(): any;
+    set contentAnimation(arg: any);
+    get contentAnimation(): any;
     set icon(arg: any);
     get icon(): any;
     set selected(arg: any);
@@ -152,13 +132,8 @@ declare class IntegralUITab extends IntegralUIBase {
         };
     };
     updateZIndex(value: any): void;
-    _updateContentClass(): void;
-    _getContentClass(): {} | undefined;
-    _getContentStyle(value: any): any;
-    _getHeaderStyle(value: any): any;
-    _getCurrentTabStyle(): null;
+    firstUpdated(props: any): void;
+    refresh(): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _contentElem: Element | null | undefined;
-    _contentSlotElem: Node | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

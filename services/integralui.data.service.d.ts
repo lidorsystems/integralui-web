@@ -34,3 +34,4 @@ declare class IntegralUIDataService {
     getUniqueId(separator: any): string;
     searchObj(value: any, list: any, fields: any, type: any): any;
 }
+//# sourceMappingURL=integralui.data.service.d.ts.map

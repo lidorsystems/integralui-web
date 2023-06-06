@@ -25,8 +25,8 @@ export const iuiMenuItemDarkStyle = css`
         color: #cccccc;
     }
     .iui-contextmenuitem-root {
-        border-color: var(--contextmenuitem-root-border-color, transparent);
-        color: var(--contextmenuitem-root-color, #cccccc);
+        border-color: var(--iui-contextmenuitem-root-border-color, transparent);
+        color: var(--iui-contextmenuitem-root-color, #cccccc);
     }
     .iui-menuitem-root-hovered, .iui-menuitem-root-selected, .iui-contextmenuitem-hovered, .iui-contextmenuitem-selected
     {
@@ -151,8 +151,11 @@ export const iuiMenuItemDarkStyle = css`
         color: #cccccc;
     }
     .iui-contextmenuitem-root-hovered, .iui-contextmenuitem-root-selected {
-        background: var(--contextmenuitem-root-hovered-background, #1177bb);
-        border-color: var(--contextmenuitem-root-hovered-border-color, #1177bb);
-        color: var(--contextmenuitem-root-hovered-color, white);
+        background: var(--iui-contextmenuitem-root-hovered-background, #1177bb);
+        border-color: var(--iui-contextmenuitem-root-hovered-border-color, #1177bb);
+        color: var(--iui-contextmenuitem-root-hovered-color, white);
+    }
+    .iui-menuitem-separator-label {
+        background: #252526;
     }
 `;

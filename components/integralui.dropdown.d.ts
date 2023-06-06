@@ -29,7 +29,7 @@ declare class IntegralUIDropDown extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -94,26 +94,10 @@ declare class IntegralUIDropDown extends IntegralUIBase {
             type: ObjectConstructor;
         };
         value: {
-            type: NumberConstructor;
+            type: any;
             reflect: boolean;
         };
     };
-    _closeTimer: any;
-    _currentAnimationSpeed: any;
-    _currentDirection: any;
-    _openTimer: any;
-    _keepActive: boolean | undefined;
-    _currentValue: any;
-    _ctrlDisplay: any;
-    _ctrlOpacity: any;
-    _ctrlPos: any;
-    _contentDisplay: string | undefined;
-    _contentOpacity: number | undefined;
-    _contentPos: {
-        top: number;
-        left: number;
-    } | undefined;
-    _currentContentTemplate: any;
     set animationSpeed(arg: any);
     get animationSpeed(): any;
     set contentTemplate(arg: any);
@@ -128,25 +112,11 @@ declare class IntegralUIDropDown extends IntegralUIBase {
     get position(): any;
     set value(arg: any);
     get value(): any;
-    _onBlur(): void;
     getContent(): Element | null;
     close(): void;
-    _closeDown(): void;
-    _closeUp(): void;
-    _getAnimationFactor(isClosing: any): number;
     open(): void;
-    _openDown(): void;
-    _openUp(): void;
-    _removeCloseTimer(): void;
-    _removeOpenTimer(): void;
-    _getContentStyle(): {
-        opacity: number | undefined;
-        left: string;
-        position: string | undefined;
-        top: string;
-    };
-    updateLayout(optimal?: any): Promise<any>;
+    firstUpdated(props: any): void;
+    refresh(): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _contentElem: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

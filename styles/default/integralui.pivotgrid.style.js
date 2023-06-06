@@ -3,23 +3,23 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiPivotGridDefaultStyle = css`
     .iui-pivotgrid {
-        background: var(--pivotgrid-background, white);
-        border: var(--pivotgrid-border, thin solid #cecece);
-        border-color:  var(--pivotgrid-border-color, #cecece);
-        border-radius: var(--pivotgrid-border-radius, 1px);
-        border-width: var(--pivotgrid-border-width, thin);
-        color: var(--pivotgrid-color, black);
-        cursor: var(--pivotgrid-cursor, default);
-        display: var(--pivotgrid-display, block);
-        float: var(--pivotgrid-float, none);
-        height: var(--pivotgrid-height, auto);
-        margin: var(--pivotgrid-margin, 0);
-        opacity: var(--pivotgrid-opacity, 1);
+        background: var(--iui-pivotgrid-background, white);
+        border: var(--iui-pivotgrid-border, thin solid #cecece);
+        border-color:  var(--iui-pivotgrid-border-color, #cecece);
+        border-radius: var(--iui-pivotgrid-border-radius, 1px);
+        border-width: var(--iui-pivotgrid-border-width, thin);
+        color: var(--iui-pivotgrid-color, black);
+        cursor: var(--iui-pivotgrid-cursor, default);
+        display: var(--iui-pivotgrid-display, block);
+        float: var(--iui-pivotgrid-float, none);
+        height: var(--iui-pivotgrid-height, auto);
+        margin: var(--iui-pivotgrid-margin, 0);
+        opacity: var(--iui-pivotgrid-opacity, 1);
         overflow: hidden;
-        padding: var(--pivotgrid-padding, 0);
-        position: var(--pivotgrid-position, relative);
-        width: var(--pivotgrid-width, auto);
-        z-index: var(--pivotgrid-z-index, auto);
+        padding: var(--iui-pivotgrid-padding, 0);
+        position: var(--iui-pivotgrid-position, relative);
+        width: var(--iui-pivotgrid-width, auto);
+        z-index: var(--iui-pivotgrid-z-index, auto);
 
         -webkit-touch-callout: none;
         -webkit-user-select: none;
@@ -29,7 +29,7 @@ export const iuiPivotGridDefaultStyle = css`
         user-select: none;
     }
     .iui-pivotgrid table {
-        color: var(--pivotgrid-color, black);
+        color: var(--iui-pivotgrid-color, black);
     }
     .iui-pivotgrid div { /*Compatibility with Bootstrap */
         -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
@@ -40,7 +40,7 @@ export const iuiPivotGridDefaultStyle = css`
         direction: rtl;
     }
     .iui-pivotgrid-block {
-        background: var(--pivotgrid-background, #white);
+        background: var(--iui-pivotgrid-background, #white);
         margin: 0;
         overflow: hidden;
         padding: 0;
@@ -48,7 +48,7 @@ export const iuiPivotGridDefaultStyle = css`
         z-index: 0;
     }
     .iui-pivotgrid-block-left {
-        background: var(--pivotgrid-block-fixed-background, #f5f5f5);
+        background: var(--iui-pivotgrid-block-fixed-background, #f5f5f5);
         left: 0;
         margin: 0;
         overflow: hidden;
@@ -58,7 +58,7 @@ export const iuiPivotGridDefaultStyle = css`
         z-index: 4;
     }
     .iui-pivotgrid-block-right {
-        background: var(--pivotgrid-block-fixed-background, #f5f5f5);
+        background: var(--iui-pivotgrid-block-fixed-background, #f5f5f5);
         margin: 0;
         overflow: hidden;
         padding: 0;
@@ -141,35 +141,40 @@ export const iuiPivotGridDefaultStyle = css`
         padding: 0 15px 0 0;
     }
     .iui-pivotgrid-column-header, .iui-pivotgrid-column-footer {
-        background: var(--pivotgrid-column-background, #ededed);
-        border: var(--pivotgrid-column-border, thin solid #d5d5d5);
-        border-color: var(--pivotgrid-column-border-color, #d5d5d5);
-        color: var(--pivotgrid-column-color, black);
+        background: var(--iui-pivotgrid-column-background, #ededed);
+        border: var(--iui-pivotgrid-column-border, thin solid #d5d5d5);
+        border-color: var(--iui-pivotgrid-column-border-color, #d5d5d5);
+        color: var(--iui-pivotgrid-column-color, black);
         margin: 0;
-        padding: var(--pivotgrid-column-padding, 3px 0);
+        padding: var(--iui-pivotgrid-column-padding, 3px 0);
         position: relative;
         vertical-align:middle;
         white-space: nowrap;
         z-index: 1;
     }
+    .iui-pivotgrid-column-header-content {
+        overflow: hidden;
+        text-overflow: var(--iui-pivotgrid-column-header-text-overflow, ellipsis);
+        white-space: var(--iui-pivotgrid-column-header-white-space, nowrap);
+    }
     .iui-pivotgrid-block-top-left .iui-pivotgrid-column-header, 
     .iui-pivotgrid-block-top-left .iui-pivotgrid-column-footer, 
     .iui-pivotgrid-block-top-right .iui-pivotgrid-column-header, 
     .iui-pivotgrid-block-top-right .iui-pivotgrid-column-footer {
-        background: var(--pivotgrid-column-fixed-background, #dddddd);
+        background: var(--iui-pivotgrid-column-fixed-background, #dddddd);
         border: thin solid #c5c5c5;
     }
     .iui-pivotgrid-column-header-hovered {
-        animation-name: var(--pivotgrid-column-header-hovered-animation-name, none);
-        background: var(--pivotgrid-column-header-hovered-background, #d5d5d5);
-        border-color: var(--pivotgrid-colum-header-hovered-border-color, #cecece);
-        color: var(--pivotgrid-column-header-hovered-color, black);
+        animation-name: var(--iui-pivotgrid-column-header-hovered-animation-name, none);
+        background: var(--iui-pivotgrid-column-header-hovered-background, #d5d5d5);
+        border-color: var(--iui-pivotgrid-colum-header-hovered-border-color, #cecece);
+        color: var(--iui-pivotgrid-column-header-hovered-color, black);
     }
     .iui-pivotgrid-column-header-selected {
-        animation-name: var(--pivotgrid-column-header-selected-animation-name, none);
-        background: var(--pivotgrid-column-header-selected-background, #bebebe);
-        border-color: var(--pivotgrid-colum-header-selected-border-color, #aeaeae);
-        color: var(--pivotgrid-column-header-selected-color, black);
+        animation-name: var(--iui-pivotgrid-column-header-selected-animation-name, none);
+        background: var(--iui-pivotgrid-column-header-selected-background, #bebebe);
+        border-color: var(--iui-pivotgrid-colum-header-selected-border-color, #aeaeae);
+        color: var(--iui-pivotgrid-column-header-selected-color, black);
     }
     .iui-pivotgrid-column-header > div, .iui-pivotgrid-column-footer > div, .iui-pivotgrid-row-cell > div {
         border: 2px solid transparent;
@@ -188,25 +193,25 @@ export const iuiPivotGridDefaultStyle = css`
         cursor: default;
     }
     .iui-pivotgrid-row, .iui-pivotgrid-row-fixed {
-        color: var(--pivotgrid-row-color, black);
+        color: var(--iui-pivotgrid-row-color, black);
         margin: 0;
         padding: 0;
         white-space: nowrap;
         z-index: 0;
     }
     .iui-pivotgrid-row-hovered {
-        animation-name: var(--pivotgrid-row-hovered-animation-name, none);
-        background: var(--pivotgrid-row-hovered-background, #f5f5f5);
-        border: var(--pivotgrid-row-hovered-border, thin solid #efefef);
-        border-color: var(--pivotgrid-row-hovered-border-color, #efefef);
-        color: var(--pivotgrid-row-hovered-color, black);
+        animation-name: var(--iui-pivotgrid-row-hovered-animation-name, none);
+        background: var(--iui-pivotgrid-row-hovered-background, #f5f5f5);
+        border: var(--iui-pivotgrid-row-hovered-border, thin solid #efefef);
+        border-color: var(--iui-pivotgrid-row-hovered-border-color, #efefef);
+        color: var(--iui-pivotgrid-row-hovered-color, black);
     }
     .iui-pivotgrid-row-selected {
-        animation-name: var(--pivotgrid-row-selected-animation-name, none);
-        background: var(--pivotgrid-row-selected-background, #e5e5e5);
-        border: var(--pivotgrid-row-selected-border, thin solid #dedede);
-        border-color: var(--pivotgrid-row-selected-border-color, #dedede);
-        color: var(--pivotgrid-row-selected-color, black);
+        animation-name: var(--iui-pivotgrid-row-selected-animation-name, none);
+        background: var(--iui-pivotgrid-row-selected-background, #e5e5e5);
+        border: var(--iui-pivotgrid-row-selected-border, thin solid #dedede);
+        border-color: var(--iui-pivotgrid-row-selected-border-color, #dedede);
+        color: var(--iui-pivotgrid-row-selected-color, black);
     }
     .iui-pivotgrid-row-cell {
         border-left: thin solid transparent;
@@ -233,7 +238,7 @@ export const iuiPivotGridDefaultStyle = css`
         display: inline-block;
         width: 16px;
         height: 16px;
-        margin: var(--pivotgrid-expand-box-margin, 2px 3px 0 0);
+        margin: var(--iui-pivotgrid-expand-box-margin, 2px 3px 0 0);
         vertical-align: top;
     }
     .iui-pivotgrid-enter .iui-pivotgrid-expand-box {
@@ -387,11 +392,11 @@ export const iuiPivotGridDefaultStyle = css`
     
     /* Disabled State */
     .iui-pivotgrid-disabled div {
-        opacity: var(--pivotgrid-disabled-opacity, 0.75);
+        opacity: var(--iui-pivotgrid-disabled-opacity, 0.75);
         pointer-events: none;
     }
     .iui-pivotgrid-row-disabled {
-        opacity: var(--pivotgrid-row-disabled-opacity, 0.6);
+        opacity: var(--iui-pivotgrid-row-disabled-opacity, 0.6);
         pointer-events: none;
     }
 
@@ -583,14 +588,163 @@ export const iuiPivotGridDefaultStyle = css`
 
 
    .iui-pivotgrid-handle {
-        background-image: var(--pivotgrid-background-image, url(../../icons/grab.ico));
+        background-image: var(--iui-pivotgrid-background-image, url(../../icons/grab.ico));
         background-repeat: repeat;
-        cursor: var(--pivotgrid-handle-cursor, grab);
+        cursor: var(--iui-pivotgrid-handle-cursor, grab);
         display: block;
-        height: var(--pivotgrid-handle-height, 16px);
-        margin: var(--pivotgrid-handle-margin, 2px 0);
+        height: var(--iui-pivotgrid-handle-height, 16px);
+        margin: var(--iui-pivotgrid-handle-margin, 2px 0);
         padding: 0;
         vertical-align: middle;
-        width: var(--pivotgrid-handle-width, 16px);
+        width: var(--iui-pivotgrid-handle-width, 16px);
+    }
+
+    /* Sorting */
+    .iui-pivotgrid-column-sort-button {
+        overflow: hidden;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 18px;
+        height: 18px;
+    }
+    .iui-pivotgrid-column-sort-button-up {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.25s ease-in-out;
+        width: 10px;
+        height: 12px;
+    }
+    .iui-pivotgrid-column-sort-button-up-active {
+        left: 3px;
+        top: 2px;
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    .iui-pivotgrid-column-sort-button-up-inactive {
+        left: -9px;
+        top: -9px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    .iui-pivotgrid-column-sort-button-up-left {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        transform: rotate(-60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-pivotgrid-column-sort-button-up-right {
+        position: absolute;
+        left: 3px;
+        top: 2px;
+        transform: rotate(60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-pivotgrid-column-sort-button-up-hline {
+        position: absolute;
+        left: 2px;
+        top: 4px;
+        width: 6px;
+        height: 2px;
+    }
+    .iui-pivotgrid-column-sort-button-up-vline {
+        position: absolute;
+        left: 4px;
+        top: 0;
+        width: 2px;
+        height: 12px;
+    }
+
+    .iui-pivotgrid-column-sort-button-down {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.25s ease-in-out;
+        width: 10px;
+        height: 12px;
+    }
+    .iui-pivotgrid-column-sort-button-down-active {
+        right: 5px;
+        bottom: 3px;
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    .iui-pivotgrid-column-sort-button-down-inactive {
+        right: -9px;
+        bottom: -9px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    .iui-pivotgrid-column-sort-button-down-left {
+        position: absolute;
+        right: 3px;
+        bottom: 2px;
+        transform: rotate(60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-pivotgrid-column-sort-button-down-right {
+        position: absolute;
+        right: 0;
+        bottom: 2px;
+        transform: rotate(-60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-pivotgrid-column-sort-button-down-hline {
+        position: absolute;
+        right: 2px;
+        bottom: 4px;
+        width: 6px;
+        height: 2px;
+    }
+    .iui-pivotgrid-column-sort-button-down-vline {
+        position: absolute;
+        right: 4px;
+        bottom: 0;
+        width: 2px;
+        height: 12px;
+    }
+
+    .iui-pivotgrid-column-sort-button-up .iui-pivotgrid-column-sort-button-up-left,
+    .iui-pivotgrid-column-sort-button-up .iui-pivotgrid-column-sort-button-up-right,
+    .iui-pivotgrid-column-sort-button-up .iui-pivotgrid-column-sort-button-up-hline,
+    .iui-pivotgrid-column-sort-button-up .iui-pivotgrid-column-sort-button-up-vline,
+    .iui-pivotgrid-column-sort-button-down .iui-pivotgrid-column-sort-button-down-left,
+    .iui-pivotgrid-column-sort-button-down .iui-pivotgrid-column-sort-button-down-right,
+    .iui-pivotgrid-column-sort-button-down .iui-pivotgrid-column-sort-button-down-hline,
+    .iui-pivotgrid-column-sort-button-down .iui-pivotgrid-column-sort-button-down-vline
+    {
+        background: var(--iui-pivotgrid-column-sort-button-background, #a5a5a5);
+    }
+    .iui-pivotgrid-column-sort-button-up-active .iui-pivotgrid-column-sort-button-up-left,
+    .iui-pivotgrid-column-sort-button-up-active .iui-pivotgrid-column-sort-button-up-right,
+    .iui-pivotgrid-column-sort-button-up-active .iui-pivotgrid-column-sort-button-up-hline,
+    .iui-pivotgrid-column-sort-button-up-active .iui-pivotgrid-column-sort-button-up-vline,
+    .iui-pivotgrid-column-sort-button-down-active .iui-pivotgrid-column-sort-button-down-left,
+    .iui-pivotgrid-column-sort-button-down-active .iui-pivotgrid-column-sort-button-down-right,
+    .iui-pivotgrid-column-sort-button-down-active .iui-pivotgrid-column-sort-button-down-hline,
+    .iui-pivotgrid-column-sort-button-down-active .iui-pivotgrid-column-sort-button-down-vline
+    {
+        background: var(--iui-pivotgrid-column-sort-button-active-background, #646464);
+    }
+    .iui-pivotgrid-column-sort-button-up:hover .iui-pivotgrid-column-sort-button-up-left,
+    .iui-pivotgrid-column-sort-button-up:hover .iui-pivotgrid-column-sort-button-up-right,
+    .iui-pivotgrid-column-sort-button-up:hover .iui-pivotgrid-column-sort-button-up-hline,
+    .iui-pivotgrid-column-sort-button-up:hover .iui-pivotgrid-column-sort-button-up-vline,
+    .iui-pivotgrid-column-sort-button-down:hover .iui-pivotgrid-column-sort-button-down-left,
+    .iui-pivotgrid-column-sort-button-down:hover .iui-pivotgrid-column-sort-button-down-right,
+    .iui-pivotgrid-column-sort-button-down:hover .iui-pivotgrid-column-sort-button-down-hline,
+    .iui-pivotgrid-column-sort-button-down:hover .iui-pivotgrid-column-sort-button-down-vline 
+    {
+        background: var(--iui-pivotgrid-column-sort-button-hover-background, #646464);
     }
 `;

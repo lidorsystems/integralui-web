@@ -3,22 +3,22 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiAutoCompleteDefaultStyle = css`
     .iui-autocomplete {
-        background: var(--autocomplete-background, white);
-        border: var(--autocomplete-border, thin solid #cecece);
-        border-radius: var(--autocomplete-border-radius, 1px);
-        border-width: var(--autocomplete-border-width, thin);
-        color: var(--autocomplete-color, black);
-        cursor: var(--autocomplete-cursor, default);
-        display: var(--autocomplete-display, block);
-        float: var(--autocomplete-float, none);
-        height: var(--autocomplete-height, auto);
-        opacity: var(--autocomplete-opacity, 1);
+        background: var(--iui-autocomplete-background, white);
+        border: var(--iui-autocomplete-border, thin solid #cecece);
+        border-radius: var(--iui-autocomplete-border-radius, 1px);
+        border-width: var(--iui-autocomplete-border-width, thin);
+        color: var(--iui-autocomplete-color, black);
+        cursor: var(--iui-autocomplete-cursor, default);
+        display: var(--iui-autocomplete-display, block);
+        float: var(--iui-autocomplete-float, none);
+        height: var(--iui-autocomplete-height, auto);
+        opacity: var(--iui-autocomplete-opacity, 1);
         overflow: hidden;
-        margin: var(--autocomplete-margin, 0);
-        padding: var(--autocomplete-padding, 1px);
-        position: var(--autocomplete-position, relative);
-        width: var(--autocomplete-width, auto);
-        z-index: var(--autocomplete-z-index, auto);
+        margin: var(--iui-autocomplete-margin, 0);
+        padding: var(--iui-autocomplete-padding, 1px);
+        position: var(--iui-autocomplete-position, relative);
+        width: var(--iui-autocomplete-width, auto);
+        z-index: var(--iui-autocomplete-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -36,11 +36,11 @@ export const iuiAutoCompleteDefaultStyle = css`
         position: relative;
     }
     .iui-autocomplete input {
-        background: var(--autocomplete-input-background, white);
-        border: var(--autocomplete-input-border, 0);
-        color: var(--autocomplete-input-color, black);
-        font-size: var(--autocomplete-input-font-size, 1rem);
-        padding: var(--autocomplete-input-padding, 3px);
+        background: var(--iui-autocomplete-input-background, white);
+        border: var(--iui-autocomplete-input-border, 0);
+        color: var(--iui-autocomplete-input-color, black);
+        font-size: var(--iui-autocomplete-input-font-size, 1rem);
+        padding: var(--iui-autocomplete-input-padding, 3px);
         width: calc(100% - 4px);
     }
     .iui-autocomplete input::-webkit-search-cancel-button {
@@ -53,7 +53,7 @@ export const iuiAutoCompleteDefaultStyle = css`
 
     /* Disabled State */
     .iui-autocomplete-disabled {
-        opacity: var(--autocomplete-disabled-opacity, 0.75);
+        opacity: var(--iui-autocomplete-disabled-opacity, 0.75);
         pointer-events: none;
     }
 `;

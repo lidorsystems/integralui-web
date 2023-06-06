@@ -2,24 +2,24 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiNumericDefaultStyle = css`
     .iui-numeric {
-        background: var(--numeric-background, white);
-        border: var(--numeric-border, 0);
-        border-color:  var(--numeric-border-color, transparent);
-        border-radius: var(--numeric-border-radius, 1px);
-        border-width: var(--numeric-border-width, thin);
-        color: var(--numeric-color, black);
-        cursor: var(--numeric-cursor, default);
-        display: var(--numeric-display, block);
-        float: var(--numeric-float, none);
-        height: var(--numeric-height, auto);
-        margin: var(--numeric-margin, 0);
-        opacity: var(--numeric-opacity, 1);
+        background: var(--iui-numeric-background, white);
+        border: var(--iui-numeric-border, 0);
+        border-color:  var(--iui-numeric-border-color, transparent);
+        border-radius: var(--iui-numeric-border-radius, 1px);
+        border-width: var(--iui-numeric-border-width, thin);
+        color: var(--iui-numeric-color, black);
+        cursor: var(--iui-numeric-cursor, default);
+        display: var(--iui-numeric-display, block);
+        float: var(--iui-numeric-float, none);
+        height: var(--iui-numeric-height, auto);
+        margin: var(--iui-numeric-margin, 0);
+        opacity: var(--iui-numeric-opacity, 1);
         overflow: hidden;
-        padding: var(--numeric-padding, 0);
-        position: var(--numeric-position, relative);
-        vertical-align: var(--numeric-vertical-align, initial);
-        width: var(--numeric-width, auto);
-        z-index: var(--numeric-z-index, auto);
+        padding: var(--iui-numeric-padding, 0);
+        position: var(--iui-numeric-position, relative);
+        vertical-align: var(--iui-numeric-vertical-align, initial);
+        width: var(--iui-numeric-width, auto);
+        z-index: var(--iui-numeric-z-index, auto);
 
         -webkit-touch-callout: none;
         -webkit-user-select: none;

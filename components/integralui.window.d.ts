@@ -29,7 +29,7 @@ declare class IntegralUIWindow extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -123,73 +123,6 @@ declare class IntegralUIWindow extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _resizeInterval: null | undefined;
-    _ctrlCursor: string;
-    _currentIcon: string;
-    _currentIconUrl: string;
-    _currentParent: string;
-    _currentState: string;
-    _currentText: string;
-    _isResizeAllowed: boolean;
-    _isSelected: boolean;
-    _isVisible: boolean;
-    _newState: string;
-    _parentRef: Element | null;
-    _contentHeight: number;
-    _ctrlMinSize: {
-        width: number;
-        height: number;
-    };
-    _currentBorder: {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    };
-    _currentMaxSize: {
-        width: number;
-        height: number;
-    };
-    _currentMinSize: {
-        width: number;
-        height: number;
-    };
-    _currentPosition: {
-        top: number;
-        left: number;
-    };
-    _headerHeight: number;
-    _isCloseButtonVisible: boolean;
-    _isMaximizeButtonVisible: boolean;
-    _isMinimizeButtonVisible: boolean;
-    _originalBounds: {
-        top: number;
-        left: number;
-        width: number;
-        height: number;
-    };
-    _moveStartPos: {
-        x: number;
-        y: number;
-    };
-    _moveEndPos: {
-        x: number;
-        y: number;
-    };
-    _isHeaderClicked: boolean;
-    _isMovingActive: boolean;
-    _currentResize: string;
-    _isResizing: boolean;
-    _generalClassName: string;
-    _currentControlStyleSettings: {
-        cssText: any;
-        readonly styleSheet: CSSStyleSheet | null;
-        _styleSheet: CSSStyleSheet | null | undefined;
-        toString(): any;
-    };
-    _defaultCursor: string;
-    _windowMouseMove(e: any): void;
-    _windowMouseUp(e: any): void;
     set allowResize(arg: boolean);
     get allowResize(): boolean;
     set closeButton(arg: boolean);
@@ -236,43 +169,12 @@ declare class IntegralUIWindow extends IntegralUIBase {
     get text(): string;
     set visible(arg: boolean);
     get visible(): boolean;
-    _animateResize(newBounds: any, state: any): void;
-    _clearOtherWindowSelection(): void;
-    _getParent(): Element;
-    _getParentBounds(): any;
-    _getParentSize(): {
-        width: number;
-        height: number;
-    };
-    _setParent(): void;
-    _callSizeChanged(): void;
-    _processUpdateLayout(): Promise<any>;
-    _changeCursor(type: any): void;
-    _checkTopBorder(): boolean;
-    _checkLeftBorder(): boolean;
-    _checkBottomBorder(): boolean;
-    _checkRightBorder(): boolean;
-    _ctrlClick(e: any): void;
-    _ctrlMouseDown(e: any): void;
-    _ctrlMouseUp(e: any): void;
-    _ctrlMouseEnter(e: any): void;
-    _ctrlMouseMove(e: any): void;
-    _ctrlMouseLeave(e: any): void;
-    _headerMouseDown(e: any): void;
-    _headerMouseMove(e: any): void;
-    _resetMoveEndPos(): void;
     close(flag: any): void;
     open(): void;
-    _applyOriginalBounds(): void;
-    _callStateChanged(): void;
-    _keepBounds(): void;
     maximize(): void;
     minimize(): void;
-    _resetWindowState(): void;
-    _removeResizeInterval(): void;
-    _updateMinPos(): void;
+    refresh(): void;
+    firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
-    _headerElem: Element | null | undefined;
-    _contentElem: Element | null | undefined;
 }
 import IntegralUIBase from "./integralui.base.js";

@@ -29,7 +29,7 @@ declare class IntegralUIBaseValue extends IntegralUIBase {
             attribute: string;
         };
         data: {
-            type: ObjectConstructor;
+            type: any;
         };
         enabled: {
             type: BooleanConstructor;
@@ -68,56 +68,8 @@ declare class IntegralUIBaseValue extends IntegralUIBase {
             reflect: boolean;
         };
     };
-    _currentValue: any;
-    _contentClass: {} | undefined;
-    _contentClassName: string | undefined;
     set value(arg: any);
     get value(): any;
-    _preventDragStart(e: any): void;
-    _processUpdateLayout(optimal: any): Promise<any>;
-    _getDefaultStyle(): {
-        general: {
-            disabled: string;
-            focused: string;
-            hovered: string;
-            normal: string | undefined;
-            selected: string;
-        } | {
-            disabled?: undefined;
-            focused?: undefined;
-            hovered?: undefined;
-            normal?: undefined;
-            selected?: undefined;
-        };
-        content: {
-            disabled: any;
-            focused: any;
-            hovered: any;
-            normal: any;
-            selected: any;
-        } | {
-            disabled?: undefined;
-            focused?: undefined;
-            hovered?: undefined;
-            normal?: undefined;
-            selected?: undefined;
-        };
-    };
-    _getDefaultContentStyle(): {
-        disabled: any;
-        focused: any;
-        hovered: any;
-        normal: any;
-        selected: any;
-    } | {
-        disabled?: undefined;
-        focused?: undefined;
-        hovered?: undefined;
-        normal?: undefined;
-        selected?: undefined;
-    };
-    _getContentClass(): {} | undefined;
-    _getContentStyle(value: any): any;
-    _updateContentClass(): void;
+    refresh(): void;
 }
 import IntegralUIBase from "./integralui.base.js";

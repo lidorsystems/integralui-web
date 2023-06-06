@@ -2,62 +2,62 @@ import { c as css } from '../../external/lit-element.js';
 
 const iuiTreeListItemDefaultStyle = css`
     .iui-treelistitem {
-        background: var(--treelistitem-background, transparent);
-        color: var(--treelistitem-color, black);
+        background: var(--iui-treelistitem-background, transparent);
+        color: var(--iui-treelistitem-color, black);
         list-style-type: none;
         overflow: hidden;
-        margin: var(--treelistitem-margin, 0);
-        padding: var(--treelistitem-padding, 7px);
-        text-overflow: var(--treelistitem-text-overflow, ellipsis);
-        white-space: var(--treelistitem-white-space, nowrap);
-        width: var(--treelistitem-width, auto);
+        margin: var(--iui-treelistitem-margin, 0);
+        padding: var(--iui-treelistitem-padding, 7px);
+        text-overflow: var(--iui-treelistitem-text-overflow, ellipsis);
+        white-space: var(--iui-treelistitem-white-space, nowrap);
+        width: var(--iui-treelistitem-width, auto);
     }
     .iui-treelistitem-expand-icon {
         background-image: url(../../icons/expandbox-icons.png);
         background-repeat: no-repeat;
-        background-position: var(--treelistitem-expand-icon-background-position, 0 0);
+        background-position: var(--iui-treelistitem-expand-icon-background-position, 0 0);
         display: inline-block;
         float: right;
         opacity: 0.25;
         overflow: hidden;
         padding: 0;
-        margin: var(--treelistitem-expand-icon-margin, 0 5px 0 0);
+        margin: var(--iui-treelistitem-expand-icon-margin, 0 5px 0 0);
         width: 16px;
         height: 16px;
         vertical-align: middle;
     }
     .iui-treelistitem-expand-icon-collapse {
-        background-position: var(--treelistitem-expand-icon-background-position, 0 -16px);
-        margin: var(--treelistitem-expand-icon-margin, 4px 5px 0 0);
+        background-position: var(--iui-treelistitem-expand-icon-background-position, 0 -16px);
+        margin: var(--iui-treelistitem-expand-icon-margin, 4px 5px 0 0);
     }
     .iui-treelistitem-expand-icon-expand {
-        margin: var(--treelistitem-expand-icon-margin, 4px 5px 0 0);
+        margin: var(--iui-treelistitem-expand-icon-margin, 4px 5px 0 0);
         transform: rotate(-90deg);
     }
     .iui-treelistitem-expand-icon-next {
         float: right;
     }
     .iui-treelistitem-hovered {
-        background: var(--treelistitem-hovered-background, #e5e5e5);
-        color: var(--treelistitem-hovered-color, black);
+        background: var(--iui-treelistitem-hovered-background, #e5e5e5);
+        color: var(--iui-treelistitem-hovered-color, black);
     }
     .iui-treelistitem-hovered .iui-treelistitem-expand-icon {
         opacity: 0.75;
     }
     .iui-treelistitem-selected {
-        background: var(--treelistitem-selected-background, #d9d9d9);
-        color: var(--treelistitem-selected-color, black);
+        background: var(--iui-treelistitem-selected-background, #d9d9d9);
+        color: var(--iui-treelistitem-selected-color, black);
     }
     .iui-treelistgroup {
-        background: var(--treelistgroup-background, #f5f5f5);
-        padding: var(--treelistgroup-padding, 7px);
-        font-weight: var(--treelistgroup-font-weight, bold);
+        background: var(--iui-treelistgroup-background, #f5f5f5);
+        padding: var(--iui-treelistgroup-padding, 7px);
+        font-weight: var(--iui-treelistgroup-font-weight, bold);
     }
     .iui-treelistgroup div:focus, .iui-treelistitem div:focus {
         outline: none !important;
     }
     .iui-treelistgroup .iui-treelistitem-expand-icon {
-        margin: var(--treelistgroup-expand-icon-margin, 2px 7px 0 0);
+        margin: var(--iui-treelistgroup-expand-icon-margin, 2px 7px 0 0);
         opacity: 0.4;
     }
     .iui-treelistgroup-hovered .iui-treelistitem-expand-icon {
@@ -72,13 +72,13 @@ const iuiTreeListItemDefaultStyle = css`
     }
 
     .iui-treelistitem-label {
-        margin: var(--treelistitem-label-margin, 0);
-        vertical-align: var(--treelistitem-label-vertical-align, middle);
+        margin: var(--iui-treelistitem-label-margin, 0);
+        vertical-align: var(--iui-treelistitem-label-vertical-align, middle);
     }
 
     /* Disabled State */
     .iui-treelist-disabled div, .iui-treelist-disabled ul {
-        opacity: var(--treelist-disabled-opacity, 0.75);
+        opacity: var(--iui-treelist-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
@@ -153,7 +153,7 @@ const iuiTreeListItemDefaultStyle = css`
         z-index: 9;
     }
     .iui-treelistitem-animate-select {
-        background: var(--treelistitem-animate-select-background, #f5f5f5);
+        background: var(--iui-treelistitem-animate-select-background, #f5f5f5);
         display: block;
         left: 0;
         position: absolute;

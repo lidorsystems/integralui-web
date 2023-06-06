@@ -2,27 +2,27 @@ import { c as css } from '../../external/lit-element.js';
 
 export const iuiTreeItemDefaultStyle = css`
     .iui-treeitem {
-        background: var(--treeitem-background, transparent);
-        color: var(--treeitem-color, black);
+        background: var(--iui-treeitem-background, transparent);
+        color: var(--iui-treeitem-color, black);
         list-style-type: none;
         overflow: hidden;
-        margin: var(--treeitem-margin, 0);
-        padding: var(--treeitem-padding, 0);
+        margin: var(--iui-treeitem-margin, 0);
+        padding: var(--iui-treeitem-padding, 0);
     }
     .iui-treeitem-block, .iui-treeitem-content-block {
-        border: var(--treeitem-border, 2px solid transparent);
-        border-color: var(--treeitem-border-color, transparent);
-        border-width: var(--treeitem-border-width, 2px);
+        border: var(--iui-treeitem-border, 2px solid transparent);
+        border-color: var(--iui-treeitem-border-color, transparent);
+        border-width: var(--iui-treeitem-border-width, 2px);
     }
     .iui-treeitem-hovered, .iui-treeitem-content-hovered {
-        background: var(--treeitem-hovered-background, #f5f5f5);
-        border-color: var(--treeitem-hovered-border-color, #efefef);
-        color: var(--treeitem-hovered-color, black);
+        background: var(--iui-treeitem-hovered-background, #f5f5f5);
+        border-color: var(--iui-treeitem-hovered-border-color, #efefef);
+        color: var(--iui-treeitem-hovered-color, black);
     }
     .iui-treeitem-selected, .iui-treeitem-content-selected {
-        background: var(--treeitem-selected-background, #e5e5e5);
-        border-color: var(--treeitem-selected-border-color, #dedede);
-        color: var(--treeitem-selected-color, black);
+        background: var(--iui-treeitem-selected-background, #e5e5e5);
+        border-color: var(--iui-treeitem-selected-border-color, #dedede);
+        color: var(--iui-treeitem-selected-color, black);
     }
     .iui-treeitem:focus {
         outline: none !important;
@@ -33,29 +33,29 @@ export const iuiTreeItemDefaultStyle = css`
         padding: 0;
     }
     .iui-treeitem-content {
-        border: var(--treeitem-border, 2px solid transparent);
+        border: var(--iui-treeitem-border, 2px solid transparent);
         display: block;
         margin: 0;
-        padding: var(--treeitem-content-padding, 3px);
+        padding: var(--iui-treeitem-content-padding, 3px);
         position: relative;
         white-space: nowrap;
     }
     .iui-treeitem-content-focused {
-        border-color: var(--treeitem-content-focused-border-color, gray);
+        border-color: var(--iui-treeitem-content-focused-border-color, gray);
     }
     .iui-treeitem-content:focus {
         outline: none !important;
     }
     .iui-treeitem-content-template {
-        display: var(--treeitem-content-template-display, inline-block);
-        vertical-align: var(--treeitem-content-template-vertical-align, middle);
+        display: var(--iui-treeitem-content-template-display, inline-block);
+        vertical-align: var(--iui-treeitem-content-template-vertical-align, middle);
     }
     .iui-treeitem-expand-box {
         background: url(../../icons/expandbox-icons.png) no-repeat 0 -48px;
         display: inline-block;
         overflow: hidden;
         padding: 0;
-        margin: var(--treeitem-expand-box-margin, 1px 3px 0 0);
+        margin: var(--iui-treeitem-expand-box-margin, 1px 3px 0 0);
         width: 16px;
         height: 16px;
         vertical-align: top;
@@ -143,7 +143,7 @@ export const iuiTreeItemDefaultStyle = css`
         }
     }
     .iui-treeitem-expand-box-load {
-        background: var(--treeitem-expand-box-load-background-image, url(../../icons/load.gif)) no-repeat 0 0 !important;
+        background: var(--iui-treeitem-expand-box-load-background-image, url(../../icons/load.gif)) no-repeat 0 0 !important;
     }
     .iui-treeitem-list {
         list-style-type: none;
@@ -154,7 +154,7 @@ export const iuiTreeItemDefaultStyle = css`
 
     /* Disabled State */
     .iui-treeitem-disabled div {
-        opacity: var(--treeitem-disabled-opacity, 0.75);
+        opacity: var(--iui-treeitem-disabled-opacity, 0.75);
         pointer-events: none;
     }
 

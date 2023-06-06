@@ -1,3 +1,30 @@
+v23.2
+- Data validation in Grid and TreeGrid with following rules: Compare, Required, Numeric, Range, StringLength and Custom
+- Option to enable data validation for all editing modes: Batch, Form and Inline
+- A new dataInvalid event that occurs when data change is invalid
+- Option to set your own custom conditions for data validation
+- Option to customize data validation message and display position
+- Improved Sorting: Single and Multi-Column Sorting in Grid and TreeGrid
+- Sorting is available on general or individual level for each column separately
+- Animated appearance of sorting button when sorting order changes
+- Menus can have shortcuts
+- Improved animations during expand/collapse, selection and hovering of menus
+- Menu Separator can have a Label
+- Option to create a vertical menu
+- Panel component can have Static and Dynamic scrolling
+- Horizontal and vertical alignment of panel content
+- Improved appearance and animations during opening and closing of PopOver component
+- PopOver content can appear with animated transition depending on position
+- Prefix for custom properties in all component styles is changed to '--iui-'
+- Fixed the appearance of sidebar header when Dark color scheme is in use
+- Change of color scheme from parent radio group to radio buttons is now applied
+- Text in column header is now trimmed for Grid and TreeGrid
+- Fixed changes to checked and checkState values for CheckBox component when used in React
+- Fixed the issue that caused non required data change to horizontal scroll position during keyboard navigation when using SHIFT+TAB
+- The appearance of PopOver when Dark color scheme is applied is now updated
+- animation property in TabStrip is replaced with contentAnimation
+- Other minor bug fixes
+
 v23.1
 - New components: Loading and SidePanel
 - Loading - Use of asynchronous animations during loading progression

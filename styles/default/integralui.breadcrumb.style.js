@@ -2,24 +2,24 @@ import { c as css } from '../../external/lit-element.js';
 
 const iuiBreadCrumbDefaultStyle = css`
     .iui-breadcrumb {
-        background: var(--breadcrumb-background, white);
-        border: var(--breadcrumb-border, thin solid #cecece);
-        border-color:  var(--breadcrumb-border-color, #cecece);
-        border-radius: var(--breadcrumb-border-radius, 1px);
-        border-width: var(--breadcrumb-border-width, thin);
-        color: var(--breadcrumb-color, black);
-        cursor: var(--breadcrumb-cursor, default);
-        display: var(--breadcrumb-display, block);
-        float: var(--breadcrumb-float, none);
-        height: var(--breadcrumb-height, auto);
-        opacity: var(--breadcrumb-opacity, 1);
+        background: var(--iui-breadcrumb-background, white);
+        border: var(--iui-breadcrumb-border, thin solid #cecece);
+        border-color:  var(--iui-breadcrumb-border-color, #cecece);
+        border-radius: var(--iui-breadcrumb-border-radius, 1px);
+        border-width: var(--iui-breadcrumb-border-width, thin);
+        color: var(--iui-breadcrumb-color, black);
+        cursor: var(--iui-breadcrumb-cursor, default);
+        display: var(--iui-breadcrumb-display, block);
+        float: var(--iui-breadcrumb-float, none);
+        height: var(--iui-breadcrumb-height, auto);
+        opacity: var(--iui-breadcrumb-opacity, 1);
         overflow: hidden;
-        margin: var(--breadcrumb-margin, 0);
-        padding: var(--breadcrumb-padding, 1px);
-        position: var(--breadcrumb-position, relative);
+        margin: var(--iui-breadcrumb-margin, 0);
+        padding: var(--iui-breadcrumb-padding, 1px);
+        position: var(--iui-breadcrumb-position, relative);
         white-space: nowrap;
-        width: var(--breadcrumb-width, auto);
-        z-index: var(--breadcrumb-z-index, auto);
+        width: var(--iui-breadcrumb-width, auto);
+        z-index: var(--iui-breadcrumb-z-index, auto);
 
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -37,7 +37,7 @@ const iuiBreadCrumbDefaultStyle = css`
 
     /* Disabled State */
     .iui-breadcrumb-disabled div, .iui-breadcrumb-disabled ul {
-        opacity: var(--breadcrumb-disabled-opacity, 0.75);
+        opacity: var(--iui-breadcrumb-disabled-opacity, 0.75);
         pointer-events: none;
     }
 
@@ -51,11 +51,11 @@ const iuiBreadCrumbDefaultStyle = css`
     .iui-breadcrumb-root-button-box {
         background: url(../../icons/menu-button.ico);
         display: inline-block;
-        height: var(--breadcrumb-root-button-height, 16px);
-        margin: var(--breadcrumb-root-button-margin, 4px 0 0 0);
+        height: var(--iui-breadcrumb-root-button-height, 16px);
+        margin: var(--iui-breadcrumb-root-button-margin, 4px 0 0 0);
         overflow: hidden;
-        padding: var(--breadcrumb-root-button-padding, 0);
-        width: var(--breadcrumb-root-button-width, 16px);
+        padding: var(--iui-breadcrumb-root-button-padding, 0);
+        width: var(--iui-breadcrumb-root-button-width, 16px);
         vertical-align: top;
     }
 
@@ -75,20 +75,20 @@ const iuiBreadCrumbDefaultStyle = css`
         display: inline-block;
         float: left;
         height: calc(100% - 8px);
-        margin:  var(--breadcrumb-item-content-margin, 0);
-        padding:  var(--breadcrumb-item-content-padding, 3px);
+        margin:  var(--iui-breadcrumb-item-content-margin, 0);
+        padding:  var(--iui-breadcrumb-item-content-padding, 3px);
         position: relative;
         white-space: nowrap;
     }
     .iui-breadcrumb-item-content-hovered {
-        background:  var(--breadcrumb-item-content-hovered-background, #f5f5f5);
-        border:  var(--breadcrumb-item-content-hovered-border, thin solid #cecece);
-        border-color:  var(--breadcrumb-item-content-hovered-border-color, #cecece);
+        background:  var(--iui-breadcrumb-item-content-hovered-background, #f5f5f5);
+        border:  var(--iui-breadcrumb-item-content-hovered-border, thin solid #cecece);
+        border-color:  var(--iui-breadcrumb-item-content-hovered-border-color, #cecece);
     }
     .iui-breadcrumb-item-content-selected {
-        background:  var(--breadcrumb-item-content-hovered-background, #e5e5e5);
-        border:  var(--breadcrumb-item-content-hovered-border, thin solid #cecece);
-        border-color:  var(--breadcrumb-item-content-hovered-border-color, #cecece);
+        background:  var(--iui-breadcrumb-item-content-hovered-background, #e5e5e5);
+        border:  var(--iui-breadcrumb-item-content-hovered-border, thin solid #cecece);
+        border-color:  var(--iui-breadcrumb-item-content-hovered-border-color, #cecece);
     }
     .iui-breadcrumb-item-content-focused {
         border-color: gray;
@@ -126,17 +126,17 @@ const iuiBreadCrumbDefaultStyle = css`
         border-bottom: thin solid #cecece;
     }
     .iui-breadcrumb-root-button-hovered {
-        border:  var(--breadcrumb-root-button-hovered-border, thin solid #cecece);
+        border:  var(--iui-breadcrumb-root-button-hovered-border, thin solid #cecece);
     }
     .iui-breadcrumb-root-button-selected {
-        border:  var(--breadcrumb-root-button-selected-border, thin solid #cecece);
+        border:  var(--iui-breadcrumb-root-button-selected-border, thin solid #cecece);
     }
 
     .iui-breadcrumb-item-expand-box {
         background: url(../../icons/expandbox-icons.png) no-repeat 0 -48px;
         border: thin solid transparent;
         display: inline-block;
-        margin: var(--breadcrumb-item-expand-margin, 0);
+        margin: var(--iui-breadcrumb-item-expand-margin, 0);
         overflow: hidden;
         padding: 0;
         width: 16px;
@@ -144,10 +144,10 @@ const iuiBreadCrumbDefaultStyle = css`
         vertical-align: top;
     }
     .iui-breadcrumb-item-expand-box-open {
-        background-position: var(--breadcrumb-item-expand-box-open-background-position, 0 -16px);
+        background-position: var(--iui-breadcrumb-item-expand-box-open-background-position, 0 -16px);
     }
     .iui-breadcrumb-item-expand-box-open-animate {
-        background-position: var(--breadcrumb-item-expand-box-open-animate-background-position, 0 0);
+        background-position: var(--iui-breadcrumb-item-expand-box-open-animate-background-position, 0 0);
    
         animation-name: expand-box-open;
         animation-delay: 0s;
@@ -171,10 +171,10 @@ const iuiBreadCrumbDefaultStyle = css`
         }
     }
     .iui-breadcrumb-item-expand-box-close {
-        background-position: var(--breadcrumb-item-expand-box-close-background-position, 0 0);
+        background-position: var(--iui-breadcrumb-item-expand-box-close-background-position, 0 0);
     }
     .iui-breadcrumb-item-expand-box-close-animate {
-        background-position: var(--breadcrumb-item-expand-box-close-animate-background-position, 0 0);
+        background-position: var(--iui-breadcrumb-item-expand-box-close-animate-background-position, 0 0);
 
         animation-name: expand-box-close;
         animation-delay: 0s;

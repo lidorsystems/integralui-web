@@ -26,14 +26,14 @@ export const iuiListScrollerLightStyle = css`
     }
 
     .iui-listscroller-item-hovered {
-        background: var(--listscroller-item-hovered-background, #d9edfd);
-        border: var(--listscroller-item-hovered-border, thin solid #d9edfd);
-        color: var(--listscroller-item-hovered-color, black);
+        background: var(--iui-listscroller-item-hovered-background, #d9edfd);
+        border: var(--iui-listscroller-item-hovered-border, thin solid #d9edfd);
+        color: var(--iui-listscroller-item-hovered-color, black);
 	}
 	.iui-listscroller-item-selected {
-        background: var(--listscroller-item-selected-background, #a5d3fa);
-        border: var(--listscroller-item-selected-border, thin solid #a5d3fa);
-        color: var(--listscroller-item-selected-color, black);
+        background: var(--iui-listscroller-item-selected-background, #a5d3fa);
+        border: var(--iui-listscroller-item-selected-border, thin solid #a5d3fa);
+        color: var(--iui-listscroller-item-selected-color, black);
 	}
 `;
 
