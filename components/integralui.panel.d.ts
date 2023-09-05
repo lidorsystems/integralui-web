@@ -83,6 +83,8 @@ declare class IntegralUIPanel extends IntegralUIBase {
     };
     set allowDrag(arg: any);
     get allowDrag(): any;
+    set autoSize(arg: any);
+    get autoSize(): any;
     set contentAlignment(arg: {
         horizontal: string;
         vertical: string;

@@ -78,6 +78,11 @@ declare class IntegralUIBaseList extends IntegralUIBase {
             attribute: string;
             reflect: boolean;
         };
+        animateInit: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
         contentVisibility: {
             attribute: string;
             converter: {
@@ -159,6 +164,8 @@ declare class IntegralUIBaseList extends IntegralUIBase {
     set allowDrag(arg: any);
     set allowDrop(arg: any);
     set allowFilter(arg: any);
+    set animateInit(arg: any);
+    get animateInit(): any;
     set dataFields(arg: any);
     get dataFields(): any;
     set focusedItem(arg: any);
@@ -185,22 +192,22 @@ declare class IntegralUIBaseList extends IntegralUIBase {
     get sorting(): any;
     set virtualMode(arg: boolean | undefined);
     get virtualMode(): boolean | undefined;
-    addItem(item: any, parent: any): void;
-    clearItems(parent: any): void;
-    insertItemAt(item: any, index: any, parent: any): void;
-    insertItemBefore(item: any, refItem: any): void;
-    insertItemAfter(item: any, refItem: any): void;
-    removeItem(item: any): boolean;
-    removeItemAt(index: any, parent: any): boolean;
+    addItem(item: any, parent: any): Promise<any>;
+    clearItems(parent: any): Promise<any>;
+    insertItemAt(item: any, index: any, parent: any): Promise<any>;
+    insertItemBefore(item: any, refItem: any): Promise<any>;
+    insertItemAfter(item: any, refItem: any): Promise<any>;
+    removeItem(item: any): Promise<any>;
+    removeItemAt(index: any, parent: any): Promise<any>;
     exportToJSON(data: any, fields: any, spacing: any, flat: any): string;
     filter(params: any): void;
     cloneItem(item: any): any;
     getHoverItem(): any;
     getList(key: any, parent: any): any;
-    getFullList(): any[] | undefined;
-    updateFullList(): any[];
+    getFullList(): any;
+    updateFullList(): any;
     getTopItem(): any;
-    beginLoad(item?: any): void;
+    beginLoad(item: any): void;
     endLoad(item: any): void;
     getPrevCurrentItem(item: any): any;
     getPrevItem(item: any): any;
@@ -208,12 +215,10 @@ declare class IntegralUIBaseList extends IntegralUIBase {
     getNextCurrentItem(item: any): any;
     getNextItem(item: any): any;
     getNextObj(obj: any, list: any): any;
-    moveItem(item: any, direction: any, targetObj: any, position: any): void;
+    moveItem(item: any, direction: any, target: any, position: any): Promise<void>;
     moveFocus(item: any, direction: any): any;
     suspendLayout(): void;
-    resumeLayout(): Promise<any>;
-    shouldUpdate(props: any): boolean;
-    updateLayout(optimal: any): Promise<any>;
+    resumeLayout(): Promise<void>;
     updateView(): void;
     scrollPos(value: any): {
         x: number;

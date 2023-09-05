@@ -28,7 +28,7 @@ export const iuiWindowDefaultStyle = css`
         -ms-user-select: none;
         user-select: none;
 
-        animation-name: iui-window-hovered-animate-leave;
+        animation-name: var(--iui-window-hovered-animation-name, iui-window-hovered-animate-leave);
         animation-delay: 0s;
         animation-direction: normal;
         animation-duration: 0.5s;
@@ -49,7 +49,7 @@ export const iuiWindowDefaultStyle = css`
     }
 
     .iui-window-selected {
-        animation-name: iui-window-selected-animate-enter;
+        animation-name: var(--iui-window-selected-animation-name, iui-window-selected-animate-enter);
         animation-delay: 0s;
         animation-direction: normal;
         animation-duration: 0.5s;

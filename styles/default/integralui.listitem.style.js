@@ -13,10 +13,10 @@ export const iuiListItemDefaultStyle = css`
         font-weight: var(--iui-listgroup-font-weight, bold);
         height: var(--iui-listgroup-height, auto);
         list-style-type: none;
-        margin: var(--iui-listgroup-margin, 1px 0);
+        margin: var(--iui-listgroup-margin, 0);
         opacity: var(--iui-listgroup-opacity, 1);
         overflow: hidden;
-        padding: var(--iui-listgroup-padding, 0);
+        padding: var(--iui-listgroup-padding, 1px 0);
         position: var(--iui-listgroup-position, relative);
         white-space: var(--iui-listgroup-white-space, nowrap);
         width: var(--iui-listgroup-width, auto);
@@ -38,74 +38,31 @@ export const iuiListItemDefaultStyle = css`
     .iui-listgroup:focus {
         outline: none !important;
     }
+    .iui-listgroup-content-block {
+        overflow: var(--iui-listgroup-content-overflow, hidden);
+        text-overflow: var(--iui-listgroup-content-text-overflow, ellipsis);
+    }
     .iui-listgroup-content {
         border: var(--iui-listgroup-border, 2px solid transparent);
         padding: var(--iui-listgroup-content-padding, 3px);
     }
 
     .iui-listgroup-expand-box {
-        background: url(../../icons/expandbox-icons.png) no-repeat 0 -48px;
+        background: url(../../icons/expandbox-icons.png) no-repeat 0 0;
         display: inline-block;
+        height: 16px;
+        margin: var(--iui-listgroup-expand-box-margin, 1px 3px 0 0);
         overflow: hidden;
         padding: 0;
-        margin: var(--iui-listgroup-expand-box-margin, 1px 3px 0 0);
-        width: 16px;
-        height: 16px;
+        transition: transform 0.25s;
         vertical-align: top;
+        width: 16px;
     }
     .iui-listgroup-expand-box-open {
-        background-position: 0 -16px;
-    }
-    .iui-listgroup-expand-box-open-animate {
-        background-position: 0 0;
-    
-        animation-name: expand-box-open;
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.25s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes expand-box-open {
-        0% { 
-            -ms-transform: rotate(0deg); /* IE 9 */
-            -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-            transform: rotate(0deg);
-        }
-        100% { 
-            -ms-transform: rotate(90deg); /* IE 9 */
-            -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-            transform: rotate(90deg);
-        }
+        transform: rotate(90deg);
     }
     .iui-listgroup-expand-box-close {
-        background-position: 0 0;
-    }
-    .iui-listgroup-expand-box-close-animate {
-        background-position: 0 0;
-
-        animation-name: expand-box-close;
-        animation-delay: 0s;
-        animation-direction: normal;
-        animation-duration: 0.25s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-        animation-timing-function: linear; 
-    }
-    @keyframes expand-box-close {
-        0% { 
-            -ms-transform: rotate(90deg); /* IE 9 */
-            -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-            transform: rotate(90deg);
-        }
-        100% { 
-            -ms-transform: rotate(0deg); /* IE 9 */
-            -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-            transform: rotate(0deg);
-        }
+        transform: rotate(0deg);
     }
 
     /* Disabled State */

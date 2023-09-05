@@ -1,6 +1,6 @@
 /*
   filename: react.integralui.numeric.js
-  version : 23.2.0
+  version : 23.3.0
   Copyright © 2016-2023 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
@@ -12,4 +12,197 @@
   This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
 */
-import React,{Component}from"react";import"../components/integralui.numeric.js";var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var s=t[r];s.enumerable=s.enumerable||!1;s.configurable=!0;if("value"in s)s.writable=!0;Object.defineProperty(e,s.key,s)}}return function(t,r,s){if(r)e(t.prototype,r);if(s)e(t,s);return t}}();function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t&&("object"===typeof t||"function"===typeof t)?t:e}function _inherits(e,t){if("function"!==typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}});if(t)Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t}var IntegralUINumericComponent=function(e){_inherits(t,Component);function t(e){_classCallCheck(this,t);var r=_possibleConstructorReturn(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));r.ctrlRef=React.createRef();return r}_createClass(t,[{key:"componentDidMount",value:function(){var e=this;this._initProps();if(this.ctrlRef&&this.ctrlRef.current){if(this.props.enabledChanged)this.ctrlRef.current.addEventListener("enabledChanged",function(t){return e.props.enabledChanged(t)});if(this.props.sizeChanged)this.ctrlRef.current.addEventListener("sizeChanged",function(t){return e.props.sizeChanged(t)});if(this.props.stateChanged)this.ctrlRef.current.addEventListener("stateChanged",function(t){return e.props.stateChanged(t)});if(this.props.valueChanged)this.ctrlRef.current.addEventListener("valueChanged",function(t){return e.props.valueChanged(t)})}}},{key:"componentWillUnmount",value:function(){if(this.ctrlRef&&this.ctrlRef.current){if(this.props.enabledChanged)this.ctrlRef.current.removeEventListener("enabledChanged",this.props.enabledChanged);if(this.props.sizeChanged)this.ctrlRef.current.removeEventListener("sizeChanged",this.props.sizeChanged);if(this.props.stateChanged)this.ctrlRef.current.removeEventListener("stateChanged",this.props.stateChanged);if(this.props.valueChanged)this.ctrlRef.current.removeEventListener("valueChanged",this.props.valueChanged)}}},{key:"componentDidUpdate",value:function(e){this._updateData(e)}},{key:"_initProps",value:function(){if(this.ctrlRef&&this.ctrlRef.current){if(this._isDefined(this.props.accelerator))this.ctrlRef.current.accelerator=this.props.accelerator;if(this._isDefined(this.props.allowAnimation))this.ctrlRef.current.allowAnimation=this.props.allowAnimation;if(this._isDefined(this.props.allowUpdate))this.ctrlRef.current.allowUpdate=this.props.allowUpdate;if(this._isDefined(this.props.buttonAlign))this.ctrlRef.current.buttonAlign=this.props.buttonAlign;if(this._isDefined(this.props.colorScheme))this.ctrlRef.current.colorScheme=this.props.colorScheme;if(this._isDefined(this.props.customStyle))this.ctrlRef.current.customStyle=this.props.customStyle;if(this._isDefined(this.props.data))this.ctrlRef.current.data=this.props.data;if(this._isDefined(this.props.decimals))this.ctrlRef.current.decimals=this.props.decimals;if(this._isDefined(this.props.displayMode))this.ctrlRef.current.displayMode=this.props.displayMode;if(this._isDefined(this.props.enabled))this.ctrlRef.current.enabled=this.props.enabled;if(this._isDefined(this.props.max))this.ctrlRef.current.max=this.props.max;if(this._isDefined(this.props.min))this.ctrlRef.current.min=this.props.min;if(this._isDefined(this.props.mouseWheelSpeed))this.ctrlRef.current.mouseWheelSpeed=this.props.mouseWheelSpeed;if(this._isDefined(this.props.name))this.ctrlRef.current.name=this.props.name;if(this._isDefined(this.props.resourcePath))this.ctrlRef.current.resourcePath=this.props.resourcePath;if(this._isDefined(this.props.size))this.ctrlRef.current.size=this.props.size;if(this._isDefined(this.props.state))this.ctrlRef.current.state=this.props.state;if(this._isDefined(this.props.step))this.ctrlRef.current.step=this.props.step;if(this._isDefined(this.props.theme))this.ctrlRef.current.theme=this.props.theme;if(this._isDefined(this.props.value))this.ctrlRef.current.value=this.props.value}}},{key:"_isDefined",value:function(e){return void 0!==e?!0:!1}},{key:"_updateData",value:function(e){if(this.ctrlRef&&this.ctrlRef.current){if(this.props.accelerator!==e.accelerator)this.ctrlRef.current.accelerator=this.props.accelerator;if(this.props.allowAnimation!==e.allowAnimation)this.ctrlRef.current.allowAnimation=this.props.allowAnimation;if(this.props.allowUpdate!==e.allowUpdate)this.ctrlRef.current.allowUpdate=this.props.allowUpdate;if(this.props.buttonAlign!==e.buttonAlign)this.ctrlRef.current.buttonAlign=this.props.buttonAlign;if(this.props.colorScheme!==e.colorScheme)this.ctrlRef.current.colorScheme=this.props.colorScheme;if(this.props.decimals!==e.decimals)this.ctrlRef.current.decimals=this.props.decimals;if(this.props.displayMode!==e.displayMode)this.ctrlRef.current.displayMode=this.props.displayMode;if(this.props.customStyle!==e.customStyle)this.ctrlRef.current.customStyle=this.props.customStyle;if(this.props.data!==e.data)this.ctrlRef.current.data=this.props.data;if(this.props.enabled!==e.enabled)this.ctrlRef.current.enabled=this.props.enabled;if(this.props.max!==e.max)this.ctrlRef.current.max=this.props.max;if(this.props.min!==e.min)this.ctrlRef.current.min=this.props.min;if(this.props.mouseWheelSpeed!==e.mouseWheelSpeed)this.ctrlRef.current.mouseWheelSpeed=this.props.mouseWheelSpeed;if(this.props.name!==e.name)this.ctrlRef.current.name=this.props.name;if(this.props.resourcePath!==e.resourcePath)this.ctrlRef.current.resourcePath=this.props.resourcePath;if(this.props.size!==e.size)this.ctrlRef.current.size=this.props.size;if(this.props.state!==e.state)this.ctrlRef.current.state=this.props.state;if(this.props.step!==e.step)this.ctrlRef.current.step=this.props.step;if(this.props.theme!==e.theme)this.ctrlRef.current.theme=this.props.theme;if(this.props.value!==e.value)this.ctrlRef.current.value=this.props.value}}},{key:"decreaseValue",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.decreaseValue()}},{key:"increaseValue",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.increaseValue()}},{key:"setClass",value:function(e){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.setClass(e)}},{key:"setStyle",value:function(e){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.setStyle(e)}},{key:"refresh",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.refresh()}},{key:"updateLayout",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.updateLayout()}},{key:"render",value:function(){return React.createElement("iui-numeric",{id:this.props.id,ref:this.ctrlRef},this.props.children)}}]);return t}();export default IntegralUINumericComponent;
+import React, { Component } from "react";
+
+import '../components/integralui.numeric.js';
+
+class IntegralUINumericComponent extends Component {
+    constructor(props){
+        super(props);
+
+        this.ctrlRef = React.createRef();
+    }
+ 
+    //
+    // Events ------------------------------------------------------------------------------------
+    //
+
+    componentDidMount(){
+        this._initProps();
+
+        if (this.ctrlRef && this.ctrlRef.current){
+            if (this.props.enabledChanged)
+                this.ctrlRef.current.addEventListener('enabledChanged', (e) => this.props.enabledChanged(e));
+            if (this.props.sizeChanged)
+                this.ctrlRef.current.addEventListener('sizeChanged', (e) => this.props.sizeChanged(e));
+            if (this.props.stateChanged)
+                this.ctrlRef.current.addEventListener('stateChanged', (e) => this.props.stateChanged(e));
+            if (this.props.valueChanged)
+                this.ctrlRef.current.addEventListener('valueChanged', (e) => this.props.valueChanged(e));
+        }
+    }
+
+    componentWillUnmount(){
+        if (this.ctrlRef && this.ctrlRef.current){
+            if (this.props.enabledChanged)
+                this.ctrlRef.current.removeEventListener('enabledChanged', this.props.enabledChanged);
+            if (this.props.sizeChanged)
+                this.ctrlRef.current.removeEventListener('sizeChanged', this.props.sizeChanged);
+            if (this.props.stateChanged)
+                this.ctrlRef.current.removeEventListener('stateChanged', this.props.stateChanged);
+            if (this.props.valueChanged)
+                this.ctrlRef.current.removeEventListener('valueChanged', this.props.valueChanged);
+        }
+    }
+ 
+    //
+    // Properties --------------------------------------------------------------------------------
+    //
+
+    componentDidUpdate(prevProps){
+        this._updateData(prevProps);
+    }
+
+    _initProps(){
+        if (this.ctrlRef && this.ctrlRef.current){
+            if (this._isDefined(this.props.accelerator))
+                this.ctrlRef.current.accelerator = this.props.accelerator;
+            if (this._isDefined(this.props.allowAnimation))
+                this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
+            if (this._isDefined(this.props.allowUpdate))
+                this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
+            if (this._isDefined(this.props.buttonAlign))
+                this.ctrlRef.current.buttonAlign = this.props.buttonAlign;
+            if (this._isDefined(this.props.colorScheme))
+                this.ctrlRef.current.colorScheme = this.props.colorScheme;
+            if (this._isDefined(this.props.customStyle))
+                this.ctrlRef.current.customStyle = this.props.customStyle;
+            if (this._isDefined(this.props.data))
+                this.ctrlRef.current.data = this.props.data;
+            if (this._isDefined(this.props.decimals))
+                this.ctrlRef.current.decimals = this.props.decimals;
+            if (this._isDefined(this.props.displayMode))
+                this.ctrlRef.current.displayMode = this.props.displayMode;
+            if (this._isDefined(this.props.enabled))
+                this.ctrlRef.current.enabled = this.props.enabled;
+            if (this._isDefined(this.props.max))
+                this.ctrlRef.current.max = this.props.max;
+            if (this._isDefined(this.props.min))
+                this.ctrlRef.current.min = this.props.min;
+            if (this._isDefined(this.props.mouseWheelSpeed))
+                this.ctrlRef.current.mouseWheelSpeed = this.props.mouseWheelSpeed;
+            if (this._isDefined(this.props.name))
+                this.ctrlRef.current.name = this.props.name;
+            if (this._isDefined(this.props.resourcePath))
+                this.ctrlRef.current.resourcePath = this.props.resourcePath;
+            if (this._isDefined(this.props.size))
+                this.ctrlRef.current.size = this.props.size;
+            if (this._isDefined(this.props.state))
+                this.ctrlRef.current.state = this.props.state;
+            if (this._isDefined(this.props.step))
+                this.ctrlRef.current.step = this.props.step;
+            if (this._isDefined(this.props.theme))
+                this.ctrlRef.current.theme = this.props.theme;
+            if (this._isDefined(this.props.value))
+                this.ctrlRef.current.value = this.props.value;
+        }
+    }
+    
+    _isDefined(value){
+        return value !== undefined ? true : false;
+    }
+
+    _updateData(prevProps){
+        if (this.ctrlRef && this.ctrlRef.current){
+            if (this.props.accelerator !== prevProps.accelerator)
+                this.ctrlRef.current.accelerator = this.props.accelerator;
+            if (this.props.allowAnimation !== prevProps.allowAnimation)
+                this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
+            if (this.props.allowUpdate !== prevProps.allowUpdate)
+                this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
+            if (this.props.buttonAlign !== prevProps.buttonAlign)
+                this.ctrlRef.current.buttonAlign = this.props.buttonAlign;
+            if (this.props.colorScheme !== prevProps.colorScheme)
+                this.ctrlRef.current.colorScheme = this.props.colorScheme;
+            if (this.props.decimals !== prevProps.decimals)
+                this.ctrlRef.current.decimals = this.props.decimals;
+            if (this.props.displayMode !== prevProps.displayMode)
+                this.ctrlRef.current.displayMode = this.props.displayMode;
+            if (this.props.customStyle !== prevProps.customStyle)
+                this.ctrlRef.current.customStyle = this.props.customStyle;
+            if (this.props.data !== prevProps.data)
+                this.ctrlRef.current.data = this.props.data;
+            if (this.props.enabled !== prevProps.enabled)
+                this.ctrlRef.current.enabled = this.props.enabled;
+            if (this.props.max !== prevProps.max)
+                this.ctrlRef.current.max = this.props.max;
+            if (this.props.min !== prevProps.min)
+                this.ctrlRef.current.min = this.props.min;
+            if (this.props.mouseWheelSpeed !== prevProps.mouseWheelSpeed)
+                this.ctrlRef.current.mouseWheelSpeed = this.props.mouseWheelSpeed;
+            if (this.props.name !== prevProps.name)
+                this.ctrlRef.current.name = this.props.name;
+            if (this.props.resourcePath !== prevProps.resourcePath)
+                this.ctrlRef.current.resourcePath = this.props.resourcePath;
+            if (this.props.size !== prevProps.size)
+                this.ctrlRef.current.size = this.props.size;
+            if (this.props.state !== prevProps.state)
+                this.ctrlRef.current.state = this.props.state;
+            if (this.props.step !== prevProps.step)
+                this.ctrlRef.current.step = this.props.step;
+            if (this.props.theme !== prevProps.theme)
+                this.ctrlRef.current.theme = this.props.theme;
+            if (this.props.value !== prevProps.value)
+                this.ctrlRef.current.value = this.props.value;
+        }
+    }
+ 
+    //
+    // Methods -----------------------------------------------------------------------------------
+    //
+
+	decreaseValue(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.decreaseValue();
+    }
+
+	increaseValue(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.increaseValue();
+    }
+ 
+    // Style -------------------------------------------------------------------------------------
+
+    setClass(value){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.setClass(value);
+    }
+
+	setStyle(value){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.setStyle(value);
+    }
+
+    // Update ------------------------------------------------------------------------------------
+
+	refresh(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.refresh();
+    }
+
+	updateLayout(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.updateLayout();
+    }
+
+    render(){
+        return (
+            <iui-numeric id={this.props.id} ref={this.ctrlRef}>
+                {this.props.children}
+            </iui-numeric>
+        );
+    }
+}
+
+
+export default IntegralUINumericComponent;

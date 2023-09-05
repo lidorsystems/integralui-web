@@ -2,8 +2,7 @@
 import { c as css } from '../../external/lit-element.js';
 
 export const iuiMenuDefaultStyle = css`
-    .iui-menu
-    {
+    .iui-menu {
         background: var(--iui-menu-background, #f5f5f5);
         border: var(--iui-menu-border, 0);
         border-color:  var(--iui-menu-border-color, transparent);
@@ -29,18 +28,16 @@ export const iuiMenuDefaultStyle = css`
         -ms-user-select: none;
         user-select: none;
     }
-    .iui-menu-block, .iui-menuitem-block
-    {
-        background: transparent;
+    .iui-menu-block, .iui-menuitem-block {
+        background: var(--iui-menu-block-background, transparent);
         list-style-type: none;
         margin: 0;
-        padding: 3px;
+        padding: var(--iui-menu-block-padding, 3px);
         position: relative;
     }
 
     /* Disabled State */
-    .iui-menu-disabled div
-    {
+    .iui-menu-disabled div {
         opacity: 0.75;
         pointer-events: none;
     }

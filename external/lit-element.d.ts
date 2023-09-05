@@ -175,3 +175,4 @@ declare class NodePart {
     clear(e?: any): void;
 }
 export { AttributePart as A, LitElement as L, PropertyPart as P, TemplateResult as T, defaultTemplateProcessor as a, css as c, directive as d, html as h };
+//# sourceMappingURL=lit-element.d.ts.map

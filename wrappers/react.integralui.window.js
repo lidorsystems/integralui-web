@@ -1,6 +1,6 @@
 /*
   filename: react.integralui.window.js
-  version : 23.2.0
+  version : 23.3.0
   Copyright © 2016-2023 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
@@ -12,4 +12,275 @@
   This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
 */
-import React,{Component}from"react";import"../components/integralui.window.js";var _createClass=function(){function e(e,t){for(var i=0;i<t.length;i++){var s=t[i];s.enumerable=s.enumerable||!1;s.configurable=!0;if("value"in s)s.writable=!0;Object.defineProperty(e,s.key,s)}}return function(t,i,s){if(i)e(t.prototype,i);if(s)e(t,s);return t}}();function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t&&("object"===typeof t||"function"===typeof t)?t:e}function _inherits(e,t){if("function"!==typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}});if(t)Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t}var IntegralUIWindowComponent=function(e){_inherits(t,Component);function t(e){_classCallCheck(this,t);var i=_possibleConstructorReturn(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));i.ctrlRef=React.createRef();return i}_createClass(t,[{key:"componentDidMount",value:function(){var e=this;this._initProps();if(this.ctrlRef&&this.ctrlRef.current){if(this.props.click)this.ctrlRef.current.addEventListener("click",function(t){return e.props.click(t)});if(this.props.closed)this.ctrlRef.current.addEventListener("closed",function(t){return e.props.closed(t)});if(this.props.closing)this.ctrlRef.current.addEventListener("closing",function(t){return e.props.closing(t)});if(this.props.enabledChanged)this.ctrlRef.current.addEventListener("enabledChanged",function(t){return e.props.enabledChanged(t)});if(this.props.mouseDown)this.ctrlRef.current.addEventListener("mouseDown",function(t){return e.props.mouseDown(t)});if(this.props.mouseEnter)this.ctrlRef.current.addEventListener("mouseEnter",function(t){return e.props.mouseEnter(t)});if(this.props.mouseLeave)this.ctrlRef.current.addEventListener("mouseLeave",function(t){return e.props.mouseLeave(t)});if(this.props.mouseMove)this.ctrlRef.current.addEventListener("mouseMove",function(t){return e.props.mouseMove(t)});if(this.props.mouseUp)this.ctrlRef.current.addEventListener("mouseUp",function(t){return e.props.mouseUp(t)});if(this.props.opened)this.ctrlRef.current.addEventListener("opened",function(t){return e.props.opened(t)});if(this.props.opening)this.ctrlRef.current.addEventListener("opening",function(t){return e.props.opening(t)});if(this.props.positionChanged)this.ctrlRef.current.addEventListener("positionChanged",function(t){return e.props.positionChanged(t)});if(this.props.selectedChanged)this.ctrlRef.current.addEventListener("selectedChanged",function(t){return e.props.selectedChanged(t)});if(this.props.sizeChanged)this.ctrlRef.current.addEventListener("sizeChanged",function(t){return e.props.sizeChanged(t)});if(this.props.stateChanged)this.ctrlRef.current.addEventListener("stateChanged",function(t){return e.props.stateChanged(t)});if(this.props.visibleChanged)this.ctrlRef.current.addEventListener("visibleChanged",function(t){return e.props.visibleChanged(t)})}}},{key:"componentWillUnmount",value:function(){if(this.ctrlRef&&this.ctrlRef.current){if(this.props.click)this.ctrlRef.current.removeEventListener("click",this.props.click);if(this.props.closed)this.ctrlRef.current.removeEventListener("closed",this.props.closed);if(this.props.closing)this.ctrlRef.current.removeEventListener("closing",this.props.closing);if(this.props.enabledChanged)this.ctrlRef.current.removeEventListener("enabledChanged",this.props.enabledChanged);if(this.props.mouseDown)this.ctrlRef.current.removeEventListener("mouseDown",this.props.mouseDown);if(this.props.mouseEnter)this.ctrlRef.current.removeEventListener("mouseEnter",this.props.mouseEnter);if(this.props.mouseLeave)this.ctrlRef.current.removeEventListener("mouseLeave",this.props.mouseLeave);if(this.props.mouseMove)this.ctrlRef.current.removeEventListener("mouseMove",this.props.mouseMove);if(this.props.mouseUp)this.ctrlRef.current.removeEventListener("mouseUp",this.props.mouseUp);if(this.props.opened)this.ctrlRef.current.removeEventListener("opened",this.props.opened);if(this.props.opening)this.ctrlRef.current.removeEventListener("opening",this.props.opening);if(this.props.positionChanged)this.ctrlRef.current.removeEventListener("positionChanged",this.props.positionChanged);if(this.props.selectedChanged)this.ctrlRef.current.removeEventListener("selectedChanged",this.props.selectedChanged);if(this.props.sizeChanged)this.ctrlRef.current.removeEventListener("sizeChanged",this.props.sizeChanged);if(this.props.stateChanged)this.ctrlRef.current.removeEventListener("stateChanged",this.props.stateChanged);if(this.props.visibleChanged)this.ctrlRef.current.removeEventListener("visibleChanged",this.props.visibleChanged)}}},{key:"componentDidUpdate",value:function(e){this._updateData(e)}},{key:"_initProps",value:function(){if(this.ctrlRef&&this.ctrlRef.current){if(this._isDefined(this.props.allowAnimation))this.ctrlRef.current.allowAnimation=this.props.allowAnimation;if(this._isDefined(this.props.allowResize))this.ctrlRef.current.allowResize=this.props.allowResize;if(this._isDefined(this.props.allowUpdate))this.ctrlRef.current.allowUpdate=this.props.allowUpdate;if(this._isDefined(this.props.closeButton))this.ctrlRef.current.closeButton=this.props.closeButton;if(this._isDefined(this.props.colorScheme))this.ctrlRef.current.colorScheme=this.props.colorScheme;if(this._isDefined(this.props.customStyle))this.ctrlRef.current.customStyle=this.props.customStyle;if(this._isDefined(this.props.data))this.ctrlRef.current.data=this.props.data;if(this._isDefined(this.props.enabled))this.ctrlRef.current.enabled=this.props.enabled;if(this._isDefined(this.props.icon))this.ctrlRef.current.icon=this.props.icon;if(this._isDefined(this.props.iconUrl))this.ctrlRef.current.iconUrl=this.props.iconUrl;if(this._isDefined(this.props.maximizeButton))this.ctrlRef.current.maximizeButton=this.props.maximizeButton;if(this._isDefined(this.props.minimizeButton))this.ctrlRef.current.minimizeButton=this.props.minimizeButton;if(this._isDefined(this.props.name))this.ctrlRef.current.name=this.props.name;if(this._isDefined(this.props.maxSize))this.ctrlRef.current.maxSize=this.props.maxSize;if(this._isDefined(this.props.minSize))this.ctrlRef.current.minSize=this.props.minSize;if(this._isDefined(this.props.parentId))this.ctrlRef.current.parentId=this.props.parentId;if(this._isDefined(this.props.position))this.ctrlRef.current.position=this.props.position;if(this._isDefined(this.props.resourcePath))this.ctrlRef.current.resourcePath=this.props.resourcePath;if(this._isDefined(this.props.selected))this.ctrlRef.current.selected=this.props.selected;if(this._isDefined(this.props.size))this.ctrlRef.current.size=this.props.size;if(this._isDefined(this.props.state))this.ctrlRef.current.state=this.props.state;if(this._isDefined(this.props.text))this.ctrlRef.current.text=this.props.text;if(this._isDefined(this.props.theme))this.ctrlRef.current.theme=this.props.theme;if(this._isDefined(this.props.visible))this.ctrlRef.current.visible=this.props.visible}}},{key:"_isDefined",value:function(e){return void 0!==e?!0:!1}},{key:"_updateData",value:function(e){if(this.ctrlRef&&this.ctrlRef.current){if(this.props.allowAnimation!==e.allowAnimation)this.ctrlRef.current.allowAnimation=this.props.allowAnimation;if(this.props.allowResize!==e.allowResize)this.ctrlRef.current.allowResize=this.props.allowResize;if(this.props.allowUpdate!==e.allowUpdate)this.ctrlRef.current.allowUpdate=this.props.allowUpdate;if(this.props.closeButton!==e.closeButton)this.ctrlRef.current.closeButton=this.props.closeButton;if(this.props.colorScheme!==e.colorScheme)this.ctrlRef.current.colorScheme=this.props.colorScheme;if(this.props.customStyle!==e.customStyle)this.ctrlRef.current.customStyle=this.props.customStyle;if(this.props.data!==e.data)this.ctrlRef.current.data=this.props.data;if(this.props.enabled!==e.enabled)this.ctrlRef.current.enabled=this.props.enabled;if(this.props.icon!==e.icon)this.ctrlRef.current.icon=this.props.icon;if(this.props.iconUrl!==e.iconUrl)this.ctrlRef.current.iconUrl=this.props.iconUrl;if(this.props.maximizeButton!==e.maximizeButton)this.ctrlRef.current.maximizeButton=this.props.maximizeButton;if(this.props.minimizeButton!==e.minimizeButton)this.ctrlRef.current.minimizeButton=this.props.minimizeButton;if(this.props.maxSize!==e.maxSize)this.ctrlRef.current.maxSize=this.props.maxSize;if(this.props.minSize!==e.minSize)this.ctrlRef.current.minSize=this.props.minSize;if(this.props.name!==e.name)this.ctrlRef.current.name=this.props.name;if(this.props.parentId!==e.parentId)this.ctrlRef.current.parentId=this.props.parentId;if(this.props.position!==e.position)this.ctrlRef.current.position=this.props.position;if(this.props.resourcePath!==e.resourcePath)this.ctrlRef.current.resourcePath=this.props.resourcePath;if(this.props.selected!==e.selected)this.ctrlRef.current.selected=this.props.selected;if(this.props.size!==e.size)this.ctrlRef.current.size=this.props.size;if(this.props.state!==e.state)this.ctrlRef.current.state=this.props.state;if(this.props.text!==e.text)this.ctrlRef.current.text=this.props.text;if(this.props.theme!==e.theme)this.ctrlRef.current.theme=this.props.theme;if(this.props.visible!==e.visible)this.ctrlRef.current.visible=this.props.visible}}},{key:"maximize",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.maximize()}},{key:"minimize",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.minimize()}},{key:"close",value:function(e){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.close(e)}},{key:"open",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.open()}},{key:"setClass",value:function(e){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.setClass(e)}},{key:"setStyle",value:function(e){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.setStyle(e)}},{key:"refresh",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.refresh()}},{key:"updateLayout",value:function(){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.updateLayout()}},{key:"render",value:function(){return React.createElement("iui-window",{id:this.props.id,ref:this.ctrlRef},this.props.children)}}]);return t}();export default IntegralUIWindowComponent;
+import React, { Component } from "react";
+
+import '../components/integralui.window.js';
+
+class IntegralUIWindowComponent extends Component {
+    constructor(props){
+        super(props);
+
+        this.ctrlRef = React.createRef();
+    }
+ 
+    //
+    // Events ------------------------------------------------------------------------------------
+    //
+
+    componentDidMount(){
+        this._initProps();
+
+        if (this.ctrlRef && this.ctrlRef.current){
+            if (this.props.click)
+                this.ctrlRef.current.addEventListener('click', (e) => this.props.click(e));
+            if (this.props.closed)
+                this.ctrlRef.current.addEventListener('closed', (e) => this.props.closed(e));
+            if (this.props.closing)
+                this.ctrlRef.current.addEventListener('closing', (e) => this.props.closing(e));
+            if (this.props.enabledChanged)
+                this.ctrlRef.current.addEventListener('enabledChanged', (e) => this.props.enabledChanged(e));
+            if (this.props.mouseDown)
+                this.ctrlRef.current.addEventListener('mouseDown', (e) => this.props.mouseDown(e));
+            if (this.props.mouseEnter)
+                this.ctrlRef.current.addEventListener('mouseEnter', (e) => this.props.mouseEnter(e));
+            if (this.props.mouseLeave)
+                this.ctrlRef.current.addEventListener('mouseLeave', (e) => this.props.mouseLeave(e));
+            if (this.props.mouseMove)
+                this.ctrlRef.current.addEventListener('mouseMove', (e) => this.props.mouseMove(e));
+            if (this.props.mouseUp)
+                this.ctrlRef.current.addEventListener('mouseUp', (e) => this.props.mouseUp(e));
+            if (this.props.opened)
+                this.ctrlRef.current.addEventListener('opened', (e) => this.props.opened(e));
+            if (this.props.opening)
+                this.ctrlRef.current.addEventListener('opening', (e) => this.props.opening(e));
+            if (this.props.positionChanged)
+                this.ctrlRef.current.addEventListener('positionChanged', (e) => this.props.positionChanged(e));
+            if (this.props.selectedChanged)
+                this.ctrlRef.current.addEventListener('selectedChanged', (e) => this.props.selectedChanged(e));
+            if (this.props.sizeChanged)
+                this.ctrlRef.current.addEventListener('sizeChanged', (e) => this.props.sizeChanged(e));
+            if (this.props.stateChanged)
+                this.ctrlRef.current.addEventListener('stateChanged', (e) => this.props.stateChanged(e));
+            if (this.props.visibleChanged)
+                this.ctrlRef.current.addEventListener('visibleChanged', (e) => this.props.visibleChanged(e));
+        }
+    }
+
+    componentWillUnmount(){
+        if (this.ctrlRef && this.ctrlRef.current){
+            if (this.props.click)
+                this.ctrlRef.current.removeEventListener('click', this.props.click);
+            if (this.props.closed)
+                this.ctrlRef.current.removeEventListener('closed', this.props.closed);
+            if (this.props.closing)
+                this.ctrlRef.current.removeEventListener('closing', this.props.closing);
+            if (this.props.enabledChanged)
+                this.ctrlRef.current.removeEventListener('enabledChanged', this.props.enabledChanged);
+            if (this.props.mouseDown)
+                this.ctrlRef.current.removeEventListener('mouseDown', this.props.mouseDown);
+            if (this.props.mouseEnter)
+                this.ctrlRef.current.removeEventListener('mouseEnter', this.props.mouseEnter);
+            if (this.props.mouseLeave)
+                this.ctrlRef.current.removeEventListener('mouseLeave', this.props.mouseLeave);
+            if (this.props.mouseMove)
+                this.ctrlRef.current.removeEventListener('mouseMove', this.props.mouseMove);
+            if (this.props.mouseUp)
+                this.ctrlRef.current.removeEventListener('mouseUp', this.props.mouseUp);
+            if (this.props.opened)
+                this.ctrlRef.current.removeEventListener('opened', this.props.opened);
+            if (this.props.opening)
+                this.ctrlRef.current.removeEventListener('opening', this.props.opening);
+            if (this.props.positionChanged)
+                this.ctrlRef.current.removeEventListener('positionChanged', this.props.positionChanged);
+            if (this.props.selectedChanged)
+                this.ctrlRef.current.removeEventListener('selectedChanged', this.props.selectedChanged);
+            if (this.props.sizeChanged)
+                this.ctrlRef.current.removeEventListener('sizeChanged', this.props.sizeChanged);
+            if (this.props.stateChanged)
+                this.ctrlRef.current.removeEventListener('stateChanged', this.props.stateChanged);
+            if (this.props.visibleChanged)
+                this.ctrlRef.current.removeEventListener('visibleChanged', this.props.visibleChanged);
+        }
+    }
+ 
+    //
+    // Properties --------------------------------------------------------------------------------
+    //
+
+    componentDidUpdate(prevProps){
+        this._updateData(prevProps);
+    }
+
+    _initProps(){
+        if (this.ctrlRef && this.ctrlRef.current){
+            if (this._isDefined(this.props.allowAnimation))
+                this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
+            if (this._isDefined(this.props.allowResize))
+                this.ctrlRef.current.allowResize = this.props.allowResize;
+            if (this._isDefined(this.props.allowUpdate))
+                this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
+            if (this._isDefined(this.props.closeButton))
+                this.ctrlRef.current.closeButton = this.props.closeButton;
+            if (this._isDefined(this.props.colorScheme))
+                this.ctrlRef.current.colorScheme = this.props.colorScheme;
+            if (this._isDefined(this.props.customStyle))
+                this.ctrlRef.current.customStyle = this.props.customStyle;
+            if (this._isDefined(this.props.data))
+                this.ctrlRef.current.data = this.props.data;
+            if (this._isDefined(this.props.enabled))
+                this.ctrlRef.current.enabled = this.props.enabled;
+            if (this._isDefined(this.props.icon))
+                this.ctrlRef.current.icon = this.props.icon;
+            if (this._isDefined(this.props.iconUrl))
+                this.ctrlRef.current.iconUrl = this.props.iconUrl;
+            if (this._isDefined(this.props.maximizeButton))
+                this.ctrlRef.current.maximizeButton = this.props.maximizeButton;
+            if (this._isDefined(this.props.minimizeButton))
+                this.ctrlRef.current.minimizeButton = this.props.minimizeButton;
+            if (this._isDefined(this.props.name))
+                this.ctrlRef.current.name = this.props.name;
+            if (this._isDefined(this.props.maxSize))
+                this.ctrlRef.current.maxSize = this.props.maxSize;
+            if (this._isDefined(this.props.minSize))
+                this.ctrlRef.current.minSize = this.props.minSize;
+            if (this._isDefined(this.props.parentId))
+                this.ctrlRef.current.parentId = this.props.parentId;
+            if (this._isDefined(this.props.position))
+                this.ctrlRef.current.position = this.props.position;
+            if (this._isDefined(this.props.resourcePath))
+                this.ctrlRef.current.resourcePath = this.props.resourcePath;
+            if (this._isDefined(this.props.selected))
+                this.ctrlRef.current.selected = this.props.selected;
+            if (this._isDefined(this.props.size))
+                this.ctrlRef.current.size = this.props.size;
+            if (this._isDefined(this.props.state))
+                this.ctrlRef.current.state = this.props.state;
+            if (this._isDefined(this.props.text))
+                this.ctrlRef.current.text = this.props.text;
+            if (this._isDefined(this.props.theme))
+                this.ctrlRef.current.theme = this.props.theme;
+            if (this._isDefined(this.props.visible))
+                this.ctrlRef.current.visible = this.props.visible;
+        }
+    }
+    
+    _isDefined(value){
+        return value !== undefined ? true : false;
+    }
+
+    _updateData(prevProps){
+        if (this.ctrlRef && this.ctrlRef.current){
+            if (this.props.allowAnimation !== prevProps.allowAnimation)
+                this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
+            if (this.props.allowResize !== prevProps.allowResize)
+                this.ctrlRef.current.allowResize = this.props.allowResize;
+            if (this.props.allowUpdate !== prevProps.allowUpdate)
+                this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
+            if (this.props.closeButton !== prevProps.closeButton)
+                this.ctrlRef.current.closeButton = this.props.closeButton;
+            if (this.props.colorScheme !== prevProps.colorScheme)
+                this.ctrlRef.current.colorScheme = this.props.colorScheme;
+            if (this.props.customStyle !== prevProps.customStyle)
+                this.ctrlRef.current.customStyle = this.props.customStyle;
+            if (this.props.data !== prevProps.data)
+                this.ctrlRef.current.data = this.props.data;
+            if (this.props.enabled !== prevProps.enabled)
+                this.ctrlRef.current.enabled = this.props.enabled;
+            if (this.props.icon !== prevProps.icon)
+                this.ctrlRef.current.icon = this.props.icon;
+            if (this.props.iconUrl !== prevProps.iconUrl)
+                this.ctrlRef.current.iconUrl = this.props.iconUrl;
+            if (this.props.maximizeButton !== prevProps.maximizeButton)
+                this.ctrlRef.current.maximizeButton = this.props.maximizeButton;
+            if (this.props.minimizeButton !== prevProps.minimizeButton)
+                this.ctrlRef.current.minimizeButton = this.props.minimizeButton;
+            if (this.props.maxSize !== prevProps.maxSize)
+                this.ctrlRef.current.maxSize = this.props.maxSize;
+            if (this.props.minSize !== prevProps.minSize)
+                this.ctrlRef.current.minSize = this.props.minSize;
+            if (this.props.name !== prevProps.name)
+                this.ctrlRef.current.name = this.props.name;
+            if (this.props.parentId !== prevProps.parentId)
+                this.ctrlRef.current.parentId = this.props.parentId;
+            if (this.props.position !== prevProps.position)
+                this.ctrlRef.current.position = this.props.position;
+            if (this.props.resourcePath !== prevProps.resourcePath)
+                this.ctrlRef.current.resourcePath = this.props.resourcePath;
+            if (this.props.selected !== prevProps.selected)
+                this.ctrlRef.current.selected = this.props.selected;
+            if (this.props.size !== prevProps.size)
+                this.ctrlRef.current.size = this.props.size;
+            if (this.props.state !== prevProps.state)
+                this.ctrlRef.current.state = this.props.state;
+            if (this.props.text !== prevProps.text)
+                this.ctrlRef.current.text = this.props.text;
+            if (this.props.theme !== prevProps.theme)
+                this.ctrlRef.current.theme = this.props.theme;
+            if (this.props.visible !== prevProps.visible)
+                this.ctrlRef.current.visible = this.props.visible;
+       }
+    }
+ 
+    //
+    // Methods -----------------------------------------------------------------------------------
+    //
+    
+    // Layout ------------------------------------------------------------------------------------
+   
+	maximize(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.maximize();
+    }
+    
+	minimize(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.minimize();
+    }
+
+    // Open/Close --------------------------------------------------------------------------------
+
+	close(remove){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.close(remove);
+    }
+
+	open(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.open();
+    }
+
+    // Style -------------------------------------------------------------------------------------
+
+    setClass(value){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.setClass(value);
+    }
+
+	setStyle(value){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.setStyle(value);
+    }
+
+    // Update ------------------------------------------------------------------------------------
+
+	refresh(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.refresh();
+    }
+
+	updateLayout(){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.updateLayout();
+    }
+
+    render(){
+        return (
+            <iui-window id={this.props.id} ref={this.ctrlRef}>
+                {this.props.children}
+            </iui-window>
+        );
+    }
+}
+
+
+export default IntegralUIWindowComponent;

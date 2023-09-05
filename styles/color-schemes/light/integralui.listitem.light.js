@@ -2,10 +2,12 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiListItemLightStyle = css`
     .iui-listgroup {
+        background: var(--iui-listgroup-background, white);
         color: var(--iui-listgroup-color, #2f78a8);
     }
 
     .iui-listitem {
+        background: var(--iui-listitem-background, white);
         color: var(--iui-listitem-color, #646464);
     }
     .iui-listitem-hovered {

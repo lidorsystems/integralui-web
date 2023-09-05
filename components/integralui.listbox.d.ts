@@ -78,6 +78,11 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
             attribute: string;
             reflect: boolean;
         };
+        animateInit: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
         contentVisibility: {
             attribute: string;
             converter: {
@@ -155,7 +160,17 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
             attribute: string;
             reflect: boolean;
         };
+        autoSize: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
         defaultGroupName: {
+            type: StringConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
+        groupBy: {
             type: StringConstructor;
             attribute: string;
             reflect: boolean;
@@ -174,8 +189,12 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
             reflect: boolean;
         };
     };
+    set autoSize(arg: any);
+    get autoSize(): any;
     set defaultGroupName(arg: any);
     get defaultGroupName(): any;
+    set groupBy(arg: any);
+    get groupBy(): any;
     set groups(arg: any);
     get groups(): any;
     set showExpandBox(arg: any);
@@ -183,9 +202,9 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
     set showGroups(arg: any);
     get showGroups(): any;
     loadData(data: any, fields: any): void;
-    collapse(group: any): void;
-    expand(group: any): void;
-    toggle(group: any, value: any): void;
+    collapse(group: any): Promise<void>;
+    expand(group: any): Promise<void>;
+    toggle(group: any, value: any): Promise<void>;
     firstUpdated(props: any): void;
     updated(changedProperties: any): void;
     render(): import("../external/lit-element.js").TemplateResult;

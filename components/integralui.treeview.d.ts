@@ -78,6 +78,11 @@ declare class IntegralUITreeView extends IntegralUIBaseList {
             attribute: string;
             reflect: boolean;
         };
+        animateInit: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
         contentVisibility: {
             attribute: string;
             converter: {
@@ -219,9 +224,9 @@ declare class IntegralUITreeView extends IntegralUIBaseList {
     get showExpandBox(): any;
     loadData(data: any, parent: any, fields: any, flat: any): void;
     isThereChildItems: boolean | undefined;
-    collapse(item: any): void;
-    expand(item: any): void;
-    toggle(item: any, value: any): void;
+    collapse(item: any): Promise<void>;
+    expand(item: any): Promise<void>;
+    toggle(item: any, value: any): Promise<void>;
     updateFullList(): any[];
     getItemLevel(item: any): number;
     getItemParent(item: any): any;

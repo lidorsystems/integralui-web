@@ -37,14 +37,6 @@ export const iuiContextMenuDefaultStyle = css`
         padding: 0;
     }
     .iui-menuitem-block {
-        background: var(--iui-contextmenu-background, #f5f5f5);
-        border: var(--iui-contextmenu-border, thin solid #dedede);
         width: var(--iui-contextmenu-width, 150px);
-    }
-    .iui-contextmenuitem-root-hovered, .iui-contextmenuitem-root-selected {
-        animation-name: var(--iui-contextmenuitem-root-animation-name, none);
-    }
-    .iui-contextmenuitem-hovered, .iui-contextmenuitem-selected {
-        animation-name: var(--iui-contextmenuitem-root-animation-name, none);
     }
 `;

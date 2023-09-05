@@ -7,6 +7,7 @@ const iuiPanelDefaultStyle = css`
         border-color:  var(--iui-panel-border-color, #cecece);
         border-radius: var(--iui-panel-border-radius, 1px);
         border-width: var(--iui-panel-border-width, thin);
+        bottom: var(--iui-panel-bottom, auto);
         color: var(--iui-panel-color, black);
         cursor: var(--iui-panel-cursor, default);
         display: var(--iui-panel-display, block);
@@ -14,12 +15,15 @@ const iuiPanelDefaultStyle = css`
         font-size: var(--iui-panel-font-size, 1rem);
         font-style: var(--iui-panel-font-style, normal);
         height: var(--iui-panel-height, 100%);
+        left: var(--iui-panel-left, auto);
         opacity: var(--iui-panel-opacity, 1);
         overflow: var(--iui-panel-overflow, hidden);
         margin: var(--iui-panel-margin, 0);
         padding: var(--iui-panel-padding, 0);
         position: var(--iui-panel-position, relative);
+        right: var(--iui-panel-right, auto);
         text-align: var(--iui-panel-text-align, center);
+        top: var(--iui-panel-top, auto);
         vertical-align: var(--iui-panel-vertical-align, initial);
         width: var(--iui-panel-width, auto);
         z-index: var(--iui-panel-z-index, auto);

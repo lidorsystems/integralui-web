@@ -15,7 +15,7 @@ export const iuiScrollBarDarkStyle = css`
     }
     .iui-scrollbar-thumb-selected {
         background: var(--iui-scrollbar-thumb-selected-background, #626262);
-        border-color: var(--iui-scrollbar-thumb-selected-border-color, #626262)+;
+        border-color: var(--iui-scrollbar-thumb-selected-border-color, #626262);
     }
     .iui-scrollbar-dynamic .iui-scrollbar-thumb {
         border-color: var(--iui-scrollbar-thumb-border-color, #484848);

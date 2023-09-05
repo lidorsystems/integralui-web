@@ -51,6 +51,10 @@ export class IntegralUIContextMenuWindow extends LitElement {
     get resourcePath(): string;
     set theme(arg: string);
     get theme(): string;
+    findItemById(id: any): any;
+    findItemByText(text: any): any;
+    getFullList(): any[] | undefined;
+    getItemParent(item: any): any;
     invokeCtrlMethod(name: any, value: any): void;
     open(e: any, mode: any, pos: any, appSize: any, elemPageRect: any): void;
     firstUpdated(props: any): void;
@@ -131,6 +135,10 @@ declare class IntegralUIContextMenu extends IntegralUIBase {
     };
     set settings(arg: any);
     get settings(): any;
+    findItemById(id: any): any;
+    findItemByText(text: any): any;
+    getFullList(): any[] | undefined;
+    getItemParent(item: any): any;
     firstUpdated(props: any): void;
     render(): TemplateResult;
 }

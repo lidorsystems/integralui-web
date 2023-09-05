@@ -9,20 +9,35 @@ export const iuiTreeItemDefaultStyle = css`
         margin: var(--iui-treeitem-margin, 0);
         padding: var(--iui-treeitem-padding, 0);
     }
-    .iui-treeitem-block, .iui-treeitem-content-block {
+    .iui-treeitem-block {
         border: var(--iui-treeitem-border, 2px solid transparent);
         border-color: var(--iui-treeitem-border-color, transparent);
         border-width: var(--iui-treeitem-border-width, 2px);
     }
-    .iui-treeitem-hovered, .iui-treeitem-content-hovered {
+    .iui-treeitem-hovered {
         background: var(--iui-treeitem-hovered-background, #f5f5f5);
         border-color: var(--iui-treeitem-hovered-border-color, #efefef);
         color: var(--iui-treeitem-hovered-color, black);
     }
-    .iui-treeitem-selected, .iui-treeitem-content-selected {
+    .iui-treeitem-selected {
         background: var(--iui-treeitem-selected-background, #e5e5e5);
         border-color: var(--iui-treeitem-selected-border-color, #dedede);
         color: var(--iui-treeitem-selected-color, black);
+    }
+    .iui-treeitem-content-block {
+        border: var(--iui-treeitem-content-border, 2px solid transparent);
+        border-color: var(--iui-treeitem-content-border-color, transparent);
+        border-width: var(--iui-treeitem-content-border-width, 2px);
+    }
+    .iui-treeitem-content-hovered {
+        background: var(--iui-treeitem-content-hovered-background, #f5f5f5);
+        border-color: var(--iui-treeitem-content-hovered-border-color, #efefef);
+        color: var(--iui-treeitem-content-hovered-color, black);
+    }
+    .iui-treeitem-content-selected {
+        background: var(--iui-treeitem-content-selected-background, #e5e5e5);
+        border-color: var(--iui-treeitem-content-selected-border-color, #dedede);
+        color: var(--iui-treeitem-content-selected-color, black);
     }
     .iui-treeitem:focus {
         outline: none !important;
@@ -33,7 +48,7 @@ export const iuiTreeItemDefaultStyle = css`
         padding: 0;
     }
     .iui-treeitem-content {
-        border: var(--iui-treeitem-border, 2px solid transparent);
+        border: var(--iui-treeitem-content-border, 2px solid transparent);
         display: block;
         margin: 0;
         padding: var(--iui-treeitem-content-padding, 3px);
@@ -160,21 +175,21 @@ export const iuiTreeItemDefaultStyle = css`
 
     /* CheckBox */
     .iui-treeitem-checkbox {
-        background-image: url(../../icons/checkbox-unchecked.ico);
+        background-image: var(--iui-treeitem-checkbox-background-image, url(../../icons/checkbox-unchecked.ico));
         background-repeat: no-repeat;
         display: inline-block;
         overflow: hidden;
-        padding: 0;
-        margin: 0 5px 0 0;
+        padding: var(--iui-treeitem-checkbox-padding, 0);
+        margin: var(--iui-treeitem-checkbox-margin, 0 5px 0 0);
         width: 16px;
         height: 16px;
-        vertical-align: middle;
+        vertical-align: var(--iui-treeitem-checkbox-vertical-align, middle);
     }
     .iui-treeitem-checkbox-checked {
-        background-image: url(../../icons/checkbox-checked.ico);
+        background-image: var(--iui-treeitem-checkbox-checked-background-image, url(../../icons/checkbox-checked.ico));
     }
     .iui-treeitem-checkbox-indeterminate {
-        background-image: url(../../icons/checkbox-indeterminate.ico);
+        background-image: var(--iui-treeitem-checkbox-indeterminate-background-image, url(../../icons/checkbox-indeterminate.ico));
     }
 
     /* Animations */

@@ -1,6 +1,6 @@
 /*
   filename: react.integralui.tabstrip.js
-  version : 23.2.0
+  version : 23.3.0
   Copyright © 2016-2023 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
@@ -12,4 +12,321 @@
   This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
 */
-import React,{Component}from"react";import"../components/integralui.tabstrip.js";var _createClass=function(){function t(t,e){for(var i=0;i<e.length;i++){var r=e[i];r.enumerable=r.enumerable||!1;r.configurable=!0;if("value"in r)r.writable=!0;Object.defineProperty(t,r.key,r)}}return function(e,i,r){if(i)t(e.prototype,i);if(r)t(e,r);return e}}();function _classCallCheck(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e&&("object"===typeof e||"function"===typeof e)?e:t}function _inherits(t,e){if("function"!==typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}});if(e)Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e}var IntegralUITabStripComponent=function(t){_inherits(e,Component);function e(t){_classCallCheck(this,e);var i=_possibleConstructorReturn(this,(e.__proto__||Object.getPrototypeOf(e)).call(this,t));i.ctrlRef=React.createRef();return i}_createClass(e,[{key:"_isCtrlDefined",value:function(){return this.ctrlRef&&this.ctrlRef.current?!0:!1}},{key:"componentDidMount",value:function(){var t=this;this._initProps();if(this._isCtrlDefined()){if(this.props.afterSelect)this.ctrlRef.current.addEventListener("afterSelect",function(e){return t.props.afterSelect(e)});if(this.props.beforeSelect)this.ctrlRef.current.addEventListener("beforeSelect",function(e){return t.props.beforeSelect(e)});if(this.props.change)this.ctrlRef.current.addEventListener("change",function(e){return t.props.change(e)});if(this.props.clear)this.ctrlRef.current.addEventListener("clear",function(){return t.props.clear()});if(this.props.enabledChanged)this.ctrlRef.current.addEventListener("enabledChanged",function(e){return t.props.enabledChanged(e)});if(this.props.tabAdded)this.ctrlRef.current.addEventListener("tabAdded",function(e){return t.props.tabAdded(e)});if(this.props.tabAdding)this.ctrlRef.current.addEventListener("tabAdding",function(e){return t.props.tabAdding(e)});if(this.props.tabOrderChanged)this.ctrlRef.current.addEventListener("tabOrderChanged",function(e){return t.props.tabOrderChanged(e)});if(this.props.tabRemoved)this.ctrlRef.current.addEventListener("tabRemoved",function(e){return t.props.tabRemoved(e)});if(this.props.tabRemoving)this.ctrlRef.current.addEventListener("tabRemoving",function(e){return t.props.tabRemoving(e)});if(this.props.scrollPosChanged)this.ctrlRef.current.addEventListener("scrollPosChanged",function(e){return t.props.scrollPosChanged(e)});if(this.props.selectionChanged)this.ctrlRef.current.addEventListener("selectionChanged",function(e){return t.props.selectionChanged(e)});if(this.props.sizeChanged)this.ctrlRef.current.addEventListener("sizeChanged",function(e){return t.props.sizeChanged(e)});if(this.props.stateChanged)this.ctrlRef.current.addEventListener("stateChanged",function(e){return t.props.stateChanged(e)});if(this.props.updateComplete)this.ctrlRef.current.addEventListener("updateComplete",function(){return t.props.updateComplete()})}}},{key:"_isDefined",value:function(t){return void 0!==t?!0:!1}},{key:"componentWillUnmount",value:function(){if(this._isCtrlDefined()){if(this.props.afterSelect)this.ctrlRef.current.removeEventListener("afterSelect",this.props.afterSelect);if(this.props.beforeSelect)this.ctrlRef.current.removeEventListener("beforeSelect",this.props.beforeSelect);if(this.props.change)this.ctrlRef.current.removeEventListener("change",this.props.change);if(this.props.clear)this.ctrlRef.current.removeEventListener("clear",this.props.clear);if(this.props.enabledChanged)this.ctrlRef.current.removeEventListener("enabledChanged",this.props.enabledChanged);if(this.props.tabAdded)this.ctrlRef.current.removeEventListener("tabAdded",this.props.tabAdded);if(this.props.tabAdding)this.ctrlRef.current.removeEventListener("tabAdding",this.props.tabAdding);if(this.props.tabOrderChanged)this.ctrlRef.current.removeEventListener("tabOrderChanged",this.props.tabOrderChanged);if(this.props.tabRemoved)this.ctrlRef.current.removeEventListener("tabRemoved",this.props.tabRemoved);if(this.props.tabRemoving)this.ctrlRef.current.removeEventListener("tabRemoving",this.props.tabRemoving);if(this.props.scrollPosChanged)this.ctrlRef.current.removeEventListener("scrollPosChanged",this.props.scrollPosChanged);if(this.props.selectionChanged)this.ctrlRef.current.removeEventListener("selectionChanged",this.props.selectionChanged);if(this.props.sizeChanged)this.ctrlRef.current.removeEventListener("sizeChanged",this.props.sizeChanged);if(this.props.stateChanged)this.ctrlRef.current.removeEventListener("stateChanged",this.props.stateChanged);if(this.props.updateComplete)this.ctrlRef.current.removeEventListener("updateComplete",this.props.updateComplete)}}},{key:"componentDidUpdate",value:function(t){this._updateData(t)}},{key:"_initProps",value:function(){if(this._isCtrlDefined()){if(this._isDefined(this.props.resourcePath))this.ctrlRef.current.resourcePath=this.props.resourcePath;if(this._isDefined(this.props.allowAnimation))this.ctrlRef.current.allowAnimation=this.props.allowAnimation;if(this._isDefined(this.props.allowUpdate))this.ctrlRef.current.allowUpdate=this.props.allowUpdate;if(this._isDefined(this.props.allowDrag))this.ctrlRef.current.allowDrag=this.props.allowDrag;if(this._isDefined(this.props.allowDrop))this.ctrlRef.current.allowDrop=this.props.allowDrop;if(this._isDefined(this.props.animationSpeed))this.ctrlRef.current.animationSpeed=this.props.animationSpeed;if(this._isDefined(this.props.autoSize))this.ctrlRef.current.autoSize=this.props.autoSize;if(this._isDefined(this.props.contentAnimation))this.ctrlRef.current.contentAnimation=this.props.contentAnimation;if(this._isDefined(this.props.colorScheme))this.ctrlRef.current.colorScheme=this.props.colorScheme;if(this._isDefined(this.props.customStyle))this.ctrlRef.current.customStyle=this.props.customStyle;if(this._isDefined(this.props.data))this.ctrlRef.current.data=this.props.data;if(this._isDefined(this.props.displayMode))this.ctrlRef.current.displayMode=this.props.displayMode;if(this._isDefined(this.props.enabled))this.ctrlRef.current.enabled=this.props.enabled;if(this._isDefined(this.props.name))this.ctrlRef.current.name=this.props.name;if(this._isDefined(this.props.navigation))this.ctrlRef.current.navigation=this.props.navigation;if(this._isDefined(this.props.scrollMode))this.ctrlRef.current.scrollMode=this.props.scrollMode;if(this._isDefined(this.props.selectedIndex))this.ctrlRef.current.selectedIndex=this.props.selectedIndex;if(this._isDefined(this.props.selectedTab))this.ctrlRef.current.selectedTab=this.props.selectedTab;if(this._isDefined(this.props.showTabLine))this.ctrlRef.current.showTabLine=this.props.showTabLine;if(this._isDefined(this.props.size))this.ctrlRef.current.size=this.props.size;if(this._isDefined(this.props.state))this.ctrlRef.current.state=this.props.state;if(this._isDefined(this.props.tabs))this.ctrlRef.current.tabs=this.props.tabs;if(this._isDefined(this.props.tabAlignment))this.ctrlRef.current.tabAlignment=this.props.tabAlignment;if(this._isDefined(this.props.tabOrientation))this.ctrlRef.current.tabOrientation=this.props.tabOrientation;if(this._isDefined(this.props.tabSpacing))this.ctrlRef.current.tabSpacing=this.props.tabSpacing;if(this._isDefined(this.props.tabStripPlacement))this.ctrlRef.current.tabStripPlacement=this.props.tabStripPlacement;if(this._isDefined(this.props.tabTemplate))this.ctrlRef.current.tabTemplate=this.props.tabTemplate;if(this._isDefined(this.props.theme))this.ctrlRef.current.theme=this.props.theme}}},{key:"_updateData",value:function(t){if(this._isCtrlDefined()){if(this.props.resourcePath!==t.resourcePath)this.ctrlRef.current.resourcePath=this.props.resourcePath;if(this.props.allowAnimation!==t.allowAnimation)this.ctrlRef.current.allowAnimation=this.props.allowAnimation;if(this.props.allowUpdate!==t.allowUpdate)this.ctrlRef.current.allowUpdate=this.props.allowUpdate;if(this.props.allowDrag!==t.allowDrag)this.ctrlRef.current.allowDrag=this.props.allowDrag;if(this.props.allowDrop!==t.allowDrop)this.ctrlRef.current.allowDrop=this.props.allowDrop;if(this.props.animationSpeed!==t.animationSpeed)this.ctrlRef.current.animationSpeed=this.props.animationSpeed;if(this.props.autoSize!==t.autoSize)this.ctrlRef.current.autoSize=this.props.autoSize;if(this.props.colorScheme!==t.colorScheme)this.ctrlRef.current.colorScheme=this.props.colorScheme;if(this.props.contentAnimation!==t.contentAnimation)this.ctrlRef.current.contentAnimation=this.props.contentAnimation;if(this.props.customStyle!==t.customStyle)this.ctrlRef.current.customStyle=this.props.customStyle;if(this.props.data!==t.data)this.ctrlRef.current.data=this.props.data;if(this.props.displayMode!==t.displayMode)this.ctrlRef.current.displayMode=this.props.displayMode;if(this.props.enabled!==t.enabled)this.ctrlRef.current.enabled=this.props.enabled;if(this.props.name!==t.name)this.ctrlRef.current.name=this.props.name;if(this.props.navigation!==t.navigation)this.ctrlRef.current.navigation=this.props.navigation;if(this.props.scrollMode!==t.scrollMode)this.ctrlRef.current.scrollMode=this.props.scrollMode;if(this.props.selectedIndex!==t.selectedIndex)this.ctrlRef.current.selectedIndex=this.props.selectedIndex;if(this.props.selectedTab!==t.selectedTab)this.ctrlRef.current.selectedTab=this.props.selectedTab;if(this.props.showTabLine!==t.showTabLine)this.ctrlRef.current.showTabLine=this.props.showTabLine;if(this.props.size!==t.size)this.ctrlRef.current.size=this.props.size;if(this.props.state!==t.state)this.ctrlRef.current.state=this.props.state;if(this._isDefined(this.props.tabs))this.ctrlRef.current.tabs=this.props.tabs;if(this.props.tabAlignment!==t.tabAlignment)this.ctrlRef.current.tabAlignment=this.props.tabAlignment;if(this.props.tabOrientation!==t.tabOrientation)this.ctrlRef.current.tabOrientation=this.props.tabOrientation;if(this.props.tabSpacing!==t.tabSpacing)this.ctrlRef.current.tabSpacing=this.props.tabSpacing;if(this.props.tabStripPlacement!==t.tabStripPlacement)this.ctrlRef.current.tabStripPlacement=this.props.tabStripPlacement;if(this._isDefined(this.props.tabTemplate))this.ctrlRef.current.tabTemplate=this.props.tabTemplate;if(this.props.theme!==t.theme)this.ctrlRef.current.theme=this.props.theme}}},{key:"addTab",value:function(t){if(this._isCtrlDefined())this.ctrlRef.current.addTab(t)}},{key:"clearTabs",value:function(){if(this._isCtrlDefined())this.ctrlRef.current.clearTabs()}},{key:"insertTabAt",value:function(t,e){if(this._isCtrlDefined())this.ctrlRef.current.insertTabAt(t,e)}},{key:"insertTabBefore",value:function(t,e){if(this._isCtrlDefined())this.ctrlRef.current.insertTabBefore(t,e)}},{key:"insertTabAfter",value:function(t,e){if(this._isCtrlDefined())this.ctrlRef.current.insertTabAfter(t,e)}},{key:"removeTab",value:function(t){return this._isCtrlDefined()?this.ctrlRef.current.removeTab(t):!1}},{key:"removeTabAt",value:function(t){return this._isCtrlDefined()?this.ctrlRef.current.removeTabAt(t):!1}},{key:"scrollPos",value:function(t){if(this._isCtrlDefined())this.ctrlRef.current.scrollPos(t)}},{key:"scrollTo",value:function(t){if(this._isCtrlDefined())this.ctrlRef.current.scrollTo(t)}},{key:"selectTab",value:function(t){if(this._isCtrlDefined())this.ctrlRef.current.selectTab(t)}},{key:"setClass",value:function(t){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.setClass(t)}},{key:"setStyle",value:function(t){if(this.ctrlRef&&this.ctrlRef.current)this.ctrlRef.current.setStyle(t)}},{key:"refresh",value:function(){if(this._isCtrlDefined())this.ctrlRef.current.refresh()}},{key:"updateLayout",value:function(){if(this._isCtrlDefined())this.ctrlRef.current.updateLayout()}},{key:"render",value:function(){return React.createElement("iui-tabstrip",{id:this.props.id,ref:this.ctrlRef},this.props.children)}}]);return e}();export default IntegralUITabStripComponent;
+import React, { Component } from "react";
+
+import '../components/integralui.tabstrip.js';
+
+class IntegralUITabStripComponent extends Component {
+    constructor(props){
+        super(props);
+
+        this.ctrlRef = React.createRef();
+    }
+   
+    _isCtrlDefined(){
+        return this.ctrlRef && this.ctrlRef.current ? true : false;
+    }
+
+    //
+    // Events ------------------------------------------------------------------------------------
+    //
+
+    componentDidMount(){
+        this._initProps();
+
+        if (this._isCtrlDefined()){
+            if (this.props.afterSelect)
+                this.ctrlRef.current.addEventListener('afterSelect', (e) => this.props.afterSelect(e));
+            if (this.props.beforeSelect)
+                this.ctrlRef.current.addEventListener('beforeSelect', (e) => this.props.beforeSelect(e));
+            if (this.props.change)
+                this.ctrlRef.current.addEventListener('change', (e) => this.props.change(e));
+            if (this.props.clear)
+                this.ctrlRef.current.addEventListener('clear', () => this.props.clear());
+            if (this.props.enabledChanged)
+                this.ctrlRef.current.addEventListener('enabledChanged', (e) => this.props.enabledChanged(e));
+            if (this.props.tabAdded)
+                this.ctrlRef.current.addEventListener('tabAdded', (e) => this.props.tabAdded(e));
+            if (this.props.tabAdding)
+                this.ctrlRef.current.addEventListener('tabAdding', (e) => this.props.tabAdding(e));
+            if (this.props.tabOrderChanged)
+                this.ctrlRef.current.addEventListener('tabOrderChanged', (e) => this.props.tabOrderChanged(e));
+            if (this.props.tabRemoved)
+                this.ctrlRef.current.addEventListener('tabRemoved', (e) => this.props.tabRemoved(e));
+            if (this.props.tabRemoving)
+                this.ctrlRef.current.addEventListener('tabRemoving', (e) => this.props.tabRemoving(e));
+            if (this.props.scrollPosChanged)
+                this.ctrlRef.current.addEventListener('scrollPosChanged', (e) => this.props.scrollPosChanged(e));
+            if (this.props.selectionChanged)
+                this.ctrlRef.current.addEventListener('selectionChanged', (e) => this.props.selectionChanged(e));
+            if (this.props.sizeChanged)
+                this.ctrlRef.current.addEventListener('sizeChanged', (e) => this.props.sizeChanged(e));
+            if (this.props.stateChanged)
+                this.ctrlRef.current.addEventListener('stateChanged', (e) => this.props.stateChanged(e));
+            if (this.props.updateComplete)
+                this.ctrlRef.current.addEventListener('updateComplete', () => this.props.updateComplete());
+        }
+    }
+     
+    _isDefined(value){
+        return value !== undefined ? true : false;
+    }
+
+    componentWillUnmount(){
+        if (this._isCtrlDefined()){
+            if (this.props.afterSelect)
+                this.ctrlRef.current.removeEventListener('afterSelect', this.props.afterSelect);
+            if (this.props.beforeSelect)
+                this.ctrlRef.current.removeEventListener('beforeSelect', this.props.beforeSelect);
+            if (this.props.change)
+                this.ctrlRef.current.removeEventListener('change', this.props.change);
+            if (this.props.clear)
+                this.ctrlRef.current.removeEventListener('clear', this.props.clear);
+            if (this.props.enabledChanged)
+                this.ctrlRef.current.removeEventListener('enabledChanged', this.props.enabledChanged);
+            if (this.props.tabAdded)
+                this.ctrlRef.current.removeEventListener('tabAdded', this.props.tabAdded);
+            if (this.props.tabAdding)
+                this.ctrlRef.current.removeEventListener('tabAdding', this.props.tabAdding);
+            if (this.props.tabOrderChanged)
+                this.ctrlRef.current.removeEventListener('tabOrderChanged', this.props.tabOrderChanged);
+            if (this.props.tabRemoved)
+                this.ctrlRef.current.removeEventListener('tabRemoved', this.props.tabRemoved);
+            if (this.props.tabRemoving)
+                this.ctrlRef.current.removeEventListener('tabRemoving', this.props.tabRemoving);
+            if (this.props.scrollPosChanged)
+                this.ctrlRef.current.removeEventListener('scrollPosChanged', this.props.scrollPosChanged);
+            if (this.props.selectionChanged)
+                this.ctrlRef.current.removeEventListener('selectionChanged', this.props.selectionChanged);
+            if (this.props.sizeChanged)
+                this.ctrlRef.current.removeEventListener('sizeChanged', this.props.sizeChanged);
+            if (this.props.stateChanged)
+                this.ctrlRef.current.removeEventListener('stateChanged', this.props.stateChanged);
+            if (this.props.updateComplete)
+                this.ctrlRef.current.removeEventListener('updateComplete', this.props.updateComplete);
+        }
+    }
+ 
+    //
+    // Properties --------------------------------------------------------------------------------
+    //
+
+    componentDidUpdate(prevProps){
+        this._updateData(prevProps);
+    }
+
+    _initProps(){
+        if (this._isCtrlDefined()){
+            if (this._isDefined(this.props.resourcePath))
+                this.ctrlRef.current.resourcePath = this.props.resourcePath;
+            if (this._isDefined(this.props.allowAnimation))
+                this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
+            if (this._isDefined(this.props.allowUpdate))
+                this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
+            if (this._isDefined(this.props.allowDrag))
+                this.ctrlRef.current.allowDrag = this.props.allowDrag;
+            if (this._isDefined(this.props.allowDrop))
+                this.ctrlRef.current.allowDrop = this.props.allowDrop;
+            if (this._isDefined(this.props.animationSpeed))
+                this.ctrlRef.current.animationSpeed = this.props.animationSpeed;
+            if (this._isDefined(this.props.autoSize))
+                this.ctrlRef.current.autoSize = this.props.autoSize;
+            if (this._isDefined(this.props.contentAnimation))
+                this.ctrlRef.current.contentAnimation = this.props.contentAnimation;
+            if (this._isDefined(this.props.colorScheme))
+                this.ctrlRef.current.colorScheme = this.props.colorScheme;
+            if (this._isDefined(this.props.customStyle))
+                this.ctrlRef.current.customStyle = this.props.customStyle;
+            if (this._isDefined(this.props.data))
+                this.ctrlRef.current.data = this.props.data;
+            if (this._isDefined(this.props.displayMode))
+                this.ctrlRef.current.displayMode = this.props.displayMode;
+            if (this._isDefined(this.props.enabled))
+                this.ctrlRef.current.enabled = this.props.enabled;
+            if (this._isDefined(this.props.name))
+                this.ctrlRef.current.name = this.props.name;
+            if (this._isDefined(this.props.navigation))
+                this.ctrlRef.current.navigation = this.props.navigation;
+            if (this._isDefined(this.props.scrollMode))
+                this.ctrlRef.current.scrollMode = this.props.scrollMode;
+            if (this._isDefined(this.props.selectedIndex))
+                this.ctrlRef.current.selectedIndex = this.props.selectedIndex;
+            if (this._isDefined(this.props.selectedTab))
+                this.ctrlRef.current.selectedTab = this.props.selectedTab;
+            if (this._isDefined(this.props.showTabLine))
+                this.ctrlRef.current.showTabLine = this.props.showTabLine;
+            if (this._isDefined(this.props.size))
+                this.ctrlRef.current.size = this.props.size;
+            if (this._isDefined(this.props.state))
+                this.ctrlRef.current.state = this.props.state;
+            if (this._isDefined(this.props.tabs))
+                this.ctrlRef.current.tabs = this.props.tabs;
+            if (this._isDefined(this.props.tabAlignment))
+                this.ctrlRef.current.tabAlignment = this.props.tabAlignment;
+           if (this._isDefined(this.props.tabOrientation))
+                this.ctrlRef.current.tabOrientation = this.props.tabOrientation;
+            if (this._isDefined(this.props.tabSpacing))
+                this.ctrlRef.current.tabSpacing = this.props.tabSpacing;
+            if (this._isDefined(this.props.tabStripPlacement))
+                this.ctrlRef.current.tabStripPlacement = this.props.tabStripPlacement;
+            if (this._isDefined(this.props.tabTemplate))
+                this.ctrlRef.current.tabTemplate = this.props.tabTemplate;
+            if (this._isDefined(this.props.theme))
+                this.ctrlRef.current.theme = this.props.theme;
+        }
+    }
+
+    _updateData(prevProps){
+        if (this._isCtrlDefined()){
+            if (this.props.resourcePath !== prevProps.resourcePath)
+                this.ctrlRef.current.resourcePath = this.props.resourcePath;
+            if (this.props.allowAnimation !== prevProps.allowAnimation)
+                this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
+            if (this.props.allowUpdate !== prevProps.allowUpdate)
+                this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
+            if (this.props.allowDrag !== prevProps.allowDrag)
+                this.ctrlRef.current.allowDrag = this.props.allowDrag;
+            if (this.props.allowDrop !== prevProps.allowDrop)
+                this.ctrlRef.current.allowDrop = this.props.allowDrop;
+            if (this.props.animationSpeed !== prevProps.animationSpeed)
+                this.ctrlRef.current.animationSpeed = this.props.animationSpeed;
+            if (this.props.autoSize !== prevProps.autoSize)
+                this.ctrlRef.current.autoSize = this.props.autoSize;
+            if (this.props.colorScheme !== prevProps.colorScheme)
+                this.ctrlRef.current.colorScheme = this.props.colorScheme;
+            if (this.props.contentAnimation !== prevProps.contentAnimation)
+                this.ctrlRef.current.contentAnimation = this.props.contentAnimation;
+            if (this.props.customStyle !== prevProps.customStyle)
+                this.ctrlRef.current.customStyle = this.props.customStyle;
+            if (this.props.data !== prevProps.data)
+                this.ctrlRef.current.data = this.props.data;
+            if (this.props.displayMode !== prevProps.displayMode)
+                this.ctrlRef.current.displayMode = this.props.displayMode;
+            if (this.props.enabled !== prevProps.enabled)
+                this.ctrlRef.current.enabled = this.props.enabled;
+            if (this.props.name !== prevProps.name)
+                this.ctrlRef.current.name = this.props.name;
+            if (this.props.navigation !== prevProps.navigation)
+                this.ctrlRef.current.navigation = this.props.navigation;
+            if (this.props.scrollMode !== prevProps.scrollMode)
+                this.ctrlRef.current.scrollMode = this.props.scrollMode;
+            if (this.props.selectedIndex !== prevProps.selectedIndex)
+                this.ctrlRef.current.selectedIndex = this.props.selectedIndex;
+            if (this.props.selectedTab !== prevProps.selectedTab)
+                this.ctrlRef.current.selectedTab = this.props.selectedTab;
+            if (this.props.showTabLine !== prevProps.showTabLine)
+                this.ctrlRef.current.showTabLine = this.props.showTabLine;
+            if (this.props.size !== prevProps.size)
+                this.ctrlRef.current.size = this.props.size;
+            if (this.props.state !== prevProps.state)
+                this.ctrlRef.current.state = this.props.state;
+            if (this._isDefined(this.props.tabs))
+                this.ctrlRef.current.tabs = this.props.tabs;
+            if (this.props.tabAlignment !== prevProps.tabAlignment)
+                this.ctrlRef.current.tabAlignment = this.props.tabAlignment;
+            if (this.props.tabOrientation !== prevProps.tabOrientation)
+                this.ctrlRef.current.tabOrientation = this.props.tabOrientation;
+            if (this.props.tabSpacing !== prevProps.tabSpacing)
+                this.ctrlRef.current.tabSpacing = this.props.tabSpacing;
+            if (this.props.tabStripPlacement !== prevProps.tabStripPlacement)
+                this.ctrlRef.current.tabStripPlacement = this.props.tabStripPlacement;
+            if (this._isDefined(this.props.tabTemplate))
+                this.ctrlRef.current.tabTemplate = this.props.tabTemplate;
+            if (this.props.theme !== prevProps.theme)
+                this.ctrlRef.current.theme = this.props.theme;
+        }
+    }
+ 
+    //
+    // Methods -----------------------------------------------------------------------------------
+    //
+ 
+    // Add Remove --------------------------------------------------------------------------------
+    
+	addTab(tab){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.addTab(tab);
+	}
+
+	clearTabs(){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.clearTabs();
+	}
+
+	insertTabAt(tab, index){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.insertTabAt(tab, index);
+	}
+
+	insertTabBefore(tab, refTab){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.insertTabBefore(tab, refTab);
+	}
+
+	insertTabAfter(tab, refTab){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.insertTabAfter(tab, refTab);
+	}
+
+	removeTab(tab){
+		return this._isCtrlDefined() ? this.ctrlRef.current.removeTab(tab) : false;
+	}
+
+	removeTabAt(index){
+		return this._isCtrlDefined() ? this.ctrlRef.current.removeTabAt(index) : false;
+	}
+ 
+    // Scrolling ---------------------------------------------------------------------------------
+
+	scrollPos(value){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.scrollPos(value);
+    }
+
+	scrollTo(tab){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.scrollTo(tab);
+    }
+ 
+    // Selection ---------------------------------------------------------------------------------
+
+	selectTab(tab){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.selectTab(tab);
+    }
+	 
+    // Style -------------------------------------------------------------------------------------
+
+    setClass(value){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.setClass(value);
+    }
+
+	setStyle(value){
+        if (this.ctrlRef && this.ctrlRef.current)
+            this.ctrlRef.current.setStyle(value);
+    }
+
+    // Update ------------------------------------------------------------------------------------
+
+	refresh(){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.refresh();
+    }
+
+	updateLayout(){
+        if (this._isCtrlDefined())
+            this.ctrlRef.current.updateLayout();
+    }
+
+    render() {
+        return (
+            <iui-tabstrip id={this.props.id} ref={this.ctrlRef}>
+                {this.props.children}
+            </iui-tabstrip>
+        );
+    }
+}
+
+
+export default IntegralUITabStripComponent;

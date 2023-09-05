@@ -15,7 +15,7 @@ declare class IntegralUIFilterService {
     createTree(conditionList: any, formula: any): {
         result: boolean;
     } | null;
-    match(value: any, conditions: any, formula: any, tree: any, caseSensitive: any): any;
+    match(value: any, conditions: any, caseSensitive: any, formula: any, tree: any): any;
     filter(list: any, field: any, conditions: any, formula: any, tree: any, caseSensitive: any): any[];
 }
 //# sourceMappingURL=integralui.filter.service.d.ts.map

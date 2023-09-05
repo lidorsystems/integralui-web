@@ -1,3 +1,34 @@
+v23.3
+- Fully animated ListBox and TreeView with asynchronous animations during: Initialization, Add/Remove/Clear, Expand/Collapse, Drag Drop, Auto-Size
+- Moving item(s) from one position to another
+- Option to add or remove multiple items at once
+- scrollPosChanged event now includes the maximum scroll position in event data
+- Dynamic grouping in ListBox: groups are created on the fly based on specified item field
+- Menu items can have check boxes
+- Menu items can have radio buttons in multiple radio groups
+- Option to create custom menu templates where you can add HTML elements in different layouts
+- A new event fired when checkbox or radio button checked value changes
+- Templates for rows and items in Grid and List components now includes the order number
+- Panel now has Auto-Size with animation
+- updateComplete event for SideBar
+- New samples available
+- Data Validation in Grid with Form Editing, the invalid message now appears at correct position when main window is scrolled
+- Window is now not movable in maximized state
+- Fixed the issue that caused moving items up/down outside the list range to cause them to be removed
+- Fixed the issue that prevented closing of menu when option is clicked
+- Fixed the issue with calendar layout when opened from DatePicker
+- Update of layout on resize in ListBox and TreeView
+- SizeChanged is now correctly called during TreeView resize with auto-size enabled
+- Fixed the issue that caused items in List components to appear stacked at 0 position
+- TreeView during initialization no longer flickers
+- Fixed the issue that prevented moving an item to last position in the List
+- Fixed the issue that caused scrollbar to hide and reset its position when component is disabled
+- Fixed the issue that caused scrollPosChanged event to fire twice when using the mouse wheel
+- Sorting in List components (ListBox, ListView and TreeView) no longer changes the item order in original list, instead a copy is used  
+- When sorting is enabled in ListBox, groups are now correctly sorted
+- Drag and Drop items over groups in ListBox are now correctly placed in target group
+- Other minor bug fixes
+
 v23.2
 - Data validation in Grid and TreeGrid with following rules: Compare, Required, Numeric, Range, StringLength and Custom
 - Option to enable data validation for all editing modes: Batch, Form and Inline

@@ -78,6 +78,11 @@ declare class IntegralUIListView extends IntegralUIBaseList {
             attribute: string;
             reflect: boolean;
         };
+        animateInit: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
         contentVisibility: {
             attribute: string;
             converter: {

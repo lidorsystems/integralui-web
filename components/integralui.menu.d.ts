@@ -181,9 +181,13 @@ declare class IntegralUIMenu extends IntegralUIBase {
     set orientation(arg: any);
     get orientation(): any;
     itemList: any;
+    findItemById(id: any): any;
+    findItemByText(text: any): any;
+    getFullList(): any[] | undefined;
     getItemParent(item: any): any;
     invokeCtrlMethod(name: any, value: any): void;
     firstUpdated(props: any): void;
+    refresh(): void;
     render(): TemplateResult;
 }
 import IntegralUIBase from "./integralui.base.js";

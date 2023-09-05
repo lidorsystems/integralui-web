@@ -38,7 +38,7 @@ export const iuiListBoxDefaultStyle = css`
         box-shadow: var(--iui-listbox-block-box-shadow, 2px 3px 3px #e5e5e5);
         pointer-events: none;
         position: absolute;
-        z-index: 6;
+        z-index: 99;
     }
     .iui-listbox-block-hover > div, .iui-listbox-block-select > div {
         background: var(--iui-listbox-block-panel-background, #f5f5f5);
@@ -46,7 +46,7 @@ export const iuiListBoxDefaultStyle = css`
         position: absolute;
         right: 0;
         top: 0;
-        z-index: 5;
+        z-index: 98;
     }
 
     /* Disabled State */

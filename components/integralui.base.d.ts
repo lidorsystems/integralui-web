@@ -108,6 +108,7 @@ declare class IntegralUIBase extends LitElement {
     getClass(obj: any): any;
     getStyle(obj: any): any;
     refresh(obj: any): void;
+    removeClass(value: any): void;
     setClass(value: any, obj: any): void;
     setStyle(value: any, obj: any): void;
     resolve(type: any): void;

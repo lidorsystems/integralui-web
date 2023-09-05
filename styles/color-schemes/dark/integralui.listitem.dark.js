@@ -2,34 +2,28 @@ import { c as css } from '../../../external/lit-element.js';
 
 export const iuiListItemDarkStyle = css`
     .iui-listgroup {
+        background: var(--iui-listgroup-background, #252526);
         border-color: var(--iui-listgroup-border-color, transparent transparent #151515 transparent);
         color: var(--iui-listgroup-color, #cccccc);
     }
     .iui-listgroup-expand-box {
-        background: url(../../../icons/expandbox-icons.png) no-repeat -48px -48px;
+        background: url(../../../icons/expandbox-icons.png) no-repeat -48px 0;
     }
     .iui-listgroup-expand-box-open {
-        background-position: -48px -16px;
         opacity: 0.25;
     }
     .iui-listgroup-expand-box-open:hover {
         opacity: 0.75;
     }
     .iui-listgroup-expand-box-close {
-        background-position: -48px 0;
         opacity: 0.25;
     }
     .iui-listgroup-expand-box-close:hover {
         opacity: 0.75;
     }
-    .iui-listgroup-expand-box-open-animate {
-        background-position: -48px 0;
-    }
-    .iui-listgroup-expand-box-close-animate {
-        background-position: -48px 0;
-    }
 
     .iui-listitem {
+        background: var(--iui-listitem-background, #252526);
         color: var(--iui-listitem-color, #cccccc);
     }
     .iui-listitem-hovered {
