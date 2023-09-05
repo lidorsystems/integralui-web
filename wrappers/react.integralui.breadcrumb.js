@@ -1,201 +1,183 @@
-/*
-  filename: react.integralui.breadcrumb.js
-  version : 23.3.0
-  Copyright © 2016-2023 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 import React, { Component } from "react";
 
 import '../components/integralui.breadcrumb.js';
 
-class IntegralUIBreadCrumbComponent extends Component {
-    constructor(props){
-        super(props);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-        this.ctrlRef = React.createRef();
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var IntegralUIBreadCrumbComponent = function (_Component) {
+    _inherits(IntegralUIBreadCrumbComponent, _Component);
+
+    function IntegralUIBreadCrumbComponent(props) {
+        _classCallCheck(this, IntegralUIBreadCrumbComponent);
+
+        var _this = _possibleConstructorReturn(this, (IntegralUIBreadCrumbComponent.__proto__ || Object.getPrototypeOf(IntegralUIBreadCrumbComponent)).call(this, props));
+
+        _this.ctrlRef = React.createRef();
+        return _this;
     }
- 
+
     //
     // Events ------------------------------------------------------------------------------------
     //
 
-    componentDidMount(){
-        this._initProps();
+    _createClass(IntegralUIBreadCrumbComponent, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
 
-        if (this.ctrlRef && this.ctrlRef.current){
-            if (this.props.enabledChanged)
-                this.ctrlRef.current.addEventListener('enabledChanged', (e) => this.props.enabledChanged(e));
-            if (this.props.selectionChanged)
-                this.ctrlRef.current.addEventListener('selectionChanged', (e) => this.props.selectionChanged(e));
-            if (this.props.sizeChanged)
-                this.ctrlRef.current.addEventListener('sizeChanged', (e) => this.props.sizeChanged(e));
-            if (this.props.stateChanged)
-                this.ctrlRef.current.addEventListener('stateChanged', (e) => this.props.stateChanged(e));
+            this._initProps();
+
+            if (this.ctrlRef && this.ctrlRef.current) {
+                if (this.props.enabledChanged) this.ctrlRef.current.addEventListener('enabledChanged', function (e) {
+                    return _this2.props.enabledChanged(e);
+                });
+                if (this.props.selectionChanged) this.ctrlRef.current.addEventListener('selectionChanged', function (e) {
+                    return _this2.props.selectionChanged(e);
+                });
+                if (this.props.sizeChanged) this.ctrlRef.current.addEventListener('sizeChanged', function (e) {
+                    return _this2.props.sizeChanged(e);
+                });
+                if (this.props.stateChanged) this.ctrlRef.current.addEventListener('stateChanged', function (e) {
+                    return _this2.props.stateChanged(e);
+                });
+            }
         }
-    }
-
-    componentWillUnmount(){
-        if (this.ctrlRef && this.ctrlRef.current){
-            if (this.props.enabledChanged)
-                this.ctrlRef.current.removeEventListener('enabledChanged', this.props.enabledChanged);
-            if (this.props.selectionChanged)
-                this.ctrlRef.current.removeEventListener('selectionChanged', this.props.selectionChanged);
-            if (this.props.sizeChanged)
-                this.ctrlRef.current.removeEventListener('sizeChanged', this.props.sizeChanged);
-            if (this.props.stateChanged)
-                this.ctrlRef.current.removeEventListener('stateChanged', this.props.stateChanged);
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            if (this.ctrlRef && this.ctrlRef.current) {
+                if (this.props.enabledChanged) this.ctrlRef.current.removeEventListener('enabledChanged', this.props.enabledChanged);
+                if (this.props.selectionChanged) this.ctrlRef.current.removeEventListener('selectionChanged', this.props.selectionChanged);
+                if (this.props.sizeChanged) this.ctrlRef.current.removeEventListener('sizeChanged', this.props.sizeChanged);
+                if (this.props.stateChanged) this.ctrlRef.current.removeEventListener('stateChanged', this.props.stateChanged);
+            }
         }
-    }
- 
-    //
-    // Properties --------------------------------------------------------------------------------
-    //
 
-    componentDidUpdate(prevProps){
-        this._updateData(prevProps);
-    }
+        //
+        // Properties --------------------------------------------------------------------------------
+        //
 
-    _initProps(){
-        if (this.ctrlRef && this.ctrlRef.current){
-            if (this._isDefined(this.props.allowAnimation))
-                this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
-            if (this._isDefined(this.props.allowUpdate))
-                this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
-            if (this._isDefined(this.props.colorScheme))
-                this.ctrlRef.current.colorScheme = this.props.colorScheme;
-            if (this._isDefined(this.props.customStyle))
-                this.ctrlRef.current.customStyle = this.props.customStyle;
-            if (this._isDefined(this.props.data))
-                this.ctrlRef.current.data = this.props.data;
-            if (this._isDefined(this.props.dataFields))
-                this.ctrlRef.current.dataFields = this.props.dataFields;
-            if (this._isDefined(this.props.dropDownSize))
-                this.ctrlRef.current.dropDownSize = this.props.dropDownSize;
-            if (this._isDefined(this.props.enabled))
-                this.ctrlRef.current.enabled = this.props.enabled;
-            if (this._isDefined(this.props.maxDropDownItems))
-                this.ctrlRef.current.maxDropDownItems = this.props.maxDropDownItems;
-            if (this._isDefined(this.props.name))
-                this.ctrlRef.current.name = this.props.name;
-            if (this._isDefined(this.props.items))
-                this.ctrlRef.current.items = this.props.items;
-            if (this._isDefined(this.props.itemTemplate))
-                this.ctrlRef.current.itemTemplate = this.props.itemTemplate;
-            if (this._isDefined(this.props.resourcePath))
-                this.ctrlRef.current.resourcePath = this.props.resourcePath;
-            if (this._isDefined(this.props.selectedItem))
-                this.ctrlRef.current.selectedItem = this.props.selectedItem;
-            if (this._isDefined(this.props.size))
-                this.ctrlRef.current.size = this.props.size;
-            if (this._isDefined(this.props.state))
-                this.ctrlRef.current.state = this.props.state;
-            if (this._isDefined(this.props.theme))
-                this.ctrlRef.current.theme = this.props.theme;
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps) {
+            this._updateData(prevProps);
         }
-    }
-    
-    _isDefined(value){
-        return value !== undefined ? true : false;
-    }
-
-    _updateData(prevProps){
-        if (this.ctrlRef && this.ctrlRef.current){
-            if (this.props.allowAnimation !== prevProps.allowAnimation)
-                this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
-            if (this.props.allowUpdate !== prevProps.allowUpdate)
-                this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
-            if (this.props.breadcrumbStyle !== prevProps.breadcrumbStyle)
-                this.ctrlRef.current.breadcrumbStyle = this.props.breadcrumbStyle;
-            if (this.props.colorScheme !== prevProps.colorScheme)
-                this.ctrlRef.current.colorScheme = this.props.colorScheme;
-            if (this.props.customStyle !== prevProps.customStyle)
-                this.ctrlRef.current.customStyle = this.props.customStyle;
-            if (this.props.data !== prevProps.data)
-                this.ctrlRef.current.data = this.props.data;
-            if (this.props.dataFields !== prevProps.dataFields)
-                this.ctrlRef.current.dataFields = this.props.dataFields;
-            if (this.props.dropDownSize !== prevProps.dropDownSize)
-                this.ctrlRef.current.dropDownSize = this.props.dropDownSize;
-            if (this.props.enabled !== prevProps.enabled)
-                this.ctrlRef.current.enabled = this.props.enabled;
-            if (this._isDefined(this.props.items))
-                this.ctrlRef.current.items = this.props.items;
-            if (this._isDefined(this.props.itemTemplate))
-                this.ctrlRef.current.itemTemplate = this.props.itemTemplate;
-            if (this.props.maxDropDownItems !== prevProps.maxDropDownItems)
-                this.ctrlRef.current.maxDropDownItems = this.props.maxDropDownItems;
-            if (this.props.name !== prevProps.name)
-                this.ctrlRef.current.name = this.props.name;
-            if (this.props.resourcePath !== prevProps.resourcePath)
-                this.ctrlRef.current.resourcePath = this.props.resourcePath;
-            if (this.props.selectedItem !== prevProps.selectedItem)
-                this.ctrlRef.current.selectedItem = this.props.selectedItem;
-            if (this.props.size !== prevProps.size)
-                this.ctrlRef.current.size = this.props.size;
-            if (this.props.state !== prevProps.state)
-                this.ctrlRef.current.state = this.props.state;
-            if (this.props.theme !== prevProps.theme)
-                this.ctrlRef.current.theme = this.props.theme;
+    }, {
+        key: '_initProps',
+        value: function _initProps() {
+            if (this.ctrlRef && this.ctrlRef.current) {
+                if (this._isDefined(this.props.allowAnimation)) this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
+                if (this._isDefined(this.props.allowUpdate)) this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
+                if (this._isDefined(this.props.colorScheme)) this.ctrlRef.current.colorScheme = this.props.colorScheme;
+                if (this._isDefined(this.props.customStyle)) this.ctrlRef.current.customStyle = this.props.customStyle;
+                if (this._isDefined(this.props.data)) this.ctrlRef.current.data = this.props.data;
+                if (this._isDefined(this.props.dataFields)) this.ctrlRef.current.dataFields = this.props.dataFields;
+                if (this._isDefined(this.props.dropDownSize)) this.ctrlRef.current.dropDownSize = this.props.dropDownSize;
+                if (this._isDefined(this.props.enabled)) this.ctrlRef.current.enabled = this.props.enabled;
+                if (this._isDefined(this.props.maxDropDownItems)) this.ctrlRef.current.maxDropDownItems = this.props.maxDropDownItems;
+                if (this._isDefined(this.props.name)) this.ctrlRef.current.name = this.props.name;
+                if (this._isDefined(this.props.items)) this.ctrlRef.current.items = this.props.items;
+                if (this._isDefined(this.props.itemTemplate)) this.ctrlRef.current.itemTemplate = this.props.itemTemplate;
+                if (this._isDefined(this.props.resourcePath)) this.ctrlRef.current.resourcePath = this.props.resourcePath;
+                if (this._isDefined(this.props.selectedItem)) this.ctrlRef.current.selectedItem = this.props.selectedItem;
+                if (this._isDefined(this.props.size)) this.ctrlRef.current.size = this.props.size;
+                if (this._isDefined(this.props.state)) this.ctrlRef.current.state = this.props.state;
+                if (this._isDefined(this.props.theme)) this.ctrlRef.current.theme = this.props.theme;
+            }
         }
-    }
- 
-    //
-    // Methods -----------------------------------------------------------------------------------
-    //
- 
-    // Expand/Collapse ---------------------------------------------------------------------------
+    }, {
+        key: '_isDefined',
+        value: function _isDefined(value) {
+            return value !== undefined ? true : false;
+        }
+    }, {
+        key: '_updateData',
+        value: function _updateData(prevProps) {
+            if (this.ctrlRef && this.ctrlRef.current) {
+                if (this.props.allowAnimation !== prevProps.allowAnimation) this.ctrlRef.current.allowAnimation = this.props.allowAnimation;
+                if (this.props.allowUpdate !== prevProps.allowUpdate) this.ctrlRef.current.allowUpdate = this.props.allowUpdate;
+                if (this.props.breadcrumbStyle !== prevProps.breadcrumbStyle) this.ctrlRef.current.breadcrumbStyle = this.props.breadcrumbStyle;
+                if (this.props.colorScheme !== prevProps.colorScheme) this.ctrlRef.current.colorScheme = this.props.colorScheme;
+                if (this.props.customStyle !== prevProps.customStyle) this.ctrlRef.current.customStyle = this.props.customStyle;
+                if (this.props.data !== prevProps.data) this.ctrlRef.current.data = this.props.data;
+                if (this.props.dataFields !== prevProps.dataFields) this.ctrlRef.current.dataFields = this.props.dataFields;
+                if (this.props.dropDownSize !== prevProps.dropDownSize) this.ctrlRef.current.dropDownSize = this.props.dropDownSize;
+                if (this.props.enabled !== prevProps.enabled) this.ctrlRef.current.enabled = this.props.enabled;
+                if (this._isDefined(this.props.items)) this.ctrlRef.current.items = this.props.items;
+                if (this._isDefined(this.props.itemTemplate)) this.ctrlRef.current.itemTemplate = this.props.itemTemplate;
+                if (this.props.maxDropDownItems !== prevProps.maxDropDownItems) this.ctrlRef.current.maxDropDownItems = this.props.maxDropDownItems;
+                if (this.props.name !== prevProps.name) this.ctrlRef.current.name = this.props.name;
+                if (this.props.resourcePath !== prevProps.resourcePath) this.ctrlRef.current.resourcePath = this.props.resourcePath;
+                if (this.props.selectedItem !== prevProps.selectedItem) this.ctrlRef.current.selectedItem = this.props.selectedItem;
+                if (this.props.size !== prevProps.size) this.ctrlRef.current.size = this.props.size;
+                if (this.props.state !== prevProps.state) this.ctrlRef.current.state = this.props.state;
+                if (this.props.theme !== prevProps.theme) this.ctrlRef.current.theme = this.props.theme;
+            }
+        }
 
-	toggle(){
-        if (this.ctrlRef && this.ctrlRef.current)
-            this.ctrlRef.current.toggle();
-    }
- 
-    // Export ------------------------------------------------------------------------------------
+        //
+        // Methods -----------------------------------------------------------------------------------
+        //
 
-    exportToJSON(data, fields, spacing, flat){
-        return this._isCtrlDefined() ? this.ctrlRef.current.exportToJSON(data, fields, spacing, flat) : null;
-    }
+        // Expand/Collapse ---------------------------------------------------------------------------
 
-    // Style -------------------------------------------------------------------------------------
+    }, {
+        key: 'toggle',
+        value: function toggle() {
+            if (this.ctrlRef && this.ctrlRef.current) this.ctrlRef.current.toggle();
+        }
 
-    setClass(value){
-        if (this.ctrlRef && this.ctrlRef.current)
-            this.ctrlRef.current.setClass(value);
-    }
+        // Export ------------------------------------------------------------------------------------
 
-	setStyle(value){
-        if (this.ctrlRef && this.ctrlRef.current)
-            this.ctrlRef.current.setStyle(value);
-    }
+    }, {
+        key: 'exportToJSON',
+        value: function exportToJSON(data, fields, spacing, flat) {
+            return this._isCtrlDefined() ? this.ctrlRef.current.exportToJSON(data, fields, spacing, flat) : null;
+        }
 
-    // Update ------------------------------------------------------------------------------------
+        // Style -------------------------------------------------------------------------------------
 
-	refresh(){
-        if (this.ctrlRef && this.ctrlRef.current)
-            this.ctrlRef.current.refresh();
-    }
+    }, {
+        key: 'setClass',
+        value: function setClass(value) {
+            if (this.ctrlRef && this.ctrlRef.current) this.ctrlRef.current.setClass(value);
+        }
+    }, {
+        key: 'setStyle',
+        value: function setStyle(value) {
+            if (this.ctrlRef && this.ctrlRef.current) this.ctrlRef.current.setStyle(value);
+        }
 
-	updateLayout(){
-        if (this.ctrlRef && this.ctrlRef.current)
-            this.ctrlRef.current.updateLayout();
-    }
+        // Update ------------------------------------------------------------------------------------
 
-    render(){
-        return (
-            <iui-breadcrumb id={this.props.id} ref={this.ctrlRef}>
-                {this.props.children}
-            </iui-breadcrumb>
-        );
-    }
-}
+    }, {
+        key: 'refresh',
+        value: function refresh() {
+            if (this.ctrlRef && this.ctrlRef.current) this.ctrlRef.current.refresh();
+        }
+    }, {
+        key: 'updateLayout',
+        value: function updateLayout() {
+            if (this.ctrlRef && this.ctrlRef.current) this.ctrlRef.current.updateLayout();
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'iui-breadcrumb',
+                { id: this.props.id, ref: this.ctrlRef },
+                this.props.children
+            );
+        }
+    }]);
 
+    return IntegralUIBreadCrumbComponent;
+}(Component);
 
 export default IntegralUIBreadCrumbComponent;
