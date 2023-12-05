@@ -12,12 +12,15 @@ export const iuiTabStripDefaultStyle = css`
         cursor: var(--iui-tabstrip-cursor, default);
         display: var(--iui-tabstrip-display, block);
         float: var(--iui-tabstrip-float, none);
+        font-size: var(--iui-tabstrip-font-size, 1rem);
+        font-style: var(--iui-tabstrip-font-style, normal);
         height: var(--iui-tabstrip-height, auto);
         margin: var(--iui-tabstrip-margin, 0);
         opacity: var(--iui-tabstrip-opacity, 1);
         overflow: hidden;
         padding: var(--iui-tabstrip-padding, 0);
         position: var(--iui-tabstrip-position, relative);
+        text-align: var(--iui-tabstrip-text-align, left);
         width: var(--iui-tabstrip-width, auto);
         z-index: var(--iui-tabstrip-z-index, auto);
 

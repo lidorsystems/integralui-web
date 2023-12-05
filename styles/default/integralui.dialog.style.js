@@ -14,6 +14,8 @@ export const iuiDialogDefaultStyle = css`
         cursor: var(--iui-dialog-cursor, default);
         display: var(--iui-dialog-display, block);
         float: var(--iui-dialog-float, none);
+        font-size: var(--iui-dialog-font-size, 1rem);
+        font-style: var(--iui-dialog-font-style, normal);
         height: var(--iui-dialog-height, 400px);
         left: 0;
         max-width: var(--iui-dialog-max-width, 800px);
@@ -25,6 +27,7 @@ export const iuiDialogDefaultStyle = css`
         padding: var(--iui-dialog-padding, 10px);
         position: var(--iui-dialog-position, fixed);
         right: 0;
+        text-align: var(--iui-dialog-text-align, left);
         top: 0;
         white-space: nowrap;
         width: var(--iui-dialog-width, 600px);

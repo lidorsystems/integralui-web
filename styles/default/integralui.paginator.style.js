@@ -11,12 +11,15 @@ export const iuiPaginatorDefaultStyle = css`
         cursor: var(--iui-paginator-cursor, default);
         display: var(--iui-paginator-display, block);
         float: var(--iui-paginator-float, none);
+        font-size: var(--iui-paginator-font-size, 1rem);
+        font-style: var(--iui-paginator-font-style, normal);
         height: var(--iui-paginator-height, auto);
         margin: var(--iui-paginator-margin, 1px 0);
         opacity: var(--iui-paginator-opacity, 1);
         overflow: hidden;
         padding: var(--iui-paginator-padding, 3px 3px 0px 3px);
         position: var(--iui-paginator-position, relative);
+        text-align: var(--iui-paginator-text-align, left);
         white-space: nowrap;
         width: var(--iui-paginator-width, auto);
         z-index: var(--iui-paginator-z-index, auto);

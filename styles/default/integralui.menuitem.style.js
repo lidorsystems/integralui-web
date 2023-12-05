@@ -12,12 +12,15 @@ export const iuiMenuItemDefaultStyle = css`
         cursor: var(--iui-menu-cursor, default);
         display: var(--iui-menu-display, block);
         float: var(--iui-menu-float, none);
+        font-size: var(--iui-menu-font-size, 1rem);
+        font-style: var(--iui-menu-font-style, normal);
         height: var(--iui-menu-height, auto);
         margin: var(--iui-menu-margin, 0);
         opacity: var(--iui-menu-opacity, 1);
         overflow: hidden;
         padding: var(--iui-menu-padding, 0);
         position: var(--iui-menu-position, relative);
+        text-align: var(--iui-menu-text-align, left);
         width: var(--iui-menu-width, auto);
         z-index: var(--iui-menu-z-index, auto);
         
@@ -262,10 +265,13 @@ export const iuiMenuItemDefaultStyle = css`
         border-color: var(--iui-menuitem-border-color, transparent);
         color: var(--iui-menuitem-color, black);
         display: block;
+        font-size: var(--iui-menuitem-font-size, 1rem);
+        font-style: var(--iui-menuitem-font-style, normal);
         list-style-type: none;
         margin: var(--iui-menuitem-margin, 1px 0);
         padding: var(--iui-menuitem-padding, 3px 4px 3px 2px);
         position: relative;
+        text-align: var(--iui-menuitem-text-align, left);
         white-space: nowrap;
         width: var(--iui-menuitem-width, auto);
     }

@@ -12,15 +12,18 @@ export const iuiGridDefaultStyle = css`
         cursor: var(--iui-grid-cursor, default);
         display: var(--iui-grid-display, block);
         float: var(--iui-grid-float, none);
+        font-size: var(--iui-grid-font-size, 1rem);
+        font-style: var(--iui-grid-font-style, normal);
         height: var(--iui-grid-height, auto);
         margin: var(--iui-grid-margin, 0);
         opacity: var(--iui-grid-opacity, 1);
         overflow: hidden;
         padding: var(--iui-grid-padding, 0);
         position: var(--iui-grid-position, relative);
+        text-align: var(--iui-grid-text-align, left);
         width: var(--iui-grid-width, auto);
         z-index: var(--iui-grid-z-index, auto);
-        
+      
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;

@@ -7,12 +7,15 @@ export const iuiSideBarDefaultStyle = css`
         cursor: var(--iui-sidebar-cursor, default);
         display: var(--iui-sidebar-display, block);
         float: var(--iui-sidebar-float, none);
+        font-size: var(--iui-sidebar-font-size, 1rem);
+        font-style: var(--iui-sidebar-font-style, normal);
         height: var(--iui-sidebar-height, auto);
         margin: var(--iui-sidebar-margin, 0);
         opacity: var(--iui-sidebar-opacity, 1);
         overflow: visible; /* hidden; */
         padding: 0;
         position: var(--iui-sidebar-position, absolute);
+        text-align: var(--iui-sidebar-text-align, left);
         width: var(--iui-sidebar-width, auto);
         z-index: var(--iui-sidebar-z-index, auto);
 

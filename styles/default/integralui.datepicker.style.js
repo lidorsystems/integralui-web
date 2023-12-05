@@ -13,12 +13,14 @@ export const iuiDatePickerDefaultStyle = css`
         display: var(--iui-datepicker-display, block);
         float: var(--iui-datepicker-float, none);
         font-size: var(--iui-datepicker-font-size, 1rem);
+        font-style: var(--iui-datepicker-font-style, normal);
         height: var(--iui-datepicker-height, auto);
         opacity: var(--iui-datepicker-opacity, 1);
         overflow: hidden;
         margin: var(--iui-datepicker-margin, 2px 0);
         padding: var(--iui-datepicker-padding, 0);
         position: var(--iui-datepicker-position, relative);
+        text-align: var(--iui-datepicker-text-align, left);
         white-space: nowrap;
         width: var(--iui-datepicker-width, auto);
         z-index: var(--iui-datepicker-z-index, auto);

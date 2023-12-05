@@ -11,12 +11,15 @@ export const iuiSplitContainerDefaultStyle = css`
         cursor: var(--iui-splitcontainer-cursor, default);
         display: var(--iui-splitcontainer-display, block);
         float: var(--iui-splitcontainer-float, none);
+        font-size: var(--iui-splitcontainer-font-size, 1rem);
+        font-style: var(--iui-splitcontainer-font-style, normal);
         height: var(--iui-splitcontainer-height, auto);
         margin: var(--iui-splitcontainer-margin, 0);
         opacity: var(--iui-splitcontainer-opacity, 1);
         overflow: hidden;
         padding: var(--iui-splitcontainer-padding, 0);
         position: var(--iui-splitcontainer-position, relative);
+        text-align: var(--iui-splitcontainer-text-align, left);
         width: var(--iui-splitcontainer-width, auto);
         z-index: var(--iui-splitcontainer-z-index, auto);
 

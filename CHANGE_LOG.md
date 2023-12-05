@@ -1,3 +1,27 @@
+v23.4
+- FontSize and FontStyle custom properties for all components
+- ListBox have built-in CheckBox for items
+- ListBox have built-in RadioButton
+- Items can appear as separators in ListBox
+- Add and remove event data in List components now include the item index and parent
+- sizeChanged event from SidePanel is fired during animated resize
+- updateComplete event is added to the SideBar, fires when layolut update completes
+- Fixed the issue that prevented additional add/remove processes when it is canceled within itemAdding or itemRemoving event
+- Fixed the issue with inserting new items at position that is outside of current list range
+- Block size is now correctly set within TreeList size when added as a child to SidePanel
+- Fixed the issue with items in TreeList to appear as grayed when disabled
+- Drag Drop Multiple items in ListBox now correctly preserves their order
+- RadioButtons in List components no longer become unchecked when clicked twice
+- Change of RadioButton value is now working also with touch
+- Text-align custom property setting for all components, by default is set to left
+- Fixed the issue with right-click on TreeList header that moves back the list when header click event is handled
+- TreeList scrollTo method no includes the header height when scrolling
+- Icons in Calendar are now rendered correctly before ResourcePath is set
+- Showing a check box in root context menu no longer throws an error 'resource not found'
+- Changing Tab Orientation during run-time in TabStrip now correctly aligns tabs
+- Deep child menus no longer remain open when root menu is opened again or a different menu opens
+- Other minor bug fixes
+
 v23.3
 - Fully animated ListBox and TreeView with asynchronous animations during: Initialization, Add/Remove/Clear, Expand/Collapse, Drag Drop, Auto-Size
 - Moving item(s) from one position to another

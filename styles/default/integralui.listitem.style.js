@@ -10,14 +10,17 @@ export const iuiListItemDefaultStyle = css`
         color: var(--iui-listgroup-color, black);
         cursor: var(--iui-listgroup-cursor, default);
         display: var(--iui-listgroup-display, block);
+        font-size: var(--iui-listgroup-font-size, 1rem);
+        font-style: var(--iui-listgroup-font-style, normal);
         font-weight: var(--iui-listgroup-font-weight, bold);
         height: var(--iui-listgroup-height, auto);
         list-style-type: none;
         margin: var(--iui-listgroup-margin, 0);
         opacity: var(--iui-listgroup-opacity, 1);
         overflow: hidden;
-        padding: var(--iui-listgroup-padding, 1px 0);
+        padding: var(--iui-listgroup-padding, 1px);
         position: var(--iui-listgroup-position, relative);
+        text-align: var(--iui-listgroup-text-align, left);
         white-space: var(--iui-listgroup-white-space, nowrap);
         width: var(--iui-listgroup-width, auto);
         z-index: var(--iui-listgroup-z-index, auto);
@@ -81,6 +84,8 @@ export const iuiListItemDefaultStyle = css`
         color: var(--iui-listitem-color, black);
         cursor: var(--iui-listitem-cursor, default);
         display: var(--iui-listitem-display, block);
+        font-size: var(--iui-listitem-font-size, 1rem);
+        font-style: var(--iui-listitem-font-style, normal);
         font-weight: var(--iui-listitem-font-weight, normal);
         height: var(--iui-listitem-height, auto);
         list-style-type: none;
@@ -89,6 +94,7 @@ export const iuiListItemDefaultStyle = css`
         overflow: hidden;
         padding: var(--iui-listitem-padding, 0);
         position: var(--iui-listitem-position, relative);
+        text-align: var(--iui-listitem-text-align, left);
         white-space: var(--iui-listitem-white-space, nowrap);
         width: var(--iui-listitem-width, auto);
     }
@@ -158,6 +164,21 @@ export const iuiListItemDefaultStyle = css`
     .iui-listitem:focus {
         outline: none !important;
     }
+    .iui-listitem-content-template {
+        display: var(--iui-listitem-content-template-display, inline-block);
+        vertical-align: var(--iui-listitem-content-template-vertical-align, middle);
+        width: var(--iui-listitem-content-template-width, 100%);
+    }
+    .iui-listitem-content-both {
+        width: var(--iui-listitem-content-template-width, calc(100% - 44px));
+    }
+   .iui-listitem-content-checkbox {
+        width: var(--iui-listitem-content-template-width, calc(100% - 21px));
+    }
+    .iui-listitem-content-radio {
+        width: var(--iui-listitem-content-template-width, calc(100% - 23px));
+    }
+
     .iui-listitem-content-block {
         overflow: var(--iui-listitem-content-overflow, hidden);
         text-overflow: var(--iui-listitem-content-text-overflow, ellipsis);
@@ -186,6 +207,24 @@ export const iuiListItemDefaultStyle = css`
         padding: 0;
     }
 
+    /* CheckBox */
+    .iui-listitem-checkbox {
+        background-image: var(--iui-listitem-checkbox-background-image, url(../../icons/checkbox-unchecked.ico));
+        background-repeat: no-repeat;
+        display: inline-block;
+        overflow: hidden;
+        padding: var(--iui-listitem-checkbox-padding, 0);
+        margin: var(--iui-listitem-checkbox-margin, 0);
+        width: 16px;
+        height: 16px;
+        vertical-align: var(--iui-listitem-checkbox-vertical-align, middle);
+    }
+    .iui-listitem-checkbox-checked {
+        background-image: var(--iui-listitem-checkbox-checked-background-image, url(../../icons/checkbox-checked.ico));
+    }
+    .iui-listitem-checkbox-indeterminate {
+        background-image: var(--iui-listitem-checkbox-indeterminate-background-image, url(../../icons/checkbox-indeterminate.ico));
+    }
 
     /* Disabled State */
     .iui-listitem-disabled div {

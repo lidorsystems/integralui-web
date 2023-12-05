@@ -12,12 +12,15 @@ export const iuiPivotGridDefaultStyle = css`
         cursor: var(--iui-pivotgrid-cursor, default);
         display: var(--iui-pivotgrid-display, block);
         float: var(--iui-pivotgrid-float, none);
+        font-size: var(--iui-pivotgrid-font-size, 1rem);
+        font-style: var(--iui-pivotgrid-font-style, normal);
         height: var(--iui-pivotgrid-height, auto);
         margin: var(--iui-pivotgrid-margin, 0);
         opacity: var(--iui-pivotgrid-opacity, 1);
         overflow: hidden;
         padding: var(--iui-pivotgrid-padding, 0);
         position: var(--iui-pivotgrid-position, relative);
+        text-align: var(--iui-pivotgrid-text-align, left);
         width: var(--iui-pivotgrid-width, auto);
         z-index: var(--iui-pivotgrid-z-index, auto);
 

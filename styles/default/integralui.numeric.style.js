@@ -11,12 +11,15 @@ export const iuiNumericDefaultStyle = css`
         cursor: var(--iui-numeric-cursor, default);
         display: var(--iui-numeric-display, block);
         float: var(--iui-numeric-float, none);
+        font-size: var(--iui-numeric-font-size, 1rem);
+        font-style: var(--iui-numeric-font-style, normal);
         height: var(--iui-numeric-height, auto);
         margin: var(--iui-numeric-margin, 0);
         opacity: var(--iui-numeric-opacity, 1);
         overflow: hidden;
         padding: var(--iui-numeric-padding, 0);
         position: var(--iui-numeric-position, relative);
+        text-align: var(--iui-numeric-text-align, left);
         vertical-align: var(--iui-numeric-vertical-align, initial);
         width: var(--iui-numeric-width, auto);
         z-index: var(--iui-numeric-z-index, auto);
@@ -55,7 +58,7 @@ export const iuiNumericDefaultStyle = css`
         border: thin solid #cecece;
         float: left;
         margin: 0 1px 0 0;
-        padding: 1px;
+        padding: var(--iui-numeric-inbound-value-padding,  1px);
         text-align: right;
         vertical-align: middle;
     }
@@ -68,7 +71,7 @@ export const iuiNumericDefaultStyle = css`
         border: thin solid #cecece;
         display: inline-block;
         margin: 0 -3px 0 0;
-        padding: 3px;
+        padding: var(--iui-numeric-inbound-btn-padding,  3px);
     }
     .iui-numeric-inbound-btn:last-of-type {
         margin: 0;

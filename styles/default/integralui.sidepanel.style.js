@@ -11,6 +11,8 @@ const iuiSidePanelDefaultStyle = css`
         cursor: var(--iui-sidepanel-cursor, default);
         display: var(--iui-sidepanel-display, none);
         float: var(--iui-sidepanel-float, none);
+        font-size: var(--iui-sidepanel-font-size, 1rem);
+        font-style: var(--iui-sidepanel-font-style, normal);
         height: var(--iui-sidepanel-height, 100%);
         opacity: var(--iui-sidepanel-opacity, 1);
         overflow: var(--iui-sidepanel-overflow, hidden);
@@ -30,7 +32,7 @@ const iuiSidePanelDefaultStyle = css`
         user-select: none;
     }
     .iui-sidepanel-content {
-        overflow: auto;
+        overflow: var(--iui-sidepanel-content-overflow, auto);
     }
 
     /* Disabled State */

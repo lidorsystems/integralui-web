@@ -11,15 +11,18 @@ export const iuiCalendarDefaultStyle = css`
         cursor: var(--iui-calendar-cursor, default);
         display: var(--iui-calendar-display, block);
         float: var(--iui-calendar-float, none);
+        font-size: var(--iui-calendar-font-size, 1rem);
+        font-style: var(--iui-calendar-font-style, normal);
         height: var(--iui-calendar-height, auto);
         opacity: var(--iui-calendar-opacity, 1);
         overflow: hidden;
         margin: var(--iui-calendar-margin, 0);
         padding: var(--iui-calendar-padding, 0);
         position: var(--iui-calendar-position, relative);
+        text-align: var(--iui-calendar-text-align, left);
         width: var(--iui-calendar-width, auto);
         z-index: var(--iui-calendar-z-index, auto);
-   
+  
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;

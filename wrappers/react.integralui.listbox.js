@@ -56,6 +56,9 @@ var IntegralUIListBoxComponent = function (_Component) {
                 if (this.props.beforeSelect) this.ctrlRef.current.addEventListener('beforeSelect', function (e) {
                     return _this2.props.beforeSelect(e);
                 });
+                if (this.props.checkedChanged) this.ctrlRef.current.addEventListener('checkedChanged', function (e) {
+                    return _this2.props.checkedChanged(e);
+                });
                 if (this.props.clear) this.ctrlRef.current.addEventListener('clear', function () {
                     return _this2.props.clear();
                 });
@@ -153,6 +156,7 @@ var IntegralUIListBoxComponent = function (_Component) {
                 if (this.props.afterSelect) this.ctrlRef.current.removeEventListener('afterSelect', this.props.afterSelect);
                 if (this.props.beforeEdit) this.ctrlRef.current.removeEventListener('beforeEdit', this.props.beforeEdit);
                 if (this.props.beforeSelect) this.ctrlRef.current.removeEventListener('beforeSelect', this.props.beforeSelect);
+                if (this.props.checkedChanged) this.ctrlRef.current.removeEventListener('checkedChanged', this.props.checkedChanged);
                 if (this.props.clear) this.ctrlRef.current.removeEventListener('clear', this.props.clear);
                 if (this.props.dragDrop) this.ctrlRef.current.removeEventListener('dragDrop', this.props.dragDrop);
                 if (this.props.dragDropComplete) this.ctrlRef.current.removeEventListener('dragDropComplete', this.props.dragDropComplete);
@@ -206,6 +210,7 @@ var IntegralUIListBoxComponent = function (_Component) {
                 if (this._isDefined(this.props.allowFocus)) this.ctrlRef.current.allowFocus = this.props.allowFocus;
                 if (this._isDefined(this.props.animateInit)) this.ctrlRef.current.animateInit = this.props.animateInit;
                 if (this._isDefined(this.props.autoSize)) this.ctrlRef.current.autoSize = this.props.autoSize;
+                if (this._isDefined(this.props.checkBoxes)) this.ctrlRef.current.checkBoxes = this.props.checkBoxes;
                 if (this._isDefined(this.props.colorScheme)) this.ctrlRef.current.colorScheme = this.props.colorScheme;
                 if (this._isDefined(this.props.contentVisibility)) this.ctrlRef.current.contentVisibility = this.props.contentVisibility;
                 if (this._isDefined(this.props.customStyle)) this.ctrlRef.current.customStyle = this.props.customStyle;
@@ -253,13 +258,14 @@ var IntegralUIListBoxComponent = function (_Component) {
                 if (this.props.animateInit !== prevProps.animateInit) this.ctrlRef.current.animateInit = this.props.animateInit;
                 if (this.props.autoSize !== prevProps.autoSize) this.ctrlRef.current.autoSize = this.props.autoSize;
                 if (this.props.dataFields !== prevProps.dataFields) this.ctrlRef.current.dataFields = this.props.dataFields;
-                if (this.props.focusedItem !== prevProps.focusedItem) this.ctrlRef.current.focusedItem = this.props.focusedItem;
+                if (this.props.checkBoxes !== prevProps.checkBoxes) this.ctrlRef.current.checkBoxes = this.props.checkBoxes;
                 if (this.props.contentVisibility !== prevProps.contentVisibility) this.ctrlRef.current.contentVisibility = this.props.contentVisibility;
                 if (this.props.colorScheme !== prevProps.colorScheme) this.ctrlRef.current.colorScheme = this.props.colorScheme;
                 if (this.props.customStyle !== prevProps.customStyle) this.ctrlRef.current.customStyle = this.props.customStyle;
                 if (this.props.data !== prevProps.data) this.ctrlRef.current.data = this.props.data;
                 if (this.props.dragDropMode !== prevProps.dragDropMode) this.ctrlRef.current.dragDropMode = this.props.dragDropMode;
                 if (this.props.enabled !== prevProps.enabled) this.ctrlRef.current.enabled = this.props.enabled;
+                if (this.props.focusedItem !== prevProps.focusedItem) this.ctrlRef.current.focusedItem = this.props.focusedItem;
                 if (this._isDefined(this.props.groups)) this.ctrlRef.current.groups = this.props.groups;
                 if (this._isDefined(this.props.itemHoverTemplate)) this.ctrlRef.current.itemHoverTemplate = this.props.itemHoverTemplate;
                 if (this._isDefined(this.props.items)) this.ctrlRef.current.items = this.props.items;
@@ -290,18 +296,13 @@ var IntegralUIListBoxComponent = function (_Component) {
 
     }, {
         key: 'addItem',
-        value: function addItem(item) {
-            if (this._isCtrlDefined()) this.ctrlRef.current.addItem(item);
-        }
-    }, {
-        key: 'clearItems',
         value: function () {
-            var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
+            var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(item) {
                 return _regeneratorRuntime.wrap(function _callee$(_context) {
                     while (1) {
                         switch (_context.prev = _context.next) {
                             case 0:
-                                return _context.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.clearItems() : Promise.resolve());
+                                return _context.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.addItem(item) : Promise.resolve());
 
                             case 1:
                             case 'end':
@@ -311,37 +312,156 @@ var IntegralUIListBoxComponent = function (_Component) {
                 }, _callee, this);
             }));
 
-            function clearItems() {
+            function addItem(_x) {
                 return _ref.apply(this, arguments);
+            }
+
+            return addItem;
+        }()
+    }, {
+        key: 'clearItems',
+        value: function () {
+            var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee2() {
+                return _regeneratorRuntime.wrap(function _callee2$(_context2) {
+                    while (1) {
+                        switch (_context2.prev = _context2.next) {
+                            case 0:
+                                return _context2.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.clearItems() : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context2.stop();
+                        }
+                    }
+                }, _callee2, this);
+            }));
+
+            function clearItems() {
+                return _ref2.apply(this, arguments);
             }
 
             return clearItems;
         }()
     }, {
         key: 'insertItemAt',
-        value: function insertItemAt(item, index) {
-            if (this._isCtrlDefined()) this.ctrlRef.current.insertItemAt(item, index);
-        }
+        value: function () {
+            var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee3(item, index) {
+                return _regeneratorRuntime.wrap(function _callee3$(_context3) {
+                    while (1) {
+                        switch (_context3.prev = _context3.next) {
+                            case 0:
+                                return _context3.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.insertItemAt(item, index) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context3.stop();
+                        }
+                    }
+                }, _callee3, this);
+            }));
+
+            function insertItemAt(_x2, _x3) {
+                return _ref3.apply(this, arguments);
+            }
+
+            return insertItemAt;
+        }()
     }, {
         key: 'insertItemBefore',
-        value: function insertItemBefore(item, refItem) {
-            if (this._isCtrlDefined()) this.ctrlRef.current.insertItemBefore(item, refItem);
-        }
+        value: function () {
+            var _ref4 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee4(item, refItem) {
+                return _regeneratorRuntime.wrap(function _callee4$(_context4) {
+                    while (1) {
+                        switch (_context4.prev = _context4.next) {
+                            case 0:
+                                return _context4.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.insertItemBefore(item, refItem) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context4.stop();
+                        }
+                    }
+                }, _callee4, this);
+            }));
+
+            function insertItemBefore(_x4, _x5) {
+                return _ref4.apply(this, arguments);
+            }
+
+            return insertItemBefore;
+        }()
     }, {
         key: 'insertItemAfter',
-        value: function insertItemAfter(item, refItem) {
-            if (this._isCtrlDefined()) this.ctrlRef.current.insertItemAfter(item, refItem);
-        }
+        value: function () {
+            var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee5(item, refItem) {
+                return _regeneratorRuntime.wrap(function _callee5$(_context5) {
+                    while (1) {
+                        switch (_context5.prev = _context5.next) {
+                            case 0:
+                                return _context5.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.insertItemAfter(item, refItem) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context5.stop();
+                        }
+                    }
+                }, _callee5, this);
+            }));
+
+            function insertItemAfter(_x6, _x7) {
+                return _ref5.apply(this, arguments);
+            }
+
+            return insertItemAfter;
+        }()
     }, {
         key: 'removeItem',
-        value: function removeItem(item) {
-            return this._isCtrlDefined() ? this.ctrlRef.current.removeItem(item) : false;
-        }
+        value: function () {
+            var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee6(item) {
+                return _regeneratorRuntime.wrap(function _callee6$(_context6) {
+                    while (1) {
+                        switch (_context6.prev = _context6.next) {
+                            case 0:
+                                return _context6.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.removeItem(item) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context6.stop();
+                        }
+                    }
+                }, _callee6, this);
+            }));
+
+            function removeItem(_x8) {
+                return _ref6.apply(this, arguments);
+            }
+
+            return removeItem;
+        }()
     }, {
         key: 'removeItemAt',
-        value: function removeItemAt(index) {
-            return this._isCtrlDefined() ? this.ctrlRef.current.removeItemAt(index) : false;
-        }
+        value: function () {
+            var _ref7 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee7(index) {
+                return _regeneratorRuntime.wrap(function _callee7$(_context7) {
+                    while (1) {
+                        switch (_context7.prev = _context7.next) {
+                            case 0:
+                                return _context7.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.removeItemAt(index) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context7.stop();
+                        }
+                    }
+                }, _callee7, this);
+            }));
+
+            function removeItemAt(_x9) {
+                return _ref7.apply(this, arguments);
+            }
+
+            return removeItemAt;
+        }()
 
         // Data --------------------------------------------------------------------------------------
 
@@ -355,19 +475,76 @@ var IntegralUIListBoxComponent = function (_Component) {
 
     }, {
         key: 'collapse',
-        value: function collapse(group) {
-            if (this._isCtrlDefined()) this.ctrlRef.current.collapse(group);
-        }
+        value: function () {
+            var _ref8 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee8(group) {
+                return _regeneratorRuntime.wrap(function _callee8$(_context8) {
+                    while (1) {
+                        switch (_context8.prev = _context8.next) {
+                            case 0:
+                                return _context8.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.collapse(group) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context8.stop();
+                        }
+                    }
+                }, _callee8, this);
+            }));
+
+            function collapse(_x10) {
+                return _ref8.apply(this, arguments);
+            }
+
+            return collapse;
+        }()
     }, {
         key: 'expand',
-        value: function expand(group) {
-            if (this._isCtrlDefined()) this.ctrlRef.current.expand(group);
-        }
+        value: function () {
+            var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee9(group) {
+                return _regeneratorRuntime.wrap(function _callee9$(_context9) {
+                    while (1) {
+                        switch (_context9.prev = _context9.next) {
+                            case 0:
+                                return _context9.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.expand(group) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context9.stop();
+                        }
+                    }
+                }, _callee9, this);
+            }));
+
+            function expand(_x11) {
+                return _ref9.apply(this, arguments);
+            }
+
+            return expand;
+        }()
     }, {
         key: 'toggle',
-        value: function toggle(group, value) {
-            if (this._isCtrlDefined()) this.ctrlRef.current.toggle(group, value);
-        }
+        value: function () {
+            var _ref10 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee10(group, value) {
+                return _regeneratorRuntime.wrap(function _callee10$(_context10) {
+                    while (1) {
+                        switch (_context10.prev = _context10.next) {
+                            case 0:
+                                return _context10.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.toggle(group, value) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context10.stop();
+                        }
+                    }
+                }, _callee10, this);
+            }));
+
+            function toggle(_x12, _x13) {
+                return _ref10.apply(this, arguments);
+            }
+
+            return toggle;
+        }()
 
         // Export ------------------------------------------------------------------------------------
 
@@ -422,9 +599,28 @@ var IntegralUIListBoxComponent = function (_Component) {
         }
     }, {
         key: 'moveItem',
-        value: function moveItem(item, direction, targetItem, position) {
-            if (this._isCtrlDefined()) this.ctrlRef.current.moveItem(item, direction, targetItem, position);
-        }
+        value: function () {
+            var _ref11 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee11(item, direction, targetItem, position) {
+                return _regeneratorRuntime.wrap(function _callee11$(_context11) {
+                    while (1) {
+                        switch (_context11.prev = _context11.next) {
+                            case 0:
+                                return _context11.abrupt('return', this._isCtrlDefined() ? this.ctrlRef.current.moveItem(item, direction, targetItem, position) : Promise.resolve());
+
+                            case 1:
+                            case 'end':
+                                return _context11.stop();
+                        }
+                    }
+                }, _callee11, this);
+            }));
+
+            function moveItem(_x14, _x15, _x16, _x17) {
+                return _ref11.apply(this, arguments);
+            }
+
+            return moveItem;
+        }()
 
         // Keyboard Navigation ---------------------------------------------------------------
 

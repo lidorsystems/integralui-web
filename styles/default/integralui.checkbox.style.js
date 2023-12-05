@@ -13,12 +13,15 @@ export const iuiCheckBoxDefaultStyle = css`
         cursor: var(--iui-checkbox-cursor, default);
         display: var(--iui-checkbox-display, inline-block);
         float: var(--iui-checkbox-float, none);
+        font-size: var(--iui-checkbox-font-size, 1rem);
+        font-style: var(--iui-checkbox-font-style, normal);
         height: var(--iui-checkbox-height, auto);
         opacity: var(--iui-checkbox-opacity, 1);
         overflow: hidden;
         margin: var(--iui-checkbox-margin, 2px 0);
         padding: var(--iui-checkbox-padding, 5px);
         position: var(--iui-checkbox-position, relative);
+        text-align: var(--iui-checkbox-text-align, left);
         width: var(--iui-checkbox-width, auto);
         z-index: var(--iui-checkbox-z-index, auto);
 

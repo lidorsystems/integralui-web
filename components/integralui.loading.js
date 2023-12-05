@@ -1,6 +1,6 @@
 /*
   filename: integralui.loading.js
-  version : 23.3.0
+  version : 23.4.0
   Copyright © 2016-2023 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

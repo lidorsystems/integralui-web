@@ -12,12 +12,15 @@ export const iuiSliderDefaultStyle = css`
         cursor: var(--iui-slider-cursor, default);
         display: var(--iui-slider-display, block);
         float: var(--iui-slider-float, none);
+        font-size: var(--iui-slider-font-size, 1rem);
+        font-style: var(--iui-slider-font-style, normal);
         height: var(--iui-slider-height, auto);
         margin: var(--iui-slider-margin, 0);
         opacity: var(--iui-slider-opacity, 1);
         overflow: hidden;
         padding: var(--iui-slider-padding, 0);
         position: var(--iui-slider-position, relative);
+        text-align: var(--iui-slider-text-align, left);
         width: var(--iui-slider-width, auto);
         z-index: var(--iui-slider-z-index, auto);
 

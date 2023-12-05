@@ -9,6 +9,8 @@ export const iuiTabDefaultStyle = css`
         border-radius: var(--iui-tab-header-border-radius, 0);
         color: var(--iui-tab-header-color, black);
         display: inline-block;
+        font-size: var(--iui-tab-header-font-size, 1rem);
+        font-style: var(--iui-tab-header-font-style, normal);
         font-weight: var(--iui-tab-header-font-weight, normal);
         list-style: none;
         margin: var(--iui-tab-header-margin, 0);
@@ -19,6 +21,7 @@ export const iuiTabDefaultStyle = css`
         top: 1px;
         white-space: nowrap;
         z-index: 0;
+
     }
     .iui-tab-header-vertical {
         transform: rotate(-90deg);

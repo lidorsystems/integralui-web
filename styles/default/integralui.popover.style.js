@@ -12,12 +12,15 @@ export const iuiPopOverDefaultStyle = css`
         cursor: var(--iui-popover-cursor, default);
         display: var(--iui-popover-display, block);
         float: var(--iui-popover-float, none);
+        font-size: var(--iui-popover-font-size, 1rem);
+        font-style: var(--iui-popover-font-style, normal);
         height: var(--iui-popover-height, auto);
         margin: var(--iui-popover-margin, 0);
         opacity: var(--iui-popover-opacity, 1);
         overflow: visible;
         padding: var(--iui-popover-padding, 0);
         position: var(--iui-popover-position, absolute);
+        text-align: var(--iui-popover-text-align, left);
         top: -999999px;
         width: var(--iui-popover-width, auto);
         z-index: var(--iui-popover-z-index, 9999999);

@@ -11,12 +11,15 @@ const iuiBreadCrumbDefaultStyle = css`
         cursor: var(--iui-breadcrumb-cursor, default);
         display: var(--iui-breadcrumb-display, block);
         float: var(--iui-breadcrumb-float, none);
+        font-size: var(--iui-breadcrumb-font-size, 1rem);
+        font-style: var(--iui-breadcrumb-font-style, normal);
         height: var(--iui-breadcrumb-height, auto);
         opacity: var(--iui-breadcrumb-opacity, 1);
         overflow: hidden;
         margin: var(--iui-breadcrumb-margin, 0);
         padding: var(--iui-breadcrumb-padding, 1px);
         position: var(--iui-breadcrumb-position, relative);
+        text-align: var(--iui-breadcrumb-text-align, left);
         white-space: nowrap;
         width: var(--iui-breadcrumb-width, auto);
         z-index: var(--iui-breadcrumb-z-index, auto);

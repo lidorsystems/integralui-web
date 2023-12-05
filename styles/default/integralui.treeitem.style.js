@@ -4,10 +4,13 @@ export const iuiTreeItemDefaultStyle = css`
     .iui-treeitem {
         background: var(--iui-treeitem-background, transparent);
         color: var(--iui-treeitem-color, black);
+        font-size: var(--iui-treeitem-font-size, 1rem);
+        font-style: var(--iui-treeitem-font-style, normal);
         list-style-type: none;
         overflow: hidden;
         margin: var(--iui-treeitem-margin, 0);
         padding: var(--iui-treeitem-padding, 0);
+        text-align: var(--iui-treeitem-text-align, left);
     }
     .iui-treeitem-block {
         border: var(--iui-treeitem-border, 2px solid transparent);

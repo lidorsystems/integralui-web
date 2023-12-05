@@ -11,12 +11,15 @@ const iuiTreeGridDefaultStyle = css`
         cursor: var(--iui-treegrid-cursor, default);
         display: var(--iui-treegrid-display, block);
         float: var(--iui-treegrid-float, none);
+        font-size: var(--iui-treegrid-font-size, 1rem);
+        font-style: var(--iui-treegrid-font-style, normal);
         height: var(--iui-treegrid-height, auto);
         margin: var(--iui-treegrid-margin, 0);
         opacity: var(--iui-treegrid-opacity, 1);
         overflow: hidden;
         padding: var(--iui-treegrid-padding, 0);
         position: var(--iui-treegrid-position, relative);
+        text-align: var(--iui-treegrid-text-align, left);
         width: var(--iui-treegrid-width, auto);
         z-index: var(--iui-treegrid-z-index, auto);
 

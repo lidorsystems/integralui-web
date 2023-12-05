@@ -11,6 +11,8 @@ const iuiButtonDefaultStyle = css`
         cursor: var(--iui-button-cursor, default);
         display: var(--iui-button-display, inline-block);
         float: var(--iui-button-float, none);
+        font-size: var(--iui-button-font-size, 1rem);
+        font-style: var(--iui-button-font-style, normal);
         height: var(--iui-button-height, auto);
         opacity: var(--iui-button-opacity, 1);
         overflow: hidden;

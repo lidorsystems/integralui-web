@@ -11,12 +11,15 @@ const iuiTreeViewDefaultStyle = css`
         cursor: var(--iui-treeview-cursor, default);
         display: var(--iui-treeview-display, block);
         float: var(--iui-treeview-float, none);
+        font-size: var(--iui-treeview-font-size, 1rem);
+        font-style: var(--iui-treeview-font-style, normal);
         height: var(--iui-treeview-height, auto);
         margin: var(--iui-treeview-margin, 0);
         opacity: var(--iui-treeview-opacity, 1);
         overflow: hidden;
         padding: var(--iui-treeview-padding, 1px);
         position: var(--iui-treeview-position, relative);
+        text-align: var(--iui-treeview-text-align, left);
         width: var(--iui-treeview-width, auto);
         z-index: var(--iui-treeview-z-index, auto);
 

@@ -11,12 +11,15 @@ export const iuiListScrollerDefaultStyle = css`
         cursor: var(--iui-listscroller-cursor, default);
         display: var(--iui-listscroller-display, block);
         float: var(--iui-listscroller-float, none);
+        font-size: var(--iui-listscroller-font-size, 1rem);
+        font-style: var(--iui-listscroller-font-style, normal);
         height: var(--iui-listscroller-height, auto);
         margin: var(--iui-listscroller-margin, 0);
         opacity: var(--iui-listscroller-opacity, 1);
         overflow: hidden;
         padding: var(--iui-listscroller-padding, 0);
         position: var(--iui-listscroller-position, relative);
+        text-align: var(--iui-listscroller-text-align, left);
         width: var(--iui-listscroller-width, auto);
         z-index: var(--iui-listscroller-z-index, auto);
       

@@ -10,6 +10,8 @@ export const iuiWindowDefaultStyle = css`
         color: var(--iui-window-color, black);
         cursor: var(--iui-window-cursor, default);
         display: var(--iui-window-display, block);
+        font-size: var(--iui-window-font-size, 1rem);
+        font-style: var(--iui-window-font-style, normal);
         height: var(--iui-window-height, auto);
         left: var(--iui-window-left, 0);
         margin: var(--iui-window-margin, 0);
@@ -17,6 +19,7 @@ export const iuiWindowDefaultStyle = css`
         overflow: hidden;
         padding: var(--iui-window-padding, 0);
         position: var(--iui-window-position, absolute);
+        text-align: var(--iui-window-text-align, left);
         top: var(--iui-window-top, 0);
         width: var(--iui-window-width, auto);
         z-index: var(--iui-window-z-index, 999);

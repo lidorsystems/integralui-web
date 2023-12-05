@@ -11,12 +11,15 @@ export const iuiAutoCompleteDefaultStyle = css`
         cursor: var(--iui-autocomplete-cursor, default);
         display: var(--iui-autocomplete-display, block);
         float: var(--iui-autocomplete-float, none);
+        font-size: var(--iui-autocomplete-font-size, 1rem);
+        font-style: var(--iui-autocomplete-font-style, normal);
         height: var(--iui-autocomplete-height, auto);
         opacity: var(--iui-autocomplete-opacity, 1);
         overflow: hidden;
         margin: var(--iui-autocomplete-margin, 0);
         padding: var(--iui-autocomplete-padding, 1px);
         position: var(--iui-autocomplete-position, relative);
+        text-align: var(--iui-autocomplete-text-align, left);
         width: var(--iui-autocomplete-width, auto);
         z-index: var(--iui-autocomplete-z-index, auto);
 

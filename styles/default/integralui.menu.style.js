@@ -12,12 +12,15 @@ export const iuiMenuDefaultStyle = css`
         cursor: var(--iui-menu-cursor, default);
         display: var(--iui-menu-display, block);
         float: var(--iui-menu-float, none);
+        font-size: var(--iui-menu-font-size, 1rem);
+        font-style: var(--iui-menu-font-style, normal);
         height: var(--iui-menu-height, auto);
         margin: var(--iui-menu-margin, 0);
         opacity: var(--iui-menu-opacity, 1);
         overflow: visible;
         padding: var(--iui-menu-padding, 0);
         position: var(--iui-menu-position, relative);
+        text-align: var(--iui-menu-text-align, left);
         width: var(--iui-menu-width, auto);
         z-index: var(--iui-menu-z-index, auto);
 

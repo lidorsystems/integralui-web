@@ -11,12 +11,15 @@ export const iuiAccordionDefaultStyle = css`
         cursor: var(--iui-accordion-cursor, default);
         display: var(--iui-accordion-display, block);
         float: var(--iui-accordion-float, none);
+        font-size: var(--iui-accordion-font-size, 1rem);
+        font-style: var(--iui-accordion-font-style, normal);
         height: var(--iui-accordion-height, auto);
         opacity: var(--iui-accordion-opacity, 1);
         overflow: hidden;
         margin: var(--iui-accordion-margin, 0);
         padding: var(--iui-accordion-padding, 0);
         position: var(--iui-accordion-position, relative);
+        text-align: var(--iui-accordion-text-align, left);
         width: var(--iui-accordion-width, auto);
         z-index: var(--iui-accordion-z-index, auto);
 

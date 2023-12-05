@@ -12,12 +12,15 @@ export const iuiProgressBarDefaultStyle = css`
         cursor: var(--iui-progressbar-cursor, default);
         display: var(--iui-progressbar-display, block);
         float: var(--iui-progressbar-float, none);
+        font-size: var(--iui-progressbar-font-size, 1rem);
+        font-style: var(--iui-progressbar-font-style, normal);
         height: var(--iui-progressbar-height, auto);
         margin: var(--iui-progressbar-margin, 0);
         opacity: var(--iui-progressbar-opacity, 1);
         overflow: hidden;
         padding: var(--iui-progressbar-padding, 2px);
         position: var(--iui-progressbar-position, relative);
+        text-align: var(--iui-progressbar-text-align, left);
         white-space: nowrap;
         width: var(--iui-progressbar-width, auto);
         z-index: var(--iui-progressbar-z-index, auto);

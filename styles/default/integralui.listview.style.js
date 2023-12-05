@@ -12,12 +12,15 @@ export const iuiListViewDefaultStyle = css`
         cursor: var(--iui-listview-cursor, default);
         display: var(--iui-listview-display, block);
         float: var(--iui-listview-float, none);
+        font-size: var(--iui-listview-font-size, 1rem);
+        font-style: var(--iui-listview-font-style, normal);
         height: var(--iui-listview-height, auto);
         margin: var(--iui-listview-margin, 0);
         opacity: var(--iui-listview-opacity, 1);
         overflow: hidden;
         padding: var(--iui-listview-padding, 1px);
         position: var(--iui-listview-position, relative);
+        text-align: var(--iui-listview-text-align, left);
         width: var(--iui-listview-width, auto);
         z-index: var(--iui-listview-z-index, auto);
 

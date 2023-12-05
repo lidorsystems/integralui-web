@@ -76,6 +76,9 @@ var IntegralUISideBarComponent = function (_Component) {
                 if (this.props.stateChanged) this.ctrlRef.current.addEventListener('stateChanged', function (e) {
                     return _this2.props.stateChanged(e);
                 });
+                if (this.props.updateComplete) this.ctrlRef.current.addEventListener('updateComplete', function () {
+                    return _this2.props.updateComplete();
+                });
             }
         }
     }, {
@@ -99,6 +102,7 @@ var IntegralUISideBarComponent = function (_Component) {
                 if (this.props.selectionChanged) this.ctrlRef.current.removeEventListener('selectionChanged', this.props.selectionChanged);
                 if (this.props.sizeChanged) this.ctrlRef.current.removeEventListener('sizeChanged', this.props.sizeChanged);
                 if (this.props.stateChanged) this.ctrlRef.current.removeEventListener('stateChanged', this.props.stateChanged);
+                if (this.props.updateComplete) this.ctrlRef.current.removeEventListener('updateComplete', this.props.updateComplete);
             }
         }
 

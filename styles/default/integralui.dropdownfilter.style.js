@@ -12,12 +12,14 @@ const iuiDropDownFilterDefaultStyle = css`
         display: var(--iui-dropdownfilter-display, block);
         float: var(--iui-dropdownfilter-float, none);
         font-size: 0;
+        font-style: var(--iui-dropdownfilter-font-style, normal);
         height: var(--iui-dropdownfilter-height, auto);
         margin: var(--iui-dropdownfilter-margin, 0);
         opacity: var(--iui-dropdownfilter-opacity, 1);
         overflow: hidden;
         padding: var(--iui-dropdownfilter-padding, 0);
         position: var(--iui-dropdownfilter-position, relative);
+        text-align: var(--iui-dropdownfilter-text-align, left);
         vertical-align: var(--iui-dropdownfilter-vertical-align, middle);
         width: var(--iui-dropdownfilter-width, auto);
         z-index: var(--iui-dropdownfilter-z-index, auto);

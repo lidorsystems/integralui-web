@@ -4,10 +4,13 @@ const iuiTreeListItemDefaultStyle = css`
     .iui-treelistitem {
         background: var(--iui-treelistitem-background, transparent);
         color: var(--iui-treelistitem-color, black);
+        font-size: var(--iui-treelistitem-font-size, 1rem);
+        font-style: var(--iui-treelistitem-font-style, normal);
         list-style-type: none;
         overflow: hidden;
         margin: var(--iui-treelistitem-margin, 0);
         padding: var(--iui-treelistitem-padding, 7px);
+        text-align: var(--iui-treelistitem-text-align, left);
         text-overflow: var(--iui-treelistitem-text-overflow, ellipsis);
         white-space: var(--iui-treelistitem-white-space, nowrap);
         width: var(--iui-treelistitem-width, auto);
@@ -64,11 +67,11 @@ const iuiTreeListItemDefaultStyle = css`
         opacity: 0.75;
     }
     .iui-treelistitem-separator {
-        background: #e5e5e5;
+        background: var(--iui-treelistitem-separator-background, #e5e5e5);
         border: 0;
-        margin: 0;
+        height: var(--iui-treelistitem-separator-height, 1px);
+        margin: var(--iui-treelistitem-separator-margin, 0);
         padding: 0;
-        height: 1px;
     }
 
     .iui-treelistitem-label {
@@ -77,7 +80,7 @@ const iuiTreeListItemDefaultStyle = css`
     }
 
     /* Disabled State */
-    .iui-treelist-disabled div, .iui-treelist-disabled ul {
+    .iui-treelist-disabled div, .iui-treelist-disabled ul, .iui-treelistitem-disabled {
         opacity: var(--iui-treelist-disabled-opacity, 0.75);
         pointer-events: none;
     }

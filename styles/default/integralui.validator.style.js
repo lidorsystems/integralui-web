@@ -12,12 +12,14 @@ export const iuiValidatorStyle = css`
         cursor: var(--iui-validator-cursor, default);
         display: var(--iui-validator-display, block);
         font-size: var(--iui-validator-font-size, 1rem);
+        font-style: var(--iui-validator-font-style, normal);
         height: var(--iui-validator-height, auto);
         margin: var(--iui-validator-margin, 0);
         opacity: var(--iui-validator-opacity, 0);
         overflow: visible;
         padding: var(--iui-validator-padding, 0);
         position: var(--iui-validator-position, absolute);
+        text-align: var(--iui-validator-text-align, left);
         top: -9999999px;
         transform: scale(0);
         width: var(--iui-validator-width, auto);

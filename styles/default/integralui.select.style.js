@@ -12,16 +12,18 @@ const iuiSelectDefaultStyle = css`
         cursor: var(--iui-select-cursor, default);
         display: var(--iui-select-display, block);
         float: var(--iui-select-float, none);
+        font-size: var(--iui-select-font-size, 1rem);
+        font-style: var(--iui-select-font-style, normal);
         height: var(--iui-select-height, auto);
         margin: var(--iui-select-margin, 2px 0);
         opacity: var(--iui-select-opacity, 1);
         overflow: hidden;
         padding: var(--iui-select-padding, 0);
         position: var(--iui-select-position, relative);
+        text-align: var(--iui-select-text-align, left);
         vertical-align: var(--iui-select-vertical-align, middle);
         width: var(--iui-select-width, auto);
         z-index: var(--iui-select-z-index, auto);
-
     }
     .iui-select:focus {
         border: var(--iui-select-focus-border, thin dotted #cecece);

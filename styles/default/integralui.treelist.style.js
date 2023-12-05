@@ -11,12 +11,15 @@ const iuiTreeListDefaultStyle = css`
         cursor: var(--iui-treelist-cursor, default);
         display: var(--iui-treelist-display, block);
         float: var(--iui-treelist-float, none);
+        font-size: var(--iui-treelist-font-size, 1rem);
+        font-style: var(--iui-treelist-font-style, normal);
         height: var(--iui-treelist-height, auto);
         margin: var(--iui-treelist-margin, 0);
         opacity: var(--iui-treelist-opacity, 1);
         overflow: hidden;
         padding: var(--iui-treelist-padding, 1px);
         position: var(--iui-treelist-position, relative);
+        text-align: var(--iui-treelist-text-align, left);
         width: var(--iui-treelist-width, auto);
         z-index: var(--iui-treelist-z-index, auto);
 

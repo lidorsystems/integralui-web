@@ -12,6 +12,8 @@ const iuiToastDefaultStyle = css`
         cursor: var(--iui-toast-cursor, default);
         display: var(--iui-toast-display, block);
         float: var(--iui-toast-float, none);
+        font-size: var(--iui-toast-font-size, 1rem);
+        font-style: var(--iui-toast-font-style, normal);
         height: var(--iui-toast-height, auto);
         opacity: var(--iui-toast-opacity, 1);
         overflow: hidden;

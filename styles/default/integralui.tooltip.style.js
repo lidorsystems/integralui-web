@@ -12,12 +12,14 @@ export const iuiTooltipStyle = css`
         cursor: var(--iui-tooltip-cursor, default);
         display: var(--iui-tooltip-display, block);
         font-size: var(--iui-tooltip-font-size, 1rem);
+        font-style: var(--iui-tooltip-font-style, normal);
         height: var(--iui-tooltip-height, auto);
         margin: var(--iui-tooltip-margin, 0);
         opacity: var(--iui-tooltip-opacity, 0);
         overflow: visible;
         padding: var(--iui-tooltip-padding, 0);
         position: var(--iui-tooltip-position, absolute);
+        text-align: var(--iui-tooltip-text-align, left);
         top: -9999999px;
         transform: scale(0);
         width: var(--iui-tooltip-width, auto);

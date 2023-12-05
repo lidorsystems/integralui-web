@@ -12,6 +12,8 @@ const iuiLabelDefaultStyle = css`
         cursor: var(--iui-label-cursor, default);
         display: var(--iui-label-display, inline-block);
         float: var(--iui-label-float, none);
+        font-size: var(--iui-label-font-size, 1rem);
+        font-style: var(--iui-label-font-style, normal);
         height: var(--iui-label-height, auto);
         opacity: var(--iui-label-opacity, 1);
         overflow: hidden;

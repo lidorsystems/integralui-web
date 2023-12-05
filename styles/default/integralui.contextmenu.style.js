@@ -13,15 +13,18 @@ export const iuiContextMenuDefaultStyle = css`
         cursor: var(--iui-contextmenu-cursor, default);
         display: var(--iui-contextmenu-display, block);
         float: var(--iui-contextmenu-float, none);
+        font-size: var(--iui-contextmenu-font-size, 1rem);
+        font-style: var(--iui-contextmenu-font-style, normal);
         height: var(--iui-contextmenu-height, auto);
         opacity: var(--iui-contextmenu-opacity, 1);
         overflow: visible;
         margin: var(--iui-contextmenu-margin, 0);
         padding: var(--iui-contextmenu-padding, 1px);
         position: var(--iui-contextmenu-position, absolute);
+        text-align: var(--iui-contextmenu-text-align, left);
         width: var(--iui-contextmenu-width, 150px);
         z-index: var(--iui-contextmenu-z-index, 9999999);
-        
+       
         -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: none;

@@ -83,6 +83,11 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
             attribute: string;
             reflect: boolean;
         };
+        checkBoxes: {
+            type: BooleanConstructor;
+            attribute: string;
+            reflect: boolean;
+        };
         contentVisibility: {
             attribute: string;
             converter: {
@@ -191,6 +196,8 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
     };
     set autoSize(arg: any);
     get autoSize(): any;
+    set checkBoxes(arg: any);
+    get checkBoxes(): any;
     set defaultGroupName(arg: any);
     get defaultGroupName(): any;
     set groupBy(arg: any);

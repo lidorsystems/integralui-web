@@ -12,6 +12,8 @@ export const iuiRadioButtonDefaultStyle = css`
         cursor: var(--iui-radio-button-cursor, default);
         display: var(--iui-radio-button-display, inline-block);
         float: var(--iui-radio-button-float, none);
+        font-size: var(--iui-radio-button-font-size, 1rem);
+        font-style: var(--iui-radio-button-font-style, normal);
         height: var(--iui-radio-button-height, auto);
         margin: var(--iui-radio-button-margin, 2px 0);
         opacity: var(--iui-radio-button-opacity, 1);

@@ -11,6 +11,8 @@ export const iuiDropDownButtonDefaultStyle = css`
         cursor: var(--iui-dropdownbutton-cursor, default);
         display: var(--iui-dropdownbutton-display, inline-block);
         float: var(--iui-dropdownbutton-float, none);
+        font-size: var(--iui-dropdownbutton-font-size, 1rem);
+        font-style: var(--iui-dropdownbutton-font-style, normal);
         height: var(--iui-dropdownbutton-height, auto);
         margin: var(--iui-dropdownbutton-margin, 0);
         opacity: var(--iui-dropdownbutton-opacity, 1);

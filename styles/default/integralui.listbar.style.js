@@ -11,12 +11,15 @@ export const iuiListBarDefaultStyle = css`
         cursor: var(--iui-listbar-cursor, default);
         display: var(--iui-listbar-display, block);
         float: var(--iui-listbar-float, none);
+        font-size: var(--iui-listbar-font-size, 1rem);
+        font-style: var(--iui-listbar-font-style, normal);
         height: var(--iui-listbar-height, auto);
         margin: var(--iui-listbar-margin, 0);
         opacity: var(--iui-listbar-opacity, 1);
         overflow: hidden;
         padding: var(--iui-listbar-padding, 0);
         position: var(--iui-listbar-position, relative);
+        text-align: var(--iui-listbar-text-align, left);
         width: var(--iui-listbar-width, auto);
         z-index: var(--iui-listbar-z-index, auto);
 

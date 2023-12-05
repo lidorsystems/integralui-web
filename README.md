@@ -1,8 +1,8 @@
-# IntegralUI Web, v23.3
+# IntegralUI Web, v23.4
 
 IntegralUI Web includes 50+ native Web Components and services that can help you build modern web applications in JavaScript, Angular, AngularJS, React and Vue. 
 
-![IntegralUI Web 23.3 - 50+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
+![IntegralUI Web 23.4 - 50+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 
@@ -24,11 +24,7 @@ Here is a brief overview of what is included:
 
 [CheckBox](https://www.lidorsystems.com/products/web/studio/samples/#/checkbox) - Represents a check box
 
-[ColorPicker](https://www.lidorsystems.com/products/web/studio/samples/#/colorpicker) - Allows the user to select a color by using a drop-down panel with color palette and slider
-
 [ContextMenu](https://www.lidorsystems.com/products/web/studio/samples/#/contextmenu) - Represents a shortcut menu
-
-[ComboBox](https://www.lidorsystems.com/products/web/studio/samples/#/combobox) - Advanced version of standard ComboBox element
 
 [DatePicker](https://www.lidorsystems.com/products/web/studio/samples/#/datepicker) - Allows the user to select a date by using a drop-down calendar
 
@@ -75,6 +71,8 @@ Here is a brief overview of what is included:
 [RadioButton](https://www.lidorsystems.com/products/web/studio/samples/#/radiobutton) - Represents a radio button
 
 [Rating](https://www.lidorsystems.com/products/web/studio/samples/#/rating) - Visualizes ratings
+
+[Select](https://www.lidorsystems.com/products/web/studio/samples/#/select) - Allows you to select an item from a dropdown list
 
 [SideBar](https://www.lidorsystems.com/products/web/studio/samples/#/sidebar) - Allows you to add a custom content panel that appears by sliding from page side over main content
 

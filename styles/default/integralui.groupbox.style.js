@@ -11,12 +11,15 @@ export const iuiGroupBoxDefaultStyle = css`
         cursor: var(--iui-groupbox-cursor, default);
         display: var(--iui-groupbox-display, block);
         float: var(--iui-groupbox-float, none);
+        font-size: var(--iui-groupbox-font-size, 1rem);
+        font-style: var(--iui-groupbox-font-style, normal);
         height: var(--iui-groupbox-height, auto);
         margin: var(--iui-groupbox-margin, 2px 0);
         opacity: var(--iui-groupbox-opacity, 1);
         overflow: hidden;
         padding: var(--iui-groupbox-padding, 0);
         position: var(--iui-groupbox-position, relative);
+        text-align: var(--iui-groupbox-text-align, left);
         width: var(--iui-groupbox-width, auto);
         z-index: var(--iui-groupbox-z-index, auto);
 

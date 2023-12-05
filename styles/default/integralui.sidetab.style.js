@@ -9,12 +9,15 @@ export const iuiTabDefaultStyle = css`
         border-color: var(--iui-tab-header-border-color, transparent);
         color: var(--iui-tab-header-color, black);
         display: inline-block;
+        font-size: var(--iui-tab-header-font-size, 1rem);
+        font-style: var(--iui-tab-header-font-style, normal);
         font-weight: var(--iui-tab-header-font-weight, normal);
         list-style: none;
         margin: var(--iui-tab-header-margin, 0);
         overflow: hidden;
         padding: var(--iui-tab-header-padding, 5px);
         position: absolute;
+        text-align: var(--iui-tab-header-text-align, left);
         top: 1px;
         white-space: nowrap;
         z-index: 0;

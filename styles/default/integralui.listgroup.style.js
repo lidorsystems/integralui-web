@@ -11,12 +11,15 @@ export const iuiListGroupDefaultStyle = css`
         cursor: var(--iui-listgroup-cursor, default);
         display: var(--iui-listgroup-display, block);
         float: var(--iui-listgroup-float, none);
+        font-size: var(--iui-listgroup-font-size, 1rem);
+        font-style: var(--iui-listgroup-font-style, normal);
         height: var(--iui-listgroup-height, auto);
         margin: var(--iui-listgroup-margin, 0);
         opacity: var(--iui-listgroup-opacity, 1);
         overflow: hidden;
         padding: var(--iui-listgroup-padding, 0);
         position: var(--iui-listgroup-position, relative);
+        text-align: var(--iui-listgroup-text-align, left);
         width: var(--iui-listgroup-width, auto);
         z-index: var(--iui-listgroup-z-index, auto);
 

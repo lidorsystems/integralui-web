@@ -6,10 +6,13 @@ export const iuiCardDefaultStyle = css`
         cursor: var(--iui-card-cursor, default);
         display: var(--iui-card-display, block);
         float: var(--iui-card-float, none);
+        font-size: var(--iui-card-font-size, 1rem);
+        font-style: var(--iui-card-font-style, normal);
         height: var(--iui-card-height, auto);
         margin: var(--iui-card-margin, 0);
         perspective: 999px;
         position: var(--iui-card-position, relative);
+        text-align: var(--iui-card-text-align, left);
         white-space: var(--iui-card-white-space, normal);
         width: var(--iui-card-width, auto);
         z-index: var(--iui-card-z-index, auto);

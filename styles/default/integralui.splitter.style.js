@@ -12,12 +12,15 @@ export const iuiSplitterDefaultStyle = css`
         cursor: var(--iui-splitter-cursor, default);
         display: var(--iui-splitter-display, block);
         float: var(--iui-splitter-float, none);
+        font-size: var(--iui-splitter-font-size, 1rem);
+        font-style: var(--iui-splitter-font-style, normal);
         height: var(--iui-splitter-height, 100%);
         margin: var(--iui-splitter-margin, 0);
         opacity: var(--iui-splitter-opacity, 1);
         overflow: hidden;
         padding: var(--iui-splitter-padding, 0);
         position: var(--iui-splitter-position, relative);
+        text-align: var(--iui-splitter-text-align, left);
         width: var(--iui-splitter-width, 100%);
         z-index: var(--iui-splitter-z-index, auto);
 

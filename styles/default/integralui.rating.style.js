@@ -12,12 +12,15 @@ export const iuiRatingDefaultStyle = css`
         cursor: var(--iui-rating-cursor, default);
         display: var(--iui-rating-display, block);
         float: var(--iui-rating-float, none);
+        font-size: var(--iui-rating-font-size, 1rem);
+        font-style: var(--iui-rating-font-style, normal);
         height: var(--iui-rating-height, 16px);
         margin: var(--iui-rating-margin, 0);
         opacity: var(--iui-rating-opacity, 1);
         overflow: hidden;
         padding: var(--iui-rating-padding, 1px);
         position: var(--iui-rating-position, relative);
+        text-align: var(--iui-rating-text-align, left);
         width: var(--iui-rating-width, auto);
         z-index: var(--iui-rating-z-index, auto);
 
