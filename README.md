@@ -1,8 +1,8 @@
-# IntegralUI Web, v23.4
+# IntegralUI Web, v24.1
 
 IntegralUI Web includes 50+ native Web Components and services that can help you build modern web applications in JavaScript, Angular, AngularJS, React and Vue. 
 
-![IntegralUI Web 23.4 - 50+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
+![IntegralUI Web 24.1 - 50+ UI Components for Angular, React and Vue](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 
