@@ -192,18 +192,18 @@ declare class IntegralUIBaseList extends IntegralUIBase {
     get sorting(): any;
     set virtualMode(arg: boolean | undefined);
     get virtualMode(): boolean | undefined;
-    addItem(item: any, parent: any): Promise<any>;
-    clearItems(parent: any): Promise<any>;
-    insertItemAt(item: any, index: any, parent: any): Promise<any>;
+    addItem(item: any, parent?: any): Promise<any>;
+    clearItems(parent?: any): Promise<any>;
+    insertItemAt(item: any, index: any, parent?: any): Promise<any>;
     insertItemBefore(item: any, refItem: any): Promise<any>;
     insertItemAfter(item: any, refItem: any): Promise<any>;
     removeItem(item: any): Promise<any>;
-    removeItemAt(index: any, parent: any): Promise<any>;
-    exportToJSON(data: any, fields: any, spacing: any, flat: any): string;
-    filter(params: any): void;
+    removeItemAt(index: any, parent?: any): Promise<any>;
+    exportToJSON(data: any, fields?: any, spacing?: any, flat?: any): string;
+    filter(params?: any): void;
     cloneItem(item: any): any;
     getHoverItem(): any;
-    getList(key: any, parent: any): any;
+    getList(key: any, parent?: any): any;
     getFullList(): any;
     updateFullList(): any;
     getTopItem(): any;
@@ -220,7 +220,7 @@ declare class IntegralUIBaseList extends IntegralUIBase {
     suspendLayout(): void;
     resumeLayout(): Promise<void>;
     updateView(): void;
-    scrollPos(value: any): {
+    scrollPos(value?: any): {
         x: number;
         y: number;
     };
@@ -232,7 +232,7 @@ declare class IntegralUIBaseList extends IntegralUIBase {
     findItemByText(text: any): any;
     clearSelection(): void;
     selectItems(items: any): void;
-    sort(order: any, comparer: any): void;
+    sort(order: any, comparer?: any): void;
     refresh(): void;
 }
 import IntegralUIBase from "./integralui.base.js";

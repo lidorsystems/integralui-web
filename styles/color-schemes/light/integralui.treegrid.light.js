@@ -51,12 +51,12 @@ const iuiTreeGridLightStyle = css`
     }
     .iui-treegrid-column-header-hovered {
         background: var(--iui-treegrid-column-header-hovered-background, #e9e9e9);
-        border-color: var(--iui-treegrid-colum-header-hovered-border-color, #e9e9e9);
+        border-color: var(--iui-treegrid-column-header-hovered-border-color, #e9e9e9);
         color: var(--iui-treegrid-column-header-hovered-color, #49678f);
     }
     .iui-treegrid-column-header-selected {
         background: var(--iui-treegrid-column-header-hovered-background, #d9d9d9);
-        border-color: var(--iui-treegrid-colum-header-hovered-border-color, #d9d9d9);
+        border-color: var(--iui-treegrid-column-header-hovered-border-color, #d9d9d9);
         color: var(--iui-treegrid-column-header-hovered-color, #3d5576);
     }
     .iui-treegrid-column-header-cell-selected {

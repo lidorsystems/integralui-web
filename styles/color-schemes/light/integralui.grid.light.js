@@ -51,12 +51,12 @@ export const iuiGridLightStyle = css`
     }
     .iui-grid-column-header-hovered {
         background: var(--iui-grid-column-header-hovered-background, #e9e9e9);
-        border-color: var(--iui-grid-colum-header-hovered-border-color, #e9e9e9);
+        border-color: var(--iui-grid-column-header-hovered-border-color, #e9e9e9);
         color: var(--iui-grid-column-header-hovered-color, #49678f);
     }
     .iui-grid-column-header-selected {
         background: var(--iui-grid-column-header-hovered-background, #d9d9d9);
-        border-color: var(--iui-grid-colum-header-hovered-border-color, #d9d9d9);
+        border-color: var(--iui-grid-column-header-hovered-border-color, #d9d9d9);
         color: var(--iui-grid-column-header-hovered-color, #3d5576);
     }
     .iui-grid-column-header-cell-selected {

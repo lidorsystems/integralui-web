@@ -46,12 +46,12 @@ export const iuiPivotGridLightStyle = css`
     }
     .iui-pivotgrid-column-header-hovered {
         background: var(--iui-pivotgrid-column-header-hovered-background, #e9e9e9);
-        border-color: var(--iui-pivotgrid-colum-header-hovered-border-color, #e9e9e9);
+        border-color: var(--iui-pivotgrid-column-header-hovered-border-color, #e9e9e9);
         color: var(--iui-pivotgrid-column-header-hovered-color, #49678f);
     }
     .iui-pivotgrid-column-header-selected {
         background: var(--iui-pivotgrid-column-header-hovered-background, #d9d9d9);
-        border-color: var(--iui-pivotgrid-colum-header-hovered-border-color, #d9d9d9);
+        border-color: var(--iui-pivotgrid-column-header-hovered-border-color, #d9d9d9);
         color: var(--iui-pivotgrid-column-header-hovered-color, #3d5576);
     }
     .iui-pivotgrid-column-header-cell-selected {

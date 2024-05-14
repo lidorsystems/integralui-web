@@ -276,7 +276,7 @@ declare class IntegralUIGrid extends IntegralUIBaseGrid {
     get groups(): any;
     set showExpandBox(arg: any);
     get showExpandBox(): any;
-    loadData(data: any, fields: any, incremental: any): void;
+    loadData(data: any, fields?: any, incremental?: any): void;
     firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }

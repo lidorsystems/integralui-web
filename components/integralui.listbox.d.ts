@@ -208,10 +208,10 @@ declare class IntegralUIListBox extends IntegralUIBaseList {
     get showExpandBox(): any;
     set showGroups(arg: any);
     get showGroups(): any;
-    loadData(data: any, fields: any): void;
-    collapse(group: any): Promise<void>;
-    expand(group: any): Promise<void>;
-    toggle(group: any, value: any): Promise<void>;
+    loadData(data: any, fields?: any): void;
+    collapse(group?: any): Promise<void>;
+    expand(group?: any): Promise<void>;
+    toggle(group?: any, value?: any): Promise<void>;
     firstUpdated(props: any): void;
     updated(changedProperties: any): void;
     render(): import("../external/lit-element.js").TemplateResult;

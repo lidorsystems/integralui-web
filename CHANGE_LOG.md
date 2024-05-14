@@ -1,3 +1,23 @@
+v24.1
+- Built-in Aggregate functions in Grid component: AVG, COUNT, MAX, MIN, SUM
+- Option to create custom aggregate functions for each column
+- Group panel now contains Add Button fromw here you can create new groups dynamically
+- Each group of rows in Grid component now has a summary footer
+- Sorting of groups is available from group panel
+- Group Expand/Collapse per level from group panel
+- Expand/Collapse and Sorting for each group is optional from group panel
+- Built-in Column Menu in Grid and TreeGrid
+- Sorting index is added for each column when multi-column sorting is enabled
+- Customizable Column Aggregations 
+- TreeLIst now adds Separator with text (alignment: left, center and right)
+- scrollPosChanged event data now includes the maximum scrolling position
+- Touch Scroll is now supported in TreeList
+- Fixed the issue that prevented manual opening of ContextMenu when left-mouse button is clicked
+- Fixed the issue within TreeList component that prevented navigation using tourch 
+- Dynamic Drag and Drop now also works without animations in ListBox and TreeView
+- menuClick event is now fired also when using Touch
+- Other minor bug fixes
+
 v23.4
 - FontSize and FontStyle custom properties for all components
 - ListBox have built-in CheckBox for items

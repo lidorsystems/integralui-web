@@ -21,8 +21,11 @@ export const iuiTreeListItemDarkStyle = css`
     .iui-treelistitem-expand-icon-expand {
         background-position: var(--iui-treelistitem-expand-icon-background-position, -48px 0);
     }
-    .iui-treelistitem-separator {
-        background: #151515;
+    .iui-treelistitem-inline-separator, .iui-treelistitem-separator {
+        background: var(--iui-treelistitem-separator-background, #151515);
+    }
+    .iui-treelistitem-separator-content {
+        background: var(--iui-treelistitem-separator-content-background, #252526);
     }
     .iui-treelistitem-animate-select {
         background: var(--iui-treelistitem-animate-select-background, #2d2d33);

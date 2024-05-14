@@ -218,7 +218,7 @@ declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     get autoExpand(): any;
     set showExpandBox(arg: any);
     get showExpandBox(): any;
-    loadData(data: any, parent: any, fields: any, flat: any, incremental: any): void;
+    loadData(data: any, parent?: any, fields?: any, flat?: any, incremental?: any): void;
     firstUpdated(props: any): void;
     render(): import("../external/lit-element.js").TemplateResult;
 }

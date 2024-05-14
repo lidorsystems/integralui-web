@@ -206,13 +206,13 @@ export const iuiGridDefaultStyle = css`
     .iui-grid-column-header-hovered {
         animation-name: var(--iui-grid-column-header-hovered-animation-name, none);
         background: var(--iui-grid-column-header-hovered-background, #d5d5d5);
-        border-color: var(--iui-grid-colum-header-hovered-border-color, #cecece);
+        border-color: var(--iui-grid-column-header-hovered-border-color, #cecece);
         color: var(--iui-grid-column-header-hovered-color, black);
     }
     .iui-grid-column-header-selected {
         animation-name: var(--iui-grid-column-header-selected-animation-name, none);
         background: var(--iui-grid-column-header-selected-background, #bebebe);
-        border-color: var(--iui-grid-colum-header-selected-border-color, #aeaeae);
+        border-color: var(--iui-grid-column-header-selected-border-color, #aeaeae);
         color: var(--iui-grid-column-header-selected-color, black);
     }
     .iui-grid-column-header > div, .iui-grid-column-filter > div, .iui-grid-column-footer > div {
@@ -453,6 +453,37 @@ export const iuiGridDefaultStyle = css`
         white-space: nowrap;
         width: 100%;
     }
+    .iui-grid-grouping-panel-add-buttton {
+        background: var(--iui-grid-grouping-panel-add-button-background, transparent);
+        border: var(--iui-grid-grouping-panel-add-button-border, thin solid transparent);
+        border-radius: var(--iui-grid-grouping-panel-add-button-border-radius, 3px);
+        display: inline-block;
+        height: 24px;
+        margin: 2px 0 2px -4px;
+        position: relative;
+        vertical-align: top;
+        width: 24px;
+    }
+    .iui-grid-grouping-panel-add-buttton:hover {
+        background: var(--iui-grid-grouping-panel-add-button-hover-background, #e9e9e9);
+        border-color: var(--iui-grid-grouping-panel-add-button-hover-border-color, #d9d9d9);
+    }
+    .iui-grid-grouping-panel-line-horizontal {
+        background: var(--iui-grid-grouping-panel-add-button-line-background, black);
+        position: absolute;
+        top: 11px;
+        left: 6px;
+        width: 12px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-line-vertical {
+        background: var(--iui-grid-grouping-panel-add-button-line-background, black);
+        position: absolute;
+        top: 6px;
+        left: 11px;
+        width: 2px;
+        height: 12px;
+    }
     .iui-grid-grouping-panel-item {
         background: var(--iui-grid-grouping-panel-item-background, #dedede);
         border: var(--iui-grid-grouping-panel-item-border, thin solid #bebebe);
@@ -463,6 +494,10 @@ export const iuiGridDefaultStyle = css`
         padding: var(--iui-grid-grouping-panel-item-padding, 2px 5px);
         position: relative;
     }
+    .iui-grid-grouping-panel-item:hover {
+        background: var(--iui-grid-grouping-panel-item-hover-background, #e9e9e9);
+        border-color: var(--iui-grid-grouping-panel-item-hover-border-color, #d9d9d9);
+    }
     .iui-grid-grouping-panel-item-disabled {
         color: var(--iui-grid-grouping-panel-item-disabled-color, gray);
     }
@@ -470,7 +505,7 @@ export const iuiGridDefaultStyle = css`
         display: inline-block;
         overflow: hidden;
         padding: 0;
-        margin: 0 0 2px 0;
+        margin: 0 4px 0 0;
         vertical-align: middle;
     }
     .iui-grid-grouping-panel-toolbar {
@@ -503,12 +538,12 @@ export const iuiGridDefaultStyle = css`
         height: 24px;
         vertical-align: middle;
     }
-    .iui-grid-grouping-panel-item-button {
+    .iui-grid-grouping-panel-item-button-close {
         background-image: url(../../icons/close-dark.ico);
         display: inline-block;
         overflow: hidden;
         padding: 0 !important;
-        margin: 0 0 2px 7px;
+        margin: 0 0 0 -4px;
         width: 16px;
         height: 16px;
         vertical-align: middle;
@@ -561,7 +596,223 @@ export const iuiGridDefaultStyle = css`
     .iui-grid-grouping-panel-dropdown-list-checkbox-true {
         background-image: url(../../icons/check-mark-dark.ico);
     }
-    
+
+    /* Group Sorting */
+    .iui-grid-grouping-panel-item-button-sort {
+        display: inline-block;
+        height: 18px;
+        margin: 0 0 0 -4px;
+        overflow: hidden;
+        position: relative;
+        vertical-align: middle;
+        width: 24px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-order {
+        color: #646464;
+        font-size: 0.75rem;
+        left: 18px;
+        position: absolute;
+        top: 12px;
+    }
+
+    .iui-grid-grouping-panel-item-button-sort-up {
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.25s ease-in-out;
+        width: 10px;
+        height: 12px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-up-active {
+        left: 7px;
+        top: 6px;
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    .iui-grid-grouping-panel-item-button-sort-up-inactive {
+        left: -9px;
+        top: -9px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    .iui-grid-grouping-panel-item-button-sort-up-left {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        transform: rotate(-60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-up-right {
+        position: absolute;
+        left: 3px;
+        top: 2px;
+        transform: rotate(60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-up-hline {
+        position: absolute;
+        left: 2px;
+        top: 4px;
+        width: 6px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-up-vline {
+        position: absolute;
+        left: 4px;
+        top: 0;
+        width: 2px;
+        height: 12px;
+    }
+
+    .iui-grid-grouping-panel-item-button-sort-down {
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.25s ease-in-out;
+        width: 10px;
+        height: 12px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-down-active {
+        right: 7px;
+        bottom: 6px;
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    .iui-grid-grouping-panel-item-button-sort-down-inactive {
+        right: -9px;
+        bottom: -9px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    .iui-grid-grouping-panel-item-button-sort-down-left {
+        position: absolute;
+        right: 3px;
+        bottom: 2px;
+        transform: rotate(60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-down-right {
+        position: absolute;
+        right: 0;
+        bottom: 2px;
+        transform: rotate(-60deg);
+        width: 7px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-down-hline {
+        position: absolute;
+        right: 2px;
+        bottom: 4px;
+        width: 6px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-sort-down-vline {
+        position: absolute;
+        right: 4px;
+        bottom: 0;
+        width: 2px;
+        height: 12px;
+    }
+
+    .iui-grid-grouping-panel-item-button-sort-up .iui-grid-grouping-panel-item-button-sort-up-left,
+    .iui-grid-grouping-panel-item-button-sort-up .iui-grid-grouping-panel-item-button-sort-up-right,
+    .iui-grid-grouping-panel-item-button-sort-up .iui-grid-grouping-panel-item-button-sort-up-hline,
+    .iui-grid-grouping-panel-item-button-sort-up .iui-grid-grouping-panel-item-button-sort-up-vline,
+    .iui-grid-grouping-panel-item-button-sort-down .iui-grid-grouping-panel-item-button-sort-down-left,
+    .iui-grid-grouping-panel-item-button-sort-down .iui-grid-grouping-panel-item-button-sort-down-right,
+    .iui-grid-grouping-panel-item-button-sort-down .iui-grid-grouping-panel-item-button-sort-down-hline,
+    .iui-grid-grouping-panel-item-button-sort-down .iui-grid-grouping-panel-item-button-sort-down-vline
+    {
+        background: var(--iui-grid-grouping-panel-item-button-sort-background, #a5a5a5);
+    }
+    .iui-grid-grouping-panel-item-button-sort-up-active .iui-grid-grouping-panel-item-button-sort-up-left,
+    .iui-grid-grouping-panel-item-button-sort-up-active .iui-grid-grouping-panel-item-button-sort-up-right,
+    .iui-grid-grouping-panel-item-button-sort-up-active .iui-grid-grouping-panel-item-button-sort-up-hline,
+    .iui-grid-grouping-panel-item-button-sort-up-active .iui-grid-grouping-panel-item-button-sort-up-vline,
+    .iui-grid-grouping-panel-item-button-sort-down-active .iui-grid-grouping-panel-item-button-sort-down-left,
+    .iui-grid-grouping-panel-item-button-sort-down-active .iui-grid-grouping-panel-item-button-sort-down-right,
+    .iui-grid-grouping-panel-item-button-sort-down-active .iui-grid-grouping-panel-item-button-sort-down-hline,
+    .iui-grid-grouping-panel-item-button-sort-down-active .iui-grid-grouping-panel-item-button-sort-down-vline
+    {
+        background: var(--iui-grid-grouping-panel-item-button-sort-active-background, #646464);
+    }
+    .iui-grid-grouping-panel-item-button-sort-up:hover .iui-grid-grouping-panel-item-button-sort-up-left,
+    .iui-grid-grouping-panel-item-button-sort-up:hover .iui-grid-grouping-panel-item-button-sort-up-right,
+    .iui-grid-grouping-panel-item-button-sort-up:hover .iui-grid-grouping-panel-item-button-sort-up-hline,
+    .iui-grid-grouping-panel-item-button-sort-up:hover .iui-grid-grouping-panel-item-button-sort-up-vline,
+    .iui-grid-grouping-panel-item-button-sort-down:hover .iui-grid-grouping-panel-item-button-sort-down-left,
+    .iui-grid-grouping-panel-item-button-sort-down:hover .iui-grid-grouping-panel-item-button-sort-down-right,
+    .iui-grid-grouping-panel-item-button-sort-down:hover .iui-grid-grouping-panel-item-button-sort-down-hline,
+    .iui-grid-grouping-panel-item-button-sort-down:hover .iui-grid-grouping-panel-item-button-sort-down-vline 
+    {
+        background: var(--iui-grid-grouping-panel-item-button-sort-hover-background, #646464);
+    }
+
+    /* Group ExpandBox */
+    .iui-grid-grouping-panel-item-button-expandbox {
+        display: inline-block;
+        height: 18px;
+        overflow: hidden;
+        position: relative;
+        vertical-align: middle;
+        width: 16px;
+    }
+    .iui-grid-grouping-panel-item-button-expandbox-collapse-up {
+        position: absolute;
+        left: 6px;
+        top: 3px;
+        opacity: 1;
+        transform: rotate(45deg);
+        transform-origin: top left;
+        width: 9px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-expandbox-collapse-down {
+        position: absolute;
+        right: 2px;
+        bottom: 2px;
+        opacity: 1;
+        transform: rotate(-45deg);
+        transform-origin: top left;
+        width: 9px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-expandbox-expand-up {
+        position: absolute;
+        left: 3px;
+        top: 6px;
+        opacity: 1;
+        transform: rotate(45deg);
+        transform-origin: top left;
+        width: 9px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-expandbox-expand-down {
+        position: absolute;
+        right: 0px;
+        bottom: 4px;
+        opacity: 1;
+        transform: rotate(-45deg);
+        transform-origin: top left;
+        width: 9px;
+        height: 2px;
+    }
+    .iui-grid-grouping-panel-item-button-expandbox > div
+    {
+        background: var(--iui-grid-grouping-panel-item-button-expandbox-line-background, #646464);
+    }
+    .iui-grid-grouping-panel-item-button-expandbox:hover > div
+    {
+        background: var(--iui-grid-grouping-panel-item-button-expandbox-line-background, black);
+    }
+
     /* Disabled State */
     .iui-grid-disabled div {
         opacity: var(--iui-grid-disabled-opacity, 0.75);
@@ -867,19 +1118,53 @@ export const iuiGridDefaultStyle = css`
         color: black;
     }
 
-    /* Sorting */
-    .iui-grid-column-sort-button {
+    /* Grid  Column Buttons */
+    .iui-grid-column-button-block {
+        height: 24px;
         overflow: hidden;
         position: absolute;
-        right: 8px;
-        top: 8px;
-        width: 18px;
-        height: 18px;
+        right: 5px;
+        top: 5px;
     }
+
+    /* Grid  Column Menu */
+    .iui-grid-column-menu-button {
+        height: 24px;
+        overflow: hidden;
+        padding: 1px 0 0 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 24px;
+    }
+    .iui-grid-column-menu-button-line {
+        background: #646464;
+        overflow: hidden;
+        margin: 4px 4px 0 4px;
+        height: 2px;
+    }
+
+    /* Sorting */
+    .iui-grid-column-sort-button {
+        height: 24px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 24px;
+        width: 24px;
+    }
+    .iui-grid-column-sort-button-order {
+        color: #646464;
+        font-size: 0.75rem;
+        left: 18px;
+        position: absolute;
+        top: 12px;
+    }
+
     .iui-grid-column-sort-button-up {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 3px;
+        top: 3px;
         opacity: 1;
         transform: scale(1);
         transition: all 0.25s ease-in-out;
@@ -887,8 +1172,8 @@ export const iuiGridDefaultStyle = css`
         height: 12px;
     }
     .iui-grid-column-sort-button-up-active {
-        left: 3px;
-        top: 2px;
+        left: 7px;
+        top: 6px;
         opacity: 1;
         transform: scale(1.25);
     }
@@ -931,8 +1216,8 @@ export const iuiGridDefaultStyle = css`
 
     .iui-grid-column-sort-button-down {
         position: absolute;
-        right: 0;
-        bottom: 0;
+        right: 3px;
+        bottom: 3px;
         opacity: 1;
         transform: scale(1);
         transition: all 0.25s ease-in-out;
@@ -940,8 +1225,8 @@ export const iuiGridDefaultStyle = css`
         height: 12px;
     }
     .iui-grid-column-sort-button-down-active {
-        right: 5px;
-        bottom: 3px;
+        right: 7px;
+        bottom: 6px;
         opacity: 1;
         transform: scale(1.25);
     }

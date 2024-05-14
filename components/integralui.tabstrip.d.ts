@@ -201,7 +201,7 @@ declare class IntegralUITabStrip extends IntegralUIBase {
     insertTabAfter(tab: any, refTab: any): void;
     removeTab(tab: any): boolean;
     removeTabAt(index: any): boolean;
-    updateLayout(optimal: any): Promise<any>;
+    updateLayout(optimal?: any): Promise<any>;
     scrollPos(value: any): number;
     scrollTo(tab: any): void;
     selectTab(tab: any, skip: any): void;

@@ -10,6 +10,7 @@ const iuiTreeListItemDefaultStyle = css`
         overflow: hidden;
         margin: var(--iui-treelistitem-margin, 0);
         padding: var(--iui-treelistitem-padding, 7px);
+        position: relative;
         text-align: var(--iui-treelistitem-text-align, left);
         text-overflow: var(--iui-treelistitem-text-overflow, ellipsis);
         white-space: var(--iui-treelistitem-white-space, nowrap);
@@ -66,12 +67,38 @@ const iuiTreeListItemDefaultStyle = css`
     .iui-treelistgroup-hovered .iui-treelistitem-expand-icon {
         opacity: 0.75;
     }
+    .iui-treelistitem-inline-separator {
+        background: var(--iui-treelistitem-separator-background, #e5e5e5);
+        border: 0;
+        height: var(--iui-treelistitem-separator-height, 1px);
+        margin: var(--iui-treelistitem-separator-margin, 0);
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        width: calc(100% - 20px);
+        z-index: 0;
+    }
     .iui-treelistitem-separator {
         background: var(--iui-treelistitem-separator-background, #e5e5e5);
         border: 0;
         height: var(--iui-treelistitem-separator-height, 1px);
         margin: var(--iui-treelistitem-separator-margin, 0);
         padding: 0;
+    }
+    .iui-treelistitem-separator-content {
+        background: var(--iui-treelistitem-separator-content-background, transparent);
+        border: var(--iui-treelistitem-separator-content-border, thin solid transparent);
+        border-color: var(--iui-treelistitem-separator-content-border-color, transparent);
+        border-radius: var(--iui-treelistitem-separator-content-border-radius, 3);
+        display: inline-block;
+        font-style: var(--iui-treelistitem-separator-content-font-style, normal);
+        font-weight: var(--iui-treelistitem-separator-content-font-weight, normal);
+        margin: var(--iui-treelistitem-separator-content-margin, 0);
+        padding: var(--iui-treelistitem-separator-content-padding, 5px 4px 5px 0);
+        position: relative;
+        text-align: var(--iui-treelistitem-separator-content-text-align, left);
+        width: var(--iui-treelistitem-separator-content-width, auto);
+        z-index: 1;
     }
 
     .iui-treelistitem-label {

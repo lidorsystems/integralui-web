@@ -1,15 +1,447 @@
-/*
-  filename: integralui.common.service.js
-  version : 23.4.0
-  Copyright © 2016-2023 Lidor Systems. All rights reserved.
+class IntegralUICommonService {
 
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
-class IntegralUICommonService{_calcMargin(t){if(t)return{top:getComputedStyle(t)["margin-top"]?parseInt(getComputedStyle(t)["margin-top"],10):getComputedStyle(t).marginTop?parseInt(getComputedStyle(t).marginTop,10):0,right:getComputedStyle(t)["margin-right"]?parseInt(getComputedStyle(t)["margin-right"],10):getComputedStyle(t).marginRight?parseInt(getComputedStyle(t).marginRight,10):0,bottom:getComputedStyle(t)["margin-bottom"]?parseInt(getComputedStyle(t)["margin-bottom"],10):getComputedStyle(t).marginBottom?parseInt(getComputedStyle(t).marginBottom,10):0,left:getComputedStyle(t)["margin-left"]?parseInt(getComputedStyle(t)["margin-left"],10):getComputedStyle(t).marginLeft?parseInt(getComputedStyle(t).marginLeft,10):0};else return{top:0,right:0,bottom:0,left:0}}checkHit(t,e,r){if(t>=r.left&&t<=r.right&&e>=r.top&&e<=r.bottom)return!0;else return!1}checkNumInRange(t,e,r){return t>e-r&&t<e+r?!0:!1}colorToRgb(t,e,r){if(r<0)r+=1;if(r>1)r-=1;if(r<1/6)return t+6*(e-t)*r;if(r<.5)return e;if(r<2/3)return t+(e-t)*(2/3-r)*6;else return t}convertRgbaToHex(t){let e="#";this.convertRgbaToNum(t,!0).forEach(t=>{t=t.toString(16);e+=1===t.length?"0"+t:t});return e}convertRgbaToHsl(t){let e,r,o=this.convertRgbaToNum(t,!0),n=o[0]/255,i=o[1]/255,g=o[2]/255,l=Math.max(n,i,g),a=Math.min(n,i,g),u=(l+a)/2;if(l===a)e=r=0;else{let t=l-a;r=u>.5?t/(2-l-a):t/(l+a);switch(l){case n:e=(i-g)/t+(i<g?6:0);break;case i:e=(g-n)/t+2;break;case g:e=(n-i)/t+4;break;default:this._defaultFunc()}e/=6}if((e=Math.round(360*e))<0)e+=360;r=Math.floor(Math.round(100*r));u=Math.floor(Math.round(100*u));return e+String.fromCharCode(176)+", "+r+"%, "+u+"%"}convertRgbaToNum(t,e){let r=(t=(t=t.replace(/[.*+?^${}()|[\]\\]/g,"")).replace("rgba","").replace("rgb","")).split(",").map(t=>parseInt(t));if(e)r=r.filter((t,e)=>e<3);r.forEach(t=>this.setNumInRange(t,0,255));return r}convertHexToRgba(t){let e=0,r=0,o=0;if(4===(t=t.replace(/[.*+?^${}()|[\]\\]/g,"")).length){e=Number("0x"+t[1]+t[1]);r=Number("0x"+t[2]+t[2]);o=Number("0x"+t[3]+t[3])}else if(7===t.length){e=Number("0x"+t[1]+t[2]);r=Number("0x"+t[3]+t[4]);o=Number("0x"+t[5]+t[6])}return"rgba("+parseInt(e,10).toString()+","+parseInt(r,10).toString()+","+parseInt(o,10).toString()+",1)"}convertHslToRgba(t){let e=(t=(t=t.replace(/[.*+?^${}()|[\]\\]/g,"")).replace(String.fromCharCode(176),"").replace("%","").replace("%","")).split(",").filter((t,e)=>e<3).map(t=>parseInt(t)),r=e[0],o=e[1]/100,n=e[2]/100,i=0,g=0,l=0;if(0===o)i=g=l=n;else{let t=n<.5?n*(1+o):n+o-n*o,e=2*n-t;i=this.colorToRgb(e,t,r+1/3);g=this.colorToRgb(e,t,r);l=this.colorToRgb(e,t,r-1/3)}return"rgba("+(i=Math.round(255*i))+", "+(g=Math.round(255*g))+", "+(l=Math.round(255*l))+", 1)"}convertValue(t,e){let r=null!==t&&void 0!==t?t:null;if(e){let o=e.locales||"en-US",n=e.options||{};if(this.isNumber(r))r=Intl.NumberFormat(o,n).format(r);else if(this.isDate(r))r=Intl.DateTimeFormat(o,n).format(r);else r=this.convertValueToString(t)}else r=this.convertValueToString(t);return r}convertValueToString(t){return null!==t&&void 0!==t?t.toString():""}_defaultFunc(){}_escapeRegExp(t){return t.replace(/[.*+\-?^${}()|[\]\\]/g,"\\$&")}getAngle(t,e,r){return r?Math.atan2(e.y-t.y,e.x-t.x):180*Math.atan2(e.y-t.y,e.x-t.x)/Math.PI}getBorderWidth(t){if(t)return{top:getComputedStyle(t)["border-top-width"]?parseInt(getComputedStyle(t)["border-top-width"],10):getComputedStyle(t).borderTopWidth?parseInt(getComputedStyle(t).borderTopWidth,10):0,right:getComputedStyle(t)["border-right-width"]?parseInt(getComputedStyle(t)["border-right-width"],10):getComputedStyle(t).borderRightWidth?parseInt(getComputedStyle(t).borderRightWidth,10):0,bottom:getComputedStyle(t)["border-bottom-width"]?parseInt(getComputedStyle(t)["border-bottom-width"],10):getComputedStyle(t).borderTopWidth?parseInt(getComputedStyle(t).borderTopWidth,10):0,left:getComputedStyle(t)["border-left-width"]?parseInt(getComputedStyle(t)["border-left-width"],10):getComputedStyle(t).borderLeftWidth?parseInt(getComputedStyle(t).borderLeftWidth,10):0};else return{top:0,right:0,bottom:0,left:0}}getClientPos(t,e){let r=this.getShiftPos(),o=this.getMousePos(t);o.x-=r.x;o.y-=r.y;let n=this.getPageRect(e);return{x:o.x-n.left,y:o.y-n.top}}getClientRect(t,e){let r=this.getPageRect(t),o=this.getPageRect(e);return{top:o.top-r.top,right:o.left+o.width,bottom:o.top+o.height,left:o.left-r.left,height:o.height,width:o.width,x:o.x-r.x,y:o.y-r.y}}getColorAtPosition(t,e,r){if(t){const o=t.getImageData(e,r,1,1).data;return"rgba("+o[0]+","+o[1]+","+o[2]+",1)"}return""}getDateFromString(t){if(this.isString(t)){let e=Date.parse(t);if("Z"===t.slice(-1)&&!isNaN(e))return new Date(e)}else if(this.isDate(t))return t;return null}getDateNum(t){if(this.isDate(t)){let e=t.getFullYear(),r=t.getMonth(),o=t.getDate();return new Date(e,r,o,0,0,0,0).valueOf()}return 0}getMargin(t){return t?this._calcMargin(t):{top:0,right:0,bottom:0,left:0}}getMouseOffsetPos(t,e){let r=this.getShiftPos(),o=this.getMousePos(t);o.x-=r.x;o.y-=r.y;let n=this.getPageRect(e);return{x:o.x-n.left,y:o.y-n.top}}getMousePos(t){return{x:t.pageX?t.pageX:t.originalEvent?t.originalEvent.pageX:0,y:t.pageY?t.pageY:t.originalEvent?t.originalEvent.pageY:0}}getObjFromListById(t,e){let r=null;if(t)for(let o=0;o<t.length;o++)if(this.isObject(t[o])&&t[o].id===e){r=t[o];break}return r}getObjFromListByName(t,e,r){let o=null;if(t&&e)for(let n=0;n<t.length;n++)if(this.isObject(t[n])&&t[n][e]===r){o=t[n];break}return o}getPadding(t){if(t)return{top:getComputedStyle(t)["padding-top"]?parseInt(getComputedStyle(t)["padding-top"],10):getComputedStyle(t).paddingTop?parseInt(getComputedStyle(t).paddingTop,10):0,right:getComputedStyle(t)["padding-right"]?parseInt(getComputedStyle(t)["padding-right"],10):getComputedStyle(t).paddingRight?parseInt(getComputedStyle(t).paddingRight,10):0,bottom:getComputedStyle(t)["padding-bottom"]?parseInt(getComputedStyle(t)["padding-bottom"],10):getComputedStyle(t).paddingBottom?parseInt(getComputedStyle(t).paddingBottom,10):0,left:getComputedStyle(t)["padding-left"]?parseInt(getComputedStyle(t)["padding-left"],10):getComputedStyle(t).paddingLeft?parseInt(getComputedStyle(t).paddingLeft,10):0};else return{top:0,right:0,bottom:0,left:0}}getPageRect(t){return t?t.getBoundingClientRect():{top:0,right:0,bottom:0,left:0,height:0,width:0,x:0,y:0}}getShiftPos(){return{x:document.body.scrollLeft>0?document.body.scrollLeft:document.documentElement.scrollLeft>0?document.documentElement.scrollLeft:0,y:document.body.scrollTop>0?document.body.scrollTop:document.documentElement.scrollTop>0?document.documentElement.scrollTop:0}}getStyle(t){return this.isObject(t)&&!this.isEmpty(t)?t:{}}getTouchData(t){return t.changedTouches?t.changedTouches:t.originalEvent?t.originalEvent.changedTouches:null}getUniqueId(t){let e=t||"-";function r(){return(65536*(1+Math.random())|0).toString(16).substring(1)}return r()+r()+e+r()+e+r()+e+r()+e+r()+r()+r()}isDate(t){return t&&"[object Date]"===Object.prototype.toString.call(t)&&!isNaN(t)}isDefined(t){return null!==t&&void 0!==t}isElement(t){return t?t instanceof Element:!1}isEmpty(t){if(this.isString(t))return!t.trim().length;else return t&&0===Object.keys(t).length&&t.constructor===Object}isEqual(t,e){if(t&&e)return t.toString()===e.toString();else return!1}isFieldAvailable(t,e){return void 0!==t?t:e}isFunc(t){return t?"function"===typeof t||t instanceof Function:!1}isIndexInRange(t,e){return e?t>=0&&t<e.length:!1}isNumber(t){return void 0!==t&&!Number.isNaN(t)?"number"===typeof t||t instanceof Number:!1}isObject(t){return t?"object"===typeof t&&null!==t&&!Array.isArray(t):!1}isString(t){return t?"string"===typeof t||t instanceof String:!1}isTrue(t){return!1===t?!1:!0}moveObject(t,e,r){if(this.isIndexInRange(t,r)&&this.isIndexInRange(e,r))r.splice(e,0,r.splice(t,1)[0])}pointToView(t){let e=this.getShiftPos();return{x:t.x-e.x,y:t.y-e.y}}replaceAll(t,e,r){return t.replace(new RegExp(this._escapeRegExp(e),"g"),r)}setNumInRange(t,e,r){return isNaN(t)?0:Math.min(Math.max(t,e),r)}}export default IntegralUICommonService;
+    _calcMargin(elem){
+        if (elem)
+            return {
+                top: getComputedStyle(elem)['margin-top'] ? parseInt(getComputedStyle(elem)['margin-top'], 10) : (getComputedStyle(elem).marginTop ? parseInt(getComputedStyle(elem).marginTop, 10) : 0),
+                right: getComputedStyle(elem)['margin-right'] ? parseInt(getComputedStyle(elem)['margin-right'], 10) : (getComputedStyle(elem).marginRight ? parseInt(getComputedStyle(elem).marginRight, 10) : 0),
+                bottom: getComputedStyle(elem)['margin-bottom'] ? parseInt(getComputedStyle(elem)['margin-bottom'], 10) : (getComputedStyle(elem).marginBottom ? parseInt(getComputedStyle(elem).marginBottom, 10) : 0),
+                left: getComputedStyle(elem)['margin-left'] ? parseInt(getComputedStyle(elem)['margin-left'], 10) : (getComputedStyle(elem).marginLeft ? parseInt(getComputedStyle(elem).marginLeft, 10) : 0)
+            }
+
+        return { top: 0, right: 0, bottom: 0, left: 0 }
+    }
+
+    checkHit(x, y, bounds){
+        if (x >= bounds.left &&
+            x <= bounds.right &&
+            y >= bounds.top &&
+            y <= bounds.bottom)
+            return true;
+            
+        return false;
+    }
+
+    checkNumInRange(value, num, range){
+        return value > num - range && value < num + range ? true : false;
+    }
+
+    colorToRgb(p, q, t){
+        if (t < 0) t += 1;
+        if (t > 1) t -= 1;
+        if (t < 1/6) return p + (q - p) * 6 * t;
+        if (t < 1/2) return q;
+        if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+
+        return p;
+    }
+
+    convertRgbaToHex(value){
+        let result = '#';
+
+        let hexList = this.convertRgbaToNum(value, true);
+        hexList.forEach((x) => { 
+            x = x.toString(16); 
+            result += x.length === 1 ? '0' + x : x
+        });
+
+        return result;
+    }
+
+    convertRgbaToHsl(value){
+        let hslList = this.convertRgbaToNum(value, true);
+
+        let r = hslList[0]/255;
+        let g = hslList[1]/255;
+        let b = hslList[2]/255;
+
+        let max = Math.max(r, g, b);
+        let min = Math.min(r, g, b);
+        let h, s, l = (max + min) / 2;
+
+        if (max === min)
+            h = s = 0;
+        else {
+            let delta = max - min;
+            s = l > 0.5 ? delta / (2 - max - min) : delta / (max + min);
+
+            switch (max){
+                case r: 
+                    h = (g - b) / delta + (g < b ? 6 : 0);
+                    break;
+
+                case g: 
+                    h = (b - r) / delta + 2; 
+                    break;
+
+                case b: 
+                    h = (r - g) / delta + 4; 
+                    break;
+
+                default:
+                      this._defaultFunc();
+                      break;
+            }
+
+            h /= 6;
+        }
+
+        h = Math.round(h * 360);
+          if (h < 0)
+              h += 360;
+
+        s = Math.floor(Math.round(s * 100));
+        l = Math.floor(Math.round(l * 100));
+
+        return h + String.fromCharCode(176) + ', ' + s + '%, ' + l + '%';
+    }
+
+    convertRgbaToNum(value, skipAlpha){
+        value = value.replace(/[.*+?^${}()|[\]\\]/g, '');
+        value = value.replace('rgba', '').replace('rgb', '');
+
+        let rgbList = value.split(",");
+        let numList = rgbList.map((x) => parseInt(x));
+
+        if (skipAlpha)
+            numList = numList.filter((x, i) => i < 3);
+
+        numList.forEach(val => this.setNumInRange(val, 0, 255));
+
+        return numList;
+    }
+
+    convertHexToRgba(value){
+        value = value.replace(/[.*+?^${}()|[\]\\]/g, '');
+
+        let r = 0, g = 0, b = 0;
+
+        if (value.length === 4){
+            r = Number("0x" + value[1] + value[1]);
+            g = Number("0x" + value[2] + value[2]);
+            b = Number("0x" + value[3] + value[3]);
+        }
+        else if (value.length === 7){
+            r = Number("0x" + value[1] + value[2]);
+            g = Number("0x" + value[3] + value[4]);
+            b = Number("0x" + value[5] + value[6]);
+        }
+
+        return "rgba("+ parseInt(r, 10).toString() + "," + parseInt(g, 10).toString() + "," + parseInt(b, 10).toString() + ",1)";
+    }
+
+    convertHslToRgba(value){
+        value = value.replace(/[.*+?^${}()|[\]\\]/g, '');
+        value = value.replace(String.fromCharCode(176), '').replace('%', '').replace('%', '');
+
+        let hslList = value.split(",");
+        let numList = hslList
+                        .filter((x, i) => i < 3)
+                        .map(x => parseInt(x));
+
+        let h = numList[0];
+        let s = numList[1] / 100;
+        let l = numList[2] / 100;
+      
+        let r = 0, g = 0, b = 0;
+
+        if (s === 0)
+            r = g = b = l;
+        else {
+            let q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+            let p = 2 * l - q;
+
+            r = this.colorToRgb(p, q, h + 1/3);
+            g = this.colorToRgb(p, q, h);
+            b = this.colorToRgb(p, q, h - 1/3);
+        }
+
+        r = Math.round(r * 255);
+        g = Math.round(g * 255);
+        b = Math.round(b * 255);
+
+        return 'rgba(' + r + ', ' + g + ', ' + b + ', 1)';
+    }
+
+    convertValue(value, format){
+        let retValue = value !== null && value !== undefined ? value : null;
+
+        if (format){
+            let locales = format.locales || 'en-US';
+            let options = format.options || {};
+
+            if (this.isNumber(retValue))
+                retValue = Intl.NumberFormat(locales, options).format(retValue);
+            else if (this.isDate(retValue))
+                retValue = Intl.DateTimeFormat(locales, options).format(retValue);
+            else 
+                retValue = this.convertValueToString(value);
+        }
+        else
+            retValue = this.convertValueToString(value);
+
+        return retValue;
+    }
+
+    convertValueToString(value){
+        return value !== null && value !== undefined ? value.toString() : '';
+    }
+
+    _defaultFunc(){}
+
+    _escapeRegExp(string){
+        return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+    }
+
+    getAngle(p1, p2, rad){
+        return rad ? Math.atan2(p2.y - p1.y, p2.x - p1.x) : Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180 / Math.PI;
+    }
+
+    getBorderWidth(elem){
+        if (elem)
+            return {
+                top: getComputedStyle(elem)['border-top-width'] ? parseInt(getComputedStyle(elem)['border-top-width'], 10) : (getComputedStyle(elem).borderTopWidth ? parseInt(getComputedStyle(elem).borderTopWidth, 10) : 0),
+                right: getComputedStyle(elem)['border-right-width'] ? parseInt(getComputedStyle(elem)['border-right-width'], 10) : (getComputedStyle(elem).borderRightWidth ? parseInt(getComputedStyle(elem).borderRightWidth, 10) : 0),
+                bottom: getComputedStyle(elem)['border-bottom-width'] ? parseInt(getComputedStyle(elem)['border-bottom-width'], 10) : (getComputedStyle(elem).borderTopWidth ? parseInt(getComputedStyle(elem).borderTopWidth, 10) : 0),
+                left: getComputedStyle(elem)['border-left-width'] ? parseInt(getComputedStyle(elem)['border-left-width'], 10) : (getComputedStyle(elem).borderLeftWidth ? parseInt(getComputedStyle(elem).borderLeftWidth, 10) : 0),
+            }
+
+        return { top: 0, right: 0, bottom: 0, left: 0 }
+    }
+
+    getClientPos(e, elem){
+        let shiftPos = this.getShiftPos();
+        let mousePos = this.getMousePos(e);
+        mousePos.x -= shiftPos.x;
+        mousePos.y -= shiftPos.y;
+
+        let elemRect = this.getPageRect(elem);
+        
+        return { x: mousePos.x - elemRect.left, y: mousePos.y - elemRect.top };
+    }
+
+    getClientRect(parent, target){
+        let parentBounds = this.getPageRect(parent);
+        let targetBounds = this.getPageRect(target);
+
+        return { 
+            top: targetBounds.top - parentBounds.top, 
+            right: targetBounds.left + targetBounds.width, 
+            bottom: targetBounds.top + targetBounds.height, 
+            left: targetBounds.left - parentBounds.left, 
+            height: targetBounds.height, 
+            width: targetBounds.width,  
+            x: targetBounds.x - parentBounds.x,  
+            y: targetBounds.y - parentBounds.y
+        }
+    }
+
+    getColorAtPosition(context, x, y) {
+        if (context){
+            const imageData = context.getImageData(x, y, 1, 1).data;
+            return 'rgba(' + imageData[0] + ',' + imageData[1] + ',' + imageData[2] + ',1)';
+        }
+
+        return '';
+    }
+
+    getDateFromString(value){
+        if (this.isString(value)){
+            let currentValue = Date.parse(value);
+            if (value.slice(-1) === 'Z' && !isNaN(currentValue))
+                return new Date(currentValue);
+        }
+        else if (this.isDate(value))
+            return value;
+
+        return null;
+    }
+
+    getDateNum(date){
+        if (this.isDate(date)){
+            let year = date.getFullYear();
+            let month = date.getMonth();
+            let day = date.getDate();
+    
+            return new Date(year, month, day, 0, 0, 0, 0).valueOf();
+        }
+
+        return 0;
+    }
+
+    getMargin(elem){
+        return elem ? this._calcMargin(elem) : { top: 0, right: 0, bottom: 0, left: 0 };
+    }
+
+    getMouseOffsetPos(e, elem){
+        let shiftPos = this.getShiftPos();
+        let mousePos = this.getMousePos(e);
+        mousePos.x -= shiftPos.x;
+        mousePos.y -= shiftPos.y;
+
+        let elemRect = this.getPageRect(elem);
+
+        let mouseOffsetPos = {
+            x: mousePos.x - elemRect.left,
+            y: mousePos.y - elemRect.top
+        }
+
+        return mouseOffsetPos;
+    }
+    
+    getMousePos(e){
+        return {
+            x: e.pageX ? e.pageX : e.originalEvent ? e.originalEvent.pageX : 0,
+            y: e.pageY ? e.pageY : e.originalEvent ? e.originalEvent.pageY : 0
+        }
+    }
+
+    getObjFromListById(list, id){
+        let found = null;
+
+        if (list)
+            for (let j = 0; j < list.length; j++){
+                if (this.isObject(list[j]) && list[j].id === id){
+                    found = list[j]; 
+                    break;
+                }
+            }
+
+        return found;
+    }
+    
+    getObjFromListByName(list, fieldName, value){
+        let found = null;
+
+        if (list && fieldName)
+            for (let j = 0; j < list.length; j++){
+                if (this.isObject(list[j]) && list[j][fieldName] === value){
+                    found = list[j]; 
+                    break;
+                }
+            }
+
+        return found;
+    }
+
+    getPadding(elem){
+        if (elem)
+            return {
+                top: getComputedStyle(elem)['padding-top'] ? parseInt(getComputedStyle(elem)['padding-top'], 10) : (getComputedStyle(elem).paddingTop ? parseInt(getComputedStyle(elem).paddingTop, 10) : 0),
+                right: getComputedStyle(elem)['padding-right'] ? parseInt(getComputedStyle(elem)['padding-right'], 10) : (getComputedStyle(elem).paddingRight ? parseInt(getComputedStyle(elem).paddingRight, 10) : 0),
+                bottom: getComputedStyle(elem)['padding-bottom'] ? parseInt(getComputedStyle(elem)['padding-bottom'], 10) : (getComputedStyle(elem).paddingBottom ? parseInt(getComputedStyle(elem).paddingBottom, 10) : 0),
+                left: getComputedStyle(elem)['padding-left'] ? parseInt(getComputedStyle(elem)['padding-left'], 10) : (getComputedStyle(elem).paddingLeft ? parseInt(getComputedStyle(elem).paddingLeft, 10) : 0)
+            }
+
+        return { top: 0, right: 0, bottom: 0, left: 0 }
+    }
+
+    getPageRect(elem){
+        return elem ? elem.getBoundingClientRect() : { top: 0, right: 0, bottom: 0, left: 0, height: 0, width: 0, x: 0, y: 0 };
+    }
+
+    getShiftPos(){
+        let shiftPos = { 
+            x: document.body.scrollLeft > 0 ? document.body.scrollLeft : (document.documentElement.scrollLeft > 0 ? document.documentElement.scrollLeft : 0),
+            y: document.body.scrollTop > 0 ? document.body.scrollTop : (document.documentElement.scrollTop > 0 ? document.documentElement.scrollTop : 0) 
+        }
+
+        return shiftPos;
+    }
+
+    getStyle(value){
+        return this.isObject(value) && !this.isEmpty(value) ? value : {};
+    }
+
+    getTouchData(e){
+        return e.changedTouches ? e.changedTouches : e.originalEvent ? e.originalEvent.changedTouches : null;
+    }
+
+    getUniqueId(separator){
+        let delimiter = separator || "-";
+
+        function S4() {
+            return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+        }
+
+        return (S4() + S4() + delimiter + S4() + delimiter + S4() + delimiter + S4() + delimiter + S4() + S4() + S4());
+    }
+
+    isDate(value){
+        return value && Object.prototype.toString.call(value) === "[object Date]" && !isNaN(value);
+    }
+                
+    isDefined(value){
+        return value !== null && value !== undefined;
+    }
+    
+    isElement(elem){
+        return elem ? elem instanceof Element : false;
+    }
+
+    isEmpty(obj){
+        if (this.isString(obj))
+            return !obj.trim().length;
+        else
+            return obj && Object.keys(obj).length === 0 && obj.constructor === Object;
+    }
+
+    isEqual(first, second){
+        if (first && second)
+            return first.toString() === second.toString();
+        
+        return false;
+    }
+
+    isFieldAvailable(field, value){
+        return field !== undefined ? field : value;
+    }
+            
+    isFunc(value){
+        return value ? typeof value === 'function' || value instanceof Function : false;
+    }
+
+    isIndexInRange(index, list){
+        return list ? index >= 0 && index < list.length : false;
+    }
+            
+    isNumber(value){
+        return value !== undefined && !Number.isNaN(value) ? typeof value === 'number' || value instanceof Number : false;
+    }
+            
+    isObject(value){
+        return value ? typeof value === 'object' && value !== null && !Array.isArray(value) : false;
+    }
+            
+    isString(value){
+        return value ? typeof value === 'string' || value instanceof String : false;
+    }
+     
+    isTrue(value){
+        return value === false ? false : true;
+    }
+   
+    moveObject(from, to, list){
+        if (this.isIndexInRange(from, list) && this.isIndexInRange(to, list))
+            list.splice(to, 0, list.splice(from, 1)[0]);
+    }
+
+    pointToView(pos){
+        let shiftPos = this.getShiftPos();
+
+        return {
+            x: pos.x - shiftPos.x,
+            y: pos.y - shiftPos.y
+        }
+    }
+  
+    replaceAll(str, find, replace){
+        return str.replace(new RegExp(this._escapeRegExp(find), 'g'), replace);
+    }
+
+    setNumInRange(value, min, max){
+        return isNaN(value) ? 0 : Math.min(Math.max(value, min), max);
+    }
+}
+
+export default IntegralUICommonService;

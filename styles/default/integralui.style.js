@@ -100,7 +100,7 @@ const iuiBaseDefaultStyle = css`
         position: absolute;
         right: -1px;
         bottom: -3px;
-        zIndex: 999;
+        z-index: 999;
     }
     .iui-draglist-corner-block {
         background: var(--iui-draglist-corner-background, #f5f5f5);
@@ -113,13 +113,13 @@ const iuiBaseDefaultStyle = css`
         transform: rotate(45deg);
         width: 250%;
         height: 300%;
-        zIndex: 0;
+        z-index: 0;
     }
     .iui-draglist-num {
         color: var(--iui-draglist-num-color, black);
         padding: 3px;
         position: relative;
-        zIndex: 1;
+        z-index: 1;
     }
 `;
 

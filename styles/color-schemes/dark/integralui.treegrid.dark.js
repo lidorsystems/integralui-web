@@ -79,7 +79,7 @@ const iuiTreeGridDarkStyle = css`
     }
     .iui-treegrid-column-header-hovered {
         background: var(--iui-treegrid-column-header-hovered-background, #113954);
-        border-color: var(--iui-treegrid-colum-header-hovered-border-color, #113954);
+        border-color: var(--iui-treegrid-column-header-hovered-border-color, #113954);
         color: var(--iui-treegrid-column-header-hovered-color, white);
 
         animation-name: var(--iui-treegrid-column-header-hovered-animation-name, iui-treegrid-column-hovered-animate-enter);
@@ -97,7 +97,7 @@ const iuiTreeGridDarkStyle = css`
     }
     .iui-treegrid-column-header-selected {
         background: var(--iui-treegrid-column-header-selected-background, #0c293d);
-        border-color: var(--iui-treegrid-colum-header-selected-border-color, #0c293d);
+        border-color: var(--iui-treegrid-column-header-selected-border-color, #0c293d);
         color: var(--iui-treegrid-column-header-selected-color, white);
 
         animation-name: var(--iui-treegrid-column-header-selected-animation-name, iui-treegrid-column-selected-animate-enter);
@@ -283,7 +283,15 @@ const iuiTreeGridDarkStyle = css`
         color: #dedede;
     }
 
+    /* Grid  Column Menu */
+    .iui-treegrid-column-menu-button-line {
+        background: #e5e5e5;
+    }
+
     /* Sorting */
+    .iui-treegrid-column-sort-button-order {
+        color: #e5e5e5;
+    }
     .iui-treegrid-column-sort-button-up .iui-treegrid-column-sort-button-up-left,
     .iui-treegrid-column-sort-button-up .iui-treegrid-column-sort-button-up-right,
     .iui-treegrid-column-sort-button-up .iui-treegrid-column-sort-button-up-hline,

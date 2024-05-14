@@ -100,25 +100,21 @@ declare class IntegralUIBase extends LitElement {
     set theme(arg: any);
     get theme(): any;
     getElemRef(): any;
-    getSize(flag: any): {
+    getSize(flag?: any): {
         width: any;
         height: any;
     };
     setFocus(obj: any): void;
-    getClass(obj: any): any;
-    getStyle(obj: any): any;
-    refresh(obj: any): void;
+    getClass(obj?: any): any;
+    getStyle(obj?: any): any;
+    refresh(obj?: any): void;
     removeClass(value: any): void;
-    setClass(value: any, obj: any): void;
-    setStyle(value: any, obj: any): void;
-    resolve(type: any): void;
+    setClass(value: any, obj?: any): void;
+    setStyle(value: any, obj?: any): void;
+    resolve(type?: any): void;
     shouldUpdate(props: any): boolean;
-    updateLayout(optimal: any): Promise<void>;
+    updateLayout(optimal?: any): Promise<void>;
     wait(): void;
-}
-export class IntegralUITComponent extends LitElement {
-    firstUpdated(props: any): void;
-    render(): import("../external/lit-element.js").TemplateResult;
 }
 import { L as LitElement } from "../external/lit-element.js";
 import IntegralUICommonService from "../services/integralui.common.service.js";

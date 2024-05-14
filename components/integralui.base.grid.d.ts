@@ -301,29 +301,29 @@ declare class IntegralUIBaseGrid extends IntegralUIBase {
     insertColumnBefore(column: any, refColumn: any): void;
     removeColumn(column: any): boolean;
     removeColumnAt(index: any): boolean;
-    addRow(row: any, parent: any): void;
+    addRow(row: any, parent?: any): void;
     clearRows(parent: any): void;
     insertRowAfter(row: any, refRow: any): void;
-    insertRowAt(row: any, index: any, parent: any): void;
+    insertRowAt(row: any, index: any, parent?: any): void;
     insertRowBefore(row: any, refRow: any): void;
     removeRow(row: any): boolean;
-    removeRowAt(index: any, parent: any): boolean;
+    removeRowAt(index: any, parent?: any): boolean;
     removeIndex: any;
     updateFullList(): any[] | undefined;
     beginEdit(row: any, cell: any): void;
-    endEdit(save: any): void;
-    collapse(row: any): void;
-    expand(row: any): void;
-    toggle(row: any, value: any): void;
+    endEdit(save?: any): void;
+    collapse(row?: any): void;
+    expand(row?: any): void;
+    toggle(row?: any, value?: any): void;
     exportToCSV(): string;
-    exportToJSON(data: any, columnFields: any, rowFields: any, spacing: any, flat: any): string;
-    filter(column: any, params: any): void;
-    cloneRow(row: any, keepId: any): any;
+    exportToJSON(data: any, columnFields?: any, rowFields?: any, spacing?: any, flat?: any): string;
+    filter(column: any, params?: any): void;
+    cloneRow(row: any, keepId?: any): any;
     getCellByColumnId(list: any, id: any): any;
     getColumnById(id: any): any;
     getColumnParent(column: any): any;
     getFullList(): any[] | undefined;
-    getList(key: any, parent: any): any;
+    getList(key: any, parent?: any): any;
     getRowLevel(row: any): number;
     getRowParent(row: any): any;
     isCellEnabled(cell: any): any;
@@ -342,7 +342,7 @@ declare class IntegralUIBaseGrid extends IntegralUIBase {
     lastPage(): void;
     nextPage(): void;
     prevPage(): void;
-    scrollPos(value: any): {
+    scrollPos(value?: any): {
         x: number;
         y: number;
     };
@@ -355,7 +355,7 @@ declare class IntegralUIBaseGrid extends IntegralUIBase {
     findRowByText(text: any): any;
     clearSelection(): void;
     selectRows(rows: any): void;
-    sort(column: any, order: any, comparer: any): void;
+    sort(column: any, order?: any, comparer?: any): void;
     refresh(): void;
     resumeLayout(): void;
     suspendLayout(): void;

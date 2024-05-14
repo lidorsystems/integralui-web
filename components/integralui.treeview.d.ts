@@ -222,11 +222,11 @@ declare class IntegralUITreeView extends IntegralUIBaseList {
     get itemDisplay(): any;
     set showExpandBox(arg: any);
     get showExpandBox(): any;
-    loadData(data: any, parent: any, fields: any, flat: any): void;
+    loadData(data: any, parent?: any, fields?: any, flat?: any): void;
     isThereChildItems: boolean | undefined;
-    collapse(item: any): Promise<void>;
-    expand(item: any): Promise<void>;
-    toggle(item: any, value: any): Promise<void>;
+    collapse(item?: any): Promise<void>;
+    expand(item?: any): Promise<void>;
+    toggle(item?: any, value?: any): Promise<void>;
     updateFullList(): any[];
     getItemLevel(item: any): number;
     getItemParent(item: any): any;

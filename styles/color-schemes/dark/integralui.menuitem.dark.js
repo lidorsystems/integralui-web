@@ -81,6 +81,9 @@ export const iuiMenuItemDarkStyle = css`
     .iui-menuitem-root-separator > hr, .iui-menuitem-separator > hr, .iui-contextmenuitem-root-separator > hr, .iui-contextmenuitem-separator > hr {
         background: var(--iui-menuitem-separator-line-background, #151515);
     }
+    .iui-menuitem-separator-content {
+        background: var(--iui-menuitem-separator-content-background, #252526);
+    }
     .iui-menu-marker-expand-down::before {
         border: 4px solid #0a4369;
         border-color: #0a4369 transparent transparent transparent;
@@ -131,10 +134,6 @@ export const iuiMenuItemDarkStyle = css`
     }
     .iui-menu-disabled > ul {
         background: var(--iui-menu-block-disabled-background, #808080);
-    }
-
-    .iui-menuitem-separator-content {
-        background: var(--iui-menuitem-separator-content-background, #252526);
     }
     
     /* Header */

@@ -170,13 +170,13 @@ export const iuiPivotGridDefaultStyle = css`
     .iui-pivotgrid-column-header-hovered {
         animation-name: var(--iui-pivotgrid-column-header-hovered-animation-name, none);
         background: var(--iui-pivotgrid-column-header-hovered-background, #d5d5d5);
-        border-color: var(--iui-pivotgrid-colum-header-hovered-border-color, #cecece);
+        border-color: var(--iui-pivotgrid-column-header-hovered-border-color, #cecece);
         color: var(--iui-pivotgrid-column-header-hovered-color, black);
     }
     .iui-pivotgrid-column-header-selected {
         animation-name: var(--iui-pivotgrid-column-header-selected-animation-name, none);
         background: var(--iui-pivotgrid-column-header-selected-background, #bebebe);
-        border-color: var(--iui-pivotgrid-colum-header-selected-border-color, #aeaeae);
+        border-color: var(--iui-pivotgrid-column-header-selected-border-color, #aeaeae);
         color: var(--iui-pivotgrid-column-header-selected-color, black);
     }
     .iui-pivotgrid-column-header > div, .iui-pivotgrid-column-footer > div, .iui-pivotgrid-row-cell > div {

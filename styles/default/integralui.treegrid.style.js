@@ -205,13 +205,13 @@ const iuiTreeGridDefaultStyle = css`
     .iui-treegrid-column-header-hovered {
         animation-name: var(--iui-treegrid-column-header-hovered-animation-name, none);
         background: var(--iui-treegrid-column-header-hovered-background, #d5d5d5);
-        border-color: var(--iui-treegrid-colum-header-hovered-border-color, #cecece);
+        border-color: var(--iui-treegrid-column-header-hovered-border-color, #cecece);
         color: var(--iui-treegrid-column-header-hovered-color, black);
     }
     .iui-treegrid-column-header-selected {
         animation-name: var(--iui-treegrid-column-header-selected-animation-name, none);
         background: var(--iui-treegrid-column-header-selected-background, #bebebe);
-        border-color: var(--iui-treegrid-colum-header-selected-border-color, #aeaeae);
+        border-color: var(--iui-treegrid-column-header-selected-border-color, #aeaeae);
         color: var(--iui-treegrid-column-header-selected-color, black);
     }
     .iui-treegrid-column-header > div, .iui-treegrid-column-filter > div, .iui-treegrid-column-footer > div {
@@ -741,19 +741,53 @@ const iuiTreeGridDefaultStyle = css`
         color: black;
     }
 
-    /* Sorting */
-    .iui-treegrid-column-sort-button {
+    /* Grid Column Buttons */
+    .iui-treegrid-column-button-block {
+        height: 24px;
         overflow: hidden;
         position: absolute;
-        right: 8px;
-        top: 8px;
-        width: 18px;
-        height: 18px;
+        right: 5px;
+        top: 5px;
     }
+
+    /* Grid Column Menu */
+    .iui-treegrid-column-menu-button {
+        height: 24px;
+        overflow: hidden;
+        padding: 1px 0 0 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 24px;
+    }
+    .iui-treegrid-column-menu-button-line {
+        background: #646464;
+        overflow: hidden;
+        margin: 4px 4px 0 4px;
+        height: 2px;
+    }
+
+    /* Sorting */
+    .iui-treegrid-column-sort-button {
+        height: 24px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 24px;
+        width: 24px;
+    }
+    .iui-treegrid-column-sort-button-order {
+        color: #646464;
+        font-size: 0.75rem;
+        left: 18px;
+        position: absolute;
+        top: 12px;
+    }
+    
     .iui-treegrid-column-sort-button-up {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 3px;
+        top: 3px;
         opacity: 1;
         transform: scale(1);
         transition: all 0.25s ease-in-out;
@@ -761,8 +795,8 @@ const iuiTreeGridDefaultStyle = css`
         height: 12px;
     }
     .iui-treegrid-column-sort-button-up-active {
-        left: 3px;
-        top: 2px;
+        left: 7px;
+        top: 6px;
         opacity: 1;
         transform: scale(1.25);
     }
@@ -805,8 +839,8 @@ const iuiTreeGridDefaultStyle = css`
 
     .iui-treegrid-column-sort-button-down {
         position: absolute;
-        right: 0;
-        bottom: 0;
+        right: 3px;
+        bottom: 3px;
         opacity: 1;
         transform: scale(1);
         transition: all 0.25s ease-in-out;
@@ -814,8 +848,8 @@ const iuiTreeGridDefaultStyle = css`
         height: 12px;
     }
     .iui-treegrid-column-sort-button-down-active {
-        right: 5px;
-        bottom: 3px;
+        right: 7px;
+        bottom: 6px;
         opacity: 1;
         transform: scale(1.25);
     }

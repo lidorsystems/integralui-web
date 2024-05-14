@@ -1,7 +1,7 @@
 /*
   filename: integralui.dialog.js
-  version : 23.4.0
-  Copyright © 2016-2023 Lidor Systems. All rights reserved.
+  version : 24.1.0
+  Copyright © 2016-2024 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    

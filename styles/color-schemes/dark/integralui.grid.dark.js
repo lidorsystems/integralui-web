@@ -79,7 +79,7 @@ export const iuiGridDarkStyle = css`
     }
     .iui-grid-column-header-hovered {
         background: var(--iui-grid-column-header-hovered-background, #113954);
-        border-color: var(--iui-grid-colum-header-hovered-border-color, #113954);
+        border-color: var(--iui-grid-column-header-hovered-border-color, #113954);
         color: var(--iui-grid-column-header-hovered-color, white);
 
         animation-name: var(--iui-grid-column-header-hovered-animation-name, iui-grid-column-hovered-animate-enter);
@@ -97,7 +97,7 @@ export const iuiGridDarkStyle = css`
     }
     .iui-grid-column-header-selected {
         background: var(--iui-grid-column-header-selected-background, #0c293d);
-        border-color: var(--iui-grid-colum-header-selected-border-color, #0c293d);
+        border-color: var(--iui-grid-column-header-selected-border-color, #0c293d);
         color: var(--iui-grid-column-header-selected-color, white);
 
         animation-name: var(--iui-grid-column-header-selected-animation-name, iui-grid-column-selected-animate-enter);
@@ -227,6 +227,16 @@ export const iuiGridDarkStyle = css`
         border-bottom: var(--iui-grid-grouping-panel-border-bottom, thin solid #151515);
         color: var(--iui-grid-grouping-panel-color, #cccccc);
     }
+    .iui-grid-grouping-panel-add-buttton {
+        background: var(--iui-grid-grouping-panel-add-button-background, transparent);
+    }
+    .iui-grid-grouping-panel-add-buttton:hover {
+        background: var(--iui-grid-grouping-panel-add-button-hover-background, #484848);
+        border-color: var(--iui-grid-grouping-panel-add-button-hover-border-color, #484848);
+    }
+    .iui-grid-grouping-panel-line-horizontal, .iui-grid-grouping-panel-line-vertical {
+        background: var(--iui-grid-grouping-panel-add-button-line-background, #999999);
+    }
     .iui-grid-grouping-panel-toolbar-button-add:hover {
         opacity: 0.75;
     }
@@ -237,8 +247,53 @@ export const iuiGridDarkStyle = css`
         background: var(--iui-grid-grouping-panel-item-background, #363636);
         border: var(--iui-grid-grouping-panel-item-border, thin solid #363636);
     }
-    .iui-grid-grouping-panel-item-button {
+    .iui-grid-grouping-panel-item:hover {
+        background: var(--iui-grid-grouping-panel-item-hover-background, #484848);
+        border-color: var(--iui-grid-grouping-panel-item-hover-border-color, #484848);
+    }
+    .iui-grid-grouping-panel-item-button-close {
         background-image: url(../../../icons/close-gray.ico);
+    }
+    .iui-grid-grouping-panel-item-button-expandbox > div
+    {
+        background: var(--iui-grid-grouping-panel-item-button-expandbox-line-background, #363636);
+    }
+    .iui-grid-grouping-panel-item-button-expandbox:hover > div
+    {
+        background: var(--iui-grid-grouping-panel-item-button-expandbox-line-background, #484848);
+    }
+    .iui-grid-grouping-panel-item-button-sort-up .iui-grid-grouping-panel-item-button-sort-up-left,
+    .iui-grid-grouping-panel-item-button-sort-up .iui-grid-grouping-panel-item-button-sort-up-right,
+    .iui-grid-grouping-panel-item-button-sort-up .iui-grid-grouping-panel-item-button-sort-up-hline,
+    .iui-grid-grouping-panel-item-button-sort-up .iui-grid-grouping-panel-item-button-sort-up-vline,
+    .iui-grid-grouping-panel-item-button-sort-down .iui-grid-grouping-panel-item-button-sort-down-left,
+    .iui-grid-grouping-panel-item-button-sort-down .iui-grid-grouping-panel-item-button-sort-down-right,
+    .iui-grid-grouping-panel-item-button-sort-down .iui-grid-grouping-panel-item-button-sort-down-hline,
+    .iui-grid-grouping-panel-item-button-sort-down .iui-grid-grouping-panel-item-button-sort-down-vline
+    {
+        background: var(--iui-grid-grouping-panel-item-button-sort-background, #808080);
+    }
+    .iui-grid-grouping-panel-item-button-sort-up-active .iui-grid-grouping-panel-item-button-sort-up-left,
+    .iui-grid-grouping-panel-item-button-sort-up-active .iui-grid-grouping-panel-item-button-sort-up-right,
+    .iui-grid-grouping-panel-item-button-sort-up-active .iui-grid-grouping-panel-item-button-sort-up-hline,
+    .iui-grid-grouping-panel-item-button-sort-up-active .iui-grid-grouping-panel-item-button-sort-up-vline,
+    .iui-grid-grouping-panel-item-button-sort-down-active .iui-grid-grouping-panel-item-button-sort-down-left,
+    .iui-grid-grouping-panel-item-button-sort-down-active .iui-grid-grouping-panel-item-button-sort-down-right,
+    .iui-grid-grouping-panel-item-button-sort-down-active .iui-grid-grouping-panel-item-button-sort-down-hline,
+    .iui-grid-grouping-panel-item-button-sort-down-active .iui-grid-grouping-panel-item-button-sort-down-vline
+    {
+        background: var(--iui-grid-grouping-panel-item-button-sort-active-background, #e5e5e5);
+    }
+    .iui-grid-grouping-panel-item-button-sort-up:hover .iui-grid-grouping-panel-item-button-sort-up-left,
+    .iui-grid-grouping-panel-item-button-sort-up:hover .iui-grid-grouping-panel-item-button-sort-up-right,
+    .iui-grid-grouping-panel-item-button-sort-up:hover .iui-grid-grouping-panel-item-button-sort-up-hline,
+    .iui-grid-grouping-panel-item-button-sort-up:hover .iui-grid-grouping-panel-item-button-sort-up-vline,
+    .iui-grid-grouping-panel-item-button-sort-down:hover .iui-grid-grouping-panel-item-button-sort-down-left,
+    .iui-grid-grouping-panel-item-button-sort-down:hover .iui-grid-grouping-panel-item-button-sort-down-right,
+    .iui-grid-grouping-panel-item-button-sort-down:hover .iui-grid-grouping-panel-item-button-sort-down-hline,
+    .iui-grid-grouping-panel-item-button-sort-down:hover .iui-grid-grouping-panel-item-button-sort-down-vline 
+    {
+        background: var(--iui-grid-grouping-panel-item-button-sort-hover-background, #e5e5e5);
     }
     .iui-grid-grouping-panel-toolbar-button-add {
         background: #363636;
@@ -318,7 +373,15 @@ export const iuiGridDarkStyle = css`
         color: #dedede;
     }
 
+    /* Grid  Column Menu */
+    .iui-grid-column-menu-button-line {
+        background: #e5e5e5;
+    }
+
     /* Sorting */
+    .iui-grid-column-sort-button-order {
+        color: #e5e5e5;
+    }
     .iui-grid-column-sort-button-up .iui-grid-column-sort-button-up-left,
     .iui-grid-column-sort-button-up .iui-grid-column-sort-button-up-right,
     .iui-grid-column-sort-button-up .iui-grid-column-sort-button-up-hline,

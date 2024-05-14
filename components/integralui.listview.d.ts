@@ -177,7 +177,7 @@ declare class IntegralUIListView extends IntegralUIBaseList {
     get itemSize(): any;
     set scrollMode(arg: any);
     get scrollMode(): any;
-    loadData(data: any, fields: any): void;
+    loadData(data: any, fields?: any): void;
     firstUpdated(props: any): void;
     updated(changedProperties: any): void;
     render(): import("../external/lit-element.js").TemplateResult;

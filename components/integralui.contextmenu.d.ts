@@ -56,6 +56,7 @@ export class IntegralUIContextMenuWindow extends LitElement {
     getFullList(): any[] | undefined;
     getItemParent(item: any): any;
     invokeCtrlMethod(name: any, value: any): void;
+    close(): void;
     open(e: any, mode: any, pos: any, appSize: any, elemPageRect: any): void;
     firstUpdated(props: any): void;
     refresh(): void;

@@ -69,7 +69,7 @@ export const iuiPivotGridDarkStyle = css`
     }
     .iui-pivotgrid-column-header-hovered {
         background: var(--iui-pivotgrid-column-header-hovered-background, #113954);
-        border-color: var(--iui-pivotgrid-colum-header-hovered-border-color, #113954);
+        border-color: var(--iui-pivotgrid-column-header-hovered-border-color, #113954);
         color: var(--iui-pivotgrid-column-header-hovered-color, white);
 
         animation-name: var(--iui-pivotgrid-column-header-hovered-animation-name, iui-pivotgrid-column-hovered-animate-enter);
@@ -87,7 +87,7 @@ export const iuiPivotGridDarkStyle = css`
     }
     .iui-pivotgrid-column-header-selected {
         background: var(--iui-pivotgrid-column-header-selected-background, #0c293d);
-        border-color: var(--iui-pivotgrid-colum-header-selected-border-color, #0c293d);
+        border-color: var(--iui-pivotgrid-column-header-selected-border-color, #0c293d);
         color: var(--iui-pivotgrid-column-header-selected-color, white);
 
         animation-name: var(--iui-pivotgrid-column-header-selected-animation-name, iui-pivotgrid-column-selected-animate-enter);
